@@ -1,0 +1,424 @@
+{
+  "metadata": {
+    "last_updated": "2026-03-24T12:12:31.040109",
+    "version": "1.0"
+  },
+  "stories": [
+    {
+      "id": "media-2026-03-11-wsj-autism-aba-medicaid",
+      "date": "2026-03-11",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "WSJ Investigation: Autism ABA Therapy Billing Is Medicaid's Fastest-Growing Abuse Area",
+      "description": "Wall Street Journal analysis of Medicaid billing records reveals ABA autism therapy payments surged from $660M to $2.2B between 2019-2023, with some providers billing up to $800/hr for services delivered by workers earning under $20/hr. Indiana was the epicenter, where one company (Piece by Piece) received $29M for just 84 patients. HHS-OIG audits found billing errors in every case sampled across four states. The investigation connects to ongoing Minnesota Medicaid fraud prosecutions.",
+      "amount": "$2.2 billion (2023 Medicaid ABA payments)",
+      "amount_numeric": 2200000000,
+      "officials": [],
+      "link": "https://www.wsj.com/health/healthcare/autism-therapy-medicaid-payments-640aa435",
+      "link_label": "WSJ Article",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Behavioral Health",
+        "Overbilling",
+        "Program Integrity"
+      ],
+      "state": "IN",
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": [],
+      "related_agency": "HHS-OIG"
+    },
+    {
+      "id": "media-2026-03-10-cbs-la-hospice-fraud",
+      "date": "2026-03-10",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "CBS News Investigation: Hundreds of LA Hospices Show Multiple Fraud Indicators Despite 2023 Crackdown",
+      "description": "CBS News analysis of records for all 1,800 hospices in Los Angeles County finds over 700 trigger multiple state-defined fraud red flags. Auditors estimated LA hospices overbilled Medicare by $105M in a single year. One building houses 89 registered hospices; one medical director is listed at 45 different hospices simultaneously. Despite California revoking 280 hospice licenses and charging over 100 people since 2023, indicators of fraud are growing. Stolen Medicare numbers are used to enroll healthy seniors in hospice with fake terminal diagnoses, billing Medicare an average of $29,000 per patient.",
+      "amount": "$105 million (1-year LA County overbilling); $3.5B alleged total",
+      "amount_numeric": 3500000000,
+      "officials": [],
+      "link": "https://www.cbsnews.com/projects/2026/hospice-fraud/",
+      "link_label": "CBS News Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Hospice Fraud",
+        "Overbilling",
+        "Program Integrity"
+      ],
+      "state": "CA",
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": [],
+      "related_agency": "CMS"
+    },
+    {
+      "id": "media-2026-02-26-propublica-arizona-indigenous-fraud",
+      "date": "2026-02-26",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "ProPublica/AZCIR: Medicaid Fraud Targeting Indigenous Communities Continues Despite Arizona Reforms",
+      "description": "ProPublica and Arizona Center for Investigative Reporting find that nearly three years after Arizona uncovered a $2.5B Medicaid fraud scheme targeting Native Americans, sober living operators are still recruiting vulnerable Indigenous residents into sham behavioral health treatment programs. State has recovered only $125M (5%) of stolen funds. At least 40 Indigenous residents died in fraudulent treatment facilities. Officials in at least five instances across both parties failed to act on evidence of fraud. Described by HHS as the largest fraud scheme targeting a single demographic group in recent U.S. history.",
+      "amount": "$2.5 billion (total scheme); $125M recovered (5%)",
+      "amount_numeric": 2500000000,
+      "officials": [],
+      "link": "https://www.propublica.org/article/arizona-medicaid-fraud-investigation-taxpayer-funds",
+      "link_label": "ProPublica Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Behavioral Health",
+        "Native American",
+        "Addiction Treatment"
+      ],
+      "state": "AZ",
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": [],
+      "related_agency": "HHS"
+    },
+    {
+      "id": "media-2026-02-20-wsmv-russian-tennessee-medicare",
+      "date": "2026-02-20",
+      "agency": "Media",
+      "type": "Investigation",
+      "title": "WSMV4 Investigation: Russian-Connected Medicare Billing Scheme Targeting Tennessee Seniors",
+      "description": "WSMV4 investigation reveals Medicare is being billed tens of thousands of dollars for Tennessee recipients who never needed or received medical equipment, connected to Russian citizen Nika Machutadze facing federal charges in a $3B+ nationwide Medicare fraud scheme. Machutadze's company Centurion began submitting large batches of fraudulent claims in late September 2025 for urinary catheters. A data breach at a healthcare billing service may have provided the stolen Medicare numbers used to bill phantom services across multiple states.",
+      "amount": "$3 billion+ (nationwide scheme)",
+      "amount_numeric": 3000000000,
+      "officials": [],
+      "link": "https://www.wsmv.com/2026/02/20/wsmv4-investigation-reveals-russian-connection-tennessee-medicare-billing-scheme/",
+      "link_label": "WSMV4 Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME Fraud",
+        "Identity Theft",
+        "Foreign Nationals",
+        "False Claims",
+        "Elder Fraud"
+      ],
+      "state": "TN",
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": [],
+      "related_agency": "DOJ"
+    },
+    {
+      "id": "media-2025-09-25-propublica-npi-loophole-fraud",
+      "date": "2025-09-25",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "ProPublica: Health Insurance Hustle — NPI Loophole Makes Healthcare Fraud Absurdly Easy",
+      "description": "ProPublica's investigation revealed how easy it is to commit healthcare fraud using the National Provider Identifier system. A Texas personal trainer and convicted felon posed as a licensed physician, obtained at least 20 NPI numbers, and billed Aetna, Cigna, and UnitedHealthcare for millions in bogus services. The reporting directly led to bipartisan legislation: the Medical License Verification Act (Sens. Cornyn and Cortez Masto) requiring Medicare to verify license validity before approving NPI numbers.",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.propublica.org/article/senators-bipartisan-bill-close-loophole-health-plans",
+      "link_label": "ProPublica Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "NPI Fraud",
+        "Medicare Advantage",
+        "Legislation"
+      ],
+      "state": "TX",
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": [
+        "UnitedHealth",
+        "Aetna",
+        "Cigna"
+      ],
+      "related_agency": "DOJ"
+    },
+    {
+      "id": "media-2025-10-15-kare11-mn-housing-hustle-series",
+      "date": "2025-10-15",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "KARE 11 Investigates: Housing Hustle — Massive Organized Fraud in Minnesota Medicaid Housing and Disability Programs",
+      "description": "KARE 11's sustained 'Housing Hustle' investigation series exposed massive organized fraud in Minnesota's Housing Stabilization Services and other Medicaid programs. Key findings: forged documents, falsified service notes, billing for deceased clients, criminal networks of fly-by-night companies, and out-of-state 'fraud tourists' (two Philadelphia men obtained $3.5M remotely). DHS ignored repeated warnings. Series led to federal charges against 8+ defendants and a third-party Optum audit finding $52.3M in direct recoveries.",
+      "amount": "$9 billion+ (estimated fraud across 14 programs)",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.kare11.com/article/news/investigations/kare-11-investigates-feds-to-announce-fraud-charges-within-state-housing-stabilization-services-program/89-f935fda7-d116-4cfe-b630-ccc834d8e120",
+      "link_label": "KARE 11 Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Housing Fraud",
+        "Organized Crime"
+      ],
+      "state": "MN",
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": [
+        "Optum"
+      ],
+      "related_agency": "DOJ"
+    },
+    {
+      "link": "https://www.foxnews.com/us/la-medicare-fraud-doctor-provider-number-billing-probe",
+      "id": "media-2026-03-12-fox-la-doctor-600m-npi-fraud",
+      "auto_fetched": false,
+      "officials": [],
+      "state": "CA",
+      "source_type": "news",
+      "title": "Fox News: 87-Year-Old LA Doctor's Medicare Number Linked to $600M in Fraudulent Billing",
+      "link_label": "Fox News Article",
+      "type": "Investigative Report",
+      "amount": "$600 million (fraudulent billing)",
+      "description": "Dr. Gilbert Faustina's Medicare provider number was used by multiple home healthcare agencies in Los Angeles to bill nearly $600 million to Medicare from 2021-2024, including $260 million in 2024 alone. Federal records show 76,000 claims for 29,527 patients, yet Faustina says he saw only 10-15 patients weekly and received ,000/month. Agencies operated as shell companies from shared addresses, staying under the radar. Faustina denies knowledge of the fraud.",
+      "agency": "Media",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Home Health Fraud",
+        "NPI Fraud",
+        "False Claims"
+      ],
+      "date": "2026-03-12",
+      "amount_numeric": 600000000,
+      "entities": [],
+      "related_agency": "DOJ"
+    },
+    {
+      "link": "https://azcir.org/news/2025/01/27/arizona-deaths-sober-living-homes-fumbled-response-medicaid-fraud/",
+      "id": "media-2025-01-azcir-propublica-az-medicaid-deaths",
+      "auto_fetched": false,
+      "officials": [],
+      "state": "AZ",
+      "source_type": "news",
+      "title": "ProPublica/AZCIR: At Least 40 Native Americans Died as Arizona Struggled to Address $2.5B Medicaid Fraud Scheme",
+      "link_label": "AZCIR Investigation",
+      "type": "Investigative Report",
+      "amount": "$2.5 billion (fraud scheme)",
+      "description": "After 18 months of investigation, ProPublica and the Arizona Center for Investigative Reporting found that dozens of Native Americans dealing with addiction died as Arizona's Medicaid agency (AHCCCS) struggled to respond to a massive $2.5B fraud scheme involving sham sober living homes and treatment facilities. The fraud evolved from 2019-2023 while the state agency failed to act. Patients were enrolled in fraudulent treatment programs, many receiving no actual care.",
+      "agency": "Media",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Addiction Treatment",
+        "Native American"
+      ],
+      "date": "2025-01-15",
+      "amount_numeric": 0,
+      "entities": [],
+      "related_agency": "CMS"
+    },
+    {
+      "id": "media-2025-06-05-bloomberg-south-florida-aca-deepfakes",
+      "date": "2025-06-05",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Bloomberg Investigation: How Celebrity Deepfakes Supercharged South Florida ACA Enrollment Fraud",
+      "description": "Bloomberg Businessweek investigation revealed how Bain Capital staked Matt Herman $75 million to create Enhance Health, one of the most prolific ACA brokers with over 1 million signups in 2023. Deepfake ads featuring AI-faked Taylor Swift, Joe Rogan, and Steve Harvey drove viewers to South Florida call centers that enrolled people in subsidized health plans without their knowledge or consent, generating over 275,000 complaints to CMS.",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.bloomberg.com/features/2025-deepfake-ads-fueled-florida-health-insurance-scheme/",
+      "link_label": "Bloomberg Businessweek",
+      "social_posts": [],
+      "tags": [
+        "ACA",
+        "Identity Theft",
+        "Organized Crime",
+        "False Claims"
+      ],
+      "entities": [
+        "Enhance Health",
+        "Bain Capital"
+      ],
+      "state": "FL",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agency": "CMS"
+    },
+    {
+      "id": "media-2025-02-21-wsj-unitedhealth-criminal-probe",
+      "date": "2025-02-21",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "WSJ Investigation: DOJ Conducting Criminal Probe of UnitedHealth Medicare Advantage Billing",
+      "description": "Wall Street Journal reported that DOJ is conducting a criminal investigation into UnitedHealth Group for Medicare fraud, specifically the use of in-home health risk assessments and chart reviews to assign obscure revenue-generating diagnoses. Extra payments from these practices totaled $8.7 billion in 2021 alone.",
+      "amount": "$8.7B",
+      "amount_numeric": 8700000000,
+      "officials": [],
+      "link": "https://www.fiercehealthcare.com/payers/wsj-feds-investigating-unitedhealth-criminal-medicare-fraud",
+      "link_label": "WSJ / Fierce Healthcare",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Risk Adjustment",
+        "False Claims",
+        "Home Health Fraud",
+        "Medicare"
+      ],
+      "entities": [
+        "UnitedHealth"
+      ],
+      "state": null,
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agency": "DOJ"
+    },
+    {
+      "id": "media-2026-03-cbs-89-hospices-one-building",
+      "date": "2026-03-10",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "CBS Investigation: State Records Show 89 Hospice Companies at One Los Angeles Office Plaza",
+      "description": "CBS News reporters physically visited an LA office building where state records listed 89 hospice companies, documenting the on-the-ground reality of potential shell hospice operations. LA County's hospice density is 6.5 times the national average.",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cbsnews.com/news/hospice-fraud-investigation-los-angeles-office-plaza/",
+      "link_label": "CBS News Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Hospice Fraud",
+        "Organized Crime"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agency": "CMS"
+    },
+    {
+      "id": "media-2025-05-21-guardian-unitedhealth-nursing-home-kickbacks",
+      "date": "2025-05-21",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "The Guardian Investigation: UnitedHealth Secretly Paid Nursing Homes to Reduce Hospital Transfers",
+      "description": "The Guardian investigation found UnitedHealth paid secret 'premium dividends' and 'shared savings' bonuses to nursing homes to keep Medicare Advantage patients out of hospitals. At least one resident suffered permanent brain damage after stroke symptoms went untreated. The investigation triggered a Senate probe by Senators Wyden and Warren and a defamation lawsuit from UnitedHealth.",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [
+        "Senator Ron Wyden",
+        "Senator Elizabeth Warren"
+      ],
+      "link": "https://www.unitedhealthgroup.com/newsroom/2025/2025-05-21-statement-regarding-may-21-article-the-guardian.html",
+      "link_label": "The Guardian / UnitedHealth Response",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Kickbacks",
+        "Nursing Home",
+        "Medicare"
+      ],
+      "entities": [
+        "UnitedHealth"
+      ],
+      "state": null,
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agency": "CMS"
+    },
+    {
+      "id": "media-2026-kare11-optum-audit-mn-medicaid-vulnerabilities",
+      "date": "2026-02-06",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "KARE 11 Investigation: Third-Party Audit Finds Minnesota Medicaid System 'Riddled with Vulnerabilities'",
+      "description": "An Optum audit of 14 high-risk Medicaid programs (Jan 2022-Oct 2025) found systemic weaknesses across all programs, $52.3M in direct recoveries, and an estimated $1 billion in potential improper payments. When scrutiny intensified after KARE 11's reporting, spending in the 14 programs dropped 29% in one quarter.",
+      "amount": "$1B potential improper payments",
+      "amount_numeric": 1000000000,
+      "officials": [],
+      "link": "https://www.kare11.com/article/news/investigations/kare-11-investigates-third-party-audit-finds-mn-medicaid-system-riddled-with-vulnerabilities-minnesota/89-cc1b0866-687f-4ba6-9b95-539c8286ebaf",
+      "link_label": "KARE 11 Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Improper Payments",
+        "Program Integrity"
+      ],
+      "entities": [
+        "Optum"
+      ],
+      "state": "MN",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agency": "CMS"
+    },
+    {
+      "id": "media-2025-12-18-mn-reformer-fraud-exceeds-9b",
+      "date": "2025-12-18",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Minnesota Reformer: U.S. Attorney Says Medicaid Fraud Likely Exceeds $9 Billion; Reveals 'Fraud Tourism' Industry",
+      "description": "Minnesota Reformer reported that former Assistant U.S. Attorney Joe Thompson estimated half or more of the $18 billion billed to 14 high-risk Medicaid programs since 2018 was fraudulent. The report uncovered a 'fraud tourism' industry where out-of-state scammers traveled to Minnesota to exploit weak program controls.",
+      "amount": "$9B+",
+      "amount_numeric": 9000000000,
+      "officials": [],
+      "link": "https://minnesotareformer.com/2025/12/18/u-s-attorney-fraud-likely-exceeds-9-billion-in-minnesota-run-medicaid-services/",
+      "link_label": "Minnesota Reformer",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Organized Crime",
+        "Improper Payments",
+        "Multi-State"
+      ],
+      "entities": [],
+      "state": "MN",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agency": "DOJ"
+    },
+    {
+      "id": "media-2026-03-nick-shirley-ca-hospice-daycare-fraud",
+      "date": "2026-03-15",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Independent Investigation: Over $170 Million in Alleged Fraud Across California Daycare and Hospice Ghost Operations",
+      "description": "Independent investigative journalist Nick Shirley visited dozens of hospice and daycare locations in LA and San Diego registered as receiving Medicaid money, finding vacant buildings, empty offices, and zero evidence of patients. His report identified $170M+ in questionable billings tied to ghost operations. Viewed 7.7 million times and corroborated by CBS News and CMS data.",
+      "amount": "$170M+",
+      "amount_numeric": 170000000,
+      "officials": [],
+      "link": "https://californiaglobe.com/fl/nick-shirley-uncovers-over-170-million-in-alleged-fraud-across-california-daycare-and-hospice-operations/",
+      "link_label": "California Globe",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Hospice Fraud",
+        "Organized Crime"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agency": "CMS"
+    },
+    {
+      "id": "media-2025-nick-shirley-mn-daycare-fraud",
+      "date": "2025-10-01",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Independent Investigation: Nick Shirley Exposes Minnesota Daycare Fraud with On-the-Ground Visits to Medicaid-Funded Facilities",
+      "description": "Independent journalist Nick Shirley visited dozens of Minnesota daycare facilities billing Medicaid, documenting empty buildings and facilities with no evidence of children being served despite receiving taxpayer funds. The viral investigation helped draw national attention to Minnesota's Medicaid fraud scandal. Some findings were disputed by state officials who said certain centers were operating normally.",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://x.com/nickshirley_/status/minnesota-daycare-fraud",
+      "link_label": "Nick Shirley Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Organized Crime",
+        "Improper Payments",
+        "Adult Day Care"
+      ],
+      "entities": [],
+      "state": "MN",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agency": "DOJ"
+    }
+  ]
+}
