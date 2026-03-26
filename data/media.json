@@ -419,6 +419,144 @@
       "source_type": "news",
       "auto_fetched": false,
       "related_agency": "DOJ"
+    },
+    {
+      "id": "media-2025-06-30-wapo-operation-gold-rush",
+      "date": "2025-06-30",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Washington Post: Inside Operation Gold Rush — Russian-Led Network Submitted $10.6B in Bogus Medicare Claims",
+      "description": "Washington Post investigation into what the DOJ called the largest healthcare fraud case ever charged. A Russian-led transnational criminal network acquired more than 30 legitimate U.S. durable medical equipment companies, stole the identities of over 1 million Americans, and submitted $10.6 billion in fraudulent Medicare claims for items like glucose monitors and urinary catheters that patients never needed or received. Medicare blocked most payments, but the network still collected nearly $1 billion. Money was laundered through accounts opened by temporary visitors and funneled to China, Pakistan, and Israel. 19 defendants charged across five federal districts; 12 arrested including four in Estonia.",
+      "amount": "$10.6 billion (fraudulent claims); ~$1B paid out",
+      "amount_numeric": 10600000000,
+      "officials": [],
+      "link": "https://www.washingtonpost.com/health/2025/06/30/health-care-fraud-bust-largest-in-us-history/",
+      "link_label": "Washington Post Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME Fraud",
+        "Identity Theft",
+        "Foreign Nationals",
+        "Organized Crime",
+        "Money Laundering"
+      ],
+      "state": null,
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": [],
+      "related_agency": "DOJ"
+    },
+    {
+      "id": "media-2026-01-15-kff-kaiser-556m-ma-fraud-settlement",
+      "date": "2026-01-15",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "KFF Health News: Kaiser Permanente Pays Record $556M in Largest-Ever Medicare Advantage Fraud Settlement",
+      "description": "KFF Health News reported on the largest Medicare Advantage fraud settlement in history. Kaiser Permanente affiliates paid $556 million to resolve DOJ allegations that from 2009 to 2018, Kaiser engaged in a widespread scheme pressuring physicians to add invalid diagnoses to patient medical records — sometimes months after visits — to inflate Medicare risk adjustment payments. The settlement dwarfs prior MA fraud settlements including Cigna ($172M, 2023) and Independent Health ($100M, 2024). Whistleblowers who initiated the case received approximately $95M. Kaiser did not admit wrongdoing.",
+      "amount": "$556 million (settlement)",
+      "amount_numeric": 556000000,
+      "officials": [],
+      "link": "https://kffhealthnews.org/news/article/medicare-advantage-record-fraud-settlement-kaiser-permanente-556-million/",
+      "link_label": "KFF Health News",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Risk Adjustment",
+        "False Claims",
+        "Upcoding"
+      ],
+      "state": "CA",
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": [
+        "Kaiser Permanente"
+      ],
+      "related_agency": "DOJ"
+    },
+    {
+      "id": "media-2025-01-04-npr-medicare-advantage-billions-fraud",
+      "date": "2025-01-04",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "NPR Investigation: Potential Fraud Could Have Earned Insurance Companies Billions off Medicare Advantage",
+      "description": "NPR investigation examining how Medicare Advantage insurers systematically exploit the risk adjustment payment system to overbill Medicare by billions of dollars annually. Eight of the ten largest MA insurers have submitted inflated diagnoses according to federal audits, and four of the five largest — UnitedHealth, Humana, Elevance, and Kaiser — have faced federal fraud lawsuits. Estimated overpayments range from $12 billion to $25 billion per year. The investigation traces how in-home health assessments and chart reviews are used to assign obscure revenue-generating diagnoses to patients.",
+      "amount": "$12–25 billion/year (estimated overpayments)",
+      "amount_numeric": 25000000000,
+      "officials": [],
+      "link": "https://www.npr.org/2025/01/04/nx-s1-5246231/potential-fraud-could-have-earned-insurance-companies-billions-off-of-medicare-advantage",
+      "link_label": "NPR Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Risk Adjustment",
+        "Upcoding",
+        "Program Integrity"
+      ],
+      "state": null,
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": [
+        "UnitedHealth",
+        "Humana",
+        "Elevance",
+        "Kaiser Permanente"
+      ],
+      "related_agency": "CMS"
+    },
+    {
+      "id": "media-2026-02-ny-post-house-oversight-ny-cdpap-fraud",
+      "date": "2026-02-10",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "NY Post / House Oversight: New York's $1.2B CDPAP Medicaid Fraud Exposed — 'Minnesota Multiplied by 10'",
+      "description": "Investigative reporting and a House Oversight Committee investigation exposed massive fraud in New York's Consumer Directed Personal Assistance Program (CDPAP), a Medicaid-funded home care program. Spending ballooned from $2.5 billion in 2019 to $9.1 billion by 2023, with an estimated $1.2 billion or more lost to scammers and middlemen. A former prosecutor who spent 27 years prosecuting Medicaid fraud in New York called it 'Minnesota multiplied by 10.' Brooklyn businesswoman Zakia Khan admitted to a $68 million fraud billing for services never provided; another executive was sentenced for a $100 million home health care scam. Governor Hochul's 2023 overhaul replacing hundreds of intermediaries with a single administrator has already saved taxpayers $1 billion.",
+      "amount": "$1.2 billion+ (estimated fraud losses)",
+      "amount_numeric": 1200000000,
+      "officials": [
+        "Chairman James Comer"
+      ],
+      "link": "https://oversight.house.gov/release/comer-takes-new-action-in-investigation-of-fraud-in-new-yorks-medicaid-programs/",
+      "link_label": "House Oversight Investigation",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Home Health Fraud",
+        "Organized Crime",
+        "Program Integrity"
+      ],
+      "state": "NY",
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": [],
+      "related_agency": "CMS"
+    },
+    {
+      "id": "media-2025-06-30-fortune-operation-gold-rush-deep-dive",
+      "date": "2025-06-30",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Fortune: Inside Operation Gold Rush — How a Transnational Criminal Network Exploited U.S. Healthcare for $10.6 Billion",
+      "description": "Fortune's deep-dive investigation into the mechanics of Operation Gold Rush, the largest healthcare fraud case ever charged. The report details how a Russian-based criminal network systematically acquired legitimate U.S. medical supply companies to gain billing access, then used stolen identities of over one million Americans to submit $10.6 billion in fraudulent Medicare claims. The investigation traces the money laundering operation: temporary visitors and undocumented immigrants in the U.S. opened bank accounts to move funds without triggering anti-laundering controls, funneling money to accounts in China, Pakistan, and Israel. Part of the broader DOJ takedown charging 324 defendants across 50 federal districts.",
+      "amount": "$10.6 billion (fraudulent claims)",
+      "amount_numeric": 10600000000,
+      "officials": [],
+      "link": "https://fortune.com/2025/06/30/operation-gold-rush-health-care-fraud-justice-department-criminal-network/",
+      "link_label": "Fortune Deep Dive",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "DME Fraud",
+        "Identity Theft",
+        "Foreign Nationals",
+        "Money Laundering",
+        "Organized Crime"
+      ],
+      "state": null,
+      "source_type": "news",
+      "auto_fetched": false,
+      "entities": [],
+      "related_agency": "DOJ"
     }
   ]
 }
