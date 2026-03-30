@@ -5,6 +5,64 @@
   },
   "actions": [
     {
+      "id": "treasury-2026-03-30-fincen-advisory",
+      "date": "2026-03-30",
+      "agency": "Treasury",
+      "type": "Administrative Action",
+      "title": "FinCEN Issues Advisory Urging Financial Institutions to Flag Healthcare Fraud Schemes",
+      "description": "The Treasury Department's Financial Crimes Enforcement Network (FinCEN) issued an advisory urging financial institutions to monitor for fraud targeting Medicare, Medicaid, and other federal and state health care benefit programs. The advisory details how transnational criminal organizations are increasingly exploiting these programs through false claims and money laundering, and provides red flag indicators to help banks identify and report suspicious activity. Financial institutions filed 20% more healthcare-related suspicious activity reports in 2025 compared to 2024. FinCEN also proposed a rule establishing a whistleblower compensation program for tips related to fraud, money laundering, and sanctions violations.",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [
+        "Scott Bessent"
+      ],
+      "link": "https://home.treasury.gov/news/press-releases/sb0426",
+      "link_label": "Treasury Press Release",
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Financial Institutions",
+        "Money Laundering",
+        "Program Integrity"
+      ],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": false,
+      "entities": [
+        "FinCEN",
+        "U.S. Treasury"
+      ]
+    },
+    {
+      "id": "treasury-2026-03-30-whistleblower-reward",
+      "date": "2026-03-30",
+      "agency": "Treasury",
+      "type": "Administrative Action",
+      "title": "Treasury Secretary Bessent Launches Whistleblower Reward Program for Medicare and Medicaid Fraud",
+      "description": "Treasury Secretary Scott Bessent announced a new anti-fraud whistleblower program offering up to 30% of recovered fines to individuals who report Medicare and Medicaid fraud, provided enforcement actions result in penalties exceeding $1 million. The program is administered through FinCEN (fincen.gov/whistleblower) and reward payments come from collected fines, not taxpayer funds. The initiative targets an estimated $70 billion in annual fraud losses and begins enforcement efforts in Minneapolis.",
+      "amount": "$70 billion (estimated annual fraud targeted)",
+      "amount_numeric": 70000000000,
+      "officials": [
+        "Scott Bessent"
+      ],
+      "link": "https://townhall.com/tipsheet/amy-curtis/2026/03/30/scott-bessent-fraud-whistleblower-reward-n2673627",
+      "link_label": "Townhall Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Whistleblower",
+        "Program Integrity"
+      ],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": false,
+      "entities": [
+        "U.S. Treasury",
+        "FinCEN"
+      ]
+    },
+    {
       "id": "doj-2025-06-national-takedown",
       "date": "2025-06-01",
       "agency": "DOJ",
