@@ -516,11 +516,14 @@ def main():
     log("Loading existing data...")
     data = load_json(DATA_FILE, {"metadata": {"last_updated": "", "version": "1.0"}, "actions": []})
 
-    # Dedup set
+    # Dedup sets
     existing_links = set()
+    existing_titles = set()
     for a in data.get("actions", []):
         if a.get("link"):
             existing_links.add(a["link"])
+        # Normalize title for fuzzy dedup
+        existing_titles.add(re.sub(r'[^a-z0-9 ]', '', a.get("title", "").lower()).strip())
 
     session = create_session()
     added = 0
@@ -554,14 +557,25 @@ def main():
                 is_media = feed['source_type'] == 'news'
                 if is_media and not test_any_keyword(title):
                     continue
-                # Dedup
+                # Reject Google News redirect URLs
+                if link and 'news.google.com' in link:
+                    continue
+                # Dedup by link
                 if link and link in existing_links:
+                    continue
+                # Dedup by normalized title
+                norm_title = re.sub(r'[^a-z0-9 ]', '', title.lower()).strip()
+                if norm_title in existing_titles:
                     continue
 
                 date_str = item.get('pub_date', '')
                 # If already YYYY-MM-DD, keep it; otherwise parse
                 if not re.match(r'^\d{4}-\d{2}-\d{2}$', date_str):
                     date_str = parse_date(date_str)
+
+                # Enforce Jan 2025 cutoff
+                if date_str < '2025-01-01':
+                    continue
 
                 amt_info = extract_amount(f"{title} {desc_clean}")
                 state = get_state(f"{title} {desc_clean}")
@@ -595,6 +609,7 @@ def main():
                 added += 1
                 if link:
                     existing_links.add(link)
+                existing_titles.add(norm_title)
                 count += 1
 
             log(f"  {feed['name']}: {count} new items.")
