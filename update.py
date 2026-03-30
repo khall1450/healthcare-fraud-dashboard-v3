@@ -61,6 +61,7 @@ FEEDS = [
     {"name": "H-E&C",       "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "energy_commerce"},
     {"name": "S-Finance",   "agency": "Congress",      "url": "https://www.finance.senate.gov/rss/feeds/?type=press",                     "enabled": True,  "source_type": "official"},
     {"name": "S-HELP",      "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "help_committee"},
+    {"name": "H-W&M",       "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "ways_means"},
     {"name": "FDA",         "agency": "FDA",           "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml", "enabled": True, "source_type": "official"},
     {"name": "DEA",         "agency": "DEA",           "url": "https://www.dea.gov/press-releases/rss",                                   "enabled": True,  "source_type": "official", "browser_fallback": True},
     # --- Media feeds disabled — Fraud Landscape is manually curated (see data/media.json) ---
@@ -329,55 +330,57 @@ def scrape_page_with_browser(url):
 # HTML scrapers for sites without RSS
 # ---------------------------------------------------------------------------
 def scrape_oig(session):
-    """Scrape HHS-OIG enforcement actions page."""
-    url = "https://oig.hhs.gov/fraud/enforcement/?type=criminal-and-civil-actions"
+    """Scrape HHS-OIG enforcement actions page (pages 1-2)."""
+    base_url = "https://oig.hhs.gov/fraud/enforcement/?type=criminal-and-civil-actions"
     items = []
-    try:
-        resp = session.get(url, timeout=20)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, 'lxml')
-        # OIG lists actions as linked items with dates
-        for a_tag in soup.select('a[href*="/fraud/enforcement/"]'):
-            href = a_tag.get('href', '')
-            title = a_tag.get_text(strip=True)
-            if not title or len(title) < 10:
-                continue
-            if href.startswith('/'):
-                href = 'https://oig.hhs.gov' + href
-            # Date is typically in a sibling or parent element
-            parent = a_tag.find_parent(['li', 'div', 'article', 'tr'])
-            date_str = ""
-            if parent:
-                text = parent.get_text(' ', strip=True)
-                date_match = re.search(r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}', text)
-                if date_match:
-                    date_str = date_match.group()
-            # Fetch detail page for description
-            detail_text = fetch_detail_page(session, href)
-            # Extract first meaningful paragraph as description (skip title echo)
-            desc = ""
-            if detail_text:
-                # Remove the title from the start if echoed
-                cleaned = detail_text
-                if title in cleaned:
-                    cleaned = cleaned.split(title, 1)[-1].strip()
-                # Take first ~600 chars as description
-                desc = cleaned[:600].strip()
-                if len(cleaned) > 600:
-                    # Cut at last sentence boundary
-                    last_period = desc.rfind('.')
-                    if last_period > 200:
-                        desc = desc[:last_period + 1]
+    for page in range(1, 3):
+        url = base_url if page == 1 else f"{base_url}&page={page}"
+        try:
+            resp = session.get(url, timeout=20)
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, 'lxml')
+            # OIG lists actions as linked items with dates
+            for a_tag in soup.select('a[href*="/fraud/enforcement/"]'):
+                href = a_tag.get('href', '')
+                title = a_tag.get_text(strip=True)
+                if not title or len(title) < 10:
+                    continue
+                if href.startswith('/'):
+                    href = 'https://oig.hhs.gov' + href
+                # Date is typically in a sibling or parent element
+                parent = a_tag.find_parent(['li', 'div', 'article', 'tr'])
+                date_str = ""
+                if parent:
+                    text = parent.get_text(' ', strip=True)
+                    date_match = re.search(r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}', text)
+                    if date_match:
+                        date_str = date_match.group()
+                # Fetch detail page for description
+                detail_text = fetch_detail_page(session, href)
+                # Extract first meaningful paragraph as description (skip title echo)
+                desc = ""
+                if detail_text:
+                    # Remove the title from the start if echoed
+                    cleaned = detail_text
+                    if title in cleaned:
+                        cleaned = cleaned.split(title, 1)[-1].strip()
+                    # Take first ~600 chars as description
+                    desc = cleaned[:600].strip()
+                    if len(cleaned) > 600:
+                        # Cut at last sentence boundary
+                        last_period = desc.rfind('.')
+                        if last_period > 200:
+                            desc = desc[:last_period + 1]
 
-            items.append({
-                'title': title,
-                'description': desc,
-                'link': href,
-                'pub_date': date_str,
-                '_full_text': detail_text,  # carry for tag/amount extraction
-            })
-    except Exception as e:
-        log(f"  WARNING: OIG scrape - {e}", "yellow")
+                items.append({
+                    'title': title,
+                    'description': desc,
+                    'link': href,
+                    'pub_date': date_str,
+                    '_full_text': detail_text,  # carry for tag/amount extraction
+                })
+        except Exception as e:
+            log(f"  WARNING: OIG scrape page {page} - {e}", "yellow")
     return items
 
 def scrape_cms(session):
@@ -529,6 +532,71 @@ def scrape_help_committee(session):
         log(f"  WARNING: S-HELP scrape - {e}")
     return items
 
+def scrape_ways_means(session):
+    """Scrape House Ways & Means Committee news using Playwright."""
+    if not HAS_PLAYWRIGHT:
+        log("    Skipping H-W&M (requires Playwright)")
+        return []
+    url = "https://waysandmeans.house.gov/news/"
+    items = []
+    try:
+        soup = scrape_page_with_browser(url)
+        seen_hrefs = set()
+        for a_tag in soup.find_all('a', href=re.compile(r'/\d{4}/\d{2}/\d{2}/')):
+            title = a_tag.get_text(strip=True)
+            if not title or len(title) < 10:
+                continue
+            # Skip "Read More" duplicate links
+            if title.lower().startswith('read more'):
+                continue
+            href = a_tag.get('href', '')
+            if href.startswith('/'):
+                href = 'https://waysandmeans.house.gov' + href
+            if href in seen_hrefs:
+                continue
+            seen_hrefs.add(href)
+            parent = a_tag.find_parent(['li', 'div', 'article', 'tr', 'section'])
+            date_str = ""
+            if parent:
+                dm = re.search(
+                    r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                    parent.get_text()
+                )
+                if dm:
+                    date_str = dm.group()
+            if not date_str:
+                # Extract date from URL pattern /YYYY/MM/DD/
+                dm = re.search(r'/(\d{4})/(\d{2})/(\d{2})/', href)
+                if dm:
+                    date_str = f"{dm.group(1)}-{dm.group(2)}-{dm.group(3)}"
+            # Fetch detail page for description
+            detail_text = ""
+            try:
+                detail_text = fetch_detail_page(session, href)
+            except Exception:
+                pass
+            desc = ""
+            if detail_text:
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+
+            items.append({
+                'title': title,
+                'description': desc,
+                'link': href,
+                'pub_date': date_str,
+                '_full_text': detail_text,
+            })
+    except Exception as e:
+        log(f"  WARNING: H-W&M scrape - {e}")
+    return items
+
 def scrape_doj_usao(session):
     """Scrape DOJ USAO press releases using Playwright (Akamai-blocked)."""
     if not HAS_PLAYWRIGHT:
@@ -656,6 +724,8 @@ def fetch_feed(session, feed):
         return scrape_energy_commerce(session)
     if scrape_mode == 'help_committee':
         return scrape_help_committee(session)
+    if scrape_mode == 'ways_means':
+        return scrape_ways_means(session)
     if not feed.get('url'):
         return []
     return fetch_rss(session, feed['url'], use_browser_fallback=feed.get('browser_fallback', False))
@@ -709,10 +779,13 @@ def main():
                 link = item.get('link', '')
 
                 search_text = f"{title} {desc_clean}"
-                if not test_any_keyword(search_text):
-                    continue
-                if not test_healthcare_context(search_text):
-                    continue
+                # HHS-OIG fraud/enforcement page is already healthcare-specific; skip keyword filters
+                trusted_source = feed.get('agency') in ('HHS-OIG',)
+                if not trusted_source:
+                    if not test_any_keyword(search_text):
+                        continue
+                    if not test_healthcare_context(search_text):
+                        continue
                 # Media feeds: keyword must be in title
                 is_media = feed['source_type'] == 'news'
                 if is_media and not test_any_keyword(title):
