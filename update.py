@@ -447,11 +447,29 @@ def scrape_energy_commerce(session):
             title = heading.get_text(strip=True) if heading else ""
             if not title or len(title) < 10:
                 continue
+            # Fetch detail page for description
+            detail_text = ""
+            try:
+                detail_text = fetch_detail_page(session, href)
+            except Exception:
+                pass
+            desc = ""
+            if detail_text:
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+
             items.append({
                 'title': title,
-                'description': '',
+                'description': desc,
                 'link': href,
                 'pub_date': date_str,
+                '_full_text': detail_text,
             })
     except Exception as e:
         log(f"  WARNING: H-E&C scrape - {e}")
@@ -483,11 +501,29 @@ def scrape_help_committee(session):
                     dm2 = re.search(r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}', parent.get_text())
                     if dm2:
                         date_str = dm2.group()
+            # Fetch detail page for description
+            detail_text = ""
+            try:
+                detail_text = fetch_detail_page(session, href)
+            except Exception:
+                pass
+            desc = ""
+            if detail_text:
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+
             items.append({
                 'title': title,
-                'description': '',
+                'description': desc,
                 'link': href,
                 'pub_date': date_str,
+                '_full_text': detail_text,
             })
     except Exception as e:
         log(f"  WARNING: S-HELP scrape - {e}")
@@ -518,11 +554,29 @@ def scrape_doj_usao(session):
                 )
                 if dm:
                     date_str = dm.group()
+            # Fetch detail page for description
+            detail_text = ""
+            try:
+                detail_text = fetch_detail_page(session, href)
+            except Exception:
+                pass
+            desc = ""
+            if detail_text:
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+
             items.append({
                 'title': title,
-                'description': '',
+                'description': desc,
                 'link': href,
                 'pub_date': date_str,
+                '_full_text': detail_text,
             })
     except Exception as e:
         log(f"  WARNING: DOJ-USAO scrape - {e}")
@@ -558,11 +612,31 @@ def fetch_rss(session, url, use_browser_fallback=False):
             date_str = time.strftime('%Y-%m-%d', entry.updated_parsed)
         else:
             date_str = entry.get('published', entry.get('updated', ''))
+
+        # If RSS summary is short/empty, fetch the detail page
+        desc_clean = clean_html(desc)
+        detail_text = ""
+        if link and len(desc_clean) < 100:
+            try:
+                detail_text = fetch_detail_page(session, link)
+                if detail_text:
+                    cleaned = detail_text
+                    if title in cleaned:
+                        cleaned = cleaned.split(title, 1)[-1].strip()
+                    desc = cleaned[:600].strip()
+                    if len(cleaned) > 600:
+                        last_period = desc.rfind('.')
+                        if last_period > 200:
+                            desc = desc[:last_period + 1]
+            except Exception:
+                pass
+
         items.append({
             'title': title,
             'description': desc,
             'link': link,
             'pub_date': date_str,
+            '_full_text': detail_text,
         })
     return items
 
