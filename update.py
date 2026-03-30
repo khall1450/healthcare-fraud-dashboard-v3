@@ -146,6 +146,60 @@ def extract_amount(text):
         return {"display": m.group(), "numeric": num * 1e6}
     return None
 
+TAG_PATTERNS = [
+    (r'\bmedicare\b', 'Medicare'),
+    (r'\bmedicaid\b', 'Medicaid'),
+    (r'\btricare\b', 'TRICARE'),
+    (r'\bkickback', 'Kickbacks'),
+    (r'\bfalse claims', 'False Claims'),
+    (r'\bindict', 'Indictment'),
+    (r'\bguilty|convict', 'Conviction'),
+    (r'\bsentenc', 'Sentencing'),
+    (r'\bsettle', 'Settlement'),
+    (r'\bplead|plea\b', 'Guilty Plea'),
+    (r'\btelemedic|telemedicine\b', 'Telemedicine'),
+    (r'\bhospice\b', 'Hospice'),
+    (r'\bhome health\b', 'Home Health'),
+    (r'\bnursing home|long.term care', 'Nursing Home'),
+    (r'\bpharmac', 'Pharmacy'),
+    (r'\bopioid|fentanyl', 'Opioids'),
+    (r'\bdurable medical|dme\b', 'DME'),
+    (r'\bgenetic test', 'Genetic Testing'),
+    (r'\blab\b|laboratory', 'Laboratory'),
+    (r'\bbilling scheme|fraudulent billing|false billing', 'Billing Fraud'),
+    (r'\bidentity theft', 'Identity Theft'),
+    (r'\bupcod', 'Upcoding'),
+]
+
+def generate_tags(text):
+    """Generate relevant tags from text content."""
+    tags = []
+    lower = text.lower()
+    for pattern, tag in TAG_PATTERNS:
+        if re.search(pattern, lower) and tag not in tags:
+            tags.append(tag)
+    return tags[:6]  # Cap at 6 tags
+
+def fetch_detail_page(session, url):
+    """Fetch a detail page and extract the main text content."""
+    try:
+        resp = session.get(url, timeout=20)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, 'lxml')
+        # Try common content containers
+        main = (soup.find('main') or soup.find('article') or
+                soup.find('div', class_='field-item') or
+                soup.find('div', class_='entry-content'))
+        if main:
+            # Remove nav, footer, sidebar elements
+            for tag in main.find_all(['nav', 'footer', 'aside', 'script', 'style']):
+                tag.decompose()
+            return re.sub(r'\s+', ' ', main.get_text(' ', strip=True))
+        return ""
+    except Exception as e:
+        log(f"    Detail fetch failed for {url}: {e}")
+        return ""
+
 def make_id(prefix, date_str, link, agency=""):
     hash_input = link or (date_str + agency)
     h = abs(int(hashlib.md5(hash_input.encode()).hexdigest()[:8], 16))
@@ -298,11 +352,29 @@ def scrape_oig(session):
                 date_match = re.search(r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}', text)
                 if date_match:
                     date_str = date_match.group()
+            # Fetch detail page for description
+            detail_text = fetch_detail_page(session, href)
+            # Extract first meaningful paragraph as description (skip title echo)
+            desc = ""
+            if detail_text:
+                # Remove the title from the start if echoed
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                # Take first ~600 chars as description
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    # Cut at last sentence boundary
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+
             items.append({
                 'title': title,
-                'description': '',
+                'description': desc,
                 'link': href,
                 'pub_date': date_str,
+                '_full_text': detail_text,  # carry for tag/amount extraction
             })
     except Exception as e:
         log(f"  WARNING: OIG scrape - {e}", "yellow")
@@ -330,11 +402,25 @@ def scrape_cms(session):
                 date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d{1,2},?\s+\d{4}', date_el)
                 if date_match:
                     date_str = date_match.group()
+            # Fetch detail page for description
+            detail_text = fetch_detail_page(session, href)
+            desc = ""
+            if detail_text:
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+
             items.append({
                 'title': title,
-                'description': '',
+                'description': desc,
                 'link': href,
                 'pub_date': date_str,
+                '_full_text': detail_text,
             })
     except Exception as e:
         log(f"  WARNING: CMS scrape - {e}", "yellow")
@@ -577,9 +663,14 @@ def main():
                 if date_str < '2025-01-01':
                     continue
 
-                amt_info = extract_amount(f"{title} {desc_clean}")
-                state = get_state(f"{title} {desc_clean}")
-                action_type = 'Investigative Report' if is_media else get_action_type(title, desc_clean)
+                # Use full detail text if available (from scrapers that fetch detail pages)
+                full_text = item.get('_full_text', '')
+                search_all = f"{title} {desc_clean} {full_text}"
+
+                amt_info = extract_amount(search_all)
+                state = get_state(search_all)
+                action_type = 'Investigative Report' if is_media else get_action_type(title, search_all)
+                tags = generate_tags(search_all)
 
                 id_prefix = 'media' if is_media else re.sub(r'\W', '-', feed['agency'].lower())
                 link_label = f"{feed['name']} Report" if is_media else f"{feed['name']} Press Release"
@@ -598,7 +689,7 @@ def main():
                     "link": link,
                     "link_label": link_label,
                     "social_posts": [],
-                    "tags": [],
+                    "tags": tags,
                     "entities": [],
                     "state": state,
                     "source_type": feed['source_type'],

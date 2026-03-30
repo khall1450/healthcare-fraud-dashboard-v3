@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-03-30T08:55:30.724724",
+    "last_updated": "2026-03-30T09:03:22.631609",
     "version": "1.0"
   },
   "actions": [
@@ -3478,8 +3478,8 @@
       "type": "Criminal Enforcement",
       "title": "Head of the Criminal Division Matthew R. Galeotti Announces Results of Health Care Fraud Takedown",
       "description": "Thank you all for joining us today to announce the results of the largest coordinated health care fraud takedown in the history of the Department of Justice.",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$14.6 billion",
+      "amount_numeric": 14600000000.0,
       "officials": [
         "Matthew R. Galeotti"
       ],
@@ -3492,7 +3492,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": null,
+      "state": "TX",
       "source_type": "official",
       "auto_fetched": true
     },
@@ -5109,16 +5109,23 @@
       "agency": "HHS-OIG",
       "type": "Criminal Enforcement",
       "title": "Telemedicine Company Owner Pleads Guilty to $46M Medicare Fraud Scheme",
-      "description": "",
-      "amount": null,
-      "amount_numeric": 0,
+      "description": "The owner of a telemedicine company pleaded guilty today to organizing and leading a $46.2 million Medicare fraud conspiracy that spanned more than six years. According to court documents, Christopher Harwood, 43, of Fort Lauderdale, Florida, admitted that he owned and operated a telemedicine company called TelevisitMD. Harwood and his co-conspirators targeted Medicare patients through aggressive telemarketing campaigns, inducing them to accept orthotic braces and genetic tests that they did not need. Harwood paid doctors to approve orders for these braces and genetic tests.",
+      "amount": "$46.2 million",
+      "amount_numeric": 46200000.0,
       "officials": [],
       "link": "https://oig.hhs.gov/fraud/enforcement/telemedicine-company-owner-pleads-guilty-to-46m-medicare-fraud-scheme/",
       "link_label": "HHS-OIG Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Conviction",
+        "Guilty Plea",
+        "Telemedicine",
+        "DME",
+        "Genetic Testing"
+      ],
       "entities": [],
-      "state": null,
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true
     },
@@ -5128,16 +5135,22 @@
       "agency": "HHS-OIG",
       "type": "Civil Action",
       "title": "OB/GYN Physician Agrees to Pay $507,500 to Resolve False Claims Act Allegations Connected to Fraudulent Prescription Scheme",
-      "description": "",
+      "description": "Baltimore, Maryland – A Maryland gynecologist agreed to a settlement in connection with federal False Claims Act violation allegations. Valinda R. Nwadike, MD, agreed to pay the United States $507,500 to resolve allegations for her role in a telemarketing scheme designed to defraud Medicare and TRICARE. U.S. Attorney Kelly O.",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/fraud/enforcement/obgyn-physician-agrees-to-pay-507500-to-resolve-false-claims-act-allegations-connected-to-fraudulent-prescription-scheme/",
       "link_label": "HHS-OIG Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "TRICARE",
+        "False Claims",
+        "Settlement",
+        "DME"
+      ],
       "entities": [],
-      "state": null,
+      "state": "MD",
       "source_type": "official",
       "auto_fetched": true
     },
@@ -5147,16 +5160,21 @@
       "agency": "HHS-OIG",
       "type": "Criminal Enforcement",
       "title": "Federal Jury Finds Mother and Daughter Guilty of Medicare Fraud Scheme and Payment of Illegal Kickbacks",
-      "description": "",
+      "description": "SAN DIEGO – A federal jury today convicted a mother and daughter from Melbourne, Florida, of multiple counts of health care fraud, payment of illegal kickbacks, and conspiracy to commit those offenses. The mother, Cindy Justice, was the owner and president of PureScience Rx, a pharmacy located in Poway. The daughter, Ashleigh Davis, was the operations manager at PureScience Rx and was a licensed pharmacy technician.",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/fraud/enforcement/federal-jury-finds-mother-and-daughter-guilty-of-medicare-fraud-scheme-and-payment-of-illegal-kickbacks/",
       "link_label": "HHS-OIG Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Kickbacks",
+        "Conviction",
+        "Pharmacy"
+      ],
       "entities": [],
-      "state": null,
+      "state": "CA",
       "source_type": "official",
       "auto_fetched": true
     },
@@ -5166,16 +5184,70 @@
       "agency": "HHS-OIG",
       "type": "Civil Action",
       "title": "Team Rehab Physical Therapy Agrees to Pay Nearly $5 Million To Resolve False Claims Act Allegations Related to Fraudulent Billing Scheme",
-      "description": "",
+      "description": "DETROIT - United States Attorney Jerome F. Gorgon Jr. announced today that Team Rehabilitation Services, LLC (“Team Rehab”), which operates approximately 140 physical therapy clinics in Michigan, Illinois, Indiana, Wisconsin, and Georgia, has agreed to pay $4,969,494 to settle allegations that it violated the False Claims Act by submitting false claims for payment for physical therapy services to several federal healthcare programs. Read more on www.justice.gov Action Details Date: March 25, 2026 Agency: U.S.",
       "amount": "$5 Million",
       "amount_numeric": 5000000.0,
       "officials": [],
       "link": "https://oig.hhs.gov/fraud/enforcement/team-rehab-physical-therapy-agrees-to-pay-nearly-5-million-to-resolve-false-claims-act-allegations-related-to-fraudulent-billing-scheme/",
       "link_label": "HHS-OIG Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "False Claims",
+        "Settlement",
+        "Billing Fraud"
+      ],
       "entities": [],
-      "state": null,
+      "state": "GA",
+      "source_type": "official",
+      "auto_fetched": true
+    },
+    {
+      "id": "hhs-oig-2026-03-27-3690155247",
+      "date": "2026-03-27",
+      "agency": "HHS-OIG",
+      "type": "Civil Action",
+      "title": "Texas Fugitive Apprehended and Sentenced to Over 12 Years in Prison for $61M Telemarketing Fraud Scheme Targeting Medicare Beneficiaries",
+      "description": "A Texas man was sentenced Wednesday to 150 months in prison and two years of supervised release for organizing and leading a $61.5 million health care fraud and wire fraud conspiracy in which thousands of Medicare beneficiaries who were the victims of deceptive telemarketing were sent thousands of orthotic braces, foot baths, and genetic tests they did not need.",
+      "amount": "$61.5 million",
+      "amount_numeric": 61500000.0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/fraud/enforcement/texas-fugitive-apprehended-and-sentenced-to-over-12-years-in-prison-for-61m-telemarketing-fraud-scheme-targeting-medicare-beneficiaries/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "False Claims",
+        "Sentencing",
+        "DME",
+        "Genetic Testing"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true
+    },
+    {
+      "id": "hhs-oig-2026-03-24-4189513151",
+      "date": "2026-03-24",
+      "agency": "HHS-OIG",
+      "type": "Criminal Enforcement",
+      "title": "Larchmont Woman Sentenced to Nearly 3 Years in Federal Prison for Her Role in Hospice and Diagnostic Testing Fraud that Conned Medicare",
+      "description": "LOS ANGELES – A woman from the Larchmont area of Los Angeles was sentenced today to 35 months in federal prison for defrauding Medicare out of more than $14 million by submitting fraudulent claims for hospice care and diagnostic testing services that were either unnecessary or not provided at all. Sophia Shaklian, 38, was sentenced by United States District Judge Stanley Blumenfeld Jr., who also ordered her to pay $14,103,043 in restitution. Shaklian pleaded guilty in November 2025 to one count of health care fraud.",
+      "amount": "$14 million",
+      "amount_numeric": 14000000.0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/fraud/enforcement/larchmont-woman-sentenced-to-nearly-3-years-in-federal-prison-for-her-role-in-hospice-and-diagnostic-testing-fraud-that-conned-medicare/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Conviction",
+        "Sentencing",
+        "Guilty Plea",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": "CA",
       "source_type": "official",
       "auto_fetched": true
     }
