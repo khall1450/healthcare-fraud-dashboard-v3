@@ -18,9 +18,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
+        "Guilty Plea",
         "Kickbacks",
         "Medicaid",
-        "Sentenced",
         "Substance Abuse"
       ],
       "entities": [],
@@ -535,7 +535,6 @@
         "DME Fraud",
         "Kickbacks",
         "Medicare",
-        "Sentenced",
         "Telehealth"
       ],
       "state": "AZ",
@@ -617,7 +616,6 @@
         "DME Fraud",
         "Kickbacks",
         "Medicare",
-        "Sentenced",
         "Unnecessary Procedures"
       ],
       "state": "FL",
@@ -803,7 +801,6 @@
         "Kickbacks",
         "Lab Fraud",
         "Medicare",
-        "Sentenced",
         "Unnecessary Procedures"
       ],
       "state": "NY",
@@ -826,11 +823,11 @@
       "social_posts": [],
       "tags": [
         "Foreign Nationals",
+        "Guilty Plea",
         "Hospice Fraud",
         "Identity Theft",
         "Medicare",
         "Money Laundering",
-        "Sentenced",
         "Unnecessary Procedures"
       ],
       "state": "CA",
@@ -879,7 +876,6 @@
         "Medicaid",
         "Medicare",
         "Nursing Home",
-        "Sentenced",
         "Tax Evasion"
       ],
       "state": "NJ",
@@ -1031,7 +1027,6 @@
         "Convicted",
         "DME Fraud",
         "Medicare",
-        "Sentenced",
         "Telehealth"
       ],
       "state": "AZ",
@@ -1082,7 +1077,6 @@
         "Guilty Plea",
         "Kickbacks",
         "Medicare",
-        "Sentenced",
         "Unnecessary Procedures"
       ],
       "state": "GA",
@@ -1410,8 +1404,7 @@
       "tags": [
         "ACA",
         "Convicted",
-        "Housing Fraud",
-        "Sentenced"
+        "Housing Fraud"
       ],
       "state": "FL",
       "source_type": "official",
@@ -1464,7 +1457,6 @@
         "Convicted",
         "Kickbacks",
         "Pharmacy Fraud",
-        "Sentenced",
         "Unnecessary Procedures"
       ],
       "state": "TX",
@@ -2016,12 +2008,12 @@
       "social_posts": [],
       "tags": [
         "Foreign Nationals",
+        "Guilty Plea",
         "Home Health Fraud",
         "Hospice Fraud",
         "Identity Theft",
         "Medicare",
-        "Organized Crime",
-        "Sentenced"
+        "Organized Crime"
       ],
       "state": "CA",
       "source_type": "official",
@@ -2094,9 +2086,9 @@
       "tags": [
         "DME Fraud",
         "Foreign Nationals",
+        "Guilty Plea",
         "Identity Theft",
         "Medicare",
-        "Sentenced",
         "Unnecessary Procedures"
       ],
       "state": "FL",
@@ -2757,9 +2749,9 @@
       "tags": [
         "DME Fraud",
         "Genetic Testing",
+        "Guilty Plea",
         "Kickbacks",
-        "Medicare",
-        "Sentenced"
+        "Medicare"
       ],
       "date": "2026-03-09",
       "amount_numeric": 14900000,
@@ -2805,8 +2797,8 @@
       "social_posts": [],
       "tags": [
         "DME Fraud",
-        "Medicare",
-        "Sentenced"
+        "Guilty Plea",
+        "Medicare"
       ],
       "date": "2026-03-09",
       "amount_numeric": 59000000,
@@ -2856,9 +2848,9 @@
       "social_posts": [],
       "tags": [
         "DME Fraud",
+        "Guilty Plea",
         "Kickbacks",
-        "Medicare",
-        "Sentenced"
+        "Medicare"
       ],
       "date": "2026-03-06",
       "amount_numeric": 2000000.0,
@@ -2880,9 +2872,9 @@
       "social_posts": [],
       "tags": [
         "DME Fraud",
+        "Guilty Plea",
         "Kickbacks",
-        "Medicare",
-        "Sentenced"
+        "Medicare"
       ],
       "date": "2026-03-06",
       "amount_numeric": 8000000,
@@ -2904,9 +2896,9 @@
       "social_posts": [],
       "tags": [
         "Ambulance Fraud",
+        "Guilty Plea",
         "Medicaid",
-        "Medicare",
-        "Sentenced"
+        "Medicare"
       ],
       "date": "2026-03-06",
       "amount_numeric": 6850000,
@@ -3134,8 +3126,7 @@
         "Convicted",
         "Medicaid",
         "Medicare",
-        "Pharmacy Fraud",
-        "Sentenced"
+        "Pharmacy Fraud"
       ],
       "entities": [
         "Safe Chain Solutions"
@@ -3158,8 +3149,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
+        "Guilty Plea",
         "Overbilling",
-        "Sentenced",
         "Tax Evasion",
         "Unnecessary Procedures"
       ],
@@ -3182,9 +3173,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
+        "Guilty Plea",
         "Medicaid",
-        "Prenatal Care",
-        "Sentenced"
+        "Prenatal Care"
       ],
       "entities": [],
       "state": "WI",
@@ -3205,10 +3196,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
+        "Guilty Plea",
         "Medicaid",
         "Medicare",
-        "Opioids",
-        "Sentenced"
+        "Opioids"
       ],
       "entities": [],
       "state": "LA",
@@ -3230,10 +3221,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
+        "Guilty Plea",
         "Medicaid",
         "Medicare",
-        "Pharmacy Fraud",
-        "Sentenced"
+        "Pharmacy Fraud"
       ],
       "entities": [],
       "state": "MI",
@@ -3449,8 +3440,7 @@
       "social_posts": [],
       "tags": [
         "Convicted",
-        "Opioids",
-        "Sentenced"
+        "Opioids"
       ],
       "entities": [],
       "state": "VA",
@@ -3499,12 +3489,12 @@
       "link_label": "DEA Press Release",
       "social_posts": [],
       "tags": [
+        "Guilty Plea",
         "Lab Fraud",
         "Medicaid",
         "Medicare",
         "Money Laundering",
         "Opioids",
-        "Sentenced",
         "Unnecessary Procedures"
       ],
       "entities": [],
@@ -3527,9 +3517,9 @@
       "link_label": "DEA Press Release",
       "social_posts": [],
       "tags": [
+        "Guilty Plea",
         "Multi-State",
-        "Opioids",
-        "Sentenced"
+        "Opioids"
       ],
       "entities": [],
       "state": "DC",
@@ -3551,10 +3541,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
+        "Guilty Plea",
         "Identity Theft",
         "Opioids",
-        "Pharmacy Fraud",
-        "Sentenced"
+        "Pharmacy Fraud"
       ],
       "entities": [],
       "state": "TX",
@@ -3623,9 +3613,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
+        "Guilty Plea",
         "Medicare",
-        "Opioids",
-        "Sentenced"
+        "Opioids"
       ],
       "entities": [],
       "state": "NY",
@@ -4328,7 +4318,6 @@
         "Genetic Testing",
         "Guilty Plea",
         "Medicare",
-        "Sentenced",
         "Telehealth",
         "Unnecessary Procedures"
       ],
@@ -4428,8 +4417,7 @@
         "Guilty Plea",
         "Kickbacks",
         "Medicaid",
-        "Prenatal Care",
-        "Sentenced"
+        "Prenatal Care"
       ],
       "entities": [],
       "state": "WI",
@@ -4576,8 +4564,8 @@
       "tags": [
         "DME Fraud",
         "Genetic Testing",
+        "Guilty Plea",
         "Medicare",
-        "Sentenced",
         "Unnecessary Procedures"
       ],
       "entities": [],
@@ -4601,8 +4589,7 @@
       "tags": [
         "Guilty Plea",
         "Hospice",
-        "Medicare",
-        "Sentenced"
+        "Medicare"
       ],
       "entities": [],
       "state": "CA",
