@@ -764,10 +764,6 @@ def main():
     log("Loading existing data...")
     data = load_json(DATA_FILE, {"metadata": {"last_updated": "", "version": "1.0"}, "actions": []})
 
-    # Date cutoff: only add entries on or after the last run date (prevents re-adding old entries)
-    last_run_raw = data["metadata"].get("last_updated", "")
-    last_run_date = last_run_raw[:10] if last_run_raw else "2025-01-01"
-    log(f"Last run date: {last_run_date} — skipping entries before this date")
 
     # Dedup sets
     existing_links = set()
@@ -829,10 +825,8 @@ def main():
                 if not re.match(r'^\d{4}-\d{2}-\d{2}$', date_str):
                     date_str = parse_date(date_str)
 
-                # Enforce Jan 2025 cutoff and last-run date cutoff
+                # Enforce Jan 2025 floor
                 if date_str < '2025-01-01':
-                    continue
-                if date_str < last_run_date:
                     continue
 
                 # Use full detail text if available (from scrapers that fetch detail pages)
