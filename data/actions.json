@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-03-31T00:00:00",
+    "last_updated": "2026-03-31T15:28:14.688179",
     "version": "1.0",
-    "last_scraped": "2026-03-31T00:00:00"
+    "last_scraped": "2026-03-31T15:28:14.688172"
   },
   "actions": [
     {
@@ -4589,6 +4589,53 @@
       ],
       "entities": [],
       "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true
+    },
+    {
+      "id": "doj-2026-03-30-840231812",
+      "date": "2026-03-30",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "American Health Companies, dba American Health Partners, Agrees to Pay Over Two Million Dollars to Resolve False Claims Act Liability Involving a Tennessee Nursing Home",
+      "description": "NASHVILLE – United States Attorney Braden H. Boucek for the Middle District of Tennessee announced today that American Health Companies, LLC (“AHC”), doing business as American Health Partners (“AHP”), has agreed to pay $2,090,309 to the United States and Tennessee to resolve False Claims Act allegations related to billing Medicare and TennCare for grossly substandard nursing home services from Lewis County Nursing and Rehabilitation, LLC, between 2019 and 2024. During those years, Lewis County Nursing and Rehabilitation did business as AHC Lewis County and operated as a subsidiary of AHP.",
+      "amount": "$2.09M",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/fraud/enforcement/american-health-companies-dba-american-health-partners-agrees-to-pay-over-two-million-dollars-to-resolve-false-claims-act-liability-involving-a-tennessee-nursing-home/",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "False Claims Act",
+        "Medicare",
+        "Nursing Home",
+        "Settlement"
+      ],
+      "entities": [],
+      "state": "TN",
+      "source_type": "official",
+      "auto_fetched": true
+    },
+    {
+      "id": "doj-2026-03-27-3440561615",
+      "date": "2026-03-27",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Local Physician Sentenced to 1 Year Imprisonment, a $60,000 fine, and Restitution of $349,272.79 for Adulterating and Misbranding Medical Devices with the Intent to Defraud",
+      "description": "Spokane, Washington — On March 25, United States District Court Judge Rebecca L. Pennell sentenced Dr. Eric Edward Haeger, age 57, of Brewster, Washington, to one year and a day in federal prison followed by a one-year term of supervised release after Haeger pleaded guilty to adulterating and misbranding medical devices with the intent to defraud or mislead. Judge Pennell also sentenced Haeger to pay a $60,000 fine and $349,272.79 in restitution. Read more on www.justice.gov Action Details Date: March 27, 2026 Agency: U.S.",
+      "amount": "$349,272",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/fraud/enforcement/local-physician-sentenced-to-1-year-imprisonment-a-60000-fine-and-restitution-of-34927279-for-adulterating-and-misbranding-medical-devices-with-the-intent-to-defraud/",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Convicted",
+        "Guilty Plea",
+        "Medical Devices"
+      ],
+      "entities": [],
+      "state": "WA",
       "source_type": "official",
       "auto_fetched": true
     }
