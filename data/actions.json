@@ -18,10 +18,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
+        "Addiction Treatment",
         "Guilty Plea",
         "Kickbacks",
-        "Medicaid",
-        "Substance Abuse"
+        "Medicaid"
       ],
       "entities": [],
       "state": "NC",
@@ -43,7 +43,6 @@
       "link": "https://home.treasury.gov/news/press-releases/sb0426",
       "link_label": "Treasury Press Release",
       "tags": [
-        "Financial Institutions",
         "Medicaid",
         "Medicare",
         "Money Laundering",
@@ -485,7 +484,6 @@
       "link_label": "CMS Press Release",
       "social_posts": [],
       "tags": [
-        "Immigration",
         "Medicaid"
       ],
       "state": "CA",
@@ -509,7 +507,6 @@
       "link_label": "CMS Press Release",
       "social_posts": [],
       "tags": [
-        "Immigration",
         "Medicaid"
       ],
       "state": "CA",
@@ -563,7 +560,6 @@
         "Indicted",
         "Kickbacks",
         "Medicaid",
-        "Native American",
         "Organized Crime"
       ],
       "state": "AZ",
@@ -871,7 +867,6 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Elder Fraud",
         "Guilty Plea",
         "Medicaid",
         "Medicare",
@@ -1403,8 +1398,7 @@
       "social_posts": [],
       "tags": [
         "ACA",
-        "Convicted",
-        "Housing Fraud"
+        "Convicted"
       ],
       "state": "FL, TX",
       "source_type": "official",
@@ -1893,7 +1887,6 @@
         "False Claims Act",
         "Medicare",
         "Nursing Home",
-        "Overbilling",
         "Unnecessary Procedures",
         "Upcoding",
         "Wound Care"
@@ -2136,7 +2129,6 @@
       "tags": [
         "Medicare",
         "Medicare Advantage",
-        "Overbilling",
         "Program Integrity",
         "Risk Adjustment",
         "Upcoding"
@@ -2513,7 +2505,6 @@
       "tags": [
         "Medicaid",
         "Medicare",
-        "Multi-State",
         "Program Integrity"
       ],
       "state": null,
@@ -2954,7 +2945,6 @@
       "tags": [
         "AI",
         "Guilty Plea",
-        "Housing Fraud",
         "Medicaid"
       ],
       "date": "2026-02-10",
@@ -3156,9 +3146,9 @@
       "social_posts": [],
       "tags": [
         "Guilty Plea",
-        "Overbilling",
         "Tax Evasion",
-        "Unnecessary Procedures"
+        "Unnecessary Procedures",
+        "Upcoding"
       ],
       "entities": [],
       "state": "AK",
@@ -3524,7 +3514,6 @@
       "social_posts": [],
       "tags": [
         "Guilty Plea",
-        "Multi-State",
         "Opioids"
       ],
       "entities": [],
@@ -3672,7 +3661,7 @@
         "Identity Theft",
         "Medicaid",
         "Organized Crime",
-        "Overbilling"
+        "Upcoding"
       ],
       "entities": [],
       "state": "MN",
@@ -4274,7 +4263,7 @@
       "tags": [
         "Hospice Fraud",
         "Medicare",
-        "Overbilling"
+        "Upcoding"
       ],
       "entities": [],
       "state": "CA",
@@ -4471,7 +4460,7 @@
         "Genetic Testing",
         "Guilty Plea",
         "Medicare",
-        "Telemedicine",
+        "Telehealth",
         "Unnecessary Procedures"
       ],
       "entities": [],
@@ -4594,7 +4583,7 @@
       "social_posts": [],
       "tags": [
         "Guilty Plea",
-        "Hospice",
+        "Hospice Fraud",
         "Medicare"
       ],
       "entities": [],
