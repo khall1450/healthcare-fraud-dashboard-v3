@@ -815,8 +815,7 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Telehealth",
-        "Opioids"
+        "Telehealth"
       ],
       "state": "CA",
       "source_type": "official",
@@ -842,8 +841,8 @@
         "Nursing Home",
         "Medicaid",
         "Medicare",
-        "Opioids",
-        "Elder Fraud"
+        "Elder Fraud",
+        "Tax Evasion"
       ],
       "state": "NJ",
       "source_type": "official",
@@ -867,8 +866,7 @@
       "social_posts": [],
       "tags": [
         "Improper Payments",
-        "Program Integrity",
-        "False Claims Act"
+        "Program Integrity"
       ],
       "state": null,
       "source_type": "official",
@@ -904,7 +902,7 @@
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "Dana-Farber Cancer Institute Pays $15M to Settle NIH Research Grant Fraud Allegations",
-      "description": "Dana-Farber Cancer Institute agreed to pay $15 million to resolve False Claims Act allegations that from 2014—2024 it made materially false statements and certifications related to NIH research grants. Specifically, researchers authored papers containing duplicated and manipulated images/data from 14 scientific publications, with six NIH grants funding the fraudulent research and four additional NIH grants obtained through false applications. Welsh microbiologist and whistleblower Sholto David received $2.625 million under qui tam provisions. U.S. Attorney Leah B. Foley noted 'there is no place in scientific research for fraud, waste and abuse.'",
+      "description": "Dana-Farber Cancer Institute agreed to pay $15 million to resolve False Claims Act allegations that from 2014—2024 it made materially false statements and certifications related to NIH research grants. Specifically, researchers authored papers containing duplicated and manipulated images/data from 14 scientific publications, with six NIH grants funding the fraudulent research and four additional NIH grants obtained through false applications. Welsh molecular biologist and whistleblower Sholto David received $2.625 million under qui tam provisions. U.S. Attorney Leah B. Foley noted 'there is no place in scientific research for fraud, waste and abuse.'",
       "amount": "$15M",
       "amount_numeric": 15000000,
       "officials": [
@@ -971,7 +969,6 @@
       "tags": [
         "Medicaid",
         "Improper Payments",
-        "Medicare Advantage",
         "Program Integrity"
       ],
       "state": "IL",
@@ -1020,7 +1017,6 @@
       "tags": [
         "Medicaid",
         "Improper Payments",
-        "Medicare Advantage",
         "Program Integrity"
       ],
       "state": null,
@@ -1073,7 +1069,9 @@
         "Lab Fraud",
         "Kickbacks",
         "Medicare",
-        "False Claims Act"
+        "False Claims Act",
+        "TRICARE",
+        "Medicaid"
       ],
       "state": "VA",
       "source_type": "official",
@@ -1088,9 +1086,9 @@
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "HHS-OIG Spring 2025 Semiannual Report: $16.6B in Health Care Fraud Flagged (Oct 2024—Mar 2025)",
-      "description": "HHS-OIG's Spring 2025 Semiannual Report to Congress—the first under the current administration—identified more than $16.6 billion in health care fraud, overpayments, and improper payments for the period October 1, 2024 through March 31, 2025. HHS-OIG conducted 946 criminal, civil, and administrative investigations, completed 744 enforcement actions, excluded 1,503 individuals and entities from federal health care programs, made 1,209 criminal referrals, and pursued 395 civil actions. Key focus areas included home health fraud, drug diversion, COVID-19 fraud, and Medicare patient abuse and neglect.",
-      "amount": null,
-      "amount_numeric": 0,
+      "description": "HHS-OIG's Spring 2025 Semiannual Report to Congress—the first under the current administration—identified more than $16.6 billion in health care fraud, overpayments, and improper payments for the period October 1, 2024 through March 31, 2025. HHS-OIG conducted 946 criminal, civil, and administrative investigations, initiated 744 enforcement actions, excluded 1,503 individuals and entities from federal health care programs, made 1,209 criminal referrals, and pursued 395 civil actions. Key focus areas included home health fraud, drug diversion, COVID-19 fraud, and Medicare patient abuse and neglect.",
+      "amount": "$16.6 billion",
+      "amount_numeric": 16600000000,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/spring-2025-semiannual-report-to-congress/",
       "link_label": "HHS-OIG Semiannual Report",
@@ -1116,8 +1114,8 @@
       "type": "Audit",
       "title": "HHS-OIG Fall 2025 Semiannual Report: $19.04B in Monetary Impact (Apr—Sep 2025)",
       "description": "HHS-OIG's Fall 2025 Semiannual Report to Congress identified $19.04 billion in monetary impact for the period April 1 through September 30, 2025—reflecting a significant increase from the Spring 2025 report's $16.6 billion. The period covered the 2025 National Health Care Fraud Takedown (June 30, 2025) and related enforcement actions. The report covers the peak enforcement period including the $14.6 billion takedown, the $10.6 billion Operation Gold Rush EDNY indictment, and the launch of the Health Care Fraud Data Fusion Center.",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$19.04 billion",
+      "amount_numeric": 19040000000,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2026/fall-2025-semiannual-report-to-congress/",
       "link_label": "HHS-OIG Semiannual Report",
@@ -1476,7 +1474,6 @@
         "DME Fraud",
         "CRUSH",
         "Medicare",
-        "Tax Evasion",
         "False Claims Act",
         "AI"
       ],
