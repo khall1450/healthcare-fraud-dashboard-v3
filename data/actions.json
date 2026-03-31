@@ -2563,29 +2563,6 @@
       "entities": []
     },
     {
-      "id": "legislation-2025-08-11-nj-anti-kickback-expansion",
-      "date": "2025-08-11",
-      "agency": "Congress",
-      "type": "Legislation",
-      "title": "New Jersey Expands Patient Brokering and Anti-Kickback Statute to Labs and Recovery Homes",
-      "description": "Acting Governor Way signed legislation expanding New Jersey's patient brokering statute to cover clinical laboratories and recovery residences. Prohibits kickbacks, bribes, and in-kind gifts in connection with patient referrals. Elevates kickback offense to third-degree crime: 3-5 years prison, $50,000 fine, plus restitution. DOH and DCA can suspend/revoke licenses and impose civil fines up to $20,000 per violation.",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.mwe.com/insights/new-jersey-expands-patient-brokering-statute-to-include-laboratories-recovery-homes/",
-      "link_label": "MWE Analysis",
-      "social_posts": [],
-      "tags": [
-        "Kickbacks",
-        "Lab Fraud",
-        "Addiction Treatment"
-      ],
-      "state": "NJ",
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": []
-    },
-    {
       "id": "legislation-2026-02-03-appropriations-pbm-reform",
       "date": "2026-02-03",
       "agency": "Congress",
@@ -4635,7 +4612,7 @@
     },
     {
       "id": "hhs-oig-2026-03-01-mfcu-annual-report",
-      "date": "2026-03-01",
+      "date": "2026-03-18",
       "agency": "HHS-OIG",
       "type": "Audit",
       "title": "HHS-OIG: Medicaid Fraud Control Units Annual Report FY2025 — $2 Billion in Combined Recoveries",
