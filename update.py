@@ -62,6 +62,7 @@ FEEDS = [
     {"name": "S-Finance",   "agency": "Congress",      "url": "https://www.finance.senate.gov/rss/feeds/?type=press",                     "enabled": True,  "source_type": "official"},
     {"name": "S-HELP",      "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "help_committee"},
     {"name": "H-W&M",       "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "ways_means"},
+    {"name": "HHS-OIG-RPT", "agency": "HHS-OIG",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "oig_reports"},
     {"name": "FDA",         "agency": "FDA",           "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml", "enabled": True, "source_type": "official"},
     {"name": "DEA",         "agency": "DEA",           "url": "https://www.dea.gov/press-releases/rss",                                   "enabled": True,  "source_type": "official", "browser_fallback": True},
     # --- Media feeds disabled — Fraud Landscape is manually curated (see data/media.json) ---
@@ -229,6 +230,7 @@ def parse_date(date_str):
         '%Y-%m-%d',
         '%B %d, %Y',
         '%b %d, %Y',
+        '%m/%d/%Y',
     ]:
         try:
             return datetime.strptime(date_str.strip(), fmt).strftime('%Y-%m-%d')
@@ -737,6 +739,67 @@ def fetch_rss(session, url, use_browser_fallback=False):
         })
     return items
 
+def scrape_oig_reports(session):
+    """Scrape HHS-OIG audit/inspection reports (pages 1-2)."""
+    base_url = "https://oig.hhs.gov/reports/all/"
+    DATE_RE = re.compile(r'Issued\s+(\d{2}/\d{2}/\d{4})')
+    items = []
+    for page in range(1, 3):
+        url = base_url if page == 1 else f"{base_url}?page={page}"
+        try:
+            resp = session.get(url, timeout=20)
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, 'lxml')
+            for card in soup.select('.usa-card__container'):
+                body = card.select_one('.usa-card__body')
+                if not body:
+                    continue
+                body_text = body.get_text(' ', strip=True)
+                # Extract report type (Audit, Evaluation, etc.) and date
+                date_str = ""
+                date_match = DATE_RE.search(body_text)
+                if date_match:
+                    date_str = date_match.group(1)
+                # Get title and link
+                a_tag = card.find('a', href=True)
+                if not a_tag:
+                    continue
+                title = a_tag.get_text(strip=True)
+                if not title or len(title) < 10:
+                    continue
+                href = a_tag['href']
+                if href.startswith('/'):
+                    href = 'https://oig.hhs.gov' + href
+                # Determine report type from body text
+                report_type = ""
+                for rt in ['Audit', 'Evaluation', 'Inspection', 'Review', 'Investigation']:
+                    if rt in body_text:
+                        report_type = rt
+                        break
+                # Fetch detail page for description
+                detail_text, _ = fetch_detail_page(session, href)
+                desc = ""
+                if detail_text:
+                    cleaned = detail_text
+                    if title in cleaned:
+                        cleaned = cleaned.split(title, 1)[-1].strip()
+                    desc = cleaned[:600].strip()
+                    if len(cleaned) > 600:
+                        last_period = desc.rfind('.')
+                        if last_period > 200:
+                            desc = desc[:last_period + 1]
+                items.append({
+                    'title': title,
+                    'description': desc,
+                    'link': href,
+                    'pub_date': date_str,
+                    '_full_text': detail_text,
+                    '_report_type': report_type,
+                })
+        except Exception as e:
+            log(f"  WARNING: OIG reports page {page} - {e}", "yellow")
+    return items
+
 # ---------------------------------------------------------------------------
 # Fetch dispatcher
 # ---------------------------------------------------------------------------
@@ -745,6 +808,8 @@ def fetch_feed(session, feed):
     scrape_mode = feed.get('scrape')
     if scrape_mode == 'oig':
         return scrape_oig(session)
+    if scrape_mode == 'oig_reports':
+        return scrape_oig_reports(session)
     if scrape_mode == 'cms':
         return scrape_cms(session)
     if scrape_mode == 'doj_usao':

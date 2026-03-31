@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-03-31T15:28:14.688179",
+    "last_updated": "2026-03-31T15:56:14.205497",
     "version": "1.0",
-    "last_scraped": "2026-03-31T15:28:14.688172"
+    "last_scraped": "2026-03-31T15:56:14.205490"
   },
   "actions": [
     {
@@ -3133,30 +3133,6 @@
       "auto_fetched": false
     },
     {
-      "id": "doj-2026-03-18-568780114",
-      "date": "2026-03-18",
-      "agency": "DOJ",
-      "type": "Criminal Enforcement",
-      "title": "Anchorage Doctor Sentenced to Prison for Multi-Million-Dollar Health Care Fraud and Tax Evasion",
-      "description": "An Anchorage doctor was sentenced yesterday to six and a half years in prison and three years of supervised release for executing a $12.5 million health care fraud scheme and evading over $4 million in taxes on the profits of that 15-year scheme. Her husband and co-defendant was sentenced to three years of probation, with two years to be served in home confinement. Beginning in 2009 and continuing through 2024, the Tans deceived patients about the medications Claribel Tan administered through injections and then fraudulently billed health insurance plans for reimbursement of medications that the Tans did not purchase. Claribel Tan routinely and surreptitiously injected patients with free samples, expired medications and medications other than those prescribed. The Tans then knowingly billed insurance plans as if she had provided a proper injection to each patient. Specifically, the Tans claimed to have administered 4,829 units of the medications to patients, and billed the insurance plans for that amount, despite only purchasing 369 units of medication. In addition to creating significant health risks for the patients, the Tans’ fraud scheme caused a loss of over $12.5 million to more than 10 insurance plans.",
-      "amount": "$12.5M+",
-      "amount_numeric": 12500000,
-      "officials": [],
-      "link": "https://www.justice.gov/opa/pr/anchorage-doctor-sentenced-prison-multi-million-dollar-health-care-fraud-and-tax-evasion",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Guilty Plea",
-        "Tax Evasion",
-        "Unnecessary Procedures",
-        "Upcoding"
-      ],
-      "entities": [],
-      "state": "AK",
-      "source_type": "official",
-      "auto_fetched": true
-    },
-    {
       "id": "doj-2026-03-18-138166021",
       "date": "2026-03-18",
       "agency": "DOJ",
@@ -4636,6 +4612,98 @@
       ],
       "entities": [],
       "state": "WA",
+      "source_type": "official",
+      "auto_fetched": true
+    },
+    {
+      "id": "doj-2026-03-31-421798427",
+      "date": "2026-03-31",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Former Board Chairman and Executive Director of Healthcare Non-Profit Indicted for Embezzlement, Bribery, and Kickback Schemes",
+      "description": "Earlier today, in federal court in Brooklyn, an indictment was unsealed charging Jean Ronald Tirelus and Roberto Samedy for embezzling more than $1.3 million from a Brooklyn-based non-profit organization that provided home care services and operated homeless shelters in New York City. Tirelus was the former chairman of the organization’s board of directors, and Samedy was the executive director of the organization. In addition, the indictment charged Tirelus, Samedy, Edouardo St. Fort and Miguel Jorge for their roles in a related scheme in which Tirelus and Samedy steered business to companies...",
+      "amount": "$1.3 million",
+      "amount_numeric": 1300000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edny/pr/former-board-chairman-and-executive-director-healthcare-non-profit-indicted",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Kickbacks",
+        "Indictment"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": true
+    },
+    {
+      "id": "hhs-oig-2026-03-26-595722301",
+      "date": "2026-03-26",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Selected Diabetes and Weight Loss Drugs Were Dispensed to Michigan Medicaid Managed Care Enrollees in Accordance With Federal and State Requirements",
+      "description": "HHS-OIG audit found that selected diabetes and weight loss drugs were dispensed to Michigan Medicaid managed care enrollees in violation of federal and state requirements. The audit examined whether certain high-cost drugs were dispensed in compliance with applicable regulations.",
+      "amount": null,
+      "amount_numeric": 9400000000.0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/selected-diabetes-and-weight-loss-drugs-were-dispensed-to-michigan-medicaid-managed-care-enrollees-in-accordance-with-federal-and-state-requirements/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Pharmacy Fraud",
+        "Program Integrity"
+      ],
+      "entities": [],
+      "state": "MI",
+      "source_type": "official",
+      "auto_fetched": true
+    },
+    {
+      "id": "hhs-oig-2026-03-26-2011277861",
+      "date": "2026-03-26",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Medicare Home Health Agency Provider Compliance Audit: VNS Health",
+      "description": "HHS-OIG compliance audit found that VNS Health received at least $2,965,484 in Medicare overpayments for home health services. OIG recommended VNS Health refund the overpayments. VNS Health did not concur with the recommendations but agreed to repay $12,606 in overpayments associated with five claims.",
+      "amount": "$2.97M",
+      "amount_numeric": 16000000000.0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/medicare-home-health-agency-provider-compliance-audit-vns-health/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [
+        "Home Health Fraud",
+        "Improper Payments",
+        "Medicare",
+        "Program Integrity"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true
+    },
+    {
+      "id": "hhs-oig-2026-03-23-2077213473",
+      "date": "2026-03-23",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Congressional Mandate: Part B Payment Amounts for One Drug Included Noncovered Self-Administered Versions in 2024",
+      "description": "HHS-OIG evaluation found that Medicare Part B payment amounts for one drug included noncovered self-administered versions, potentially resulting in higher payment rates than appropriate. OIG recommended CMS take action to ensure accurate payment calculations.",
+      "amount": null,
+      "amount_numeric": 1300000000.0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/congressional-mandate-part-b-payment-amounts-for-one-drug-included-noncovered-self-administered-versions-in-2024/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Pharmacy Fraud",
+        "Program Integrity"
+      ],
+      "entities": [],
+      "state": null,
       "source_type": "official",
       "auto_fetched": true
     }
