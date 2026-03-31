@@ -3160,30 +3160,6 @@
       "related_agency": "DOJ"
     },
     {
-      "link": "https://federalnewsnetwork.com/artificial-intelligence/2026/03/cmss-two-pronged-approach-to-crushing-fraud-waste-abuse/",
-      "id": "media-2026-03-11-fednet-cms-crush-ai-war-room",
-      "auto_fetched": false,
-      "officials": [],
-      "state": null,
-      "source_type": "news",
-      "title": "Federal News Network: CMS Two-Pronged Approach to Crushing Fraud - AI War Room Saves $2B",
-      "link_label": "Federal News Network Article",
-      "type": "Administrative Action",
-      "amount": "$2 billion (saved by AI war room since March 2025)",
-      "description": "CMS tackling fraud through regulatory reforms (CRUSH RFI, 68 comments received) and technology deployment. Claims Analysis 'War Room' using real-time AI billing review has saved $2 billion since March 2025. In hospice, CMS removed 60%+ of flagged companies within 6 months, 90% within a year. CLAW (Contracts Analysis Wizard) AI tool saving hundreds of millions in contract negotiations. CMS grew software engineers from 13 to 40, targeting 72 AI use cases.",
-      "agency": "CMS",
-      "social_posts": [],
-      "tags": [
-        "AI",
-        "CRUSH",
-        "Hospice Fraud"
-      ],
-      "date": "2026-03-11",
-      "amount_numeric": 2000000000,
-      "entities": [],
-      "related_agency": "CMS"
-    },
-    {
       "link": "https://www.cms.gov/newsroom/press-releases/cms-notifies-individuals-potentially-impacted-data-incident",
       "id": "media-2025-08-cms-103k-medicare-breach",
       "auto_fetched": false,
