@@ -3642,31 +3642,6 @@
       "auto_fetched": false
     },
     {
-      "id": "cms-2025-mn-medicaid-payment-deferrals",
-      "date": "2026-02-25",
-      "agency": "CMS",
-      "type": "Administrative Action",
-      "title": "CMS Defers $259M in Federal Medicaid Payments to Minnesota, Freezes Provider Enrollment",
-      "description": "CMS temporarily deferred $259 million in federal Medicaid payments to Minnesota for FY2025 claims and froze provider enrollment. Payments deferred for 14 high-risk programs worth $3.75 billion annually, marking an aggressive new federal approach to state Medicaid fraud.",
-      "amount": "$259M",
-      "amount_numeric": 259000000,
-      "officials": [
-        "Dr. Mehmet Oz"
-      ],
-      "link": "https://www.kff.org/medicaid/cms-new-approach-to-federal-medicaid-spending-in-cases-of-potential-fraud/",
-      "link_label": "KFF Analysis",
-      "social_posts": [],
-      "tags": [
-        "Improper Payments",
-        "Medicaid",
-        "Program Integrity"
-      ],
-      "entities": [],
-      "state": "MN",
-      "source_type": "official",
-      "auto_fetched": false
-    },
-    {
       "id": "congress-2025-09-04-senate-finance-hhs-secretary-hearing",
       "date": "2025-09-04",
       "agency": "Congress",

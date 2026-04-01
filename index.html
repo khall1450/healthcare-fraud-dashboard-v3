@@ -623,7 +623,7 @@ function appendCards(count, view) {
     const tagsEl = col.querySelector('.card-tags');
     const entities = new Set(action.entities || []);
     const PROGRAMS = new Set(['Medicare','Medicaid','Medicare Advantage','ACA','ACA Fraud','TRICARE','Medi-Cal']);
-    const allTags = (action.entities || []).concat(action.tags || []).concat(action.officials || []);
+    const allTags = (action.entities || []).concat(action.tags || []).concat(action.officials || []).sort((a,b) => a.localeCompare(b));
     allTags.forEach(tag => {
       const pill = document.createElement('span');
       pill.className = 'tag-pill';
@@ -1049,7 +1049,7 @@ function renderStoryCards(stories) {
     const tagsEl = col.querySelector('.card-tags');
     const entities = new Set(action.entities || []);
     const PROGRAMS = new Set(['Medicare','Medicaid','Medicare Advantage','ACA','ACA Fraud','TRICARE','Medi-Cal']);
-    const allTags = (action.entities || []).concat(action.tags || []).concat(action.officials || []);
+    const allTags = (action.entities || []).concat(action.tags || []).concat(action.officials || []).sort((a,b) => a.localeCompare(b));
     allTags.forEach(tag => {
       const pill = document.createElement('span');
       pill.className = 'tag-pill';
