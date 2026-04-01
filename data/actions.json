@@ -3729,7 +3729,7 @@
     {
       "id": "doge-2026-02-13-medicaid-data-release",
       "date": "2026-02-13",
-      "agency": "White House",
+      "agency": "CMS",
       "type": "Technology/Innovation",
       "title": "DOGE Releases Largest Medicaid Dataset in History to Crowdsource Fraud Detection",
       "description": "DOGE released the largest Medicaid dataset in HHS history — 10 GB of provider-level claims data covering fee-for-service, managed care, and CHIP claims from 2018–2024 — to the public via opendata.hhs.gov. The dataset aggregates billing by provider, procedure code, and month, enabling public identification of anomalous billing patterns. DOGE cited Minnesota's large-scale autism diagnosis fraud as an example of what the data could surface. Elon Musk posted: \"Medicaid data has been open sourced, so the level of fraud is easy to identify.\"",
