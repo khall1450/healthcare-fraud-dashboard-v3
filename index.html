@@ -732,7 +732,7 @@ function applyOversightFilters() {
   const dateTo   = document.getElementById('oversightDateTo').value;
 
   let filtered = oversightActions.filter(a => {
-    if (agency !== 'all' && a.agency !== agency && a.related_agency !== agency) return false;
+    if (agency !== 'all' && a.agency !== agency && !(a.related_agencies||[]).includes(agency)) return false;
     if (type   !== 'all' && a.type   !== type)   return false;
     if (state  !== 'all') {
       const states = (a.state || '').split(',').map(s => s.trim());
@@ -804,7 +804,7 @@ function populateStateFilter(selectId, dataArray) {
 function refreshTypeFilter(actionsArray, agencyValue, typeSelectId) {
   const subset = agencyValue === 'all'
     ? actionsArray
-    : actionsArray.filter(a => a.agency === agencyValue || a.related_agency === agencyValue);
+    : actionsArray.filter(a => a.agency === agencyValue || (a.related_agencies||[]).includes(agencyValue));
   populateFilterOptions(typeSelectId, subset, 'type');
   document.getElementById(typeSelectId).value = 'all';
 }

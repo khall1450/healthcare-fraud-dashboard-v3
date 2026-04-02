@@ -84,7 +84,7 @@ new_items = [
         "state": "CA",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "dea-2025-02-06-talbot-louisiana-opioid-sentencing",
@@ -104,7 +104,7 @@ new_items = [
         "state": "LA",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "doj-2025-02-06-four-pharmacists-13m-sentencing",
@@ -162,7 +162,7 @@ new_items = [
         "state": "TX",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "dea-2025-07-03-operation-profit-over-patients",
@@ -220,7 +220,7 @@ new_items = [
         "state": "FL",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "fda-2025-12-washington-cpap-fraud",
@@ -240,7 +240,7 @@ new_items = [
         "state": "WA",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "doj-2025-06-teva-450m-copaxone-kickback",
@@ -336,7 +336,7 @@ new_items = [
         "state": None,
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "FDA"
+        "related_agencies": ["FDA"]
     },
     {
         "id": "fda-2025-09-dtc-advertising-crackdown",

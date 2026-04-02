@@ -19,7 +19,7 @@ new_items = [
         "link_label": "Bozeman Daily Chronicle",
         "social_posts": [], "tags": ["Addiction Treatment", "Native American", "False Claims", "Organized Crime"],
         "entities": ["PacificSource"], "state": "MT", "source_type": "news", "auto_fetched": False,
-        "related_agency": "HHS"
+        "related_agencies": ["HHS"]
     },
     {
         "id": "state-2025-wv-32m-medicaid-overpayments-ineligible",
@@ -35,7 +35,7 @@ new_items = [
         "link_label": "West Virginia Watch",
         "social_posts": [], "tags": ["Medicaid", "Improper Payments", "Program Integrity"],
         "entities": [], "state": "WV", "source_type": "news", "auto_fetched": False,
-        "related_agency": "CMS"
+        "related_agencies": ["CMS"]
     },
     {
         "id": "oig-2025-ms-mfcu-unreported-overpayments-4-5m",
@@ -96,7 +96,7 @@ new_items = [
         "link_label": "ABC4 News",
         "social_posts": [], "tags": ["Medicaid", "Addiction Treatment", "False Claims"],
         "entities": ["MATR"], "state": "UT", "source_type": "news", "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "doj-2025-07-nd-bismarck-1-8m-fraud",
@@ -142,7 +142,7 @@ new_items = [
         "link_label": "HHS-OIG",
         "social_posts": [], "tags": ["Medicaid", "Behavioral Health", "False Claims"],
         "entities": ["Equine Assisted Programs"], "state": "NM", "source_type": "official", "auto_fetched": False,
-        "related_agency": "HHS-OIG"
+        "related_agencies": ["HHS-OIG"]
     },
 ]
 

@@ -26,7 +26,7 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": null
+      "related_agencies": []
     },
     {
       "id": "media-2026-03-11-wsj-autism-aba-medicaid",
@@ -51,7 +51,9 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": "HHS-OIG"
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "media-2026-03-10-cbs-la-hospice-fraud",
@@ -76,7 +78,7 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": null
+      "related_agencies": []
     },
     {
       "id": "media-2026-02-26-propublica-arizona-indigenous-fraud",
@@ -101,7 +103,7 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": null
+      "related_agencies": []
     },
     {
       "id": "media-2026-02-20-wsmv-russian-tennessee-medicare",
@@ -128,7 +130,9 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "id": "media-2025-09-25-propublica-npi-loophole-fraud",
@@ -157,7 +161,9 @@
         "Aetna",
         "Cigna"
       ],
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "id": "media-2025-10-15-kare11-mn-housing-hustle-series",
@@ -183,7 +189,9 @@
       "entities": [
         "Optum"
       ],
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "link": "https://www.foxnews.com/us/la-medicare-fraud-doctor-provider-number-billing-probe",
@@ -208,7 +216,9 @@
       "date": "2026-03-12",
       "amount_numeric": 600000000,
       "entities": [],
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "link": "https://azcir.org/news/2025/01/27/arizona-deaths-sober-living-homes-fumbled-response-medicaid-fraud/",
@@ -232,7 +242,7 @@
       "date": "2025-01-15",
       "amount_numeric": 0,
       "entities": [],
-      "related_agency": null
+      "related_agencies": []
     },
     {
       "id": "media-2025-06-05-bloomberg-south-florida-aca-deepfakes",
@@ -260,7 +270,7 @@
       "state": "FL",
       "source_type": "news",
       "auto_fetched": false,
-      "related_agency": null
+      "related_agencies": []
     },
     {
       "id": "media-2025-02-21-wsj-unitedhealth-criminal-probe",
@@ -288,7 +298,9 @@
       "state": null,
       "source_type": "news",
       "auto_fetched": false,
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "id": "media-2025-05-21-guardian-unitedhealth-nursing-home-kickbacks",
@@ -318,7 +330,7 @@
       "state": null,
       "source_type": "news",
       "auto_fetched": false,
-      "related_agency": null
+      "related_agencies": []
     },
     {
       "id": "media-2026-kare11-optum-audit-mn-medicaid-vulnerabilities",
@@ -344,7 +356,7 @@
       "state": "MN",
       "source_type": "news",
       "auto_fetched": false,
-      "related_agency": null
+      "related_agencies": []
     },
     {
       "id": "media-2026-03-nick-shirley-ca-hospice-daycare-fraud",
@@ -369,7 +381,7 @@
       "state": "CA",
       "source_type": "news",
       "auto_fetched": false,
-      "related_agency": null
+      "related_agencies": []
     },
     {
       "id": "media-2025-nick-shirley-mn-daycare-fraud",
@@ -394,7 +406,9 @@
       "state": "MN",
       "source_type": "news",
       "auto_fetched": false,
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "id": "media-2025-06-30-wapo-operation-gold-rush",
@@ -421,7 +435,9 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "id": "media-2025-01-04-npr-medicare-advantage-billions-fraud",
@@ -451,7 +467,7 @@
         "Elevance",
         "Kaiser Permanente"
       ],
-      "related_agency": null
+      "related_agencies": []
     },
     {
       "id": "media-2026-01-08-nypost-ny-cdpap-fraud",
@@ -476,7 +492,7 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": null
+      "related_agencies": []
     }
   ]
 }

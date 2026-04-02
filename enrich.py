@@ -55,7 +55,7 @@ Return ONLY valid JSON, no markdown fencing, no explanation:
   "entities": [array of company/organization names involved, e.g. "CVS", "UnitedHealth", "DMERx"],
   "officials": [array of named government officials mentioned, e.g. "Dr. Mehmet Oz", "President Trump"],
   "agency": "The government agency primarily responsible for this action. One of: DOJ, CMS, HHS, HHS-OIG, GAO, Congress, White House, State Agency, Media. Use 'Media' only when the media outlet itself conducted the investigation (e.g. ProPublica expose, CBS investigation). If the article is news coverage of a DOJ indictment, the agency is DOJ, not Media.",
-  "related_agency": "If agency is Media or State Agency, which federal agency is most related (DOJ, CMS, HHS-OIG, etc.), or null"
+  "related_agencies": ["If agency is Media or State Agency, which federal agency is most related (DOJ, CMS, HHS-OIG, etc.), or null"]
 }
 
 ## APPROVED TAG LIST (use ONLY these, pick all that apply):
@@ -130,8 +130,8 @@ Other: AI, COVID-19, Foreign Nationals, Native American, Cybersecurity, Immigrat
                 # Official feed items keep their feed-assigned agency
                 if not is_official and result.get("agency"):
                     action["agency"] = result["agency"]
-                if result.get("related_agency"):
-                    action["related_agency"] = result["related_agency"]
+                if result.get("related_agencies"):
+                    action["related_agencies"] = result["related_agencies"]
 
                 enriched_count += 1
                 print(f"  OK: {action['id']} -> {action['type']}, {len(action['tags'])} tags")

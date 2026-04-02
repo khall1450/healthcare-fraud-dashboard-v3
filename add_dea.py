@@ -23,7 +23,7 @@ new_items = [
         "state": None,
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "dea-2025-01-07-smithers-467-counts-opioid",
@@ -43,7 +43,7 @@ new_items = [
         "state": "VA",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "dea-2025-02-08-syed-new-haven-psychiatrist",
@@ -63,7 +63,7 @@ new_items = [
         "state": "CT",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "dea-2025-03-14-randall-nc-udt-fraud",
@@ -83,7 +83,7 @@ new_items = [
         "state": "NC",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "dea-2025-06-26-okafor-dc-pill-mill-18yr",
@@ -103,7 +103,7 @@ new_items = [
         "state": "DC",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "dea-2025-09-26-health-fit-pharmacy-houston-pill-mill",
@@ -123,7 +123,7 @@ new_items = [
         "state": "TX",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "dea-2026-01-13-atlantic-biologicals-opioid-dpa",
@@ -143,7 +143,7 @@ new_items = [
         "state": "FL",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "dea-2025-01-14-stockton-np-opioid-lawsuit",
@@ -163,7 +163,7 @@ new_items = [
         "state": "CA",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "dea-2026-03-09-great-neck-pill-mill-7yr",
@@ -183,7 +183,7 @@ new_items = [
         "state": "NY",
         "source_type": "official",
         "auto_fetched": False,
-        "related_agency": "HHS-OIG"
+        "related_agencies": ["HHS-OIG"]
     },
 ]
 

@@ -19,7 +19,7 @@ new_items = [
         "link_label": "NY AG Press Release",
         "social_posts": [], "tags": ["Medicaid", "Home Health Fraud", "False Claims Act", "Whistleblower"],
         "entities": ["Americare"], "state": "NY", "source_type": "official", "auto_fetched": False,
-        "related_agency": "HHS-OIG"
+        "related_agencies": ["HHS-OIG"]
     },
     {
         "id": "state-2025-06-30-ny-ag-medical-transport-takedown-13m",
@@ -35,7 +35,7 @@ new_items = [
         "link_label": "NY AG Press Release",
         "social_posts": [], "tags": ["Medicaid", "False Claims", "Kickbacks", "Organized Crime"],
         "entities": [], "state": "NY", "source_type": "official", "auto_fetched": False,
-        "related_agency": "HHS-OIG"
+        "related_agencies": ["HHS-OIG"]
     },
     {
         "id": "state-2025-03-tx-ag-molina-40m",
@@ -51,7 +51,7 @@ new_items = [
         "link_label": "TX AG Press Release",
         "social_posts": [], "tags": ["Medicaid", "False Claims", "Whistleblower"],
         "entities": ["Molina Healthcare"], "state": "TX", "source_type": "official", "auto_fetched": False,
-        "related_agency": "HHS-OIG"
+        "related_agencies": ["HHS-OIG"]
     },
     {
         "id": "state-2025-10-13-ca-ag-health-net-40m",
@@ -67,7 +67,7 @@ new_items = [
         "link_label": "CA AG Press Release",
         "social_posts": [], "tags": ["Medicaid", "Medi-Cal", "Behavioral Health"],
         "entities": ["Health Net"], "state": "CA", "source_type": "official", "auto_fetched": False,
-        "related_agency": "CMS"
+        "related_agencies": ["CMS"]
     },
     {
         "id": "state-2025-01-30-ca-ag-qol-medical-47m",
@@ -83,7 +83,7 @@ new_items = [
         "link_label": "CA AG Press Release",
         "social_posts": [], "tags": ["Medicaid", "Medi-Cal", "Kickbacks", "Anti-Kickback", "False Claims Act"],
         "entities": ["QOL Medical"], "state": "CA", "source_type": "official", "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "state-2025-01-14-mi-ag-acadia-healthcare-20m",
@@ -99,7 +99,7 @@ new_items = [
         "link_label": "MI AG Press Release",
         "social_posts": [], "tags": ["Medicaid", "Behavioral Health", "False Claims", "Multi-State"],
         "entities": ["Acadia Healthcare"], "state": "MI", "source_type": "official", "auto_fetched": False,
-        "related_agency": "HHS-OIG"
+        "related_agencies": ["HHS-OIG"]
     },
     {
         "id": "state-2025-01-02-ca-ag-rb-medical-10m",
@@ -115,7 +115,7 @@ new_items = [
         "link_label": "CA AG Press Release",
         "social_posts": [], "tags": ["Medi-Cal", "Kickbacks", "Lab Fraud", "Stark Law"],
         "entities": ["R&B Medical Group"], "state": "CA", "source_type": "official", "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "state-2026-01-nc-ag-bethany-medical-8-8m",
@@ -131,7 +131,7 @@ new_items = [
         "link_label": "NC AG Press Release",
         "social_posts": [], "tags": ["Medicare", "Medicaid", "TRICARE", "Opioids", "Lab Fraud", "Whistleblower"],
         "entities": ["Bethany Medical Center"], "state": "NC", "source_type": "official", "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "state-2025-05-nc-ag-reign-inspirations-4-7m",
@@ -147,7 +147,7 @@ new_items = [
         "link_label": "NC AG Press Release",
         "social_posts": [], "tags": ["Medicaid", "False Claims", "Home Health Fraud"],
         "entities": ["Reign & Inspirations"], "state": "NC", "source_type": "official", "auto_fetched": False,
-        "related_agency": "HHS-OIG"
+        "related_agencies": ["HHS-OIG"]
     },
     {
         "id": "state-2025-02-06-ny-ag-imran-shams-7m",
@@ -163,7 +163,7 @@ new_items = [
         "link_label": "NY AG Press Release",
         "social_posts": [], "tags": ["Medicaid", "Kickbacks", "False Claims"],
         "entities": [], "state": "NY", "source_type": "official", "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "state-2025-ca-ag-abrons-medi-cal-20m",
@@ -179,7 +179,7 @@ new_items = [
         "link_label": "CA AG Press Release",
         "social_posts": [], "tags": ["Medi-Cal", "Drug Diversion", "Pharmaceutical", "Kickbacks"],
         "entities": [], "state": "CA", "source_type": "official", "auto_fetched": False,
-        "related_agency": "DOJ"
+        "related_agencies": ["DOJ"]
     },
     {
         "id": "state-2025-ct-ag-assured-rx-39m",
@@ -210,7 +210,7 @@ new_items = [
         "link_label": "MN AG Press Release",
         "social_posts": [], "tags": ["Medicaid", "Home Health Fraud", "False Claims"],
         "entities": ["Guardian Home Health Services"], "state": "MN", "source_type": "official", "auto_fetched": False,
-        "related_agency": "HHS-OIG"
+        "related_agencies": ["HHS-OIG"]
     },
     {
         "id": "state-2026-02-25-mn-map-act-legislation",

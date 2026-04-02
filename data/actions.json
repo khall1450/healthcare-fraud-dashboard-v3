@@ -751,7 +751,9 @@
       "state": "NY",
       "source_type": "official",
       "auto_fetched": false,
-      "related_agency": "DEA"
+      "related_agencies": [
+        "DEA"
+      ]
     },
     {
       "id": "congress-2026-03-06-house-ec-medicaid-investigation-expansion",
@@ -926,7 +928,9 @@
       "date": "2026-03-05",
       "amount_numeric": 400000000.0,
       "entities": [],
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "id": "congress-2026-03-04-house-oversight-mn-fraud-part2",
@@ -1251,7 +1255,9 @@
       "date": "2026-02-12",
       "amount_numeric": 10000000,
       "entities": [],
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "id": "congress-2026-02-10-house-oversight-ny-cdpap-investigation",
@@ -1323,7 +1329,9 @@
       "date": "2026-02-10",
       "amount_numeric": 3500000,
       "entities": [],
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "id": "congress-2026-02-10-judiciary-subpoenas-aca-insurers",
@@ -2014,7 +2022,9 @@
       "date": "2026-01-08",
       "amount_numeric": 30000000.0,
       "entities": [],
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "id": "congress-2026-01-07-house-oversight-mn-fraud-part1",
@@ -2413,7 +2423,9 @@
       "state": "WA",
       "source_type": "official",
       "auto_fetched": false,
-      "related_agency": "FDA"
+      "related_agencies": [
+        "FDA"
+      ]
     },
     {
       "id": "doj-2025-11-vohra-wound-45m-settlement",
@@ -2686,7 +2698,9 @@
       "source_type": "news",
       "auto_fetched": false,
       "entities": [],
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "id": "doj-2025-09-lab-ceo-marketers-settlement",
@@ -2764,7 +2778,9 @@
       "state": "TX",
       "source_type": "official",
       "auto_fetched": false,
-      "related_agency": "FDA"
+      "related_agencies": [
+        "FDA"
+      ]
     },
     {
       "link": "https://www.cms.gov/newsroom/press-releases/cms-notifies-individuals-potentially-impacted-data-incident",
@@ -2787,7 +2803,9 @@
       "date": "2025-08-21",
       "amount_numeric": 0.0,
       "entities": [],
-      "related_agency": "CMS"
+      "related_agencies": [
+        "CMS"
+      ]
     },
     {
       "id": "doj-2025-08-troy-health-npa-ai",
@@ -3354,7 +3372,9 @@
       "date": "2025-05-22",
       "amount_numeric": 227000000.0,
       "entities": [],
-      "related_agency": "DOJ"
+      "related_agencies": [
+        "DOJ"
+      ]
     },
     {
       "id": "cms-2025-05-21-radv-audit-expansion",
@@ -3572,7 +3592,9 @@
       "entities": [
         "Walgreens"
       ],
-      "related_agency": "DEA"
+      "related_agencies": [
+        "DEA"
+      ]
     },
     {
       "id": "doj-2025-04-04-vohra-wound-physicians-complaint",
@@ -3729,7 +3751,9 @@
       "state": "NC",
       "source_type": "official",
       "auto_fetched": false,
-      "related_agency": "DEA"
+      "related_agencies": [
+        "DEA"
+      ]
     },
     {
       "id": "fda-2025-03-12-ar-research-clinical-trial-fraud",
@@ -3752,7 +3776,9 @@
       "state": "FL",
       "source_type": "official",
       "auto_fetched": false,
-      "related_agency": "FDA"
+      "related_agencies": [
+        "FDA"
+      ]
     },
     {
       "id": "gao-2025-02-25-high-risk-list",
@@ -3881,7 +3907,9 @@
       "state": "CT",
       "source_type": "official",
       "auto_fetched": false,
-      "related_agency": "DEA"
+      "related_agencies": [
+        "DEA"
+      ]
     },
     {
       "id": "dea-2025-02-06-talbot-louisiana-opioid-sentencing",
@@ -3906,7 +3934,9 @@
       "state": "LA",
       "source_type": "official",
       "auto_fetched": false,
-      "related_agency": "DEA"
+      "related_agencies": [
+        "DEA"
+      ]
     },
     {
       "id": "doj-2025-02-06-four-pharmacists-13m-sentencing",

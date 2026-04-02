@@ -363,7 +363,7 @@ def main():
                     "source_type": "news",
                     "auto_fetched": True,
                     "entities": [],
-                    "related_agency": related,
+                    "related_agencies": related,
                 }
 
                 new_stories.append(story)
