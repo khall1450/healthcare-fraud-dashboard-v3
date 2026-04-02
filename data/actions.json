@@ -3279,31 +3279,6 @@
       "entities": []
     },
     {
-      "id": "doj-2025-06-30-1365456376",
-      "date": "2025-06-30",
-      "agency": "DOJ",
-      "type": "Criminal Enforcement",
-      "title": "Head of the Criminal Division Matthew R. Galeotti Announces Results of Health Care Fraud Takedown",
-      "description": "Thank you all for joining us today to announce the results of the largest coordinated health care fraud takedown in the history of the Department of Justice.",
-      "amount": "$14.6B+",
-      "amount_numeric": 14600000000.0,
-      "officials": [
-        "Matthew R. Galeotti (Acting AAG, Criminal Division)"
-      ],
-      "link": "https://www.justice.gov/opa/speech/supervisory-official-matthew-r-galeotti-delivers-remarks-regarding-health-care-fraud",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid",
-        "Medicare",
-        "National Takedown"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true
-    },
-    {
       "id": "doj-2025-07-nd-bismarck-1-8m-fraud",
       "date": "2025-06-30",
       "agency": "DOJ",
