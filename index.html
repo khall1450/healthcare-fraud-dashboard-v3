@@ -268,9 +268,6 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
       </div>
 
       <div class="d-flex align-items-center gap-3">
-        <span class="last-updated-badge" id="lastUpdated">
-          <i class="fa-regular fa-clock me-1"></i> Updated: &mdash;
-        </span>
         <button class="last-updated-badge" style="cursor:pointer;border:1px solid rgba(255,255,255,0.2);transition:background 0.2s;" data-bs-toggle="modal" data-bs-target="#aboutModal"><i class="fa-solid fa-user me-1"></i> About</button>
       </div>
     </div>
@@ -320,8 +317,8 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <select class="form-select filter-select" id="stateFilter" onchange="applyFilters()">
           <option value="all">All States</option>
         </select>
-        <input type="date" class="form-control filter-date" id="dateFrom" onchange="applyFilters()" title="From date" />
-        <input type="date" class="form-control filter-date" id="dateTo" onchange="applyFilters()" title="To date" />
+        <input type="date" class="form-control filter-date" id="dateFrom" onchange="applyFilters()" title="From date" min="2025-01-01" />
+        <input type="date" class="form-control filter-date" id="dateTo" onchange="applyFilters()" title="To date" min="2025-01-01" />
         <button class="btn btn-outline-secondary btn-sm" onclick="clearFilters()">
           <i class="fa-solid fa-xmark me-1"></i>Clear
         </button>
@@ -336,8 +333,8 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <select class="form-select filter-select" id="oversightStateFilter" onchange="applyOversightFilters()">
           <option value="all">All States</option>
         </select>
-        <input type="date" class="form-control filter-date" id="oversightDateFrom" onchange="applyOversightFilters()" title="From date" />
-        <input type="date" class="form-control filter-date" id="oversightDateTo" onchange="applyOversightFilters()" title="To date" />
+        <input type="date" class="form-control filter-date" id="oversightDateFrom" onchange="applyOversightFilters()" title="From date" min="2025-01-01" />
+        <input type="date" class="form-control filter-date" id="oversightDateTo" onchange="applyOversightFilters()" title="To date" min="2025-01-01" />
         <button class="btn btn-outline-secondary btn-sm" onclick="clearOversightFilters()">
           <i class="fa-solid fa-xmark me-1"></i>Clear
         </button>
@@ -346,8 +343,8 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <select class="form-select filter-select" id="landscapeStateFilter" onchange="filterLandscape()">
           <option value="all">All States</option>
         </select>
-        <input type="date" class="form-control filter-date" id="landscapeDateFrom" onchange="filterLandscape()" title="From date" />
-        <input type="date" class="form-control filter-date" id="landscapeDateTo" onchange="filterLandscape()" title="To date" />
+        <input type="date" class="form-control filter-date" id="landscapeDateFrom" onchange="filterLandscape()" title="From date" min="2025-01-01" />
+        <input type="date" class="form-control filter-date" id="landscapeDateTo" onchange="filterLandscape()" title="To date" min="2025-01-01" />
         <button class="btn btn-outline-secondary btn-sm" onclick="clearLandscapeFilters()">
           <i class="fa-solid fa-xmark me-1"></i>Clear
         </button>
@@ -499,11 +496,11 @@ function updateLastUpdated(ts) {
   try {
     const d = new Date(ts);
     const fmt = d.toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'});
-    document.getElementById('lastUpdated').innerHTML = '<i class="fa-regular fa-clock me-1"></i> Updated: ' + fmt;
     const footer = document.getElementById('footerUpdated');
     if (footer) footer.textContent = 'Last updated: ' + fmt;
   } catch(e) {}
 }
+
 
 const CONVICTED_RE = /plead|guilty|convict|sentenc/i;
 
@@ -1131,7 +1128,14 @@ function clearLandscapeFilters() {
 
 
 // Init
-document.addEventListener('DOMContentLoaded', loadData);
+document.addEventListener('DOMContentLoaded', () => {
+  const today = new Date().toISOString().slice(0, 10);
+  ['dateFrom','dateTo','oversightDateFrom','oversightDateTo','landscapeDateFrom','landscapeDateTo'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.max = today;
+  });
+  loadData();
+});
 
 // ── Spotlight rotation ────────────────────────────────────────
 (function() {
