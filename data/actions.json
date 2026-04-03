@@ -3197,8 +3197,8 @@
       "date": "2025-07-17",
       "agency": "CMS",
       "type": "Administrative Action",
-      "title": "CMS and DOGE Find 2.8 Million Americans in Duplicate Medicaid/ACA Enrollments; $14B Annual Savings Identified",
-      "description": "CMS, in coordination with DOGE, announced the identification of 2.8 million Americans potentially enrolled in duplicate Medicaid/CHIP plans or simultaneously in both Medicaid/CHIP and subsidized ACA Exchange coverage: 1.2 million/month enrolled in Medicaid/CHIP across two or more states and 1.6 million/month enrolled in both Medicaid/CHIP and subsidized Exchange plans. CMS estimated $14 billion in annual taxpayer savings from eliminating duplicate enrollment. CMS directed states to recheck eligibility and provided 30-day notice to affected individuals. HHS Secretary RFK Jr. stated HHS staff 'uncovered millions who were illegally or improperly enrolled.'",
+      "title": "CMS Finds 2.8 Million Americans Potentially Enrolled in Duplicate Medicaid/ACA Plans",
+      "description": "CMS announced the identification of 2.8 million Americans potentially enrolled in duplicate Medicaid/CHIP plans or simultaneously in both Medicaid/CHIP and subsidized ACA Exchange coverage: 1.2 million/month enrolled in Medicaid/CHIP across two or more states and 1.6 million/month enrolled in both Medicaid/CHIP and subsidized Exchange plans. CMS estimated $14 billion in annual taxpayer savings from eliminating duplicate enrollment. CMS directed states to recheck eligibility and provided 30-day notice to affected individuals.",
       "amount": "$14B/year savings",
       "amount_numeric": 14000000000,
       "officials": [
@@ -3210,7 +3210,6 @@
       "social_posts": [],
       "tags": [
         "ACA",
-        "DOGE",
         "Medicaid",
         "Program Integrity"
       ],
