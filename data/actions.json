@@ -6,6 +6,33 @@
   },
   "actions": [
     {
+      "id": "doj-2026-04-02-operation-never-say-die",
+      "date": "2026-04-02",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Operation Never Say Die: 15 Defendants Charged in 0M+ Los Angeles Hospice Fraud; 221 CA Providers Suspended",
+      "description": "DOJ and FBI executed arrests and search warrants in the Los Angeles area, charging 15 defendants in connection with more than 0 million in alleged hospice fraud. Eight were arrested, including the owners of a hospice that reported a 97% five-year patient survival rate while billing Medicare for end-of-life care. Healthy beneficiaries were allegedly paid 00 per month in kickbacks to pose as terminal patients. Total provider suspensions in California reached 221.",
+      "amount": "0M+",
+      "amount_numeric": 50000000.0,
+      "officials": [
+        "Bill Essayli (U.S. Attorney, C.D. Cal.)",
+        "Akil Davis (FBI Los Angeles)"
+      ],
+      "link": "https://www.justice.gov/usao-cdca/pr/8-arrested-health-care-fraud-takedown-including-owners-hospices-billed-taxpayers",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
       "id": "treasury-2026-03-30-fincen-advisory",
       "date": "2026-03-30",
       "agency": "Treasury",
@@ -197,6 +224,33 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "whitehouse-2026-03-25-la-hospice-suspensions",
+      "date": "2026-03-25",
+      "agency": "White House",
+      "type": "Administrative Action",
+      "title": "Task Force to Eliminate Fraud and CMS Suspend 70 Los Angeles Hospice and Home Health Providers",
+      "description": "The Task Force to Eliminate Fraud and CMS suspended 70 hospice and home health businesses in Los Angeles from Medicare and Medicaid reimbursements using AI-driven fraud detection. VP JD Vance and CMS Administrator Dr. Oz announced the action \u2014 the first major operational enforcement by the newly established task force. Suspensions were based on irregular patient rosters, duplicate beneficiary enrollments, and overlapping administrative control across multiple provider entities.",
+      "amount": "",
+      "amount_numeric": 0.0,
+      "officials": [
+        "JD Vance",
+        "Dr. Mehmet Oz"
+      ],
+      "link": "https://www.foxnews.com/politics/jd-vances-anti-fraud-task-force-ramps-up-identifying-fraud-across-us-after-suspending-70-providers-la",
+      "link_label": "Fox News",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agencies": [
+        "CMS"
       ]
     },
     {
@@ -574,6 +628,31 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false
+    },
+    {
+      "id": "cms-2026-03-17-florida-fraud-inquiry",
+      "date": "2026-03-17",
+      "agency": "CMS",
+      "type": "Investigation",
+      "title": "Dr. Oz Sends Fraud Inquiry to Florida Governor DeSantis, Calling State a Hotspot for Health Care Fraud",
+      "description": "CMS Administrator Dr. Oz sent a detailed fraud inquiry to Florida Governor Ron DeSantis, stating Florida has been a hotspot for health care fraud for years. Oz cited DME fraud, a 6 million telemedicine billing scheme, non-emergency medical transportation fraud, and ABA services fraud. Florida was given 30 days to respond. This was the first such letter sent to a Republican-led state; prior letters went to New York, Minnesota, Maine, and California.",
+      "amount": "",
+      "amount_numeric": 0.0,
+      "officials": [
+        "Dr. Mehmet Oz"
+      ],
+      "link": "https://www.clickorlando.com/news/politics/2026/03/17/trump-administration-widens-medicaid-fraud-crackdown-to-florida-calling-it-a-hotspot/",
+      "link_label": "AP/Click Orlando",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agencies": []
     },
     {
       "id": "whitehouse-2026-03-16-task-force-eliminate-fraud",
@@ -3990,6 +4069,31 @@
         "HHS-OIG",
         "DEA"
       ]
+    },
+    {
+      "id": "whitehouse-2025-03-20-information-silos-eo",
+      "date": "2025-03-20",
+      "agency": "White House",
+      "type": "Executive Order",
+      "title": "President Trump Signs Executive Order to Eliminate Information Silos and Detect Fraud",
+      "description": "President Trump signed an Executive Order directing agency heads to provide designated federal officials with full and prompt access to all unclassified agency records and data to identify waste and fraud. Within 30 days, agencies must review and rescind regulatory barriers to information sharing. The order also requires the federal government to obtain unfettered access to comprehensive data from all state programs receiving federal funding, including Medicaid.",
+      "amount": "",
+      "amount_numeric": 0.0,
+      "officials": [
+        "President Trump"
+      ],
+      "link": "https://www.whitehouse.gov/presidential-actions/2025/03/stopping-waste-fraud-and-abuse-by-eliminating-information-silos/",
+      "link_label": "White House Executive Order",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Medicare"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
     },
     {
       "id": "dea-2025-03-14-randall-nc-udt-fraud",
