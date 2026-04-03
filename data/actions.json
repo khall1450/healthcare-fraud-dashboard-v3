@@ -6,6 +6,34 @@
   },
   "actions": [
     {
+      "id": "doj-2026-04-02-dawkins-serenity-keepers-sober-home",
+      "date": "2026-04-02",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Lexington Man Convicted of Health Care Fraud and Kickbacks at Sober Homes",
+      "description": "Dashawn Dawkins, 34, a peer support specialist at Serenity Keeper's LLC, a Fayette County sober home, was convicted of conspiracy to commit health care fraud and conspiracy to receive illegal kickbacks. Dawkins received $62,750 in kickbacks for ordering urine drug tests billed to Kentucky Medicaid and Medicare totaling $2.5 million. More than 9,000 tests were ordered using the stolen identification number and forged signature of a nurse practitioner. Medicaid paid Serenity Keepers $9 million for behavioral health claims not provided in accordance with Medicaid regulations or not provided at all. Dawkins was the fifth defendant convicted in the investigation.",
+      "amount": "$2.57M",
+      "amount_numeric": 2569946.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edky/pr/lexington-man-convicted-conspiracies-commit-healthcare-fraud-and-violate-anti-kickback",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Convicted",
+        "Kickbacks",
+        "Medicaid",
+        "Medicare",
+        "Opioids"
+      ],
+      "entities": [
+        "Serenity Keeper's LLC"
+      ],
+      "state": "KY",
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
+    },
+    {
       "id": "cms-2026-04-02-hospice-transparency-scoring",
       "date": "2026-04-02",
       "agency": "CMS",
