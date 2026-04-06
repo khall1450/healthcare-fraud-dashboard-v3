@@ -2509,7 +2509,7 @@
       "date": "2025-12-16",
       "agency": "HHS-OIG",
       "type": "Audit",
-      "title": "HHS-OIG Medicare Advantage Audit of Humana Louisiana Finds $10.5M in Unsupported Diagnosis Overpayments",
+      "title": "HHS-OIG Audit of Humana Louisiana Finds Medicare Advantage Overpayments",
       "description": "HHS-OIG conducted an audit of Humana Health Benefit of Louisiana as part of a broader series reviewing high-risk diagnosis codes that Medicare Advantage organizations submitted to CMS for use in the risk adjustment program. HHS-OIG found that most of the selected diagnosis codes Humana submitted did not comply with federal requirements. For 218 of 240 sampled enrollee-years, medical records did not support the diagnosis codes and resulted in $553,049 in overpayments, and OIG estimated the plan received at least $10.5 million in overpayments for 2017 and 2018.",
       "amount": "$10.5M",
       "amount_numeric": 10500000.0,
