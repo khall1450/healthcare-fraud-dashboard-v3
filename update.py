@@ -314,7 +314,12 @@ def scrape_page_with_browser(url):
 # HTML scrapers for sites without RSS
 # ---------------------------------------------------------------------------
 def scrape_oig(session):
-    """Scrape HHS-OIG enforcement actions page (pages 1-2)."""
+    """Scrape HHS-OIG enforcement actions page.
+
+    Normal mode: pages 1-2 (enough for daily updates).
+    Backfill mode: walks pages until all items on a page are older than
+    BACKFILL_FLOOR, with a hard cap to avoid infinite loops.
+    """
     base_url = "https://oig.hhs.gov/fraud/enforcement/?type=criminal-and-civil-actions"
     # Known OIG navigation/index paths that are not individual enforcement actions
     OIG_NAV_PATHS = {
@@ -326,7 +331,10 @@ def scrape_oig(session):
         r'(January|February|March|April|May|June|July|August|September|October|November|December)'
         r'\s+\d{1,2},?\s+\d{4}', re.I)
     items = []
-    for page in range(1, 3):
+    backfill = globals().get('BACKFILL_MODE', False)
+    floor = globals().get('BACKFILL_FLOOR', '2025-01-01')
+    max_pages = 60 if backfill else 2
+    for page in range(1, max_pages + 1):
         url = base_url if page == 1 else f"{base_url}&page={page}"
         try:
             resp = session.get(url, timeout=20)
@@ -354,9 +362,14 @@ def scrape_oig(session):
                         date_str = date_match.group()
                 # Fetch OIG detail page — also extracts DOJ press release link if present
                 detail_text, doj_link = fetch_detail_page(session, href)
-                # If DOJ press release exists, use it as the canonical link and fetch its text
+                # If DOJ press release exists, use it as the canonical link.
                 canonical_link = doj_link if doj_link else href
-                if doj_link:
+                # In normal mode we also fetch the DOJ press release text to
+                # get better tag/amount extraction. In backfill mode we skip
+                # that second fetch — justice.gov bot-blocks most of the time
+                # and we don't store descriptions anyway, so the incremental
+                # quality isn't worth the latency or failure rate.
+                if doj_link and not backfill:
                     doj_text, _ = fetch_detail_page(session, doj_link)
                     if doj_text:
                         detail_text = doj_text  # use DOJ text for description/tags
@@ -387,6 +400,21 @@ def scrape_oig(session):
                     'pub_date': date_str,
                     '_full_text': detail_text,  # carry for tag/amount extraction
                 })
+
+            # Backfill early-stop: if every item on this page has a parsed
+            # date older than the floor, we've walked past the target range.
+            if backfill and page >= 2:
+                parsed_dates = []
+                for it in items[-40:]:  # recent slice
+                    try:
+                        pd = parse_date(it.get('pub_date', ''))
+                        if pd:
+                            parsed_dates.append(pd)
+                    except Exception:
+                        pass
+                if parsed_dates and max(parsed_dates) < floor:
+                    log(f"  OIG backfill: page {page} all older than {floor}, stopping")
+                    break
         except Exception as e:
             log(f"  WARNING: OIG scrape page {page} - {e}", "yellow")
     return items
@@ -812,6 +840,10 @@ def main():
     parser = argparse.ArgumentParser(description='Fetch healthcare fraud feeds')
     parser.add_argument('-s', '--silent', action='store_true')
     parser.add_argument('--no-browser', action='store_true', help='Disable Playwright browser fallback')
+    parser.add_argument('--backfill-from', metavar='YYYY-MM-DD',
+                        help='Backfill mode: scrape pages back to this date, '
+                             'ignoring last_scraped cutoff. Also deepens '
+                             'OIG pagination to walk the archive.')
     args = parser.parse_args()
     silent = args.silent
     if args.no_browser:
@@ -820,10 +852,19 @@ def main():
     log("Loading existing data...")
     data = load_json(DATA_FILE, {"metadata": {"last_updated": "", "version": "1.0"}, "actions": []})
 
-    # Cutoff: use last_scraped (set by scraper only), falling back to last_updated for legacy data
-    last_scraped_raw = data["metadata"].get("last_scraped") or data["metadata"].get("last_updated", "")
-    last_scraped_date = last_scraped_raw[:10] if last_scraped_raw else "2025-01-01"
-    log(f"Last scraped date: {last_scraped_date} — skipping entries before this date")
+    # Cutoff: backfill mode uses the explicit floor and ignores last_scraped.
+    # Normal mode uses last_scraped to only pick up new items since last run.
+    if args.backfill_from:
+        last_scraped_date = args.backfill_from
+        log(f"BACKFILL MODE: floor = {last_scraped_date} (ignoring last_scraped)")
+    else:
+        last_scraped_raw = data["metadata"].get("last_scraped") or data["metadata"].get("last_updated", "")
+        last_scraped_date = last_scraped_raw[:10] if last_scraped_raw else "2025-01-01"
+        log(f"Last scraped date: {last_scraped_date} — skipping entries before this date")
+
+    # Thread backfill flag into scrapers via a module-level variable
+    globals()['BACKFILL_MODE'] = bool(args.backfill_from)
+    globals()['BACKFILL_FLOOR'] = last_scraped_date
 
     # Dedup sets
     existing_links = set()
