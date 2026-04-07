@@ -883,6 +883,22 @@ def main():
         # Normalize title for fuzzy dedup
         existing_titles.add(re.sub(r'[^a-z0-9 ]', '', a.get("title", "").lower()).strip())
 
+    # Also dedup against needs_review.json so we don't re-scrape items that
+    # are either pending review or have been permanently rejected.
+    review_path = os.path.join(SCRIPT_DIR, "data", "needs_review.json")
+    if os.path.exists(review_path):
+        try:
+            review = load_json(review_path, {"items": [], "rejected_links": []})
+            for link in review.get("rejected_links", []) or []:
+                if link:
+                    existing_links.add(link)
+            # Pending items: don't re-flag the same thing on the next run
+            for pending in review.get("items", []) or []:
+                if pending.get("link"):
+                    existing_links.add(pending["link"])
+        except Exception as e:
+            log(f"  WARNING: could not load needs_review.json: {e}")
+
     session = create_session()
     added = 0
     new_actions = []

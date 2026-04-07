@@ -30,10 +30,13 @@ jobs:
       - name: Run update script
         run: python update.py
 
+      - name: Audit new items (regex flag check)
+        run: python audit_new_items.py
+
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet data/actions.json; then
+          if git diff --quiet data/actions.json data/needs_review.json data/pending.json; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
@@ -52,25 +55,31 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git checkout -b "$BRANCH"
-          git add data/actions.json data/pending.json
+          git add data/actions.json data/needs_review.json data/pending.json
           git commit -m "Auto-update: new enforcement actions for ${DATE}"
           git push origin "$BRANCH"
 
-          # Count new entries
-          NEW_COUNT=$(git diff main...HEAD --stat data/actions.json | grep -oP '\d+ insertion' | grep -oP '\d+' || echo "unknown")
+          # Build the PR body. Include the audit summary if it exists.
+          BODY_FILE=$(mktemp)
+          {
+            echo "## Auto-fetched enforcement actions"
+            echo
+            echo "The daily scraper found new entries from federal agency sources."
+            echo
+            if [ -f data/_audit_summary.md ]; then
+              cat data/_audit_summary.md
+              echo
+            fi
+            echo "**Review checklist:**"
+            echo "- [ ] Auto-approved items look like real enforcement actions"
+            echo "- [ ] Titles accurately reflect the source"
+            echo "- [ ] Tags are from the allowlist (see tag_allowlist.py)"
+            echo "- [ ] Flagged items in needs_review.json have been triaged"
+            echo
+            echo "> Merge to publish to the live dashboard. Close to discard."
+            echo "> Items in \`needs_review.json\` are NOT live — promote or reject after merge."
+          } > "$BODY_FILE"
 
           gh pr create \
             --title "Daily update: new enforcement actions (${DATE})" \
-            --body "$(cat <<'EOF'
-          ## Auto-fetched enforcement actions
-
-          The daily scraper found new entries from federal agency sources. Please review the changes below before merging.
-
-          **Review checklist:**
-          - [ ] Entries are real enforcement actions (not duplicates or irrelevant)
-          - [ ] Titles accurately reflect the source
-          - [ ] Tags are from the allowlist (programs + vulnerable areas only — see tag_allowlist.py)
-
-          > Merge to publish to the live dashboard. Close to discard.
-          EOF
-          )"
+            --body-file "$BODY_FILE"
