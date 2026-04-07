@@ -23,8 +23,7 @@
       "state": "CA",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [],
-      "related_agencies": []
+      "entities": []
     },
     {
       "id": "media-2026-03-24-rci-new-orleans-hospice-billing",
@@ -46,8 +45,7 @@
       "state": "LA",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [],
-      "related_agencies": []
+      "entities": []
     },
     {
       "id": "media-2026-03-11-wsj-autism-aba-medicaid",
@@ -69,10 +67,7 @@
       "state": "IN",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [],
-      "related_agencies": [
-        "HHS-OIG"
-      ]
+      "entities": []
     },
     {
       "id": "media-2026-03-10-cbs-la-hospice-fraud",
@@ -93,8 +88,7 @@
       "state": "CA",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [],
-      "related_agencies": []
+      "entities": []
     },
     {
       "id": "media-2026-02-26-propublica-arizona-indigenous-fraud",
@@ -116,8 +110,7 @@
       "state": "AZ",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [],
-      "related_agencies": []
+      "entities": []
     },
     {
       "id": "media-2026-02-20-wsmv-russian-tennessee-medicare",
@@ -137,10 +130,7 @@
       "state": "TN",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [],
-      "related_agencies": [
-        "DOJ"
-      ]
+      "entities": []
     },
     {
       "id": "media-2025-09-25-propublica-npi-loophole-fraud",
@@ -161,10 +151,7 @@
       "state": "TX",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [],
-      "related_agencies": [
-        "DOJ"
-      ]
+      "entities": []
     },
     {
       "id": "media-2025-10-15-kare11-mn-housing-hustle-series",
@@ -184,10 +171,7 @@
       "state": "MN",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [],
-      "related_agencies": [
-        "DOJ"
-      ]
+      "entities": []
     },
     {
       "link": "https://www.foxnews.com/us/la-medicare-fraud-doctor-provider-number-billing-probe",
@@ -208,10 +192,7 @@
       ],
       "date": "2026-03-12",
       "amount_numeric": 0,
-      "entities": [],
-      "related_agencies": [
-        "DOJ"
-      ]
+      "entities": []
     },
     {
       "link": "https://azcir.org/news/2025/01/27/arizona-deaths-sober-living-homes-fumbled-response-medicaid-fraud/",
@@ -232,8 +213,7 @@
       ],
       "date": "2025-01-15",
       "amount_numeric": 0,
-      "entities": [],
-      "related_agencies": []
+      "entities": []
     },
     {
       "id": "media-2025-06-05-bloomberg-south-florida-aca-deepfakes",
@@ -253,8 +233,7 @@
       "entities": [],
       "state": "FL",
       "source_type": "news",
-      "auto_fetched": false,
-      "related_agencies": []
+      "auto_fetched": false
     },
     {
       "id": "media-2025-02-21-wsj-unitedhealth-criminal-probe",
@@ -276,10 +255,7 @@
       "entities": [],
       "state": null,
       "source_type": "news",
-      "auto_fetched": false,
-      "related_agencies": [
-        "DOJ"
-      ]
+      "auto_fetched": false
     },
     {
       "id": "media-2025-05-21-guardian-unitedhealth-nursing-home-kickbacks",
@@ -301,8 +277,7 @@
       "entities": [],
       "state": null,
       "source_type": "news",
-      "auto_fetched": false,
-      "related_agencies": []
+      "auto_fetched": false
     },
     {
       "id": "media-2026-kare11-optum-audit-mn-medicaid-vulnerabilities",
@@ -322,8 +297,7 @@
       "entities": [],
       "state": "MN",
       "source_type": "news",
-      "auto_fetched": false,
-      "related_agencies": []
+      "auto_fetched": false
     },
     {
       "id": "media-2026-03-nick-shirley-ca-hospice-daycare-fraud",
@@ -345,8 +319,7 @@
       "entities": [],
       "state": "CA",
       "source_type": "news",
-      "auto_fetched": false,
-      "related_agencies": []
+      "auto_fetched": false
     },
     {
       "id": "media-2025-nick-shirley-mn-daycare-fraud",
@@ -366,10 +339,7 @@
       "entities": [],
       "state": "MN",
       "source_type": "news",
-      "auto_fetched": false,
-      "related_agencies": [
-        "DOJ"
-      ]
+      "auto_fetched": false
     },
     {
       "id": "media-2025-06-30-wapo-operation-gold-rush",
@@ -389,10 +359,7 @@
       "state": null,
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [],
-      "related_agencies": [
-        "DOJ"
-      ]
+      "entities": []
     },
     {
       "id": "media-2025-01-04-npr-medicare-advantage-billions-fraud",
@@ -412,8 +379,7 @@
       "state": null,
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [],
-      "related_agencies": []
+      "entities": []
     },
     {
       "id": "media-2026-01-08-nypost-ny-cdpap-fraud",
@@ -434,8 +400,7 @@
       "state": "NY",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": [],
-      "related_agencies": []
+      "entities": []
     }
   ]
 }

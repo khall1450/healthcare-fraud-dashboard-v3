@@ -913,13 +913,8 @@ function renderStoryCards(stories) {
     agBadge.textContent = action.agency || 'Media';
     agBadge.classList.add(AGENCY_CLASS[action.agency] || 'agency-Other');
     if (AGENCY_TOOLTIPS[action.agency]) { agBadge.title = AGENCY_TOOLTIPS[action.agency]; agBadge.style.cursor = 'help'; }
-    (action.related_agencies || []).forEach(ra => {
-      const raBadge = document.createElement('span');
-      raBadge.className = 'agency-badge ' + (AGENCY_CLASS[ra] || 'agency-Other');
-      raBadge.textContent = ra;
-      if (AGENCY_TOOLTIPS[ra]) { raBadge.title = AGENCY_TOOLTIPS[ra]; raBadge.style.cursor = 'help'; }
-      agBadge.insertAdjacentElement('afterend', raBadge);
-    });
+    // Media tab items never render related_agencies — if an agency is the
+    // actor in the story, it belongs on the Oversight tab instead.
     const typeBadge = col.querySelector('.type-badge');
     typeBadge.textContent = action.type || 'Investigative Report';
     typeBadge.classList.add(typeClass(action.type));

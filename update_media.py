@@ -193,22 +193,12 @@ def make_id(date_str, link):
     return f"media-{date_str}-{h}"
 
 
-def guess_related_agency(text):
-    """Guess the most relevant federal agency from the text."""
-    lower = text.lower()
-    if re.search(r'\bdoj\b|department of justice|u\.s\. attorney|justice department', lower):
-        return 'DOJ'
-    if re.search(r'\boig\b|inspector general|hhs-oig', lower):
-        return 'HHS-OIG'
-    if re.search(r'\bcms\b|centers for medicare', lower):
-        return 'CMS'
-    if re.search(r'\bfda\b|food and drug', lower):
-        return 'FDA'
-    if re.search(r'\bdea\b|drug enforcement', lower):
-        return 'DEA'
-    if re.search(r'\bgao\b|government accountability', lower):
-        return 'GAO'
-    return ''
+# NOTE: related_agencies is intentionally NOT populated on media items.
+# The media tab is for investigative journalism reports about healthcare fraud;
+# if a federal agency is the actor in the story (a DOJ indictment, an HHS-OIG
+# audit release, a CMS enforcement action), that item belongs on the
+# Oversight & Accountability tab as an official-source action, not here.
+# See project memory: project_media_no_related_agencies.
 
 
 # ---------------------------------------------------------------------------
@@ -319,10 +309,11 @@ def main():
                 amt_info = None
                 state = get_state(search_text)
                 tags = generate_tags(search_text)
-                related = guess_related_agency(search_text)
 
                 # NOTE: description field is intentionally NOT written.
-                # See tag_allowlist.py and project memory for details.
+                # related_agencies is intentionally NOT written — if a federal
+                # agency is the actor in the story, the item belongs on the
+                # Oversight tab, not here. See project memory.
                 story = {
                     "id": make_id(date_str, link),
                     "date": date_str,
@@ -340,7 +331,6 @@ def main():
                     "source_type": "news",
                     "auto_fetched": True,
                     "entities": [],
-                    "related_agencies": related,
                 }
 
                 new_stories.append(story)
