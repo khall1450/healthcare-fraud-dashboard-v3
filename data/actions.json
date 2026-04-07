@@ -12492,29 +12492,6 @@
       "auto_fetched": true
     },
     {
-      "id": "doj-2026-03-24-1533705637",
-      "date": "2026-03-24",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "Former St. Louis Area Pediatrician Sentenced to 20 Years in Prison for Exchanging Prescriptions for Sex Acts",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.justice.gov/usao-edmo/pr/former-st-louis-area-pediatrician-sentenced-20-years-prison-exchanging-prescriptions",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Opioids"
-      ],
-      "entities": [],
-      "state": "MO",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [
-        "HHS-OIG"
-      ]
-    },
-    {
       "id": "doj-2025-12-05-1246483037",
       "date": "2025-12-05",
       "agency": "DOJ",
