@@ -15,11 +15,6 @@ on:
         required: false
         type: boolean
         default: false
-      enrich_existing:
-        description: 'If true, run ai-enrich --all over every auto-fetched item in actions.json. Used for one-off backfill enrichment.'
-        required: false
-        type: boolean
-        default: false
 
 permissions:
   contents: write
@@ -59,17 +54,6 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python audit_new_items.py ai-review
-
-      - name: AI enrich tags + amounts on auto-approved items (Claude Haiku)
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: |
-          if [ "${{ github.event.inputs.enrich_existing }}" = "true" ]; then
-            echo "ENRICH-EXISTING MODE: processing every auto-fetched item"
-            python audit_new_items.py ai-enrich --all
-          else
-            python audit_new_items.py ai-enrich
-          fi
 
       - name: Upload audit summary as artifact
         if: always()

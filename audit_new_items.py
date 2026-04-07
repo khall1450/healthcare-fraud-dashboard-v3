@@ -320,31 +320,15 @@ def _write_summary(approved: list, flagged: list) -> None:
 
 
 # ---------------------------------------------------------------------------
-# AI review layer — Claude Haiku
+# AI review layer — Claude Haiku processes items in needs_review.json
 # ---------------------------------------------------------------------------
 AI_MODEL = "claude-haiku-4-5-20251001"
 
-# Allowlist tags pulled from tag_allowlist.py and embedded in the prompt so
-# Claude knows exactly which tags it can emit. We import lazily to keep
-# this script importable without the full project on disk.
-def _allowlist_for_prompt() -> str:
-    try:
-        from tag_allowlist import PROGRAM_TAGS, AREA_TAGS
-        programs = ", ".join(sorted(PROGRAM_TAGS))
-        areas = ", ".join(sorted(AREA_TAGS))
-        return f"Programs: {programs}\nVulnerable areas: {areas}"
-    except Exception:
-        return "(allowlist unavailable — emit no tags)"
-
-
-_RELEVANCE_PROMPT_TEMPLATE = """You are a classifier and metadata extractor for a healthcare fraud enforcement dashboard.
+AI_SYSTEM_PROMPT = """You are a relevance classifier for a healthcare fraud enforcement dashboard.
 
 The dashboard tracks federal enforcement actions against healthcare fraud in the United States: Medicare, Medicaid, TRICARE, ACA marketplace, and private health insurance fraud by providers, pharmacies, device makers, labs, and insurers.
 
-You will be given a DOJ press release title and URL. Do two things:
-
-1. Determine whether this press release belongs on the dashboard.
-2. If it does, extract structured metadata: tags from the allowlist below, and any single dollar amount that represents the case's headline figure (alleged loss, settlement value, restitution, or judgment).
+You will be given a DOJ press release title and URL. Determine whether this press release belongs on the dashboard.
 
 ## IN SCOPE (answer healthcare_fraud=true)
 
@@ -373,123 +357,39 @@ You will be given a DOJ press release title and URL. Do two things:
 - Roundups, "ICYMI" posts, or district-wide prosecution highlights
 - Press releases announcing new prosecutors, office changes, or organizational news
 
-## TAG ALLOWLIST
-
-Pick zero or more tags that clearly apply. You may ONLY use tags from this list:
-
-{allowlist}
-
-Tags fall into two categories:
-- Program tags name the payer that was defrauded (Medicare, Medicaid, TRICARE, ACA, Medicare Advantage)
-- Vulnerable-area tags name the service area where the fraud happened (e.g. Hospice, DME, Pharmacy, Telehealth, Genetic Testing, Nursing Home, Wound Care)
-
-Infer aggressively from context. "Stark Law" implies Medicare. "Medi-Cal" → Medicaid. "Pill mill" → Pharmacy + Opioids. "Wheelchair scheme" → DME. A wound care clinic case → Wound Care. A psychiatrist case → Behavioral Health. A drug-diversion case from a licensed pharmacist → Pharmacy. A skilled nursing facility case → Nursing Home.
-
-NEVER emit tags outside the allowlist. If nothing applies, return an empty list.
-
-## DOLLAR AMOUNT
-
-Extract the single most important dollar figure from the title. Prefer:
-1. A "$X million" / "$X billion" figure if explicit
-2. A "$X,XXX,XXX" figure if explicit
-3. Otherwise null
-
-Format the display string the way the press release writes it (e.g. "$5 million", "$14.6 billion", "$750,000"). Compute amount_numeric as the integer dollar value (5000000, 14600000000, 750000). If no amount is in the title, return null and 0.
-
 ## OUTPUT
 
-Return ONLY valid JSON. No markdown fences, no prose.
+Return ONLY valid JSON. No markdown fences, no explanation outside the JSON.
 
-{{
+{
   "healthcare_fraud": true | false,
   "confidence": integer 0-100,
-  "reason": "one sentence explaining the relevance decision",
-  "tags": ["..."],
-  "amount": "string display or null",
-  "amount_numeric": integer or 0
-}}
+  "reason": "one sentence explaining the decision"
+}
 
 Confidence calibration:
-- 95-100: title is unambiguous
-- 70-94: title clearly implies one direction
-- 30-69: genuinely ambiguous
+- 95-100: title makes it unambiguous (mentions Medicare/Medicaid/pharmacy/doctor/hospital/etc. OR unambiguous non-HC term)
+- 70-94: title clearly implies one direction but lacks a definitive keyword
+- 30-69: title is genuinely ambiguous, could go either way
 - 0-29: unable to judge from title alone
-
-If healthcare_fraud is false, tags MUST be [] and amount MUST be null. Don't tag rejected items.
 """
-
-
-_ENRICH_PROMPT_TEMPLATE = """You are a metadata extractor for a healthcare fraud enforcement dashboard.
-
-You will be given a DOJ press release title and URL for an item that has already been verified to be a real healthcare fraud enforcement action. Your job is to extract structured metadata: tags from the allowlist below, and the case's headline dollar amount if mentioned in the title.
-
-## TAG ALLOWLIST
-
-You may ONLY emit tags from this list:
-
-{allowlist}
-
-Tags fall into two categories:
-- Program tags name the payer that was defrauded (Medicare, Medicaid, TRICARE, ACA, Medicare Advantage)
-- Vulnerable-area tags name the service area where the fraud happened (Hospice, DME, Pharmacy, Telehealth, Genetic Testing, Nursing Home, Wound Care, Behavioral Health, etc.)
-
-Infer aggressively from context. "Stark Law" implies Medicare. "Medi-Cal" → Medicaid. "Pill mill" → Pharmacy + Opioids. "Wheelchair scheme" → DME. A wound care clinic case → Wound Care. A psychiatrist case → Behavioral Health. A skilled nursing facility case → Nursing Home.
-
-NEVER emit tags outside the allowlist. If nothing clearly applies, return an empty list rather than guessing.
-
-## DOLLAR AMOUNT
-
-Extract the single most important dollar figure from the title. Prefer:
-1. A "$X million" / "$X billion" figure if explicit
-2. A "$X,XXX,XXX" figure if explicit
-3. Otherwise null
-
-Format the display string the way the press release writes it (e.g. "$5 million", "$14.6 billion", "$750,000"). Compute amount_numeric as the integer dollar value. If no amount is in the title, return null and 0.
-
-## OUTPUT
-
-Return ONLY valid JSON. No markdown fences, no prose.
-
-{{
-  "tags": ["..."],
-  "amount": "string display or null",
-  "amount_numeric": integer or 0
-}}
-"""
-
-
-def _build_relevance_prompt() -> str:
-    return _RELEVANCE_PROMPT_TEMPLATE.format(allowlist=_allowlist_for_prompt())
-
-
-def _build_enrich_prompt() -> str:
-    return _ENRICH_PROMPT_TEMPLATE.format(allowlist=_allowlist_for_prompt())
-
 
 AUTO_PROMOTE_THRESHOLD = 90  # confidence >= this AND healthcare_fraud=true -> auto-promote
 AUTO_REJECT_THRESHOLD = 90   # confidence >= this AND healthcare_fraud=false -> auto-reject
 
 
-def _filter_to_allowlist(tags) -> list:
-    """Strip any model-emitted tags that aren't in the canonical allowlist."""
-    try:
-        from tag_allowlist import filter_tags
-        return filter_tags(tags or [])
-    except Exception:
-        return []
-
-
-def _call_claude_relevance(client, title: str, link: str) -> dict | None:
-    """Call Claude Haiku with the relevance + extraction prompt."""
+def _call_claude(client, title: str, link: str) -> dict | None:
+    """Call Claude Haiku with the classifier prompt. Returns decision dict or None."""
     user_msg = f"Title: {title}\nLink: {link}"
     try:
         resp = client.messages.create(
             model=AI_MODEL,
-            max_tokens=400,
-            system=_build_relevance_prompt(),
+            max_tokens=200,
+            system=AI_SYSTEM_PROMPT,
             messages=[{"role": "user", "content": user_msg}],
         )
         text = resp.content[0].text.strip()
+        # Strip possible markdown fences
         if text.startswith("```"):
             text = text.split("\n", 1)[1]
             if text.endswith("```"):
@@ -502,33 +402,6 @@ def _call_claude_relevance(client, title: str, link: str) -> dict | None:
     except Exception as e:
         print(f"    AI call failed: {e}", file=sys.stderr)
         return None
-
-
-def _call_claude_enrich(client, title: str, link: str) -> dict | None:
-    """Call Claude Haiku with the metadata-only enrichment prompt."""
-    user_msg = f"Title: {title}\nLink: {link}"
-    try:
-        resp = client.messages.create(
-            model=AI_MODEL,
-            max_tokens=300,
-            system=_build_enrich_prompt(),
-            messages=[{"role": "user", "content": user_msg}],
-        )
-        text = resp.content[0].text.strip()
-        if text.startswith("```"):
-            text = text.split("\n", 1)[1]
-            if text.endswith("```"):
-                text = text[:-3]
-            text = text.strip()
-        result = json.loads(text)
-        return result
-    except Exception as e:
-        print(f"    AI enrich failed: {e}", file=sys.stderr)
-        return None
-
-
-# Backwards-compat alias used by older callers / mocked tests
-_call_claude = _call_claude_relevance
 
 
 def cmd_ai_review() -> int:
@@ -570,7 +443,7 @@ def cmd_ai_review() -> int:
         print(f"  reviewing: {item['id']}")
         print(f"             {title[:80]}")
 
-        decision = _call_claude_relevance(client, title, link)
+        decision = _call_claude(client, title, link)
         if decision is None:
             print("             SKIP (API error, left in queue)")
             continue
@@ -578,9 +451,6 @@ def cmd_ai_review() -> int:
         is_hc = bool(decision.get("healthcare_fraud"))
         conf = int(decision.get("confidence", 0))
         reason = str(decision.get("reason", ""))[:200]
-        ai_tags = _filter_to_allowlist(decision.get("tags") or [])
-        ai_amount = decision.get("amount")
-        ai_amount_numeric = decision.get("amount_numeric") or 0
 
         item["ai_decision"] = "healthcare_fraud" if is_hc else "not_healthcare_fraud"
         item["ai_confidence"] = conf
@@ -588,25 +458,12 @@ def cmd_ai_review() -> int:
         item["ai_model"] = AI_MODEL
 
         if is_hc and conf >= AUTO_PROMOTE_THRESHOLD:
-            # Auto-promote: strip review metadata, apply AI-extracted
-            # tags/amount, add to actions.json. The AI-extracted values
-            # only override the existing fields when the existing values
-            # are empty — never clobber a curator-set value.
+            # Auto-promote: strip review metadata and add to actions
             clean = {k: v for k, v in item.items()
                      if not k.startswith("ai_") and k not in ("flagged_at", "flag_reason")}
-            if ai_tags and not clean.get("tags"):
-                clean["tags"] = ai_tags
-            if (ai_amount or ai_amount_numeric) and not (clean.get("amount") or clean.get("amount_numeric")):
-                clean["amount"] = ai_amount
-                clean["amount_numeric"] = int(ai_amount_numeric or 0)
-            clean["ai_enriched_at"] = datetime.now().isoformat()
             data.setdefault("actions", []).append(clean)
             promoted_items.append(item)
-            extras = []
-            if ai_tags: extras.append(f"tags={ai_tags}")
-            if ai_amount: extras.append(f"amount={ai_amount}")
-            extra_str = (" " + " ".join(extras)) if extras else ""
-            print(f"             PROMOTE (confidence={conf}){extra_str} — {reason[:60]}")
+            print(f"             PROMOTE (confidence={conf}) — {reason[:80]}")
         elif (not is_hc) and conf >= AUTO_REJECT_THRESHOLD:
             if link and link not in review["rejected_links"]:
                 review["rejected_links"].append(link)
@@ -630,94 +487,6 @@ def cmd_ai_review() -> int:
           f"{len(rejected_items)} rejected, {len(escalated_items)} escalated")
 
     _append_ai_summary(promoted_items, rejected_items, escalated_items)
-    return 0
-
-
-def cmd_ai_enrich(only_new: bool = True, limit: int = 0) -> int:
-    """Enrich tags + amount on auto-fetched items in actions.json.
-
-    Walks data/actions.json and finds items that:
-      - have auto_fetched=true (curator items are left alone)
-      - AND don't yet have an ai_enriched_at timestamp
-      - AND (in only_new mode) were added since the last git commit
-
-    For each, calls Claude Haiku with the metadata-only prompt and writes
-    back the suggested tags + amount when the existing fields are empty.
-    Curator-set tags/amounts are never overwritten.
-    """
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
-    if not api_key:
-        print("ai-enrich: ANTHROPIC_API_KEY not set, skipping")
-        return 0
-
-    try:
-        import anthropic
-    except ImportError:
-        print("ai-enrich: anthropic package not installed, skipping")
-        return 0
-
-    data = load_json(DATA_FILE, {"actions": []})
-    actions = data.get("actions", [])
-
-    if only_new:
-        committed_ids = get_committed_ids()
-        candidates = [a for a in actions if a.get("id") not in committed_ids]
-    else:
-        candidates = actions
-
-    # Filter to auto-fetched items needing enrichment (missing tags or amount,
-    # not already enriched). Curator-set items keep their human curation.
-    def needs_enrich(a: dict) -> bool:
-        if not a.get("auto_fetched"):
-            return False
-        if a.get("ai_enriched_at"):
-            return False
-        # Already has both tags and amount? skip
-        has_tags = bool(a.get("tags"))
-        has_amount = bool(a.get("amount") or (a.get("amount_numeric") or 0))
-        return not (has_tags and has_amount)
-
-    candidates = [a for a in candidates if needs_enrich(a)]
-    if limit and len(candidates) > limit:
-        print(f"ai-enrich: capping to first {limit} of {len(candidates)} candidates")
-        candidates = candidates[:limit]
-
-    if not candidates:
-        print("ai-enrich: no items need enrichment")
-        return 0
-
-    print(f"ai-enrich: processing {len(candidates)} item(s) with {AI_MODEL}")
-    client = anthropic.Anthropic(api_key=api_key)
-
-    enriched = 0
-    for item in candidates:
-        title = item.get("title", "")
-        link = item.get("link", "")
-        result = _call_claude_enrich(client, title, link)
-        if result is None:
-            continue
-        ai_tags = _filter_to_allowlist(result.get("tags") or [])
-        ai_amount = result.get("amount")
-        ai_amount_numeric = result.get("amount_numeric") or 0
-
-        changed = []
-        if ai_tags and not item.get("tags"):
-            item["tags"] = ai_tags
-            changed.append(f"tags={ai_tags}")
-        if (ai_amount or ai_amount_numeric) and not (item.get("amount") or item.get("amount_numeric")):
-            item["amount"] = ai_amount
-            item["amount_numeric"] = int(ai_amount_numeric or 0)
-            changed.append(f"amount={ai_amount}")
-
-        item["ai_enriched_at"] = datetime.now().isoformat()
-        enriched += 1
-        if changed:
-            print(f"  {item['id']}: {' '.join(changed)}")
-        else:
-            print(f"  {item['id']}: (no changes)")
-
-    save_json(DATA_FILE, data)
-    print(f"ai-enrich: enriched {enriched} item(s)")
     return 0
 
 
@@ -774,15 +543,9 @@ def main() -> int:
         "cmd",
         nargs="?",
         default="audit",
-        choices=["audit", "list", "promote", "reject", "ai-review", "ai-enrich"],
+        choices=["audit", "list", "promote", "reject", "ai-review"],
     )
     parser.add_argument("item_id", nargs="?")
-    parser.add_argument("--all", action="store_true",
-                        help="(ai-enrich only) Process every auto-fetched item, "
-                             "not just items added since the last commit. "
-                             "Used for one-off backfill enrichment.")
-    parser.add_argument("--limit", type=int, default=0,
-                        help="(ai-enrich only) Cap to first N items.")
     args = parser.parse_args()
 
     if args.cmd == "audit":
@@ -791,8 +554,6 @@ def main() -> int:
         return cmd_list()
     if args.cmd == "ai-review":
         return cmd_ai_review()
-    if args.cmd == "ai-enrich":
-        return cmd_ai_enrich(only_new=not args.all, limit=args.limit)
     if args.cmd in ("promote", "reject"):
         if not args.item_id:
             print(f"{args.cmd} requires an item ID", file=sys.stderr)
