@@ -24,10 +24,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 feedparser lxml
+          pip install requests beautifulsoup4 feedparser lxml playwright
+          playwright install --with-deps chromium
 
       - name: Run update script
-        run: python update.py --no-browser
+        run: python update.py
 
       - name: Check for changes
         id: changes

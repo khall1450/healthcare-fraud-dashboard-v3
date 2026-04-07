@@ -54,7 +54,7 @@ HEALTHCARE_TERMS = [re.compile(p, re.IGNORECASE) for p in [
 # ---------------------------------------------------------------------------
 FEEDS = [
     # --- Official agency feeds ---
-    {"name": "DOJ",         "agency": "DOJ",          "url": "https://www.justice.gov/news/rss",                                          "enabled": True,  "source_type": "official"},
+    {"name": "DOJ",         "agency": "DOJ",          "url": "https://www.justice.gov/news/rss",                                          "enabled": True,  "source_type": "official", "browser_fallback": True},
     {"name": "HHS-OIG",     "agency": "HHS-OIG",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "oig"},
     {"name": "CMS",         "agency": "CMS",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "cms"},
     {"name": "HHS",         "agency": "HHS",           "url": "https://www.hhs.gov/rss/news.xml",                                         "enabled": False, "source_type": "official", "browser_fallback": True},
