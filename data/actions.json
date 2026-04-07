@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-07T11:49:47.507602",
+    "last_updated": "2026-04-07T18:30:46.191832",
     "version": "1.0",
-    "last_scraped": "2026-04-07T11:49:47.507591"
+    "last_scraped": "2026-04-07T18:30:46.191823"
   },
   "actions": [
     {
@@ -5130,6 +5130,45 @@
       "tags": [],
       "entities": [],
       "state": "WA",
+      "source_type": "official",
+      "auto_fetched": true
+    },
+    {
+      "id": "doj-2026-04-03-3847526660",
+      "date": "2026-04-03",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Florida Man Pleads Guilty in Health Care Fraud and Kickback Scheme Involving “Foot Baths”",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdpa/pr/florida-man-pleads-guilty-health-care-fraud-and-kickback-scheme-involving-foot-baths",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true
+    },
+    {
+      "id": "doj-2026-04-02-1798136913",
+      "date": "2026-04-02",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Advanced Urology and Jitesh Patel will pay $14 million to settle False Claims Act case involving allegations of fraudulent billing and unnecessary medical procedures",
+      "amount": "$14 million",
+      "amount_numeric": 14000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndga/pr/advanced-urology-and-jitesh-patel-will-pay-14-million-settle-false-claims-act-case",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "GA",
       "source_type": "official",
       "auto_fetched": true
     }
