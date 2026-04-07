@@ -3500,33 +3500,6 @@
       ]
     },
     {
-      "id": "doj-2025-03-kentucky-addiction",
-      "date": "2025-03-20",
-      "agency": "DOJ",
-      "type": "Criminal Enforcement",
-      "title": "Three Convicted for Fraudulently Billing Over $8 Million to Medicare and Medicaid Through Opioid Addiction Treatment Clinics in Kentucky",
-      "amount": "$8M+",
-      "amount_numeric": 8000000.0,
-      "officials": [],
-      "link": "https://www.justice.gov/opa/pr/three-convicted-fraudulently-billing-over-8-million-medicare-and-medicaid-through-opioid",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Addiction Treatment",
-        "Medicaid",
-        "Medicare",
-        "Opioids"
-      ],
-      "state": "KY",
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": [],
-      "related_agencies": [
-        "HHS-OIG",
-        "DEA"
-      ]
-    },
-    {
       "id": "doj-2025-03-20-kentucky-opioid-clinics-conviction",
       "date": "2025-03-20",
       "agency": "DOJ",
@@ -3927,7 +3900,10 @@
       "entities": [],
       "state": "OH",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-26-3564031109",
@@ -3949,7 +3925,10 @@
       "entities": [],
       "state": "GA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-03-213577922",
@@ -3969,7 +3948,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-26-1393241180",
@@ -3990,7 +3972,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-22-1353365571",
@@ -4011,7 +3996,10 @@
       "entities": [],
       "state": null,
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-21-997477609",
@@ -4029,7 +4017,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-20-4041096344",
@@ -4050,7 +4041,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-15-2387167296",
@@ -4072,7 +4066,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-13-1788919544",
@@ -4093,7 +4090,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-07-1412150765",
@@ -4111,7 +4111,10 @@
       "entities": [],
       "state": "SC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-18-2540986264",
@@ -4131,7 +4134,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-17-3932038928",
@@ -4149,7 +4155,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-12-700946067",
@@ -4171,7 +4180,10 @@
       "entities": [],
       "state": "KS",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-12-1077195743",
@@ -4193,7 +4205,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-12-263213136",
@@ -4214,7 +4229,10 @@
       "entities": [],
       "state": "AZ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-05-2343552851",
@@ -4235,7 +4253,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-24-3386143684",
@@ -4256,7 +4277,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-21-2087677445",
@@ -4278,7 +4302,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-21-3815609782",
@@ -4300,7 +4327,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-20-935959263",
@@ -4321,7 +4351,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-13-971612399",
@@ -4342,7 +4375,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-26-3530216575",
@@ -4362,7 +4398,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-25-873505268",
@@ -4383,7 +4422,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-23-3288111769",
@@ -4403,7 +4445,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-19-96454455",
@@ -4423,7 +4468,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-17-3297560168",
@@ -4444,7 +4492,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-17-98488305",
@@ -4464,7 +4515,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-12-2914979766",
@@ -4484,7 +4538,10 @@
       "entities": [],
       "state": "AZ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-02-3344854033",
@@ -4504,7 +4561,10 @@
       "entities": [],
       "state": "OH",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-29-1064069786",
@@ -4524,7 +4584,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-06-167659195",
@@ -4545,7 +4608,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-30-770806133",
@@ -4565,7 +4631,10 @@
       "entities": [],
       "state": null,
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-14-1707400269",
@@ -4586,7 +4655,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-08-3702295868",
@@ -4607,7 +4679,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-26-417367562",
@@ -4628,7 +4703,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-23-2666076654",
@@ -4649,7 +4727,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-12-1573660464",
@@ -4670,7 +4751,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-05-3983275416",
@@ -4691,7 +4775,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-03-3898264963",
@@ -4713,7 +4800,10 @@
       "entities": [],
       "state": "OH",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-29-3445463737",
@@ -4734,7 +4824,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-28-2714389737",
@@ -4755,7 +4848,10 @@
       "entities": [],
       "state": "MD",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-21-1433302924",
@@ -4773,7 +4869,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-20-1372914456",
@@ -4794,7 +4893,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-02-1499443414",
@@ -4816,7 +4918,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-18-4242922259",
@@ -4836,7 +4941,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-16-579832275",
@@ -4856,7 +4964,10 @@
       "entities": [],
       "state": null,
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-02-1371089855",
@@ -4876,7 +4987,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-02-1882273970",
@@ -4896,7 +5010,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-06-2825688378",
@@ -4914,7 +5031,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-25-2321841153",
@@ -4934,7 +5054,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-21-3934491684",
@@ -4955,7 +5078,10 @@
       "entities": [],
       "state": "AL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-19-1250908041",
@@ -4975,7 +5101,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-11-2612004164",
@@ -4997,7 +5126,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-28-1058370719",
@@ -5015,7 +5147,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-24-1913806017",
@@ -5035,7 +5170,10 @@
       "entities": [],
       "state": null,
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-17-1315362926",
@@ -5053,7 +5191,10 @@
       "entities": [],
       "state": "DE",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-15-4284919876",
@@ -5075,7 +5216,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-14-814987287",
@@ -5095,7 +5239,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-07-1647947457",
@@ -5113,7 +5260,10 @@
       "entities": [],
       "state": "SC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-06-994022661",
@@ -5131,7 +5281,10 @@
       "entities": [],
       "state": "WA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-04-03-3847526660",
@@ -5149,7 +5302,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-04-02-1798136913",
@@ -5170,7 +5326,10 @@
       "entities": [],
       "state": "GA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-03-30-1941657765",
@@ -5191,7 +5350,10 @@
       "entities": [],
       "state": "TN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-03-27-4141773486",
@@ -5211,7 +5373,10 @@
       "entities": [],
       "state": "WA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-03-26-483858630",
@@ -5233,7 +5398,10 @@
       "entities": [],
       "state": "MD",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-03-17-3994160690",
@@ -5251,7 +5419,10 @@
       "entities": [],
       "state": "AK",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-03-09-3461129787",
@@ -5273,7 +5444,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-03-05-1430787986",
@@ -5295,7 +5469,10 @@
       "entities": [],
       "state": "WI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-03-05-1704777377",
@@ -5315,7 +5492,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-03-05-2288402010",
@@ -5335,7 +5515,10 @@
       "entities": [],
       "state": "TN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-03-04-3615750670",
@@ -5355,7 +5538,10 @@
       "entities": [],
       "state": "MD",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-03-04-875810582",
@@ -5376,7 +5562,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-03-03-734419063",
@@ -5398,7 +5587,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-27-3347929946",
@@ -5416,7 +5608,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-25-3665785592",
@@ -5436,7 +5631,10 @@
       "entities": [],
       "state": "SC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-25-411291892",
@@ -5458,7 +5656,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-18-578634508",
@@ -5476,7 +5677,10 @@
       "entities": [],
       "state": "IN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-17-3488009839",
@@ -5497,7 +5701,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-13-2701522834",
@@ -5515,7 +5722,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-10-1566331119",
@@ -5535,7 +5745,10 @@
       "entities": [],
       "state": "CO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-10-2659142195",
@@ -5555,7 +5768,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-06-3273492913",
@@ -5573,7 +5789,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-05-2201510774",
@@ -5591,7 +5810,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-04-1586099329",
@@ -5613,7 +5835,10 @@
       "entities": [],
       "state": "WA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-02-03-1156407560",
@@ -5631,7 +5856,10 @@
       "entities": [],
       "state": "WI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-30-3188964451",
@@ -5652,7 +5880,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-29-3473428125",
@@ -5673,7 +5904,10 @@
       "entities": [],
       "state": "NC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-28-4012091910",
@@ -5693,7 +5927,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-28-1561144592",
@@ -5713,7 +5950,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-28-3837528692",
@@ -5733,7 +5973,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-28-3296272138",
@@ -5753,7 +5996,10 @@
       "entities": [],
       "state": "NC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-27-1786949553",
@@ -5774,7 +6020,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-26-4214741563",
@@ -5794,7 +6043,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-23-2304499942",
@@ -5814,7 +6066,10 @@
       "entities": [],
       "state": "GA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-22-3345310978",
@@ -5834,7 +6089,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-21-4111871201",
@@ -5854,7 +6112,10 @@
       "entities": [],
       "state": "CO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-20-1968412201",
@@ -5874,7 +6135,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-14-2405265522",
@@ -5894,7 +6158,10 @@
       "entities": [],
       "state": "NC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-14-2012618848",
@@ -5914,7 +6181,10 @@
       "entities": [],
       "state": "OH",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-13-2254209858",
@@ -5934,7 +6204,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-12-3914269674",
@@ -5954,7 +6227,10 @@
       "entities": [],
       "state": "WA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-09-3371163373",
@@ -5975,7 +6251,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-08-2310387698",
@@ -5997,7 +6276,10 @@
       "entities": [],
       "state": "TN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-07-1994340529",
@@ -6018,7 +6300,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-07-1130922516",
@@ -6040,7 +6325,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2026-01-05-3418612843",
@@ -6058,7 +6346,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-22-807616206",
@@ -6080,7 +6371,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-19-3365888554",
@@ -6098,7 +6392,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-18-364097162",
@@ -6118,7 +6415,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-18-3622430509",
@@ -6138,7 +6438,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-18-1217491721",
@@ -6159,7 +6462,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-18-1319882104",
@@ -6179,7 +6485,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-15-3633982256",
@@ -6200,7 +6509,10 @@
       "entities": [],
       "state": "DE",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-15-1740657257",
@@ -6220,7 +6532,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-15-2813942706",
@@ -6241,7 +6556,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-11-1155968297",
@@ -6262,7 +6580,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-11-1992076801",
@@ -6282,7 +6603,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-10-2302354038",
@@ -6303,7 +6627,10 @@
       "entities": [],
       "state": "NH",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-10-3145604155",
@@ -6323,7 +6650,10 @@
       "entities": [],
       "state": "WA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-03-1461515342",
@@ -6408,7 +6738,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-01-1121071701",
@@ -6428,7 +6761,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-24-3316291949",
@@ -6448,7 +6784,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-24-696476044",
@@ -6469,7 +6808,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-24-1773728046",
@@ -6491,7 +6833,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-24-559131543",
@@ -6512,7 +6857,10 @@
       "entities": [],
       "state": "CO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-24-3403144743",
@@ -6532,7 +6880,10 @@
       "entities": [],
       "state": "IN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-20-3202728049",
@@ -6552,7 +6903,10 @@
       "entities": [],
       "state": "AZ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-20-1918370239",
@@ -6574,7 +6928,10 @@
       "entities": [],
       "state": "GA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-19-1115429366",
@@ -6594,7 +6951,10 @@
       "entities": [],
       "state": "AR",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-18-3128738892",
@@ -6615,7 +6975,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-18-512607463",
@@ -6635,7 +6998,10 @@
       "entities": [],
       "state": "TN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-17-2747256093",
@@ -6656,7 +7022,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-17-1430537948",
@@ -6678,7 +7047,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-17-1231632408",
@@ -6698,7 +7070,10 @@
       "entities": [],
       "state": "ID",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-17-3845852564",
@@ -6719,7 +7094,10 @@
       "entities": [],
       "state": "WA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-14-2326029794",
@@ -6740,7 +7118,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-13-3130995721",
@@ -6758,7 +7139,10 @@
       "entities": [],
       "state": "IN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-13-3692875603",
@@ -6780,7 +7164,10 @@
       "entities": [],
       "state": "AL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-13-494639545",
@@ -6800,7 +7187,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-10-21-797229075",
@@ -6822,7 +7212,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-10-16-103006597",
@@ -6840,7 +7233,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-10-01-1408649606",
@@ -6860,7 +7256,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-26-2619037281",
@@ -6880,7 +7279,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-24-881240589",
@@ -6901,7 +7303,10 @@
       "entities": [],
       "state": "NV",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-24-558322553",
@@ -6921,7 +7326,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-17-582207489",
@@ -6943,7 +7351,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-16-1000772530",
@@ -6965,7 +7376,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-16-3839205405",
@@ -6986,7 +7400,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-16-1346123610",
@@ -7004,7 +7421,10 @@
       "entities": [],
       "state": "MD",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-12-3084539056",
@@ -7026,7 +7446,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-10-286393915",
@@ -7046,7 +7469,10 @@
       "entities": [],
       "state": "MD",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-10-3071756259",
@@ -7067,7 +7493,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-08-143654408",
@@ -7085,7 +7514,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-08-68394441",
@@ -7103,7 +7535,10 @@
       "entities": [],
       "state": "MD",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-29-507674245",
@@ -7123,7 +7558,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-28-3535260710",
@@ -7144,7 +7582,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-27-2870962131",
@@ -7166,7 +7607,10 @@
       "entities": [],
       "state": "KY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-27-4213954199",
@@ -7186,7 +7630,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-27-814561773",
@@ -7204,7 +7651,10 @@
       "entities": [],
       "state": "MD",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-25-277820596",
@@ -7225,7 +7675,10 @@
       "entities": [],
       "state": "NC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-22-2608032975",
@@ -7245,7 +7698,10 @@
       "entities": [],
       "state": "MS",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-21-1770757312",
@@ -7266,7 +7722,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-21-2492575617",
@@ -7284,7 +7743,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-20-2228101950",
@@ -7304,7 +7766,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-18-2462022836",
@@ -7326,7 +7791,10 @@
       "entities": [],
       "state": "AL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-15-1291727262",
@@ -7346,7 +7814,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-14-973070332",
@@ -7366,7 +7837,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-14-3472628844",
@@ -7386,7 +7860,10 @@
       "entities": [],
       "state": "IA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-13-4053894",
@@ -7404,7 +7881,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-12-3397431578",
@@ -7422,7 +7902,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-11-3088674483",
@@ -7442,7 +7925,10 @@
       "entities": [],
       "state": "MD",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-11-4015542845",
@@ -7460,7 +7946,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-11-3096933694",
@@ -7480,7 +7969,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-08-1543894470",
@@ -7501,7 +7993,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-07-320656245",
@@ -7523,7 +8018,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-06-2857904017",
@@ -7544,7 +8042,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-06-832361645",
@@ -7565,7 +8066,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-05-1326785441",
@@ -7586,7 +8090,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-31-741202760",
@@ -7608,7 +8115,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-25-3257727530",
@@ -7629,7 +8139,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-22-1097906817",
@@ -7651,7 +8164,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-21-421450124",
@@ -7671,7 +8187,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-18-914832517",
@@ -7689,7 +8208,10 @@
       "entities": [],
       "state": "IL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-18-3215787058",
@@ -7710,7 +8232,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-17-866941594",
@@ -7731,7 +8256,10 @@
       "entities": [],
       "state": "CO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-16-3566847185",
@@ -7753,7 +8281,10 @@
       "entities": [],
       "state": "NV",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-16-518935439",
@@ -7773,7 +8304,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-16-3672545468",
@@ -7794,7 +8328,10 @@
       "entities": [],
       "state": "IA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-15-442981577",
@@ -7812,7 +8349,10 @@
       "entities": [],
       "state": "ID",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-15-211175681",
@@ -7832,7 +8372,10 @@
       "entities": [],
       "state": "MD",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-15-1315223511",
@@ -7850,7 +8393,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-11-21221624",
@@ -7870,7 +8416,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-11-1077592231",
@@ -7891,7 +8440,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-10-302256570",
@@ -7913,7 +8465,10 @@
       "entities": [],
       "state": "OH",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-07-1272789542",
@@ -7935,7 +8490,10 @@
       "entities": [],
       "state": "DE",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-07-1733296651",
@@ -7955,7 +8513,10 @@
       "entities": [],
       "state": "DE",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-02-1103786005",
@@ -7977,7 +8538,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-02-2607910239",
@@ -7998,7 +8562,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-01-11614765",
@@ -8018,7 +8585,10 @@
       "entities": [],
       "state": "OR",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-01-806268380",
@@ -8038,7 +8608,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-01-681006436",
@@ -8060,7 +8633,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-01-3829140106",
@@ -8080,7 +8656,10 @@
       "entities": [],
       "state": "IL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-01-898410919",
@@ -8101,7 +8680,10 @@
       "entities": [],
       "state": "KS",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-01-1112786268",
@@ -8121,7 +8703,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-01-3883276430",
@@ -8142,7 +8727,10 @@
       "entities": [],
       "state": "KY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-858442612",
@@ -8162,7 +8750,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-183539080",
@@ -8183,7 +8774,10 @@
       "entities": [],
       "state": "AZ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-3560403939",
@@ -8203,7 +8797,10 @@
       "entities": [],
       "state": "MD",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-440009396",
@@ -8225,7 +8822,10 @@
       "entities": [],
       "state": null,
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-2000669559",
@@ -8245,7 +8845,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-177123410",
@@ -8265,7 +8868,10 @@
       "entities": [],
       "state": "ME",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-2346134373",
@@ -8285,7 +8891,10 @@
       "entities": [],
       "state": "NV",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-2910983354",
@@ -8308,7 +8917,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-3537299598",
@@ -8326,7 +8938,10 @@
       "entities": [],
       "state": "SC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-664340218",
@@ -8348,7 +8963,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-1045926680",
@@ -8370,7 +8988,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-2111041078",
@@ -8392,7 +9013,10 @@
       "entities": [],
       "state": "NC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-973125829",
@@ -8412,7 +9036,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-1414367905",
@@ -8430,7 +9057,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-1485394000",
@@ -8450,7 +9080,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-4291362584",
@@ -8468,7 +9101,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-2738567534",
@@ -8489,7 +9125,10 @@
       "entities": [],
       "state": "TN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-768550733",
@@ -8509,7 +9148,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-962075124",
@@ -8529,7 +9171,10 @@
       "entities": [],
       "state": "MS",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-2359811983",
@@ -8551,7 +9196,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-86544224",
@@ -8572,7 +9220,10 @@
       "entities": [],
       "state": "OH",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-637335433",
@@ -8597,7 +9248,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-2840606145",
@@ -8617,7 +9271,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-1071872551",
@@ -8638,7 +9295,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-1709807880",
@@ -8658,7 +9318,10 @@
       "entities": [],
       "state": "NC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-4195727624",
@@ -8678,7 +9341,10 @@
       "entities": [],
       "state": "OK",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-3109365968",
@@ -8698,7 +9364,10 @@
       "entities": [],
       "state": "WA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-27-1495052289",
@@ -8719,7 +9388,10 @@
       "entities": [],
       "state": "IL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-26-3127130108",
@@ -8739,7 +9411,10 @@
       "entities": [],
       "state": "MD",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-26-324041486",
@@ -8759,7 +9434,10 @@
       "entities": [],
       "state": "MN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-26-2566114644",
@@ -8779,7 +9457,10 @@
       "entities": [],
       "state": "GA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-25-1499545623",
@@ -8799,7 +9480,10 @@
       "entities": [],
       "state": "IL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-24-2279199102",
@@ -8820,7 +9504,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-20-2368970887",
@@ -8840,7 +9527,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-20-2727176811",
@@ -8860,7 +9550,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-12-68739499",
@@ -8880,7 +9573,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-11-3405267707",
@@ -8900,7 +9596,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-11-1386312532",
@@ -8920,7 +9619,10 @@
       "entities": [],
       "state": "GA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-11-1675397407",
@@ -8940,7 +9642,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-10-1441872301",
@@ -8962,7 +9667,10 @@
       "entities": [],
       "state": "IL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-06-2321952338",
@@ -8983,7 +9691,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-03-2021139974",
@@ -9003,7 +9714,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-03-3070307515",
@@ -9024,7 +9738,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-03-493193980",
@@ -9044,7 +9761,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-02-227142135",
@@ -9065,7 +9785,10 @@
       "entities": [],
       "state": "ME",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-30-238571667",
@@ -9083,7 +9806,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-30-3412498147",
@@ -9101,7 +9827,10 @@
       "entities": [],
       "state": "NV",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-30-1219299273",
@@ -9122,7 +9851,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-29-1239204358",
@@ -9142,7 +9874,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-28-2676196451",
@@ -9162,7 +9897,10 @@
       "entities": [],
       "state": "IL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-27-1460203017",
@@ -9183,7 +9921,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-27-3360699215",
@@ -9204,7 +9945,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-27-3535624043",
@@ -9224,7 +9968,10 @@
       "entities": [],
       "state": "KY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-23-2364743001",
@@ -9245,7 +9992,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-22-2270456962",
@@ -9265,7 +10015,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-21-2258549710",
@@ -9283,7 +10036,10 @@
       "entities": [],
       "state": "TN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-21-2206755188",
@@ -9304,7 +10060,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-20-810670970",
@@ -9324,7 +10083,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-20-2653894949",
@@ -9346,7 +10108,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-19-2830256670",
@@ -9366,7 +10131,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-19-3636943254",
@@ -9388,7 +10156,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-16-2637975628",
@@ -9408,7 +10179,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-16-3440869955",
@@ -9428,7 +10202,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-16-4223392182",
@@ -9448,7 +10225,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-14-2075487701",
@@ -9469,7 +10249,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-09-495866515",
@@ -9490,7 +10273,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-09-3218014410",
@@ -9510,7 +10296,10 @@
       "entities": [],
       "state": "WA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-09-1137645234",
@@ -9530,7 +10319,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-06-1400204696",
@@ -9552,7 +10344,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-05-1827227164",
@@ -9572,7 +10367,10 @@
       "entities": [],
       "state": "NC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-30-1504350157",
@@ -9593,7 +10391,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-30-1403760295",
@@ -9613,7 +10414,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-29-3157920334",
@@ -9633,7 +10437,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-29-4167040458",
@@ -9654,7 +10461,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-28-970392459",
@@ -9674,7 +10484,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-25-3080020997",
@@ -9692,7 +10505,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-24-1743037607",
@@ -9710,7 +10526,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-23-2747836921",
@@ -9728,7 +10547,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-23-959892856",
@@ -9749,7 +10571,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-21-3305234714",
@@ -9767,7 +10592,10 @@
       "entities": [],
       "state": "GA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-17-1153115369",
@@ -9787,7 +10615,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-17-1009792437",
@@ -9807,7 +10638,10 @@
       "entities": [],
       "state": "VT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-17-1678577162",
@@ -9827,7 +10661,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-17-3524233051",
@@ -9848,7 +10685,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-15-3833758586",
@@ -9868,7 +10708,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-14-1003414101",
@@ -9886,7 +10729,10 @@
       "entities": [],
       "state": "TN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-11-3109416189",
@@ -9906,7 +10752,10 @@
       "entities": [],
       "state": "OH",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-10-2956623029",
@@ -9927,7 +10776,10 @@
       "entities": [],
       "state": "MN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-09-2705052873",
@@ -9967,7 +10819,10 @@
       "entities": [],
       "state": "NC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-07-3368904670",
@@ -9985,7 +10840,10 @@
       "entities": [],
       "state": "RI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-04-1407840511",
@@ -10005,7 +10863,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-04-2219586018",
@@ -10026,7 +10887,10 @@
       "entities": [],
       "state": "KS",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-03-2129192524",
@@ -10047,7 +10911,10 @@
       "entities": [],
       "state": "IA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-02-623905336",
@@ -10065,7 +10932,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-02-388085362",
@@ -10086,7 +10956,10 @@
       "entities": [],
       "state": "SC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-02-4248106716",
@@ -10107,7 +10980,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-27-1650864718",
@@ -10128,7 +11004,10 @@
       "entities": [],
       "state": "GA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-27-2577730808",
@@ -10148,7 +11027,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-26-3097954397",
@@ -10169,7 +11051,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-26-2517877765",
@@ -10189,7 +11074,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-26-3634776053",
@@ -10207,7 +11095,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-26-1600437648",
@@ -10225,7 +11116,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-26-3926352260",
@@ -10246,7 +11140,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-24-2370101919",
@@ -10267,7 +11164,10 @@
       "entities": [],
       "state": "WI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-24-2465020221",
@@ -10287,7 +11187,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-21-4279500336",
@@ -10307,7 +11210,10 @@
       "entities": [],
       "state": "MD",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-20-424352297",
@@ -10325,7 +11231,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-19-1784983540",
@@ -10345,7 +11254,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-18-1953653951",
@@ -10365,7 +11277,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-14-4276488006",
@@ -10385,7 +11300,10 @@
       "entities": [],
       "state": "GA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-14-907242669",
@@ -10407,7 +11325,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-14-4226505279",
@@ -10427,7 +11348,10 @@
       "entities": [],
       "state": "IA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-14-4149133546",
@@ -10447,7 +11371,10 @@
       "entities": [],
       "state": "KY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-12-2100008897",
@@ -10467,7 +11394,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-11-1423804365",
@@ -10487,7 +11417,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-11-1924768508",
@@ -10507,7 +11440,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-10-3679741773",
@@ -10525,7 +11461,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-10-3473559209",
@@ -10545,7 +11484,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-06-2093993786",
@@ -10566,7 +11508,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-06-82223692",
@@ -10584,7 +11529,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-06-2856077363",
@@ -10604,7 +11552,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-05-836385474",
@@ -10624,7 +11575,10 @@
       "entities": [],
       "state": "RI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-05-2543434025",
@@ -10644,7 +11598,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-03-69491902",
@@ -10662,7 +11619,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-28-4183616648",
@@ -10685,7 +11645,10 @@
       "entities": [],
       "state": "HI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-28-3215621622",
@@ -10705,7 +11668,10 @@
       "entities": [],
       "state": "TN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-27-2467154593",
@@ -10726,7 +11692,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-25-1875398994",
@@ -10746,7 +11715,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-25-4291877380",
@@ -10766,7 +11738,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-24-1543100463",
@@ -10786,7 +11761,10 @@
       "entities": [],
       "state": "IL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-24-471078244",
@@ -10806,7 +11784,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-21-3522417578",
@@ -10826,7 +11807,10 @@
       "entities": [],
       "state": "OH",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-20-254976578",
@@ -10846,7 +11830,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-20-1447211807",
@@ -10871,7 +11858,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-20-354760251",
@@ -10891,7 +11881,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-19-691144230",
@@ -10912,7 +11905,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-12-933517736",
@@ -10933,7 +11929,10 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-04-813690700",
@@ -10954,7 +11953,10 @@
       "entities": [],
       "state": "NJ",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-04-1683610405",
@@ -10975,7 +11977,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-02-03-3874049456",
@@ -10995,7 +12000,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-31-351999022",
@@ -11015,7 +12023,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-29-2017891167",
@@ -11035,7 +12046,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-27-869715626",
@@ -11056,7 +12070,10 @@
       "entities": [],
       "state": "PA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-27-2343441085",
@@ -11077,7 +12094,10 @@
       "entities": [],
       "state": "WI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-23-2344958612",
@@ -11097,7 +12117,10 @@
       "entities": [],
       "state": "MA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-17-3838852947",
@@ -11117,7 +12140,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-17-4067321120",
@@ -11138,7 +12164,10 @@
       "entities": [],
       "state": "IL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-17-2535030533",
@@ -11159,7 +12188,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-16-2323583445",
@@ -11180,7 +12212,10 @@
       "entities": [],
       "state": "IA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-15-1968993948",
@@ -11198,7 +12233,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-15-3856123390",
@@ -11218,7 +12256,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-13-3375927787",
@@ -11238,7 +12279,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-13-4028236152",
@@ -11259,7 +12303,10 @@
       "entities": [],
       "state": "NC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-08-589032976",
@@ -11279,7 +12326,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-08-3628749926",
@@ -11299,7 +12349,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-07-3772948121",
@@ -11321,7 +12374,10 @@
       "entities": [],
       "state": "RI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-07-1796492592",
@@ -11341,7 +12397,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-03-531802520",
@@ -11362,7 +12421,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-02-2804233657",
@@ -11382,7 +12444,10 @@
       "entities": [],
       "state": "TN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-02-4283638988",
@@ -11400,7 +12465,10 @@
       "entities": [],
       "state": "VA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "hhs-oig-2026-03-09-2348143186",
@@ -11441,7 +12509,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-12-05-1246483037",
@@ -11461,7 +12532,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-20-1901418396",
@@ -11481,7 +12555,10 @@
       "entities": [],
       "state": "LA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-19-3943036206",
@@ -11501,7 +12578,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-11-17-119758127",
@@ -11519,7 +12599,10 @@
       "entities": [],
       "state": "MI",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-22-554453420",
@@ -11540,7 +12623,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-11-568483712",
@@ -11560,7 +12646,10 @@
       "entities": [],
       "state": "TN",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-19-2542748640",
@@ -11578,7 +12667,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-31-1664232202",
@@ -11600,7 +12692,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-07-31-724261442",
@@ -11620,7 +12715,10 @@
       "entities": [],
       "state": "NC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-22-803218501",
@@ -11640,7 +12738,10 @@
       "entities": [],
       "state": "MO",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-16-2799245681",
@@ -11660,7 +12761,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-05-09-1418567954",
@@ -11680,7 +12784,10 @@
       "entities": [],
       "state": "CT",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-04-21-3127599967",
@@ -11700,7 +12807,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-03-20-654454416",
@@ -11720,7 +12830,10 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-28-1040393229",
@@ -11741,7 +12854,10 @@
       "entities": [],
       "state": "NC",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-17-1866079757",
@@ -11761,7 +12877,10 @@
       "entities": [],
       "state": "TX",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-01-03-2247902745",
@@ -11781,7 +12900,10 @@
       "entities": [],
       "state": "FL",
       "source_type": "official",
-      "auto_fetched": true
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }

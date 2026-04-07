@@ -1024,6 +1024,7 @@ def main():
 
                 # HHS-OIG entries: recategorize by link domain and content
                 actual_agency = feed['agency']
+                related_agencies = []
                 if feed['agency'] == 'HHS-OIG' and link:
                     # DOJ press releases → categorize as DOJ
                     if 'justice.gov' in link:
@@ -1034,6 +1035,14 @@ def main():
                     # Criminal/civil enforcement outcomes on oig.hhs.gov are DOJ prosecutions
                     elif re.search(r'sentenc|guilty plea|plead[s ]? guilty|convict|indict|charg|arrest|prison|ordered to pay|jury find|agrees to pay|consent judgment|settlement|resolve.*allegations', title.lower()):
                         actual_agency = 'DOJ'
+                    # If we relabeled the primary agency away from HHS-OIG,
+                    # preserve the OIG provenance as a related agency. OIG is
+                    # the criminal investigative arm for Medicare/Medicaid
+                    # fraud and is named as the investigating agency on
+                    # virtually every healthcare fraud DOJ press release we
+                    # source through this pipeline.
+                    if actual_agency != 'HHS-OIG':
+                        related_agencies.append('HHS-OIG')
 
                 id_prefix = 'media' if is_media else re.sub(r'\W', '-', actual_agency.lower())
                 link_label = f"{feed['name']} Report" if is_media else f"{actual_agency} Press Release"
@@ -1058,6 +1067,7 @@ def main():
                     "state": state,
                     "source_type": feed['source_type'],
                     "auto_fetched": True,
+                    "related_agencies": related_agencies,
                 }
 
                 new_actions.append(entry)
