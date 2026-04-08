@@ -134,6 +134,56 @@ def is_obviously_healthcare(item: dict) -> bool:
     return bool(HC_KEYWORDS.search(text) or HC_ENTITIES.search(text))
 
 
+# Stricter HC gate for OVERSIGHT items. Unlike enforcement items (where
+# "false claims", "kickback", or "fraud" alone is enough), oversight items
+# come from HHS-OIG / GAO / Congressional committees that publish many
+# NON-healthcare-fraud audits (LIHEAP, FISMA, ACF grants, NIH OT awards,
+# cybersecurity, child welfare, foster care). So auto-promotion requires
+# a signal that the audit/hearing/report is about Medicare, Medicaid, or
+# a clearly-named healthcare program-integrity / fraud concept.
+OVERSIGHT_FRAUD_GATE = re.compile(
+    r"\b("
+    # Programs defrauded
+    r"medicare|medicaid|medi-?cal|chip\s+program|tricare|"
+    r"affordable\s+care\s+act|\baca\s+(marketplace|exchange|enrollment)|"
+    r"marketplace\s+(enrollment|fraud)|"
+    # Core fraud / program integrity concepts
+    r"fraud|kickback|false\s+claim|qui\s+tam|anti-?kickback|stark\s+law|"
+    r"improper\s+payment|overpayment|unrecovered|unallowable\s+"
+    r"(medicaid|medicare)|program\s+integrity|"
+    # Provider / beneficiary schemes
+    r"billing\s+scheme|upcod|unbundl|phantom\s+billing|pill\s+mill|"
+    r"drug\s+diversion|"
+    # Oversight language that implies a fraud concern
+    r"fraud\s+(investigation|hearing|oversight|waste)|"
+    r"waste.{0,10}abuse|anti-?fraud|"
+    # HC-specific service areas where oversight items are always in scope
+    r"hospice|durable\s+medical\s+equipment|\bdme\b|\bdmepos\b|"
+    r"skin\s+substitute|home\s+health\s+agenc|nursing\s+home|"
+    r"genetic\s+test|telehealth"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
+def is_oversight_hc_fraud(item: dict) -> bool:
+    """Stricter version of is_obviously_healthcare for OVERSIGHT items.
+
+    Requires an explicit fraud/program-integrity signal OR a named
+    federal healthcare program. Rejects generic mentions of "Health"
+    (e.g. "Vibrent Health Claimed Unallowable Costs Under NIH Award" —
+    Vibrent Health is a company name, NIH award is a grant, not fraud
+    against Medicare/Medicaid).
+
+    Used by cmd_audit_oversight instead of is_obviously_healthcare.
+    """
+    title = item.get("title", "") or ""
+    link = item.get("link", "") or ""
+    # Include link slug so e.g. "oig.hhs.gov/fraud/enforcement/..." counts
+    text = f"{title} {link}"
+    return bool(OVERSIGHT_FRAUD_GATE.search(text))
+
+
 # ---------------------------------------------------------------------------
 # DOJ topic extraction. Every justice.gov press release page carries a
 # .node-topics field rendered by the Drupal template, containing DOJ's own
@@ -1258,12 +1308,16 @@ def cmd_audit_oversight() -> int:
     auto_promoted = []
     still_pending = []
     for item in pending:
-        if is_obviously_healthcare(item):
+        # Use the stricter oversight-specific gate instead of the
+        # generic is_obviously_healthcare. Prevents auto-promotion of
+        # HHS-OIG audits about NIH grants, LIHEAP, FISMA, child welfare,
+        # foster care, etc. that happen to have "Health" in the title.
+        if is_oversight_hc_fraud(item):
             auto_promoted.append(item)
             item["audit_decision"] = "auto_approved"
         else:
             still_pending.append(item)
-            item["flag_reason"] = "title lacks healthcare keyword"
+            item["flag_reason"] = "title lacks HC fraud / program integrity signal"
 
     if auto_promoted:
         for item in auto_promoted:

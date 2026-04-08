@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-08T12:12:41.351273",
+    "last_updated": "2026-04-08T14:06:42.923671",
     "version": "1.0",
     "last_scraped": "2026-04-08T12:12:41.351267"
   },
@@ -13803,6 +13803,147 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "cms-2026-04-08-1769082188",
+      "date": "2026-04-08",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "CMS Issues Guidance to Implement New Limits on Federal Medicaid and CHIP Funding for Certain Noncitizens",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/press-releases/cms-issues-guidance-implement-new-limits-federal-medicaid-chip-funding-certain-noncitizens",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "cms-2026-04-08-160222268",
+      "date": "2026-04-08",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "2027 Medicare Advantage and Part D Rate Announcement",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "cms-2026-04-08-3422526735",
+      "date": "2026-04-08",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Fiscal Year 2027 Medicare Inpatient Psychiatric Facility Prospective Payment System Proposed Rule (CMS-1847-P)",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/fiscal-year-2027-medicare-inpatient-psychiatric-facility-prospective-payment-system-proposed-rule",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "Hospice"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "medpac-2026-03-12-1289941730",
+      "date": "2026-03-12",
+      "agency": "MedPAC",
+      "type": "Report",
+      "title": "March 2026 Report to the Congress: Medicare Payment Policy",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.medpac.gov/document/march-2026-report-to-the-congress-medicare-payment-policy/",
+      "link_label": "MedPAC Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "Hospice",
+        "Home Health",
+        "Nursing Home"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "macpac-2026-03-12-613531730",
+      "date": "2026-03-12",
+      "agency": "MACPAC",
+      "type": "Report",
+      "title": "March 2026 Report to Congress on Medicaid and CHIP",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.macpac.gov/publication/march-2026-report-to-congress-on-medicaid-and-chip/",
+      "link_label": "MACPAC Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Behavioral Health"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "macpac-2026-03-05-45262624",
+      "date": "2026-03-05",
+      "agency": "MACPAC",
+      "type": "Report",
+      "title": "Provider Enrollment and Credentialing in Medicaid",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.macpac.gov/publication/provider-enrollment-and-credentialing-in-medicaid/",
+      "link_label": "MACPAC Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

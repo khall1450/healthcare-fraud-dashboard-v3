@@ -30,6 +30,32 @@ PENDING_FILE = os.path.join(SCRIPT_DIR, "data", "pending.json")
 # ---------------------------------------------------------------------------
 # Keywords & healthcare terms (compiled regexes)
 # ---------------------------------------------------------------------------
+OVERSIGHT_KEYWORDS = [re.compile(p, re.IGNORECASE) for p in [
+    # Congressional oversight verbs
+    r'\bhearing\b', r'\btestimony\b', r'\btestif', r'\bsubcommittee\b',
+    r'\bcommittee\s+(hearing|held|vote|investigat|markup)',
+    r'\b(demand|demands|press(es)?\s+for|calls?\s+for)\s+(answers|action|hearings?|investigation|accountability)',
+    r'\bopen(s|ed)?\s+(an?\s+)?investigation',
+    r'\blaunch(es|ed)?\s+(an?\s+)?investigation',
+    r'\bexpand(s|ed|ing)?\s+(an?\s+)?investigation',
+    r'\bsubpoena',
+    r'\bletter\s+(to|from|demanding|requesting)',
+    r'\bchairman\b', r'\branking\s+member\b', r'\bsenator\b',
+    # Reports + audits + program integrity
+    r'\baudit\b', r'\bsemiannual\s+report\b', r'\bgao\s+report\b',
+    r'\bpolicy\s+brief\b', r'\bissue\s+brief\b', r'\breport\s+to\s+congress',
+    r'\bfindings\b', r'\bimproper\s+payment',
+    r'\bprogram\s+integrity\b', r'\bfraud,?\s+waste,?\s+and\s+abuse\b',
+    r'\b(top|major)\s+management\s+challenges',
+    # Rules + advisories + corrective action
+    r'\bfinal\s+rule\b', r'\bproposed\s+rule\b', r'\binterim\s+final\s+rule\b',
+    r'\badvisory\b', r'\balert\b', r'\bbulletin\b', r'\bnotice\b', r'\bguidance\b',
+    r'\bcorrective\s+action', r'\bmoratorium\b', r'\bsuspension\b',
+    r'\b(withholding|deferral)\s+of\s+funds?',
+    # Generic fraud language (shared with enforcement)
+    r'\bfraud\b', r'\bscheme\b', r'\bkickback', r'\bfalse\s+claims?\b',
+]]
+
 KEYWORDS = [re.compile(p, re.IGNORECASE) for p in [
     # Generic fraud/scheme verbs — must also pass HEALTHCARE_TERMS for a
     # healthcare-context match, so 'fraud' alone is safe here.
@@ -94,7 +120,7 @@ FEEDS = [
     {"name": "HHS",         "agency": "HHS",           "url": "https://www.hhs.gov/rss/news.xml",                                         "enabled": False, "source_type": "official", "browser_fallback": True},
     {"name": "DOJ-USAO",    "agency": "DOJ",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "doj_usao"},
     {"name": "GAO",         "agency": "GAO",           "url": "https://www.gao.gov/rss/reports.xml",                                      "enabled": True,  "source_type": "official", "browser_fallback": True},
-    {"name": "H-Oversight", "agency": "Congress",      "url": "https://oversight.house.gov/feed/",                                        "enabled": True,  "source_type": "official", "browser_fallback": True},
+    {"name": "H-Oversight", "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "h_oversight"},
     {"name": "H-E&C",       "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "energy_commerce"},
     {"name": "S-Finance",   "agency": "Congress",      "url": "https://www.finance.senate.gov/rss/feeds/?type=press",                     "enabled": True,  "source_type": "official", "browser_fallback": True},
     {"name": "S-HELP",      "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "help_committee"},
@@ -140,6 +166,18 @@ def log(msg, color=None):
 
 def test_any_keyword(text):
     for pat in KEYWORDS:
+        if pat.search(text):
+            return True
+    return False
+
+def test_any_oversight_keyword(text):
+    """Oversight-mode keyword check. Accepts oversight vocabulary
+    (hearings, investigations, demand letters, audits, reports, rules,
+    advisories, etc.) that the enforcement-oriented KEYWORDS list
+    doesn't catch. In oversight mode the main loop uses this OR the
+    enforcement KEYWORDS list to qualify items.
+    """
+    for pat in OVERSIGHT_KEYWORDS:
         if pat.search(text):
             return True
     return False
@@ -393,6 +431,51 @@ def clean_html(text):
         return ""
     soup = BeautifulSoup(text, "lxml")
     return re.sub(r'\s+', ' ', soup.get_text(separator=' ')).strip()
+
+
+def normalize_link(url):
+    """Canonicalize a URL for dedup purposes.
+
+    - Lowercase scheme and host
+    - Drop 'www.' prefix
+    - Strip trailing slash from path
+    - Drop URL fragments (#anchor)
+    - Drop tracking query params (utm_*, fbclid, etc.)
+    Returns an empty string for empty input.
+
+    Used so that 'https://www.justice.gov/opa/pr/foo/',
+    'https://justice.gov/opa/pr/foo', and
+    'https://www.justice.gov/opa/pr/foo#section' all collapse to
+    the same dedup key.
+    """
+    if not url:
+        return ""
+    try:
+        p = urlparse(url.strip())
+    except Exception:
+        return url.strip().lower()
+    scheme = (p.scheme or 'https').lower()
+    host = (p.netloc or '').lower()
+    if host.startswith('www.'):
+        host = host[4:]
+    path = p.path or ''
+    # Strip trailing slash UNLESS it's the root path
+    if len(path) > 1 and path.endswith('/'):
+        path = path.rstrip('/')
+    # Drop tracking params
+    query = ''
+    if p.query:
+        keep = []
+        for kv in p.query.split('&'):
+            if not kv:
+                continue
+            k = kv.split('=', 1)[0].lower()
+            if k.startswith('utm_') or k in ('fbclid', 'gclid', 'mc_cid', 'mc_eid', 'bm-verify'):
+                continue
+            keep.append(kv)
+        if keep:
+            query = '?' + '&'.join(keep)
+    return f"{scheme}://{host}{path}{query}"
 
 def parse_date(date_str):
     if not date_str:
@@ -671,6 +754,74 @@ def scrape_cms(session):
     except Exception as e:
         log(f"  WARNING: CMS scrape - {e}", "yellow")
     return items
+
+def scrape_h_oversight(session):
+    """Scrape House Oversight Committee press releases using Playwright.
+
+    The old RSS feed (/feed/) is stale — it returns 2020-era items from
+    a legacy WordPress install that's no longer maintained. The current
+    press release listing lives at /release/ and is rendered
+    server-side with JS that the browser can read.
+    """
+    if not HAS_PLAYWRIGHT:
+        log("    Skipping H-Oversight (requires Playwright)")
+        return []
+    url = "https://oversight.house.gov/release/"
+    items = []
+    try:
+        soup = scrape_page_with_browser(url)
+        for a_tag in soup.find_all('a', href=re.compile(r'oversight\.house\.gov/release/')):
+            href = a_tag.get('href', '')
+            txt = a_tag.get_text(' ', strip=True)
+            if not txt or len(txt) < 30:
+                continue
+            # Anchor text format:  "Press ReleaseHeadline HereApril 1, 2026WASHINGTON..."
+            # Extract headline by stripping the "Press Release" prefix and
+            # finding the date anchor
+            m = re.match(
+                r'Press Release(.+?)(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                txt)
+            if m:
+                title = m.group(1).strip()
+                date_str = txt[m.end(1):].strip()
+                date_m = re.search(
+                    r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                    date_str)
+                date_str = date_m.group() if date_m else ""
+            else:
+                title = txt.replace('Press Release', '', 1).strip()
+                date_str = ""
+            if not title:
+                continue
+            detail_text = ""
+            _detail_title = ""
+            try:
+                detail_text, _, _detail_title = fetch_detail_page(session, href)
+            except Exception:
+                pass
+            if _detail_title:
+                title = _detail_title
+            desc = ""
+            if detail_text:
+                cleaned = detail_text
+                if title in cleaned:
+                    cleaned = cleaned.split(title, 1)[-1].strip()
+                desc = cleaned[:600].strip()
+                if len(cleaned) > 600:
+                    last_period = desc.rfind('.')
+                    if last_period > 200:
+                        desc = desc[:last_period + 1]
+            items.append({
+                'title': title,
+                'description': desc,
+                'link': href,
+                'pub_date': date_str,
+                '_full_text': detail_text,
+            })
+    except Exception as e:
+        log(f"  WARNING: H-Oversight scrape - {e}")
+    return items
+
 
 def scrape_energy_commerce(session):
     """Scrape House Energy & Commerce press releases using Playwright."""
@@ -1432,6 +1583,8 @@ def fetch_feed(session, feed):
         return scrape_doj_usao(session)
     if scrape_mode == 'doj_opa':
         return scrape_doj_opa(session)
+    if scrape_mode == 'h_oversight':
+        return scrape_h_oversight(session)
     if scrape_mode == 'energy_commerce':
         return scrape_energy_commerce(session)
     if scrape_mode == 'help_committee':
@@ -1532,12 +1685,14 @@ def main():
         log("ERROR: --enforcement-only and --oversight-only are mutually exclusive", "red")
         sys.exit(2)
 
-    # Dedup sets
+    # Dedup sets. Links are normalized (lowercase host, strip www,
+    # strip trailing slash, drop tracking params) so minor URL variants
+    # between scrapers don't break dedup. See normalize_link().
     existing_links = set()
     existing_titles = set()
     for a in data.get("actions", []):
         if a.get("link"):
-            existing_links.add(a["link"])
+            existing_links.add(normalize_link(a["link"]))
         # Normalize title for fuzzy dedup
         existing_titles.add(re.sub(r'[^a-z0-9 ]', '', a.get("title", "").lower()).strip())
 
@@ -1549,11 +1704,11 @@ def main():
             review = load_json(review_path, {"items": [], "rejected_links": []})
             for link in review.get("rejected_links", []) or []:
                 if link:
-                    existing_links.add(link)
+                    existing_links.add(normalize_link(link))
             # Pending items: don't re-flag the same thing on the next run
             for pending in review.get("items", []) or []:
                 if pending.get("link"):
-                    existing_links.add(pending["link"])
+                    existing_links.add(normalize_link(pending["link"]))
         except Exception as e:
             log(f"  WARNING: could not load needs_review.json: {e}")
 
@@ -1566,10 +1721,10 @@ def main():
             ov_review = load_json(oversight_review_path, {"items": [], "rejected_links": []})
             for link in ov_review.get("rejected_links", []) or []:
                 if link:
-                    existing_links.add(link)
+                    existing_links.add(normalize_link(link))
             for pending in ov_review.get("items", []) or []:
                 if pending.get("link"):
-                    existing_links.add(pending["link"])
+                    existing_links.add(normalize_link(pending["link"]))
         except Exception as e:
             log(f"  WARNING: could not load needs_review_oversight.json: {e}")
 
@@ -1612,8 +1767,17 @@ def main():
                 trusted_source = feed.get('agency') in ('HHS-OIG',) or trust_source
                 if not trust_source:
                     if not trusted_source:
-                        # Non-trusted feeds need both a fraud keyword AND healthcare context
-                        if not test_any_keyword(search_text):
+                        # Non-trusted feeds need both a fraud/oversight
+                        # keyword AND healthcare context. Oversight mode
+                        # accepts the broader OVERSIGHT_KEYWORDS list
+                        # (hearings, investigations, audits, reports,
+                        # rules, advisories) in addition to enforcement
+                        # KEYWORDS; enforcement mode uses KEYWORDS only.
+                        oversight_mode = bool(globals().get('OVERSIGHT_ONLY'))
+                        keyword_ok = test_any_keyword(search_text)
+                        if oversight_mode and not keyword_ok:
+                            keyword_ok = test_any_oversight_keyword(search_text)
+                        if not keyword_ok:
                             continue
                     if not test_healthcare_context(search_text):
                         continue
@@ -1624,8 +1788,9 @@ def main():
                 # Reject Google News redirect URLs
                 if link and 'news.google.com' in link:
                     continue
-                # Dedup by link
-                if link and link in existing_links:
+                # Dedup by link (normalized)
+                link_key = normalize_link(link) if link else ""
+                if link_key and link_key in existing_links:
                     continue
                 # Dedup by normalized title
                 norm_title = re.sub(r'[^a-z0-9 ]', '', title.lower()).strip()
@@ -1756,8 +1921,8 @@ def main():
 
                 new_actions.append(entry)
                 added += 1
-                if link:
-                    existing_links.add(link)
+                if link_key:
+                    existing_links.add(link_key)
                 existing_titles.add(norm_title)
                 count += 1
 
