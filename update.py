@@ -80,8 +80,13 @@ HEALTHCARE_TERMS = [re.compile(p, re.IGNORECASE) for p in [
 # ---------------------------------------------------------------------------
 FEEDS = [
     # --- Official agency feeds ---
-    {"name": "DOJ",         "agency": "DOJ",          "url": "https://www.justice.gov/news/rss",                                          "enabled": True,  "source_type": "official", "browser_fallback": True},
+    # DOJ-OPA runs before the DOJ RSS so the topic-tag-gated scraper
+    # gets first dibs on /opa/pr/ items. Items from DOJ-OPA carry a
+    # doj_topics field as provenance; items that came via DOJ RSS or
+    # HHS-OIG's link extraction don't. Putting DOJ-OPA first preserves
+    # that provenance on all OPA-sourced items.
     {"name": "DOJ-OPA",     "agency": "DOJ",          "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "doj_opa"},
+    {"name": "DOJ",         "agency": "DOJ",          "url": "https://www.justice.gov/news/rss",                                          "enabled": True,  "source_type": "official", "browser_fallback": True},
     {"name": "HHS-OIG",     "agency": "HHS-OIG",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "oig"},
     {"name": "CMS",         "agency": "CMS",           "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "cms"},
     {"name": "HHS",         "agency": "HHS",           "url": "https://www.hhs.gov/rss/news.xml",                                         "enabled": False, "source_type": "official", "browser_fallback": True},
@@ -845,13 +850,24 @@ def scrape_ways_means(session):
 def scrape_doj_opa(session):
     """Scrape DOJ Office of Public Affairs press releases using Playwright.
 
-    This is THE canonical source for DOJ OPA releases, which include all
-    nationwide healthcare fraud takedowns, FCA settlements, and major
-    criminal cases. The DOJ 'Justice News' RSS feed (justice.gov/news/rss)
-    does NOT include OPA releases — it only has FOIA training events and
-    miscellaneous USAO items — so for a long time OPA releases were only
-    caught incidentally when HHS-OIG happened to link to them from its
-    enforcement listing. This scraper closes that gap.
+    This is THE canonical source for DOJ OPA releases (healthcare fraud
+    takedowns, FCA settlements, major criminal cases). The DOJ 'Justice
+    News' RSS feed (justice.gov/news/rss) does NOT include OPA releases
+    — it's a mishmash of FOIA training events and USAO scraps — so for
+    a long time OPA releases were only caught incidentally when HHS-OIG
+    linked to them. This scraper closes that gap.
+
+    INCLUSION RULE: Items are gated by the DOJ-assigned topic tag
+    extracted from the detail page's .node-topics field. If DOJ tagged
+    the release as 'Health Care Fraud' we include it unconditionally;
+    otherwise we skip it. This matches the project rule
+    (project_doj_topic_authoritative.md) — defer to DOJ's classification
+    rather than second-guess it with regex keyword filters.
+
+    Items returned by this scraper are marked with `_trust_source: True`
+    so the main loop bypasses its regex HC-keyword filter (which was
+    only needed because most sources don't provide topic tags). The
+    DOJ topic list is stored on the item as `doj_topics` for provenance.
 
     The listing page is Akamai-protected; Playwright is required.
     """
@@ -860,13 +876,25 @@ def scrape_doj_opa(session):
         return []
     url = "https://www.justice.gov/news/press-releases"
     items = []
+    # Import topic helpers from audit_new_items so we share a single
+    # source of truth for DOJ topic vocab + "Health Care Fraud" check.
+    try:
+        from audit_new_items import fetch_doj_topics, has_hc_topic
+    except ImportError as e:
+        log(f"  DOJ-OPA: cannot import topic helpers: {e}")
+        return []
     try:
         soup = scrape_page_with_browser(url)
+        candidates = []
+        seen = set()
         for a_tag in soup.find_all('a', href=re.compile(r'^/opa/pr/')):
             title = a_tag.get_text(strip=True)
             if not title or len(title) < 20:
                 continue
             href = a_tag.get('href', '')
+            if href in seen:
+                continue
+            seen.add(href)
             if href.startswith('/'):
                 href = 'https://www.justice.gov' + href
             parent = a_tag.find_parent(['li', 'div', 'article', 'tr'])
@@ -878,41 +906,65 @@ def scrape_doj_opa(session):
                 )
                 if dm:
                     date_str = dm.group()
-            # Fetch detail page for description + canonical title + date
-            detail_text = ""
-            _detail_title = ""
-            try:
-                detail_text, _, _detail_title = fetch_detail_page(session, href)
-            except Exception:
-                pass
-            if _detail_title:
-                title = _detail_title
-            # If no date on listing, extract from detail page (DOJ puts
-            # "Tuesday, April 7, 2026" in a date field)
-            if not date_str and detail_text:
-                dm = re.search(
-                    r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
-                    detail_text)
-                if dm:
-                    date_str = dm.group()
-            desc = ""
-            if detail_text:
-                cleaned = detail_text
-                if title in cleaned:
-                    cleaned = cleaned.split(title, 1)[-1].strip()
-                desc = cleaned[:600].strip()
-                if len(cleaned) > 600:
-                    last_period = desc.rfind('.')
-                    if last_period > 200:
-                        desc = desc[:last_period + 1]
+            candidates.append((title, href, date_str))
 
-            items.append({
-                'title': title,
-                'description': desc,
-                'link': href,
-                'pub_date': date_str,
-                '_full_text': detail_text,
-            })
+        log(f"    DOJ-OPA: {len(candidates)} candidates, checking topic tags...")
+        # Get a reusable Playwright page for topic extraction
+        browser = get_browser()
+        page = None
+        if browser is not None:
+            ctx = browser.new_context(
+                user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+                viewport={'width': 1280, 'height': 800},
+            )
+            page = ctx.new_page()
+        try:
+            kept = 0
+            for (title, href, date_str) in candidates:
+                # Gate 1: DOJ topic tag check — authoritative
+                topics = fetch_doj_topics(href, page=page)
+                if not has_hc_topic(topics):
+                    # Not tagged by DOJ as Health Care Fraud — skip entirely
+                    continue
+                # Gate 2: extract canonical title + body via a requests
+                # fetch (justice.gov/opa/pr/* works fine with requests,
+                # unlike the Akamai-protected listing page)
+                detail_text, _, canonical_title = fetch_detail_page(session, href)
+                if canonical_title:
+                    title = canonical_title
+                if not date_str and detail_text:
+                    dm = re.search(
+                        r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                        detail_text)
+                    if dm:
+                        date_str = dm.group()
+                desc = ""
+                if detail_text:
+                    cleaned = detail_text
+                    if title in cleaned:
+                        cleaned = cleaned.split(title, 1)[-1].strip()
+                    desc = cleaned[:600].strip()
+                    if len(cleaned) > 600:
+                        last_period = desc.rfind('.')
+                        if last_period > 200:
+                            desc = desc[:last_period + 1]
+                items.append({
+                    'title': title,
+                    'description': desc,
+                    'link': href,
+                    'pub_date': date_str,
+                    '_full_text': detail_text,
+                    '_trust_source': True,  # bypass HC keyword filter
+                    '_doj_topics': topics,  # store for provenance
+                })
+                kept += 1
+            log(f"    DOJ-OPA: {kept} of {len(candidates)} candidates tagged 'Health Care Fraud'")
+        finally:
+            if page is not None:
+                try:
+                    page.context.close()
+                except Exception:
+                    pass
     except Exception as e:
         log(f"  WARNING: DOJ-OPA scrape - {e}")
     return items
@@ -1496,13 +1548,20 @@ def main():
                 # but OIG surfaces SNAP, childcare, immigration, housing,
                 # passport, and other non-HC cases. So require healthcare
                 # context on every item.
-                trusted_source = feed.get('agency') in ('HHS-OIG',)
-                if not trusted_source:
-                    # Non-trusted feeds need both a fraud keyword AND healthcare context
-                    if not test_any_keyword(search_text):
+                # Items marked with _trust_source=True have already been
+                # gated by a higher-authority signal (e.g. scrape_doj_opa
+                # only returns items DOJ itself tagged 'Health Care Fraud').
+                # Bypass the regex HC keyword / context check for those,
+                # per project_doj_topic_authoritative.md.
+                trust_source = bool(item.get('_trust_source'))
+                trusted_source = feed.get('agency') in ('HHS-OIG',) or trust_source
+                if not trust_source:
+                    if not trusted_source:
+                        # Non-trusted feeds need both a fraud keyword AND healthcare context
+                        if not test_any_keyword(search_text):
+                            continue
+                    if not test_healthcare_context(search_text):
                         continue
-                if not test_healthcare_context(search_text):
-                    continue
                 # Media feeds: keyword must be in title
                 is_media = feed['source_type'] == 'news'
                 if is_media and not test_any_keyword(title):
@@ -1633,6 +1692,12 @@ def main():
                     "auto_fetched": True,
                     "related_agencies": related_agencies,
                 }
+                # Persist DOJ topic tags when the scraper captured them —
+                # useful provenance ("DOJ itself classified this as Health
+                # Care Fraud") that survives into actions.json.
+                doj_topics = item.get('_doj_topics')
+                if doj_topics:
+                    entry['doj_topics'] = doj_topics
 
                 new_actions.append(entry)
                 added += 1

@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-08T11:36:49.746806",
+    "last_updated": "2026-04-08T12:03:29.344710",
     "version": "1.0",
-    "last_scraped": "2026-04-08T11:37:48.518414"
+    "last_scraped": "2026-04-08T12:03:29.344703"
   },
   "actions": [
     {
@@ -3885,27 +3885,6 @@
       ]
     },
     {
-      "id": "doj-2026-04-02-3852963637",
-      "date": "2026-04-02",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "Trinity Hospital Agrees to Pay $1.7M to Resolve Alleged Stark Law Violations",
-      "amount": "$1.7 million",
-      "amount_numeric": 1700000.0,
-      "officials": [],
-      "link": "https://www.justice.gov/opa/pr/trinity-hospital-agrees-pay-17m-resolve-alleged-stark-law-violations",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": "OH",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [
-        "HHS-OIG"
-      ]
-    },
-    {
       "id": "doj-2026-02-26-3564031109",
       "date": "2026-02-26",
       "agency": "DOJ",
@@ -5280,51 +5259,6 @@
       "tags": [],
       "entities": [],
       "state": "WA",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [
-        "HHS-OIG"
-      ]
-    },
-    {
-      "id": "doj-2026-04-03-3847526660",
-      "date": "2026-04-03",
-      "agency": "DOJ",
-      "type": "Criminal Enforcement",
-      "title": "Florida Man Pleads Guilty in Health Care Fraud and Kickback Scheme Involving “Foot Baths”",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.justice.gov/usao-mdpa/pr/florida-man-pleads-guilty-health-care-fraud-and-kickback-scheme-involving-foot-baths",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": "FL",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": [
-        "HHS-OIG"
-      ]
-    },
-    {
-      "id": "doj-2026-04-02-1798136913",
-      "date": "2026-04-02",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "Advanced Urology and Jitesh Patel will pay $14 million to settle False Claims Act case involving allegations of fraudulent billing and unnecessary medical procedures",
-      "amount": "$14 million",
-      "amount_numeric": 14000000.0,
-      "officials": [],
-      "link": "https://www.justice.gov/usao-ndga/pr/advanced-urology-and-jitesh-patel-will-pay-14-million-settle-false-claims-act-case",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": "GA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -13721,6 +13655,65 @@
       "related_agencies": []
     },
     {
+      "id": "doj-2026-04-07-692450150",
+      "date": "2026-04-07",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "California Man Pleads Guilty to Orchestrating $270M Medication Reimbursement Fraud Scheme",
+      "amount": "$45 billion",
+      "amount_numeric": 45000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/california-man-pleads-guilty-orchestrating-270m-medication-reimbursement-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "ACA",
+        "Pharmacy",
+        "Telehealth"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
+    },
+    {
+      "id": "doj-2026-04-07-95672696",
+      "date": "2026-04-07",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "National Partnership of Insurance Brokers and its Former Subsidiary Agree to Pay Over $135 Million For Affordable Care Act Enrollment Fraud Scheme",
+      "amount": "$45 billion",
+      "amount_numeric": 45000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/national-partnership-insurance-brokers-and-its-former-subsidiary-agree-pay-over-135-million",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "ACA",
+        "Telehealth",
+        "Behavioral Health",
+        "Hospital",
+        "Addiction Treatment",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Health Care Fraud"
+      ]
+    },
+    {
       "id": "doj-2026-04-07-1949714811",
       "date": "2026-04-07",
       "agency": "DOJ",
@@ -13746,47 +13739,70 @@
       ]
     },
     {
-      "id": "doj-2026-04-07-95672696",
-      "date": "2026-04-07",
+      "id": "doj-2026-04-03-3847526660",
+      "date": "2026-04-03",
       "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "National Partnership of Insurance Brokers and its Former Subsidiary Agree to Pay Over $135 Million For Affordable Care Act Enrollment Fraud Scheme",
-      "amount": "$135 Million",
-      "amount_numeric": 135000000,
+      "type": "Criminal Enforcement",
+      "title": "Florida Man Pleads Guilty in Health Care Fraud and Kickback Scheme Involving “Foot Baths”",
+      "amount": null,
+      "amount_numeric": 0,
       "officials": [],
-      "link": "https://www.justice.gov/opa/pr/national-partnership-insurance-brokers-and-its-former-subsidiary-agree-pay-over-135-million",
+      "link": "https://www.justice.gov/usao-mdpa/pr/florida-man-pleads-guilty-health-care-fraud-and-kickback-scheme-involving-foot-baths",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [
-        "ACA"
-      ],
+      "tags": [],
       "entities": [],
       "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
-      "id": "doj-2026-04-02-3318459454",
+      "id": "doj-2026-04-02-1798136913",
       "date": "2026-04-02",
       "agency": "DOJ",
-      "type": "Criminal Enforcement",
-      "title": "Texas Doctor Charged with Illegally Distributing Millions of Opioid Pills",
-      "amount": null,
-      "amount_numeric": 0,
+      "type": "Civil Action",
+      "title": "Advanced Urology and Jitesh Patel will pay $14 million to settle False Claims Act case involving allegations of fraudulent billing and unnecessary medical procedures",
+      "amount": "$14 million",
+      "amount_numeric": 14000000.0,
       "officials": [],
-      "link": "https://www.justice.gov/opa/pr/texas-doctor-charged-illegally-distributing-millions-opioid-pills",
+      "link": "https://www.justice.gov/usao-ndga/pr/advanced-urology-and-jitesh-patel-will-pay-14-million-settle-false-claims-act-case",
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Opioids"
+        "Medicaid"
       ],
       "entities": [],
-      "state": "AR",
+      "state": "GA",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-04-02-3852963637",
+      "date": "2026-04-02",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Trinity Hospital Agrees to Pay $1.7M to Resolve Alleged Stark Law Violations",
+      "amount": "$1.7 million",
+      "amount_numeric": 1700000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/trinity-hospital-agrees-pay-17m-resolve-alleged-stark-law-violations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "OH",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
