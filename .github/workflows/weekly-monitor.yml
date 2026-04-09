@@ -1,0 +1,56 @@
+name: Weekly Landing Page Monitor
+
+# Checks federal agency anti-fraud landing pages for new documents
+# (PDFs, fact sheets, annual reports, strategy docs) that weren't
+# there last week. Low-volume, high-value: catches the kind of
+# flagship documents that CMS/OIG/GAO publish outside their newsrooms.
+
+on:
+  schedule:
+    # Runs every Monday at 9:43 AM UTC
+    - cron: '43 9 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 lxml playwright
+          playwright install --with-deps chromium
+
+      - name: Run landing page monitor
+        run: python monitor_landing_pages.py --add-to-queue
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet data/_landing_page_state.json data/needs_review_oversight.json; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit state + any new items
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/_landing_page_state.json data/needs_review_oversight.json
+          git commit -m "Weekly monitor: $(date +%Y-%m-%d) landing page check"
+          git push origin main
