@@ -712,51 +712,125 @@ def scrape_oig(session):
     return items
 
 def scrape_cms(session):
-    """Scrape CMS newsroom press releases."""
-    url = "https://www.cms.gov/about-cms/contact/newsroom"
-    items = []
-    try:
-        resp = session.get(url, timeout=20)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, 'lxml')
-        for row in soup.select('.views-row, article, .node--type-press-release'):
-            a_tag = row.find('a', href=True)
-            if not a_tag:
-                continue
-            title = a_tag.get_text(strip=True)
-            href = a_tag['href']
-            if href.startswith('/'):
-                href = 'https://www.cms.gov' + href
-            date_str = ""
-            date_el = row.find(string=re.compile(r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2},?\s+\d{4}'))
-            if date_el:
-                date_match = re.search(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d{1,2},?\s+\d{4}', date_el)
-                if date_match:
-                    date_str = date_match.group()
-            # Fetch detail page for description and canonical title
-            detail_text, _, canonical_title = fetch_detail_page(session, href)
-            if canonical_title:
-                title = canonical_title
-            desc = ""
-            if detail_text:
-                cleaned = detail_text
-                if title in cleaned:
-                    cleaned = cleaned.split(title, 1)[-1].strip()
-                desc = cleaned[:600].strip()
-                if len(cleaned) > 600:
-                    last_period = desc.rfind('.')
-                    if last_period > 200:
-                        desc = desc[:last_period + 1]
+    """Scrape CMS newsroom press releases with pagination.
 
-            items.append({
-                'title': title,
-                'description': desc,
-                'link': href,
-                'pub_date': date_str,
-                '_full_text': detail_text,
-            })
-    except Exception as e:
-        log(f"  WARNING: CMS scrape - {e}", "yellow")
+    CMS's newsroom shows only 7 items per page, and fraud-relevant
+    items (CRUSH, hospice suspensions, corrective actions) scroll off
+    within days as rate-setting announcements take over. Walking
+    pages 0-9 (up to 70 items) catches fraud items from the past
+    ~2-3 months.
+
+    Normal mode: pages 0-4 (35 items, ~1 month of CMS output).
+    Backfill mode: pages 0-14 (105 items, ~3-4 months).
+
+    Requires Playwright because the CMS newsroom is JS-rendered —
+    requests returns the same 7 items regardless of page param.
+    Falls back to the old requests approach (page 0 only) if
+    Playwright is unavailable.
+    """
+    items = []
+    seen_hrefs = set()
+    backfill = globals().get('BACKFILL_MODE', False)
+    max_pages = 15 if backfill else 5
+
+    if HAS_PLAYWRIGHT:
+        try:
+            for page_n in range(max_pages):
+                url = f"https://www.cms.gov/newsroom?page={page_n}"
+                soup = scrape_page_with_browser(url)
+                page_items = 0
+                for a_tag in soup.find_all('a', href=True):
+                    txt = a_tag.get_text(strip=True)
+                    if not txt.startswith('Read moreabout '):
+                        continue
+                    title = txt.replace('Read moreabout ', '').strip()
+                    if not title or len(title) < 15:
+                        continue
+                    href = a_tag.get('href', '')
+                    if href.startswith('/'):
+                        href = 'https://www.cms.gov' + href
+                    if href in seen_hrefs:
+                        continue
+                    seen_hrefs.add(href)
+                    # Fetch detail page for canonical title + body + date
+                    detail_text = ""
+                    _detail_title = ""
+                    try:
+                        detail_text, _, _detail_title = fetch_detail_page(session, href)
+                    except Exception:
+                        pass
+                    if _detail_title:
+                        title = _detail_title
+                    # Extract date from detail page
+                    date_str = ""
+                    if detail_text:
+                        dm = re.search(
+                            r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                            detail_text)
+                        if dm:
+                            date_str = dm.group()
+                    desc = ""
+                    if detail_text:
+                        cleaned = detail_text
+                        if title in cleaned:
+                            cleaned = cleaned.split(title, 1)[-1].strip()
+                        desc = cleaned[:600].strip()
+                        if len(cleaned) > 600:
+                            last_period = desc.rfind('.')
+                            if last_period > 200:
+                                desc = desc[:last_period + 1]
+                    items.append({
+                        'title': title,
+                        'description': desc,
+                        'link': href,
+                        'pub_date': date_str,
+                        '_full_text': detail_text,
+                    })
+                    page_items += 1
+                if page_items == 0:
+                    break  # empty page = end of listing
+        except Exception as e:
+            log(f"  WARNING: CMS Playwright scrape - {e}", "yellow")
+    else:
+        # Fallback: old requests-based scrape (page 0 only)
+        url = "https://www.cms.gov/about-cms/contact/newsroom"
+        try:
+            resp = session.get(url, timeout=20)
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, 'lxml')
+            for row in soup.select('.views-row, article, .node--type-press-release'):
+                a_tag = row.find('a', href=True)
+                if not a_tag:
+                    continue
+                title = a_tag.get_text(strip=True)
+                href = a_tag['href']
+                if href.startswith('/'):
+                    href = 'https://www.cms.gov' + href
+                detail_text, _, canonical_title = fetch_detail_page(session, href)
+                if canonical_title:
+                    title = canonical_title
+                date_str = ""
+                if detail_text:
+                    dm = re.search(
+                        r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                        detail_text)
+                    if dm:
+                        date_str = dm.group()
+                desc = ""
+                if detail_text:
+                    cleaned = detail_text
+                    if title in cleaned:
+                        cleaned = cleaned.split(title, 1)[-1].strip()
+                    desc = cleaned[:600].strip()
+                items.append({
+                    'title': title,
+                    'description': desc,
+                    'link': href,
+                    'pub_date': date_str,
+                    '_full_text': detail_text,
+                })
+        except Exception as e:
+            log(f"  WARNING: CMS scrape - {e}", "yellow")
     return items
 
 def scrape_h_oversight(session):
