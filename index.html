@@ -122,6 +122,11 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 .action-card[data-agency="Media"]      { --agency-color: #8B6914; }
 .action-card[data-agency="State Agency"] { --agency-color: #795548; }
 .action-card[data-agency="Treasury"]     { --agency-color: #1B5E20; }
+.action-card[data-agency="Congress"]     { --agency-color: #1a5276; }
+.action-card[data-agency="GAO"]          { --agency-color: #2e7d32; }
+.action-card[data-agency="DEA"]          { --agency-color: #BF360C; }
+.action-card[data-agency="MedPAC"]       { --agency-color: #00695C; }
+.action-card[data-agency="MACPAC"]       { --agency-color: #00838F; }
 .card-top-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
 .card-top-badges { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; flex: 1; }
 .agency-badge { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 10px; border-radius: var(--radius); color: white; font-family: 'Public Sans', sans-serif; }
@@ -137,6 +142,9 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 .agency-GAO         { background: #2e7d32; }
 .agency-State-Agencies { background: #795548; }
 .agency-Treasury       { background: #1B5E20; }
+.agency-DEA            { background: #BF360C; }
+.agency-MedPAC         { background: #00695C; }
+.agency-MACPAC         { background: #00838F; }
 .type-badge { font-size: 0.65rem; font-weight: 600; padding: 3px 9px; border-radius: var(--radius); border: 1px solid currentColor; font-family: 'Public Sans', sans-serif; letter-spacing: 0.02em; }
 .type-Criminal-Enforcement     { color: var(--type-criminal); background: rgba(198,40,40,0.07); }
 .type-Civil-Action             { color: var(--type-civil); background: rgba(255,148,26,0.1); }
@@ -454,7 +462,7 @@ let enforcementActions = [];
 let oversightActions = [];
 const ENFORCEMENT_TYPES = new Set(['Criminal Enforcement', 'Civil Action']);
 
-const AGENCY_CLASS = { 'DOJ':'agency-DOJ','HHS':'agency-HHS','CMS':'agency-CMS','HHS-OIG':'agency-HHS-OIG','FDA':'agency-FDA','White House':'agency-White-House','Media':'agency-Media','Congress':'agency-Congress','GAO':'agency-GAO','State Agency':'agency-State-Agencies','Treasury':'agency-Treasury' };
+const AGENCY_CLASS = { 'DOJ':'agency-DOJ','HHS':'agency-HHS','CMS':'agency-CMS','HHS-OIG':'agency-HHS-OIG','FDA':'agency-FDA','White House':'agency-White-House','Media':'agency-Media','Congress':'agency-Congress','GAO':'agency-GAO','State Agency':'agency-State-Agencies','Treasury':'agency-Treasury','DEA':'agency-DEA','MedPAC':'agency-MedPAC','MACPAC':'agency-MACPAC' };
 const AGENCY_TOOLTIPS = {
   'DOJ': 'Department of Justice \u2014 Prosecutes health care fraud through criminal and civil enforcement, including the Health Care Fraud Strike Force.',
   'HHS-OIG': 'HHS Office of Inspector General \u2014 Investigates fraud and audits Medicare, Medicaid, and other HHS programs.',
@@ -465,6 +473,9 @@ const AGENCY_TOOLTIPS = {
   'Congress': 'Congressional committees conducting oversight hearings, investigations, and legislation related to health care fraud.',
   'White House': 'Executive actions, presidential memoranda, and administration-wide anti-fraud initiatives.',
   'Treasury': 'Department of the Treasury / FinCEN \u2014 Issues advisories to financial institutions and administers the fraud whistleblower reward program.',
+  'DEA': 'Drug Enforcement Administration \u2014 Investigates prescription drug diversion and pill mill operations by licensed providers.',
+  'MedPAC': 'Medicare Payment Advisory Commission \u2014 Congressional advisory body that publishes reports on Medicare payment policy and program integrity.',
+  'MACPAC': 'Medicaid and CHIP Payment and Access Commission \u2014 Congressional advisory body on Medicaid/CHIP policy and program integrity.',
   'Media': 'Investigative journalism and media coverage uncovering health care fraud.',
 };
 const STATE_NAMES  = { AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming',DC:'Washington D.C.' };
