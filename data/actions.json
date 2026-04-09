@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-09T09:49:44.730290",
+    "last_updated": "2026-04-09T14:46:21.573088",
     "version": "1.0",
     "last_scraped": "2026-04-09T08:51:05.838375"
   },
@@ -14005,6 +14005,49 @@
       "link_label": "HHS-OIG Press Release",
       "social_posts": [],
       "tags": [],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "cms-2025-06-25-exchange-integrity",
+      "date": "2025-06-25",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "CMS Actions to Protect Consumers and Strengthen Exchange Program Integrity",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/cms-actions-protect-consumers-strengthen-exchange-program-integrity",
+      "link_label": "CMS Press Release",
+      "social_posts": [],
+      "tags": [
+        "ACA"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "cms-2026-01-01-skin-substitute-lcds",
+      "date": "2026-01-01",
+      "agency": "CMS",
+      "type": "Rule/Regulation",
+      "title": "Final Local Coverage Determinations (LCDs) for Certain Skin Substitutes Withdrawn",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.cms.gov/newsroom/fact-sheets/upcoming-update-final-local-coverage-determinations-lcds-certain-skin-substitutes",
+      "link_label": "CMS Fact Sheet",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Skin Substitutes"
+      ],
       "entities": [],
       "state": null,
       "source_type": "official",

@@ -99,6 +99,8 @@ HEALTHCARE_TERMS = [re.compile(p, re.IGNORECASE) for p in [
     r'pill mill', r'opioid pills', r'opioid prescri',
     # Reimbursement / billing language
     r'reimbursement', r'medication', r'\bstark law\b',
+    # Program integrity language (catches CMS oversight items)
+    r'\bintegrity\b', r'\bloophole\b', r'skin substitute',
 ]]
 
 # ---------------------------------------------------------------------------
@@ -909,65 +911,72 @@ def scrape_oig_press(session):
     reports, enforcement results, policy statements, and data briefs
     that don't always appear on the other two pages.
 
+    Normal mode: pages 1-3 (60 items, ~2-3 years of press releases).
+    Backfill mode: pages 1-8 (all ~160 items in the archive).
+
     Source: oig.hhs.gov/newsroom/news-releases-articles/
     """
-    url = "https://oig.hhs.gov/newsroom/news-releases-articles/"
+    base_url = "https://oig.hhs.gov/newsroom/news-releases-articles/"
+    backfill = globals().get('BACKFILL_MODE', False)
+    max_pages = 8 if backfill else 3
     items = []
-    try:
-        resp = session.get(url, timeout=20)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, 'lxml')
-        for card in soup.select('li.usa-card'):
-            a_tag = card.select_one('h2.usa-card__heading a')
-            if not a_tag:
-                a_tag = card.select_one('a[href]')
-            if not a_tag:
-                continue
-            title = a_tag.get_text(strip=True)
-            if not title or len(title) < 15:
-                continue
-            href = a_tag.get('href', '')
-            if href.startswith('/'):
-                href = 'https://oig.hhs.gov' + href
-            # Extract date from card metadata
-            date_str = ""
-            date_span = card.select_one('span.text-base-dark')
-            if date_span:
-                date_str = date_span.get_text(strip=True)
-            if not date_str:
-                dm = re.search(
-                    r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
-                    card.get_text(' ', strip=True))
-                if dm:
-                    date_str = dm.group()
-            # Fetch detail page for body text + canonical title
-            detail_text = ""
-            _detail_title = ""
-            try:
-                detail_text, _, _detail_title = fetch_detail_page(session, href)
-            except Exception:
-                pass
-            if _detail_title:
-                title = _detail_title
-            desc = ""
-            if detail_text:
-                cleaned = detail_text
-                if title in cleaned:
-                    cleaned = cleaned.split(title, 1)[-1].strip()
-                desc = cleaned[:600].strip()
-                if len(cleaned) > 600:
-                    last_period = desc.rfind('.')
-                    if last_period > 200:
-                        desc = desc[:last_period + 1]
-            items.append({
-                'title': title,
-                'description': desc,
-                'link': href,
-                'pub_date': date_str,
-                '_full_text': detail_text,
-            })
-    except Exception as e:
-        log(f"  WARNING: OIG press scrape - {e}", "yellow")
+    for page_n in range(max_pages):
+        url = base_url if page_n == 0 else f"{base_url}?page={page_n}"
+        try:
+            resp = session.get(url, timeout=20)
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, 'lxml')
+            for card in soup.select('li.usa-card'):
+                a_tag = card.select_one('h2.usa-card__heading a')
+                if not a_tag:
+                    a_tag = card.select_one('a[href]')
+                if not a_tag:
+                    continue
+                title = a_tag.get_text(strip=True)
+                if not title or len(title) < 15:
+                    continue
+                href = a_tag.get('href', '')
+                if href.startswith('/'):
+                    href = 'https://oig.hhs.gov' + href
+                # Extract date from card metadata
+                date_str = ""
+                date_span = card.select_one('span.text-base-dark')
+                if date_span:
+                    date_str = date_span.get_text(strip=True)
+                if not date_str:
+                    dm = re.search(
+                        r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                        card.get_text(' ', strip=True))
+                    if dm:
+                        date_str = dm.group()
+                # Fetch detail page for body text + canonical title
+                detail_text = ""
+                _detail_title = ""
+                try:
+                    detail_text, _, _detail_title = fetch_detail_page(session, href)
+                except Exception:
+                    pass
+                if _detail_title:
+                    title = _detail_title
+                desc = ""
+                if detail_text:
+                    cleaned = detail_text
+                    if title in cleaned:
+                        cleaned = cleaned.split(title, 1)[-1].strip()
+                    desc = cleaned[:600].strip()
+                    if len(cleaned) > 600:
+                        last_period = desc.rfind('.')
+                        if last_period > 200:
+                            desc = desc[:last_period + 1]
+                items.append({
+                    'title': title,
+                    'description': desc,
+                    'link': href,
+                    'pub_date': date_str,
+                    '_full_text': detail_text,
+                })
+        except Exception as e:
+            log(f"  WARNING: OIG press scrape page {page_n} - {e}", "yellow")
     return items
 
 
@@ -1623,11 +1632,17 @@ def fetch_rss(session, url, use_browser_fallback=False):
     return items
 
 def scrape_oig_reports(session):
-    """Scrape HHS-OIG audit/inspection reports (pages 1-2)."""
+    """Scrape HHS-OIG audit/inspection reports.
+
+    Normal mode: pages 1-5 (100 items, ~2-3 months of reports).
+    Backfill mode: pages 1-15 (300 items, ~6-9 months).
+    """
     base_url = "https://oig.hhs.gov/reports/all/"
     DATE_RE = re.compile(r'Issued\s+(\d{2}/\d{2}/\d{4})')
+    backfill = globals().get('BACKFILL_MODE', False)
+    max_pages = 15 if backfill else 5
     items = []
-    for page in range(1, 3):
+    for page in range(1, max_pages + 1):
         url = base_url if page == 1 else f"{base_url}?page={page}"
         try:
             resp = session.get(url, timeout=20)
