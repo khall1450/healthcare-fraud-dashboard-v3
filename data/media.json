@@ -342,26 +342,6 @@
       "auto_fetched": false
     },
     {
-      "id": "media-2025-nick-shirley-mn-daycare-fraud",
-      "date": "2025-10-01",
-      "agency": "Media",
-      "type": "Investigative Report",
-      "title": "What to know about Nick Shirley, the YouTuber alleging day care fraud in Minnesota",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.npr.org/2025/12/31/nx-s1-5662600/nick-shirley-minnesota-daycare-fraud",
-      "link_label": "NPR Report",
-      "social_posts": [],
-      "tags": [
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": "MN",
-      "source_type": "news",
-      "auto_fetched": false
-    },
-    {
       "id": "media-2025-06-30-wapo-operation-gold-rush",
       "date": "2025-06-30",
       "agency": "Media",
