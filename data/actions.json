@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-14T13:37:38.165890",
+    "last_updated": "2026-04-15T09:00:28.837373",
     "version": "1.0",
-    "last_scraped": "2026-04-14T09:10:39.728982"
+    "last_scraped": "2026-04-15T09:00:28.837361"
   },
   "actions": [
     {
@@ -14979,6 +14979,29 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-04-13-1340021280",
+      "date": "2026-04-13",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Former Nurse Practitioner Pleads Guilty to Possessing Controlled Substances with the Intent to Unlawfully Distribute Them",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndny/pr/former-nurse-practitioner-pleads-guilty-possessing-controlled-substances-intent",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "NY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
