@@ -1353,6 +1353,28 @@ def cmd_audit_oversight() -> int:
     # by regex alone (auto-promote or reject), and only the genuinely
     # ambiguous ~20% go to Claude for a binary yes/no.
     MIXED_CONTENT_AGENCIES = {'CMS', 'GAO', 'Congress', 'MedPAC', 'MACPAC'}
+    # Commentary/messaging blocklist. These are press statements, op-eds,
+    # floor remarks, and "chairman's news" pieces that use the word "fraud"
+    # but aren't actions — they're political messaging about existing
+    # policy. Auto-reject before the fraud-signal check so "Working Families
+    # Tax Cuts Fight Medicaid Fraud" (Crapo op-ed) doesn't slip through.
+    # Only paths that are unambiguously political messaging. Avoid /blog/
+    # and /newsletter/ — CMS (and others) use those for real action
+    # announcements, not commentary.
+    COMMENTARY_URL_PATHS = re.compile(
+        r"/chairmans?-news/|/ranking-members?-news/|/minority-news/|"
+        r"/op-?ed/|/opinion/|/floor-remarks/|/dear-colleague/",
+        re.IGNORECASE,
+    )
+    COMMENTARY_TITLE = re.compile(
+        r"^(chairman|ranking\s+member|senator|representative|rep\.|sen\.)\s+\S+\s+"
+        r"(statement|op-?ed|opening\s+(statement|remarks)|closing\s+(statement|remarks)|"
+        r"floor\s+remarks|speech)\b|"
+        r"^(opening|closing)\s+(statement|remarks)\b|"
+        r"^op-?ed:\s|"
+        r"^my\s+statement\b",
+        re.IGNORECASE,
+    )
     STRONG_FRAUD_SIGNAL = re.compile(
         r"\b("
         r"fraud|kickback|false\s+claim|qui\s+tam|anti-?kickback|"
@@ -1383,6 +1405,16 @@ def cmd_audit_oversight() -> int:
     for item in pending:
         agency = item.get("agency", "")
         title = item.get("title", "") or ""
+        link = item.get("link", "") or ""
+
+        # Commentary blocklist: op-eds, chairman's statements, floor remarks.
+        # These use fraud vocabulary but aren't actions. Auto-reject first,
+        # before any fraud-signal or HC-keyword check.
+        if COMMENTARY_URL_PATHS.search(link) or COMMENTARY_TITLE.search(title):
+            still_pending.append(item)
+            item["flag_reason"] = "commentary/op-ed/chairman's-news — not an action"
+            item["audit_decision"] = "auto_rejected"
+            continue
 
         if agency in MIXED_CONTENT_AGENCIES:
             # Tier 1: strong fraud signal → auto-promote

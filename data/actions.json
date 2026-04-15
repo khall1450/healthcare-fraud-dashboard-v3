@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-15T09:00:28.837373",
+    "last_updated": "2026-04-15T17:01:41.896364",
     "version": "1.0",
     "last_scraped": "2026-04-15T09:00:28.837361"
   },
@@ -14403,27 +14403,6 @@
       ]
     },
     {
-      "id": "congress-2026-04-09-1170495907",
-      "date": "2026-04-09",
-      "agency": "Congress",
-      "type": "Administrative Action",
-      "title": "Working Families Tax Cuts Fight Medicaid Fraud",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "http://www.finance.senate.gov/chairmans-news/working-families-tax-cuts-fight-medicaid-fraud",
-      "link_label": "Congress Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "hhs-oig-2025-12-15-2920030945",
       "date": "2025-12-15",
       "agency": "HHS-OIG",
@@ -15002,6 +14981,42 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "treasury-2026-01-minnesota-fraud-initiatives",
+      "date": "2026-01-16",
+      "agency": "Treasury",
+      "type": "Administrative Action",
+      "title": "Secretary Bessent Announces Initiatives to Combat Rampant Fraud in Minnesota",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://home.treasury.gov/news/press-releases/sb0354",
+      "link_label": "Treasury Press Release",
+      "tags": [
+        "Medicaid"
+      ],
+      "state": "MN",
+      "source_type": "official",
+      "auto_fetched": false,
+      "entities": []
+    },
+    {
+      "id": "hhs-2026-01-22-scott-brady-fraud-hire",
+      "date": "2026-01-22",
+      "agency": "HHS",
+      "type": "Administrative Action",
+      "title": "HHS Adds Former U.S. Attorney for Fraud Efforts",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.hhs.gov/press-room/hhs-adds-former-us-attorney-fraud-efforts.html",
+      "link_label": "HHS Press Release",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": false,
+      "entities": []
     }
   ]
 }

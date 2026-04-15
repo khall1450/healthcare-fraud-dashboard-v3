@@ -788,10 +788,13 @@ def scrape_cms(session):
     items = []
     seen_hrefs = set()
     backfill = globals().get('BACKFILL_MODE', False)
-    max_pages = 15 if backfill else 5
+    floor = globals().get('BACKFILL_FLOOR', '2025-01-01')
+    # Backfill walks up to 40 pages; early-stops on a page fully below floor.
+    max_pages = 40 if backfill else 5
 
     if HAS_PLAYWRIGHT:
         try:
+            prev_len = 0
             for page_n in range(max_pages):
                 url = f"https://www.cms.gov/newsroom?page={page_n}"
                 soup = scrape_page_with_browser(url)
@@ -846,6 +849,21 @@ def scrape_cms(session):
                     page_items += 1
                 if page_items == 0:
                     break  # empty page = end of listing
+                # Backfill early-stop: all new items this page below floor.
+                if backfill and page_n >= 1:
+                    new_this_page = items[prev_len:]
+                    parsed_dates = []
+                    for it in new_this_page:
+                        pd = it.get('pub_date', '')
+                        if pd:
+                            try:
+                                parsed_dates.append(parse_date(pd))
+                            except Exception:
+                                pass
+                    if parsed_dates and max(parsed_dates) < floor:
+                        log(f"  CMS backfill: page {page_n} all older than {floor}, stopping")
+                        break
+                prev_len = len(items)
         except Exception as e:
             log(f"  WARNING: CMS Playwright scrape - {e}", "yellow")
     else:
@@ -1022,8 +1040,11 @@ def scrape_oig_press(session):
     """
     base_url = "https://oig.hhs.gov/newsroom/news-releases-articles/"
     backfill = globals().get('BACKFILL_MODE', False)
-    max_pages = 8 if backfill else 3
+    floor = globals().get('BACKFILL_FLOOR', '2025-01-01')
+    # Backfill walks up to 40 pages; early-stops on a page fully below floor.
+    max_pages = 40 if backfill else 3
     items = []
+    prev_len = 0
     for page_n in range(max_pages):
         url = base_url if page_n == 0 else f"{base_url}?page={page_n}"
         try:
@@ -1079,6 +1100,21 @@ def scrape_oig_press(session):
                     'pub_date': date_str,
                     '_full_text': detail_text,
                 })
+            # Backfill early-stop: all new items on this page below floor.
+            if backfill and page_n >= 1:
+                page_items = items[prev_len:]
+                parsed_dates = []
+                for it in page_items:
+                    pd = it.get('pub_date', '')
+                    if pd:
+                        try:
+                            parsed_dates.append(parse_date(pd))
+                        except Exception:
+                            pass
+                if parsed_dates and max(parsed_dates) < floor:
+                    log(f"  OIG press backfill: page {page_n} all older than {floor}, stopping")
+                    break
+            prev_len = len(items)
         except Exception as e:
             log(f"  WARNING: OIG press scrape page {page_n} - {e}", "yellow")
     return items
@@ -1744,8 +1780,12 @@ def scrape_oig_reports(session):
     base_url = "https://oig.hhs.gov/reports/all/"
     DATE_RE = re.compile(r'Issued\s+(\d{2}/\d{2}/\d{4})')
     backfill = globals().get('BACKFILL_MODE', False)
-    max_pages = 15 if backfill else 5
+    floor = globals().get('BACKFILL_FLOOR', '2025-01-01')
+    # Backfill walks up to 50 pages (~1000 items, ~2 years of reports).
+    # Early-stops when a full page falls below the floor.
+    max_pages = 50 if backfill else 5
     items = []
+    prev_len = 0
     for page in range(1, max_pages + 1):
         url = base_url if page == 1 else f"{base_url}?page={page}"
         try:
@@ -1816,6 +1856,22 @@ def scrape_oig_reports(session):
                     '_full_text': detail_text,
                     '_report_type': report_type,
                 })
+            # Backfill early-stop: if every item added this page parses
+            # to a date older than the floor, stop walking.
+            if backfill and page >= 2:
+                page_items = items[prev_len:]
+                parsed_dates = []
+                for it in page_items:
+                    pd = it.get('pub_date', '')
+                    if pd:
+                        try:
+                            parsed_dates.append(parse_date(pd))
+                        except Exception:
+                            pass
+                if parsed_dates and max(parsed_dates) < floor:
+                    log(f"  OIG reports backfill: page {page} all older than {floor}, stopping")
+                    break
+            prev_len = len(items)
         except Exception as e:
             log(f"  WARNING: OIG reports page {page} - {e}", "yellow")
     return items
