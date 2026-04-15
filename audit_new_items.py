@@ -934,15 +934,48 @@ def cmd_audit_media() -> int:
     media = load_json(MEDIA_FILE, {"metadata": {"version": "1.0", "last_updated": ""},
                                     "stories": []})
 
+    # Media two-tier gate (mirrors oversight approach):
+    #   Tier 1: Strong fraud-investigation signal → auto-promote
+    #   Tier 2: HC keyword but no fraud signal → AI review
+    #   Neither → auto-reject
+    MEDIA_FRAUD_SIGNAL = re.compile(
+        r"\b("
+        r"fraud|scam|scheme|kickback|false claim|improper payment|"
+        r"overbill|upcod|billing scheme|phantom billing|"
+        r"investigation|investigat|expos|uncover|reveal|probe|"
+        r"indict|convict|sentenc|plead|guilty|arrest|"
+        r"settlement|agrees? to pay|ordered to pay|"
+        r"whistleblower|qui tam|"
+        r"billion.{0,10}(fraud|scheme|loss)|"
+        r"million.{0,10}(fraud|scheme|loss)"
+        r")\b",
+        re.IGNORECASE,
+    )
+
     auto_promoted = []
     still_pending = []
+    auto_rejected = []
     for item in pending:
-        if is_obviously_healthcare(item):
+        title = item.get("title", "") or ""
+        # Tier 1: strong fraud/investigation signal → auto-promote
+        if MEDIA_FRAUD_SIGNAL.search(title) and is_obviously_healthcare(item):
             auto_promoted.append(item)
             item["audit_decision"] = "auto_approved"
-        else:
+        # Tier 2: HC keyword but no fraud signal → AI review
+        elif is_obviously_healthcare(item):
             still_pending.append(item)
-            item["flag_reason"] = "title lacks healthcare keyword"
+            item["flag_reason"] = "HC keyword but no fraud/investigation signal — needs AI review"
+        # Neither → auto-reject
+        else:
+            auto_rejected.append(item)
+            item["audit_decision"] = "auto_rejected"
+            item["flag_reason"] = "no HC keyword"
+
+    # Block auto-rejected links
+    for item in auto_rejected:
+        link = item.get("link", "")
+        if link and link not in review["rejected_links"]:
+            review["rejected_links"].append(link)
 
     if auto_promoted:
         # Strip review-only metadata before adding to media.json
@@ -955,12 +988,15 @@ def cmd_audit_media() -> int:
         media["metadata"]["last_updated"] = datetime.now().isoformat()
         save_json(MEDIA_FILE, media)
 
-    # Remove auto-promoted items from the review queue
-    promoted_ids = {a["id"] for a in auto_promoted}
-    review["items"] = [a for a in review["items"] if a.get("id") not in promoted_ids]
+    # Remove auto-promoted + auto-rejected from the review queue
+    handled_ids = {a["id"] for a in auto_promoted + auto_rejected}
+    review["items"] = [a for a in review["items"] if a.get("id") not in handled_ids]
     save_json(MEDIA_REVIEW_FILE, review)
 
-    print(f"audit-media: {len(auto_promoted)} auto-promoted, {len(still_pending)} flagged for AI/human review")
+    ai_pending = len(still_pending)
+    print(f"audit-media: {len(auto_promoted)} auto-promoted, "
+          f"{len(auto_rejected)} auto-rejected, "
+          f"{ai_pending} flagged for AI review")
 
     _write_media_audit_summary(auto_promoted, still_pending)
     return 0
