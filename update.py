@@ -433,8 +433,75 @@ def _looks_like_bad_title(t):
     return False
 
 
+def _extract_canonical_date(soup, url, response_headers=None):
+    """Extract a publication date from structured markup.
+
+    Priority order (most authoritative first):
+      1. <meta property="article:published_time"> — OpenGraph standard
+      2. JSON-LD datePublished — schema.org standard
+      3. <time datetime="..."> — HTML5 standard
+      4. URL path date pattern /YYYY/MM/DD/
+      5. HTTP Last-Modified header (if response_headers provided)
+
+    Returns an ISO date string 'YYYY-MM-DD' or None if nothing was found.
+    Visual body-text scraping is intentionally NOT done here — callers
+    keep their existing regex fallback for that case.
+    """
+    # 1. OpenGraph
+    og = soup.find('meta', attrs={'property': 'article:published_time'})
+    if og and og.get('content'):
+        iso = og['content'][:10]
+        if re.match(r'^\d{4}-\d{2}-\d{2}$', iso):
+            return iso
+    # 2. JSON-LD datePublished (may be array of scripts; take first valid)
+    for script in soup.find_all('script', attrs={'type': 'application/ld+json'}):
+        raw = script.string or script.get_text()
+        if not raw:
+            continue
+        try:
+            data = json.loads(raw)
+        except Exception:
+            continue
+        # JSON-LD can be a single object, an array, or a @graph wrapper
+        candidates = []
+        if isinstance(data, list):
+            candidates = data
+        elif isinstance(data, dict):
+            if '@graph' in data and isinstance(data['@graph'], list):
+                candidates = data['@graph']
+            else:
+                candidates = [data]
+        for obj in candidates:
+            if isinstance(obj, dict) and obj.get('datePublished'):
+                iso = str(obj['datePublished'])[:10]
+                if re.match(r'^\d{4}-\d{2}-\d{2}$', iso):
+                    return iso
+    # 3. <time datetime="..."> — prefer elements marked as publication
+    for time_el in soup.find_all('time', attrs={'datetime': True}):
+        dt = time_el['datetime']
+        iso = dt[:10]
+        if re.match(r'^\d{4}-\d{2}-\d{2}$', iso):
+            return iso
+    # 4. URL path /YYYY/MM/DD/
+    m = re.search(r'/(\d{4})/(\d{1,2})/(\d{1,2})(?:/|$)', url)
+    if m:
+        y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
+        if 2000 <= y <= 2100 and 1 <= mo <= 12 and 1 <= d <= 31:
+            return f"{y:04d}-{mo:02d}-{d:02d}"
+    # 5. HTTP Last-Modified header (weak — reflects server caching, not pub)
+    if response_headers:
+        lm = response_headers.get('Last-Modified')
+        if lm:
+            try:
+                from email.utils import parsedate_to_datetime
+                return parsedate_to_datetime(lm).strftime('%Y-%m-%d')
+            except Exception:
+                pass
+    return None
+
+
 def fetch_detail_page(session, url):
-    """Fetch a detail page and return (text, doj_link, canonical_title).
+    """Fetch a detail page and return (text, doj_link, canonical_title, canonical_date).
 
     The canonical_title is extracted from (in order of preference):
       1. <meta property="og:title">
@@ -442,6 +509,11 @@ def fetch_detail_page(session, url):
       3. <title> tag, stripped of site/breadcrumb boilerplate
     Returns "" for canonical_title if nothing usable was found — callers
     should fall back to the listing-page link text in that case.
+
+    The canonical_date is extracted from structured markup via
+    _extract_canonical_date(). Returns None if no structured date was
+    found — callers should fall back to listing-page date / body-text
+    regex in that case.
     """
     try:
         resp = session.get(url, timeout=20)
@@ -472,6 +544,8 @@ def fetch_detail_page(session, url):
                 cand = normalize_page_title(title_tag.get_text(strip=True))
                 if not _looks_like_bad_title(cand):
                     canonical_title = cand
+        # Extract canonical date from structured markup (None if not found)
+        canonical_date = _extract_canonical_date(soup, url, resp.headers)
         # Try common content containers
         main = (soup.find('main') or soup.find('article') or
                 soup.find('div', class_='field-item') or
@@ -479,11 +553,12 @@ def fetch_detail_page(session, url):
         if main:
             for tag in main.find_all(['nav', 'footer', 'aside', 'script', 'style']):
                 tag.decompose()
-            return re.sub(r'\s+', ' ', main.get_text(' ', strip=True)), doj_link, canonical_title
-        return "", doj_link, canonical_title
+            return (re.sub(r'\s+', ' ', main.get_text(' ', strip=True)),
+                    doj_link, canonical_title, canonical_date)
+        return "", doj_link, canonical_title, canonical_date
     except Exception as e:
         log(f"    Detail fetch failed for {url}: {e}")
-        return "", None, ""
+        return "", None, "", None
 
 def make_id(prefix, date_str, link, agency=""):
     hash_input = link or (date_str + agency)
@@ -541,10 +616,22 @@ def normalize_link(url):
             query = '?' + '&'.join(keep)
     return f"{scheme}://{host}{path}{query}"
 
-def parse_date(date_str):
+def parse_date(date_str, *, strict=False):
+    """Parse a date string into 'YYYY-MM-DD'.
+
+    Returns today's date for empty input (convenience for callers that
+    don't care). For non-empty strings that can't be parsed:
+      - strict=True returns None (caller is expected to handle the
+        missing date — flag for review, skip, etc.)
+      - strict=False falls back to today's date and logs a WARNING
+        with the raw string, so the parser gap becomes visible.
+
+    New callers should pass strict=True. The non-strict default stays
+    for backward compatibility, but those call sites should be migrated
+    over time.
+    """
     if not date_str:
-        return datetime.now().strftime('%Y-%m-%d')
-    # feedparser provides parsed time tuples
+        return None if strict else datetime.now().strftime('%Y-%m-%d')
     for fmt in [
         '%a, %d %b %Y %H:%M:%S %z',
         '%a, %d %b %Y %H:%M:%S %Z',
@@ -553,18 +640,27 @@ def parse_date(date_str):
         '%Y-%m-%d',
         '%B %d, %Y',
         '%b %d, %Y',
+        '%b. %d, %Y',
         '%m/%d/%Y',
+        '%d %B %Y',
+        '%d %b %Y',
     ]:
         try:
             return datetime.strptime(date_str.strip(), fmt).strftime('%Y-%m-%d')
         except (ValueError, TypeError):
             continue
-    # Last resort: try dateutil if available, otherwise today
+    # Last-resort dateutil fallback
     try:
         from dateutil import parser as du_parser
         return du_parser.parse(date_str).strftime('%Y-%m-%d')
     except Exception:
-        return datetime.now().strftime('%Y-%m-%d')
+        pass
+    # All parsers failed
+    if strict:
+        return None
+    log(f"  WARNING: could not parse date '{date_str}' — defaulting to today. "
+        f"Add a format string to parse_date() to fix.", "yellow")
+    return datetime.now().strftime('%Y-%m-%d')
 
 def load_json(path, default=None):
     if not os.path.exists(path):
@@ -708,7 +804,7 @@ def scrape_oig(session):
                         date_str = date_match.group()
                 # Fetch OIG detail page — also extracts DOJ press release link
                 # and canonical headline (h1/og:title)
-                detail_text, doj_link, canonical_title = fetch_detail_page(session, href)
+                detail_text, doj_link, canonical_title, canonical_date = fetch_detail_page(session, href)
                 # If DOJ press release exists, use it as the canonical link.
                 canonical_link = doj_link if doj_link else href
                 # In normal mode we also fetch the DOJ press release text to
@@ -717,15 +813,20 @@ def scrape_oig(session):
                 # and we don't store descriptions anyway, so the incremental
                 # quality isn't worth the latency or failure rate.
                 if doj_link and not backfill:
-                    doj_text, _, doj_canonical = fetch_detail_page(session, doj_link)
+                    doj_text, _, doj_canonical, _doj_date = fetch_detail_page(session, doj_link)
                     if doj_text:
                         detail_text = doj_text  # use DOJ text for description/tags
                     if doj_canonical:
                         canonical_title = doj_canonical  # prefer DOJ headline
+                    # DOJ press release date is the authoritative prosecution date
+                    if _doj_date:
+                        canonical_date = _doj_date
                 # Override listing-page title with the canonical headline
                 if canonical_title:
                     title = canonical_title
-                # Fallback: extract date from detail page text (e.g. "Action Details Date: March 27, 2026")
+                # Date priority: structured canonical > listing-page regex > body-text regex
+                if canonical_date:
+                    date_str = canonical_date
                 if not date_str and detail_text:
                     date_match = DATE_RE.search(detail_text)
                     if date_match:
@@ -819,14 +920,14 @@ def scrape_cms(session):
                     detail_text = ""
                     _detail_title = ""
                     try:
-                        detail_text, _, _detail_title = fetch_detail_page(session, href)
+                        detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
                     except Exception:
                         pass
                     if _detail_title:
                         title = _detail_title
-                    # Extract date from detail page
-                    date_str = ""
-                    if detail_text:
+                    # Date priority: structured markup (canonical) > body-text regex
+                    date_str = _detail_date or ""
+                    if not date_str and detail_text:
                         dm = re.search(
                             r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
                             detail_text)
@@ -884,11 +985,12 @@ def scrape_cms(session):
                 href = a_tag['href']
                 if href.startswith('/'):
                     href = 'https://www.cms.gov' + href
-                detail_text, _, canonical_title = fetch_detail_page(session, href)
+                detail_text, _, canonical_title, canonical_date = fetch_detail_page(session, href)
                 if canonical_title:
                     title = canonical_title
-                date_str = ""
-                if detail_text:
+                # Structured date first, body-text regex as fallback
+                date_str = canonical_date or ""
+                if not date_str and detail_text:
                     dm = re.search(
                         r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
                         detail_text)
@@ -1001,7 +1103,7 @@ def scrape_h_oversight(session):
             detail_text = ""
             _detail_title = ""
             try:
-                detail_text, _, _detail_title = fetch_detail_page(session, href)
+                detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
             except Exception:
                 pass
             if _detail_title:
@@ -1081,11 +1183,14 @@ def scrape_oig_press(session):
                 detail_text = ""
                 _detail_title = ""
                 try:
-                    detail_text, _, _detail_title = fetch_detail_page(session, href)
+                    detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
                 except Exception:
                     pass
                 if _detail_title:
                     title = _detail_title
+                # Prefer structured canonical date over the listing-card span
+                if _detail_date:
+                    date_str = _detail_date
                 desc = ""
                 if detail_text:
                     cleaned = detail_text
@@ -1189,7 +1294,7 @@ def scrape_senate_judiciary(session):
                 if not title_passes:
                     # Fetch body for second-chance check
                     try:
-                        detail_text, _, _detail_title = fetch_detail_page(session, href)
+                        detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
                     except Exception:
                         pass
                     if detail_text and _CONGRESS_HC_PREFILTER.search(detail_text):
@@ -1199,7 +1304,7 @@ def scrape_senate_judiciary(session):
                 # If we didn't fetch yet (title passed on first check), fetch now
                 if not detail_text:
                     try:
-                        detail_text, _, _detail_title = fetch_detail_page(session, href)
+                        detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
                     except Exception:
                         pass
                 if _detail_title:
@@ -1274,7 +1379,7 @@ def scrape_house_judiciary(session):
             detail_text = ""
             _detail_title = ""
             try:
-                detail_text, _, _detail_title = fetch_detail_page(session, href)
+                detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
             except Exception:
                 pass
             if _detail_title:
@@ -1326,7 +1431,7 @@ def scrape_energy_commerce(session):
             detail_text = ""
             _detail_title = ""
             try:
-                detail_text, _, _detail_title = fetch_detail_page(session, href)
+                detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
             except Exception:
                 pass
             if _detail_title:
@@ -1383,7 +1488,7 @@ def scrape_help_committee(session):
             detail_text = ""
             _detail_title = ""
             try:
-                detail_text, _, _detail_title = fetch_detail_page(session, href)
+                detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
             except Exception:
                 pass
             if _detail_title:
@@ -1451,7 +1556,7 @@ def scrape_ways_means(session):
             detail_text = ""
             _detail_title = ""
             try:
-                detail_text, _, _detail_title = fetch_detail_page(session, href)
+                detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
             except Exception:
                 pass
             if _detail_title:
@@ -1560,7 +1665,7 @@ def scrape_doj_opa(session):
                 # Gate 2: extract canonical title + body via a requests
                 # fetch (justice.gov/opa/pr/* works fine with requests,
                 # unlike the Akamai-protected listing page)
-                detail_text, _, canonical_title = fetch_detail_page(session, href)
+                detail_text, _, canonical_title, canonical_date = fetch_detail_page(session, href)
                 if canonical_title:
                     title = canonical_title
                 if not date_str and detail_text:
@@ -1669,7 +1774,7 @@ def scrape_doj_usao(session):
                 detail_text = ""
                 _detail_title = ""
                 try:
-                    detail_text, _, _detail_title = fetch_detail_page(session, href)
+                    detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
                 except Exception:
                     pass
                 if _detail_title:
@@ -1750,7 +1855,7 @@ def fetch_rss(session, url, use_browser_fallback=False):
         _detail_title = ""
         if link and len(desc_clean) < 100:
             try:
-                detail_text, _, _detail_title = fetch_detail_page(session, link)
+                detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, link)
                 if detail_text:
                     cleaned = detail_text
                     if title in cleaned:
@@ -1837,10 +1942,27 @@ def scrape_oig_reports(session):
                     if rt in body_text:
                         report_type = rt
                         break
-                # Fetch detail page for description and canonical title
-                detail_text, _, canonical_title = fetch_detail_page(session, href)
+                # Fetch detail page for description, canonical title, canonical date
+                detail_text, _, canonical_title, canonical_date = fetch_detail_page(session, href)
                 if canonical_title:
                     title = canonical_title
+                # Prefer structured canonical date over the listing-page regex.
+                # If they disagree by >7 days, log it — listing sometimes beats
+                # the structured tag (e.g. "last-modified" vs "published").
+                if canonical_date:
+                    if date_str:
+                        try:
+                            listing_iso = parse_date(date_str, strict=True)
+                            if listing_iso:
+                                d1 = datetime.strptime(listing_iso, '%Y-%m-%d')
+                                d2 = datetime.strptime(canonical_date, '%Y-%m-%d')
+                                if abs((d1 - d2).days) > 7:
+                                    log(f"  NOTE: OIG reports listing date {listing_iso} "
+                                        f"disagrees with canonical {canonical_date} by "
+                                        f"{abs((d1-d2).days)}d for {href}")
+                        except Exception:
+                            pass
+                    date_str = canonical_date
                 desc = ""
                 if detail_text:
                     cleaned = detail_text
@@ -1914,7 +2036,7 @@ def scrape_medpac(session):
             detail_text = ""
             _detail_title = ""
             try:
-                detail_text, _, _detail_title = fetch_detail_page(session, href)
+                detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
             except Exception:
                 pass
             if _detail_title:
@@ -1975,7 +2097,7 @@ def scrape_macpac(session):
             detail_text = ""
             _detail_title = ""
             try:
-                detail_text, _, _detail_title = fetch_detail_page(session, href)
+                detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
             except Exception:
                 pass
             if _detail_title:
@@ -2076,7 +2198,7 @@ def scrape_hhs_press(session):
                 detail_text = ""
                 _detail_title = ""
                 try:
-                    detail_text, _, _detail_title = fetch_detail_page(session, href)
+                    detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
                 except Exception:
                     pass
                 if _detail_title:
@@ -2154,13 +2276,14 @@ def scrape_fincen(session):
             detail_text = ""
             _detail_title = ""
             try:
-                detail_text, _, _detail_title = fetch_detail_page(session, full_href)
+                detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, full_href)
             except Exception:
                 pass
             if _detail_title:
                 title = _detail_title
-            date_str = ""
-            if detail_text:
+            # Structured date from detail page first, body-text regex fallback
+            date_str = _detail_date or ""
+            if not date_str and detail_text:
                 date_match = re.search(
                     r'(January|February|March|April|May|June|July|August|'
                     r'September|October|November|December)\s+\d{1,2},?\s+\d{4}',
