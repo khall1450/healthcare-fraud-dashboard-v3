@@ -518,15 +518,33 @@ def resolve_committee_url(title, committee_code, session=None):
     return None
 
 
+_DEDUP_STOPWORDS = {"the", "a", "an", "of", "in", "on", "to", "for", "at", "by",
+                    "and", "or", "with", "as", "is", "are", "was", "were", "be",
+                    "from", "that", "this"}
+
+
+def _content_words(title):
+    """Return the set of content (non-stopword) words in a title."""
+    return {w for w in _slugify(title).split("-")
+            if w and w not in _DEDUP_STOPWORDS and len(w) > 1}
+
+
 def _matches_existing_hearing(new_row, existing_items):
     """True if a new hearing looks like an existing Hearing-type item.
 
     Dedup rules:
       - Same congress.gov event URL
-      - Same date AND title fuzzy-matches (shared 5+ word sequence)
+      - Same date AND title content-word overlap is high (>=60% of the
+        shorter title's content words appear in the longer one, with a
+        minimum of 3 shared words). Uses stopword-filtered tokens so
+        "Fighting Obamacare Subsidy Fraud" matches "Fighting Obamacare
+        Subsidy Fraud: Is the Administrative Procedure Act Working".
+      - Date within 1 day AND high content overlap (hearings sometimes
+        get rescheduled by a day; press release dates can differ from
+        the actual hearing date).
     """
     new_date = new_row["date"]
-    new_title_words = set(_slugify(new_row["title"]).split("-"))
+    new_words = _content_words(new_row["title"])
     for ex in existing_items:
         if ex.get("type") != "Hearing":
             continue
@@ -534,13 +552,29 @@ def _matches_existing_hearing(new_row, existing_items):
         # Event URL match
         if f"-event/{new_row['eventId']}" in link:
             return True
-        # Date + title fuzzy match
-        if ex.get("date") == new_date:
-            ex_words = set(_slugify(ex.get("title", "")).split("-"))
-            overlap = len(new_title_words & ex_words)
-            if overlap >= 5:
-                return True
+        # Date + content word overlap
+        ex_date = ex.get("date", "")
+        ex_words = _content_words(ex.get("title", ""))
+        if not ex_words or not new_words:
+            continue
+        shared = new_words & ex_words
+        shorter = min(len(new_words), len(ex_words))
+        # Allow 1-day slack (hearing vs announcement dates)
+        date_close = (ex_date == new_date
+                      or _date_within_days(ex_date, new_date, 1))
+        if date_close and len(shared) >= max(3, int(shorter * 0.6)):
+            return True
     return False
+
+
+def _date_within_days(a, b, days):
+    try:
+        from datetime import datetime
+        da = datetime.strptime(a, "%Y-%m-%d")
+        db = datetime.strptime(b, "%Y-%m-%d")
+        return abs((da - db).days) <= days
+    except Exception:
+        return False
 
 
 def apply_to_actions(results):
