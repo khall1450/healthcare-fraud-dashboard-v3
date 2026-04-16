@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T15:36:35.079450",
+    "last_updated": "2026-04-16T15:43:40.204767",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -3116,7 +3116,7 @@
       "date": "2025-06-30",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
-      "title": "Case Summaries",
+      "title": "Pakistani National Charged with $650 Million Substance Abuse Treatment Fraud in Arizona",
       "amount": "$650 Million",
       "amount_numeric": 650000000.0,
       "officials": [],
@@ -3124,13 +3124,8 @@
       "link_label": "DOJ 2025 Takedown Case Summaries",
       "social_posts": [],
       "tags": [
-        "Addiction Treatment",
         "Medicaid",
-        "Wound Care",
-        "TRICARE",
-        "Hospice",
-        "Skin Substitutes",
-        "Medicare"
+        "Addiction Treatment"
       ],
       "state": "AZ",
       "source_type": "official",

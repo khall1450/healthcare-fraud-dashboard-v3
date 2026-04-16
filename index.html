@@ -855,7 +855,16 @@ async function loadData() {
     populateFilterOptions('oversightTypeFilter', oversightActions, 'type');
     populateStateFilter('oversightStateFilter', oversightActions);
     updateLastUpdated(data.metadata && data.metadata.last_updated);
-    applyFilters();
+    // Restore last-viewed tab from sessionStorage (refresh preserves it;
+    // new browser tabs/windows default back to Federal Enforcement).
+    let savedView = null;
+    try { savedView = sessionStorage.getItem('hcfd_view'); } catch (e) {}
+    if (savedView && ['cards', 'oversight', 'landscape'].includes(savedView)
+        && savedView !== 'cards') {
+      setView(savedView);
+    } else {
+      applyFilters();
+    }
   } else {
     document.getElementById('cardsGrid').innerHTML =
       '<div class="col-12"><div class="alert alert-danger">Could not load data.</div></div>';
@@ -898,6 +907,10 @@ function showToast(msg, type) {
 let currentView = 'cards';
 function setView(view) {
   currentView = view;
+  // Persist last-viewed tab in sessionStorage so page refresh preserves
+  // it. sessionStorage (not localStorage) means fresh browser tabs still
+  // default to the Federal Enforcement tab — only refreshes stay sticky.
+  try { sessionStorage.setItem('hcfd_view', view); } catch (e) {}
   document.getElementById('cardsView').classList.toggle('d-none', view !== 'cards');
   document.getElementById('oversightView').classList.toggle('d-none', view !== 'oversight');
   document.getElementById('landscapeView').classList.toggle('d-none', view !== 'landscape');

@@ -2023,6 +2023,42 @@ def scrape_oig_reports(session):
                 detail_text, _, canonical_title, canonical_date = fetch_detail_page(session, href)
                 if canonical_title:
                     title = canonical_title
+                # Body-level clean-bill-of-health check. HHS-OIG audits where
+                # the auditee complied often don't hit the title filter above
+                # but DO have a stock phrase in the What OIG Found / Recommen-
+                # dations section. Scan the first ~3000 chars (covers the
+                # abstract + key findings) for any such phrase. Match =
+                # compliance finding = skip.
+                if detail_text:
+                    head = detail_text[:3000].lower()
+                    compliance_signals = [
+                        "oig has no recommendations",
+                        "no recommendations",
+                        "oig is making no recommendations",
+                        "oig recommends no corrective action",
+                        "no exceptions noted",
+                        "auditee substantially complied",
+                        "agency substantially complied",
+                        "provider substantially complied",
+                        "state substantially complied",
+                        "generally complied with federal requirements",
+                        "generally complied with medicare requirements",
+                        "generally complied with medicaid requirements",
+                        "met medicare requirements",
+                        "met medicaid requirements",
+                    ]
+                    # Only skip if a compliance signal appears AND there's no
+                    # counter-signal (fraud/improper payment/kickback) that
+                    # indicates the audit still matters
+                    fraud_signal = re.search(
+                        r"\b(fraud|kickback|improper\s+payment|overpayment|"
+                        r"false\s+claim|enforcement|excluded\s+provider|"
+                        r"suspension|referral|improperly|"
+                        r"unallowable|exceeded\s+medicare|program\s+integrity\s+concern)\b",
+                        head)
+                    if any(sig in head for sig in compliance_signals) and not fraud_signal:
+                        log(f"  skipping OIG no-issue audit (body compliance signal): {title[:80]}")
+                        continue
                 # Prefer structured canonical date over the listing-page regex.
                 # If they disagree by >7 days, log it — listing sometimes beats
                 # the structured tag (e.g. "last-modified" vs "published").
