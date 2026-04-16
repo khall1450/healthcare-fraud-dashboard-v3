@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T14:34:28.762720",
+    "last_updated": "2026-04-16T15:05:42.903660",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -59,7 +59,7 @@
       "date": "2026-04-02",
       "agency": "CMS",
       "type": "Rule/Regulation",
-      "title": "CMS Proposes Hospice Transparency Scoring System to Combat Fraud and Protect Beneficiaries",
+      "title": "CMS Proposes New Transparency Measures to Strengthen Oversight of Hospice Providers",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -74,7 +74,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "CMS Proposes Hospice Transparency Scoring System to Combat Fraud and Protect Beneficiaries"
     },
     {
       "id": "doj-2026-04-02-operation-never-say-die",
@@ -105,7 +106,7 @@
       "date": "2026-03-30",
       "agency": "Treasury",
       "type": "Administrative Action",
-      "title": "FinCEN Issues Advisory Urging Financial Institutions to Flag Health Care Fraud Schemes",
+      "title": "Treasury Targets Fraud Schemes Exploiting Government Health Care Benefits",
       "amount": "",
       "amount_numeric": 0,
       "officials": [],
@@ -118,7 +119,8 @@
       "state": "",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "FinCEN Issues Advisory Urging Financial Institutions to Flag Health Care Fraud Schemes"
     },
     {
       "id": "treasury-2026-03-30-whistleblower-reward",
@@ -347,7 +349,7 @@
       "date": "2026-03-23",
       "agency": "Congress",
       "type": "Investigation",
-      "title": "House Oversight Committee Launches Investigation into California Hospice Fraud, Sends Letter to Gov. Newsom",
+      "title": "Oversight Committee Launches Investigation Into Rampant Taxpayer Fraud in California Hospice Programs",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -361,7 +363,8 @@
       "entities": [],
       "state": "CA",
       "source_type": "official",
-      "auto_fetched": false
+      "auto_fetched": false,
+      "narrative_title": "House Oversight Committee Launches Investigation into California Hospice Fraud, Sends Letter to Gov. Newsom"
     },
     {
       "id": "hhs-oig-2026-03-23-2528000540",
@@ -612,7 +615,7 @@
       "date": "2026-03-18",
       "agency": "HHS-OIG",
       "type": "Report",
-      "title": "HHS-OIG: Medicaid Fraud Control Units Annual Report FY2025 — $2 Billion in Combined Recoveries",
+      "title": "Medicaid Fraud Control Units Annual Report: Fiscal Year 2025",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -626,14 +629,15 @@
       "entities": [],
       "state": null,
       "source_type": "official",
-      "auto_fetched": false
+      "auto_fetched": false,
+      "narrative_title": "HHS-OIG: Medicaid Fraud Control Units Annual Report FY2025 — $2 Billion in Combined Recoveries"
     },
     {
       "id": "congress-2026-03-17-house-ec-cms-fraud-hearing",
       "date": "2026-03-17",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "House E&C Hearing: Protecting Patients and Safeguarding Taxpayer Dollars — The Role of CMS in Combatting Medicare and Medicaid Fraud",
+      "title": "O&I Subcommittee: Protecting Patients and Safeguarding Taxpayer Dollars: The Role of CMS in Combatting Medicare and Medicaid Fraud",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -647,7 +651,8 @@
       "entities": [],
       "state": null,
       "source_type": "official",
-      "auto_fetched": false
+      "auto_fetched": false,
+      "narrative_title": "House E&C Hearing: Protecting Patients and Safeguarding Taxpayer Dollars — The Role of CMS in Combatting Medicare and Medicaid Fraud"
     },
     {
       "id": "cms-2026-03-17-florida-fraud-inquiry",
@@ -678,7 +683,7 @@
       "date": "2026-03-16",
       "agency": "White House",
       "type": "Presidential Action",
-      "title": "President Trump Establishes Task Force to Eliminate Fraud via Executive Order",
+      "title": "Fact Sheet: President Donald J. Trump Establishes the Task Force to Eliminate Fraud",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -692,7 +697,8 @@
       "entities": [],
       "state": "MN, CA, IL, NY, ME, CO",
       "source_type": "official",
-      "auto_fetched": false
+      "auto_fetched": false,
+      "narrative_title": "President Trump Establishes Task Force to Eliminate Fraud via Executive Order"
     },
     {
       "id": "doj-2026-03-16-safe-chain-hiv-drugs-92m",
@@ -893,7 +899,7 @@
       "date": "2026-03-06",
       "agency": "Congress",
       "type": "Investigation",
-      "title": "House E&C Expands Medicaid Fraud Investigation to 10 Additional States",
+      "title": "E&C Leaders Expand Investigation into Medicaid Fraud Nationwide",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -907,7 +913,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "House E&C Expands Medicaid Fraud Investigation to 10 Additional States"
     },
     {
       "link": "https://www.justice.gov/usao-ma/pr/amerisourcebergen-subsidiary-agrees-pay-1-million-allegedly-paying-kickbacks-health-care",
@@ -1062,7 +1069,7 @@
       "date": "2026-03-04",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "House Oversight Hearing: Minnesota Fraud Part II — Governor Walz and AG Ellison Testify",
+      "title": "Oversight of Fraud and Misuse of Federal Funds in Minnesota: Part II",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1075,7 +1082,8 @@
       "state": "MN",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "House Oversight Hearing: Minnesota Fraud Part II — Governor Walz and AG Ellison Testify"
     },
     {
       "id": "cms-2026-03-new-york-medicaid-investigation",
@@ -1128,7 +1136,7 @@
       "date": "2026-02-27",
       "agency": "CMS",
       "type": "Rule/Regulation",
-      "title": "CMS Publishes CRUSH RFI in Federal Register; Seeks Public Input on Sweeping Anti-Fraud Regulation",
+      "title": "Request for Information (RFI) Related to Comprehensive Regulations To Uncover Suspicious Healthcare (CRUSH)",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1148,14 +1156,15 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "CMS Publishes CRUSH RFI in Federal Register; Seeks Public Input on Sweeping Anti-Fraud Regulation"
     },
     {
       "id": "cms-2026-02-major-fraud-crackdown-feb25",
       "date": "2026-02-25",
       "agency": "CMS",
       "type": "Administrative Action",
-      "title": "CMS/HHS Announce Major Anti-Fraud Package: $259.5M MN Deferral, DMEPOS Moratorium, CRUSH Initiative",
+      "title": "Trump Administration Prioritizes Affordability by Announcing Major Crackdown on Health Care Fraud",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -1176,7 +1185,8 @@
       "entities": [],
       "related_agencies": [
         "HHS"
-      ]
+      ],
+      "narrative_title": "CMS/HHS Announce Major Anti-Fraud Package: $259.5M MN Deferral, DMEPOS Moratorium, CRUSH Initiative"
     },
     {
       "id": "doj-2026-02-texas-dr-taba-compound-sentenced",
@@ -1353,7 +1363,7 @@
       "date": "2026-02-10",
       "agency": "Congress",
       "type": "Investigation",
-      "title": "House Oversight Committee Investigates New York CDPAP Medicaid Fraud — $1.2B+ Lost to Scammers",
+      "title": "Comer Takes New Action in Investigation of Fraud in New York’s Medicaid Programs",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -1368,14 +1378,15 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": false
+      "auto_fetched": false,
+      "narrative_title": "House Oversight Committee Investigates New York CDPAP Medicaid Fraud — $1.2B+ Lost to Scammers"
     },
     {
       "id": "congress-2026-02-10-hsgac-fraud-foreign-influence",
       "date": "2026-02-10",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "HSGAC Subcommittee Hearing: Examining Fraud and Foreign Influence in State and Federal Programs",
+      "title": "Examining Fraud and Foreign Influence in State and Federal Programs",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1388,7 +1399,8 @@
       "state": "MN",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "HSGAC Subcommittee Hearing: Examining Fraud and Foreign Influence in State and Federal Programs"
     },
     {
       "link": "https://www.justice.gov/opa/pr/fraud-tourists-plead-guilty-minneapolis-medicaid-fraud",
@@ -1419,7 +1431,7 @@
       "date": "2026-02-10",
       "agency": "Congress",
       "type": "Investigation",
-      "title": "House Judiciary Subpoenas 8 Major Health Insurers Over ACA Enrollment Fraud",
+      "title": "Chairmen Jordan, Fitzgerald, and Van Drew Subpoena Insurance Providers for Documents About Obamacare Fraud",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1432,7 +1444,8 @@
       "entities": [],
       "state": null,
       "source_type": "official",
-      "auto_fetched": false
+      "auto_fetched": false,
+      "narrative_title": "House Judiciary Subpoenas 8 Major Health Insurers Over ACA Enrollment Fraud"
     },
     {
       "id": "doj-2026-02-queens-men-120m-adult-day-care",
@@ -1486,7 +1499,7 @@
       "date": "2026-02-04",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "Senate Judiciary Subcommittee Hearing: Somali Scammers — Fighting Fraud in Minnesota and Beyond",
+      "title": "Somali Scammers: Fighting Fraud in Minnesota and Beyond",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1499,14 +1512,15 @@
       "state": "MN",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "Senate Judiciary Subcommittee Hearing: Somali Scammers — Fighting Fraud in Minnesota and Beyond"
     },
     {
       "id": "congress-2026-02-03-house-ec-fraud-hearing",
       "date": "2026-02-03",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "House Energy & Commerce Hearing: Common Schemes, Real Harm — Examining Medicare/Medicaid Fraud",
+      "title": "Chairmen Guthrie and Joyce Announce Oversight and Investigations Hearing on Medicare and Medicaid Fraud Schemes",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1520,14 +1534,15 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "House Energy & Commerce Hearing: Common Schemes, Real Harm — Examining Medicare/Medicaid Fraud"
     },
     {
       "id": "legislation-2026-02-03-appropriations-pbm-reform",
       "date": "2026-02-03",
       "agency": "Congress",
       "type": "Legislation",
-      "title": "Consolidated Appropriations Act 2026 Signed: PBM Transparency Reform and Anti-Fraud Provisions",
+      "title": "H.R.7148 - 119th Congress (2025-2026): Consolidated Appropriations Act, 2026",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1540,7 +1555,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "Consolidated Appropriations Act 2026 Signed: PBM Transparency Reform and Anti-Fraud Provisions"
     },
     {
       "id": "doj-2026-02-joel-french-197m-dme-braces",
@@ -1596,7 +1612,7 @@
       "date": "2026-01-29",
       "agency": "CMS",
       "type": "Rule/Regulation",
-      "title": "CMS Issues Final Rule Closing Medicaid Provider Tax Loophole; $78.2B Decade Savings",
+      "title": "CMS Shuts Down Massive Medicaid Tax Loophole, Saving Billions for Federal Taxpayers and Restoring the Federal-State Partnership",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -1610,7 +1626,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "CMS Issues Final Rule Closing Medicaid Provider Tax Loophole; $78.2B Decade Savings"
     },
     {
       "id": "cms-2026-01-27-newsom-demand",
@@ -1638,7 +1655,7 @@
       "date": "2026-01-27",
       "agency": "Congress",
       "type": "Structural/Organizational",
-      "title": "Senate HELP Committee Launches Task Force to Eliminate Fraud in Federal Spending",
+      "title": "Chair Cassidy, HELP Committee Republicans Launch Task Force to Eliminate Fraud in Federal Spending, Protect American Taxpayers | The U.S. Senate Committee on Health, Education, Labor & Pensions",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1653,7 +1670,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "Senate HELP Committee Launches Task Force to Eliminate Fraud in Federal Spending"
     },
     {
       "id": "doj-2026-01-22-florida-nursing",
@@ -1685,7 +1703,7 @@
       "date": "2026-01-22",
       "agency": "HHS-OIG",
       "type": "Audit",
-      "title": "HHS-OIG Maine Audit: $45.6M Improper Medicaid Payments for Autism Services",
+      "title": "HHS-OIG Audit Finds Maine Made At Least $45.6 Million in Improper Medicaid Payments for Autism Services",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -1700,14 +1718,15 @@
       "state": "ME",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "HHS-OIG Maine Audit: $45.6M Improper Medicaid Payments for Autism Services"
     },
     {
       "id": "congress-2026-01-22-house-ec-wm-insurance-ceo-hearings",
       "date": "2026-01-22",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "House E&C and Ways & Means: Health Insurance CEO Hearings on Costs, MA Upcoding, and Vertical Integration",
+      "title": "Chair Smith Opening Statement: Hearing with Health Insurance CEOs - Ways and Means",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1721,14 +1740,15 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "House E&C and Ways & Means: Health Insurance CEO Hearings on Costs, MA Upcoding, and Vertical Integration"
     },
     {
       "id": "hhs-oig-2026-01-fall-semiannual-report",
       "date": "2026-01-21",
       "agency": "HHS-OIG",
       "type": "Report",
-      "title": "HHS-OIG Fall 2025 Semiannual Report: $19.04B in Monetary Impact (Apr—Sep 2025)",
+      "title": "Fall 2025 Semiannual Report to Congress",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -1742,14 +1762,15 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "HHS-OIG Fall 2025 Semiannual Report: $19.04B in Monetary Impact (Apr—Sep 2025)"
     },
     {
       "id": "congress-2026-01-20-house-ec-mn-medicaid-investigation-launch",
       "date": "2026-01-20",
       "agency": "Congress",
       "type": "Investigation",
-      "title": "House E&C Launches Investigation into Ongoing Medicaid Fraud in Minnesota",
+      "title": "E&C Leaders Launch Investigation into Ongoing Medicaid Fraud in Minnesota",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1762,14 +1783,15 @@
       "entities": [],
       "state": "MN",
       "source_type": "official",
-      "auto_fetched": false
+      "auto_fetched": false,
+      "narrative_title": "House E&C Launches Investigation into Ongoing Medicaid Fraud in Minnesota"
     },
     {
       "id": "doj-2026-01-fca-record-fy2025",
       "date": "2026-01-16",
       "agency": "DOJ",
       "type": "Report",
-      "title": "DOJ Announces Record $6.8B in False Claims Act Recoveries in FY2025; Health Care Accounts for $5.7B",
+      "title": "False Claims Act Settlements and Judgments Exceed $6.8B in Fiscal Year 2025",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -1784,7 +1806,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "DOJ Announces Record $6.8B in False Claims Act Recoveries in FY2025; Health Care Accounts for $5.7B"
     },
     {
       "id": "doj-2026-01-15-brooklyn-daycare",
@@ -1816,7 +1839,7 @@
       "date": "2026-01-15",
       "agency": "CMS",
       "type": "Report",
-      "title": "CMS FY2025 Improper Payments Fact Sheet: $28.8B Medicare FFS, $23.7B Medicare Advantage",
+      "title": "Fiscal Year 2025 Improper Payments Fact Sheet",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -1832,7 +1855,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "CMS FY2025 Improper Payments Fact Sheet: $28.8B Medicare FFS, $23.7B Medicare Advantage"
     },
     {
       "id": "doj-2026-01-five-fl-ophthalmology-settlement",
@@ -1907,7 +1931,7 @@
       "date": "2026-01-13",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "House Oversight Hearing: Curbing Federal Fraud — Examining Innovative Detection Tools",
+      "title": "Curbing Federal Fraud: Examining Innovative Tools to Detect and Prevent Fraud in Federal Programs",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1921,14 +1945,15 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "House Oversight Hearing: Curbing Federal Fraud — Examining Innovative Detection Tools"
     },
     {
       "id": "congress-2026-01-12-grassley-unitedhealth-ma-report",
       "date": "2026-01-12",
       "agency": "Congress",
       "type": "Report",
-      "title": "Senate Report: UnitedHealth 'Aggressively' Gaming Medicare Advantage, Turning Risk Adjustment Into Profit Engine",
+      "title": "Grassley Report Details UnitedHealth’s Record of Appearing to Game the Medicare Advantage System, Turning Risk Adjustment into Its Own Business | U.S. Senator Chuck Grassley of Iowa",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -1943,7 +1968,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "Senate Report: UnitedHealth 'Aggressively' Gaming Medicare Advantage, Turning Risk Adjustment Into Profit Engine"
     },
     {
       "id": "cms-hhs-2026-01-minnesota-mission",
@@ -1970,7 +1996,7 @@
       "date": "2026-01-08",
       "agency": "White House",
       "type": "Structural/Organizational",
-      "title": "White House Establishes New DOJ National Fraud Enforcement Division",
+      "title": "Fact Sheet: President Donald J. Trump Establishes New Department of Justice Division for National Fraud Enforcement",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -1984,7 +2010,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "White House Establishes New DOJ National Fraud Enforcement Division"
     },
     {
       "link": "https://www.justice.gov/opa/pr/oklahoma-medical-supply-company-owner-indicted-30m-health-care-fraud-scheme",
@@ -2018,7 +2045,7 @@
       "date": "2026-01-07",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "House Oversight Hearing: Oversight of Fraud and Misuse of Federal Funds in Minnesota — Part I",
+      "title": "Oversight of Fraud and Misuse of Federal Funds in Minnesota: Part I",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -2034,7 +2061,8 @@
       "state": "MN",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "House Oversight Hearing: Oversight of Fraud and Misuse of Federal Funds in Minnesota — Part I"
     },
     {
       "id": "cms-2025-12-05-minnesota-corrective-action-directive",
@@ -2081,7 +2109,7 @@
       "date": "2025-12-22",
       "agency": "HHS-OIG",
       "type": "Audit",
-      "title": "HHS-OIG Finds Medicaid Agencies Made Millions in Unallowable Payments for Deceased Enrollees",
+      "title": "Medicaid Agencies Made Millions in Unallowable Capitation Payments to Managed Care Organizations on Behalf of Deceased Enrollees",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2095,14 +2123,15 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "HHS-OIG Finds Medicaid Agencies Made Millions in Unallowable Payments for Deceased Enrollees"
     },
     {
       "id": "congress-2025-12-house-oversight-mn-investigation-widened",
       "date": "2026-01-23",
       "agency": "Congress",
       "type": "Investigation",
-      "title": "House Oversight Widens Investigation into Minnesota Social Services and Medicaid Fraud",
+      "title": "Chairman Comer Widens Investigation into Fraud in Minnesota’s Social Services Programs",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -2115,14 +2144,15 @@
       "entities": [],
       "state": "MN",
       "source_type": "official",
-      "auto_fetched": false
+      "auto_fetched": false,
+      "narrative_title": "House Oversight Widens Investigation into Minnesota Social Services and Medicaid Fraud"
     },
     {
       "id": "congress-2025-12-02-house-oversight-mn-investigation-launch",
       "date": "2025-12-02",
       "agency": "Congress",
       "type": "Investigation",
-      "title": "House Oversight Committee Launches Investigation into Massive Fraud in Minnesota’s Social Services Programs",
+      "title": "Chairman Comer Launches Investigation into Massive Fraud in Minnesota’s Social Services System on Governor Walz’s Watch",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2137,7 +2167,8 @@
       "state": "MN",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "House Oversight Committee Launches Investigation into Massive Fraud in Minnesota’s Social Services Programs"
     },
     {
       "id": "doj-2025-12-gary-cox-dmerx-sentenced",
@@ -2170,7 +2201,7 @@
       "date": "2025-12-18",
       "agency": "HHS-OIG",
       "type": "Audit",
-      "title": "HHS-OIG Finds Illinois Made at Least $9.5M in Unallowable Medicaid Payments for Incarcerated Enrollees",
+      "title": "Illinois Made Unallowable Managed Care Capitation Payments on Behalf of Incarcerated Medicaid Enrollees",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2184,14 +2215,15 @@
       "state": "IL",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "HHS-OIG Finds Illinois Made at Least $9.5M in Unallowable Medicaid Payments for Incarcerated Enrollees"
     },
     {
       "id": "oig-2025-ms-mfcu-unreported-overpayments-4-5m",
       "date": "2025-09-08",
       "agency": "HHS-OIG",
       "type": "Audit",
-      "title": "HHS-OIG Audit Finds Mississippi Failed to Report Millions in Medicaid Overpayments",
+      "title": "Mississippi Did Not Report and Return All Medicaid Overpayments for the State’s Medicaid Fraud Control Unit Cases",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2204,7 +2236,8 @@
       "entities": [],
       "state": "MS",
       "source_type": "official",
-      "auto_fetched": false
+      "auto_fetched": false,
+      "narrative_title": "HHS-OIG Audit Finds Mississippi Failed to Report Millions in Medicaid Overpayments"
     },
     {
       "id": "doj-2025-12-dana-farber-grant-fraud-settlement",
@@ -2234,7 +2267,7 @@
       "date": "2025-12-16",
       "agency": "HHS-OIG",
       "type": "Audit",
-      "title": "HHS-OIG Audit of Humana Louisiana Finds Medicare Advantage Overpayments",
+      "title": "Medicare Advantage Compliance Audit of Specific Diagnosis Codes Humana Health Benefit of Louisiana (Contract H1951) Submitted to CMS",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2248,14 +2281,15 @@
       "state": "LA",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "HHS-OIG Audit of Humana Louisiana Finds Medicare Advantage Overpayments"
     },
     {
       "id": "congress-2025-12-15-house-judiciary-insurer-probe",
       "date": "2025-12-15",
       "agency": "Congress",
       "type": "Investigation",
-      "title": "House Judiciary Probes 8 Major Insurers in Obamacare Subsidy Fraud Investigation",
+      "title": "Judiciary Republicans Probe Insurance Companies on Obamacare Fraud",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -2270,14 +2304,15 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "House Judiciary Probes 8 Major Insurers in Obamacare Subsidy Fraud Investigation"
     },
     {
       "id": "congress-2025-12-10-house-judiciary-aca-fraud-hearing",
       "date": "2025-12-10",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "House Judiciary Joint Hearing: Fighting Obamacare Subsidy Fraud",
+      "title": "Fighting Obamacare Subsidy Fraud: Is the Administrative Procedure Act Working as Intended?",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -2290,7 +2325,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "House Judiciary Joint Hearing: Fighting Obamacare Subsidy Fraud"
     },
     {
       "id": "doj-2025-12-virginia-lab-kickbacks-settlement",
@@ -2492,7 +2528,7 @@
       "date": "2025-11-17",
       "agency": "HHS-OIG",
       "type": "Audit",
-      "title": "HHS-OIG: CMS Put $11.2 Billion at Risk of Fraud, Waste, and Abuse by Failing to Properly Close Contracts",
+      "title": "CMS Put $11.2 Billion at Risk of Fraud, Waste, and Abuse by Not Properly Closing Contracts",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2506,7 +2542,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "HHS-OIG: CMS Put $11.2 Billion at Risk of Fraud, Waste, and Abuse by Failing to Properly Close Contracts"
     },
     {
       "id": "doj-2025-11-florida-aca-enrollment",
@@ -2536,7 +2573,7 @@
       "date": "2025-10-31",
       "agency": "CMS",
       "type": "Rule/Regulation",
-      "title": "CMS Restructures Skin Substitute Payments to Curb Abusive Pricing Practices",
+      "title": "CMS Modernizes Payment Accuracy and Significantly Cuts Spending Waste",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2552,14 +2589,15 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "CMS Restructures Skin Substitute Payments to Curb Abusive Pricing Practices"
     },
     {
       "id": "hhs-oig-2025-10-dmepos-inpatient-22m",
       "date": "2025-10-24",
       "agency": "HHS-OIG",
       "type": "Audit",
-      "title": "HHS-OIG Audit Finds Medicare Improperly Paid DMEPOS Suppliers $22.7M for Items Provided During Inpatient Stays",
+      "title": "Medicare Improperly Paid Suppliers $22.7 Million Over 7 Years for Durable Medical Equipment, Prosthetics, Orthotics, and Supplies Provided to Enrollees During Inpatient Stays",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2573,7 +2611,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "HHS-OIG Audit Finds Medicare Improperly Paid DMEPOS Suppliers $22.7M for Items Provided During Inpatient Stays"
     },
     {
       "id": "doj-2025-10-baldonado-sentenced-24m-ny",
@@ -2605,7 +2644,7 @@
       "date": "2025-09-23",
       "agency": "DOJ",
       "type": "Structural/Organizational",
-      "title": "DOJ Expands Health Care Fraud Strike Force to Massachusetts",
+      "title": "Justice Department Expands Health Care Fraud Unit to Target Health Care Fraud in Massachusetts",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -2622,7 +2661,8 @@
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "DOJ Expands Health Care Fraud Strike Force to Massachusetts"
     },
     {
       "id": "media-2025-09-16-kff-exactech-knee-implant-settlement",
@@ -2680,7 +2720,7 @@
       "date": "2025-09-04",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "Senate Finance Hearing: RFK Jr. Highlights Fraud Prevention in President’s 2026 Health Care Agenda",
+      "title": "The President’s 2026 Health Care Agenda",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -2698,14 +2738,15 @@
       "auto_fetched": false,
       "related_agencies": [
         "HHS"
-      ]
+      ],
+      "narrative_title": "Senate Finance Hearing: RFK Jr. Highlights Fraud Prevention in President’s 2026 Health Care Agenda"
     },
     {
       "id": "hhs-oig-2025-09-skin-substitutes-10b",
       "date": "2025-09-03",
       "agency": "HHS-OIG",
       "type": "Report",
-      "title": "HHS-OIG Flags Medicare Skin Substitute Billing as Vulnerable to Fraud, Waste, and Abuse",
+      "title": "Medicare Part B Payment Trends for Skin Substitutes Raise Major Concerns About Fraud, Waste, and Abuse",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2722,7 +2763,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "HHS-OIG Flags Medicare Skin Substitute Billing as Vulnerable to Fraud, Waste, and Abuse"
     },
     {
       "id": "fda-2025-08-29-kimberly-clark-40m-surgical-gowns",
@@ -2755,7 +2797,7 @@
       "date": "2025-08-25",
       "agency": "HHS-OIG",
       "type": "Report",
-      "title": "HHS-OIG Calls For Increased Oversight of Remote Patient Monitoring in Medicare",
+      "title": "Billing for Remote Patient Monitoring in Medicare",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2770,14 +2812,15 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "HHS-OIG Calls For Increased Oversight of Remote Patient Monitoring in Medicare"
     },
     {
       "id": "cms-2025-08-25-medicaid-citizenship-eligibility-push",
       "date": "2025-08-19",
       "agency": "CMS",
       "type": "Administrative Action",
-      "title": "CMS Launches Nationwide Initiative to Remove Ineligible Medicaid Enrollees",
+      "title": "CMS Launches Nationwide Push to Remove Ineligible Medicaid Enrollees, Uphold Citizenship Requirements",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -2791,7 +2834,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "CMS Launches Nationwide Initiative to Remove Ineligible Medicaid Enrollees"
     },
     {
       "link": "https://www.cms.gov/newsroom/press-releases/cms-notifies-individuals-potentially-impacted-data-incident",
@@ -2800,7 +2844,7 @@
       "officials": [],
       "state": null,
       "source_type": "official",
-      "title": "CMS Notifies Medicare Beneficiaries of Data Incident Involving Fraudulent Medicare.gov Accounts",
+      "title": "CMS Notifies Individuals Potentially Impacted by Data Incident",
       "link_label": "CMS Press Release",
       "type": "Administrative Action",
       "amount": "",
@@ -2812,7 +2856,8 @@
       "date": "2025-06-30",
       "amount_numeric": 0.0,
       "entities": [],
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "CMS Notifies Medicare Beneficiaries of Data Incident Involving Fraudulent Medicare.gov Accounts"
     },
     {
       "id": "doj-2025-08-troy-health-npa-ai",
@@ -2869,7 +2914,7 @@
       "date": "2025-07-17",
       "agency": "CMS",
       "type": "Administrative Action",
-      "title": "CMS Finds 2.8 Million Americans Potentially Enrolled in Duplicate Medicaid/ACA Plans",
+      "title": "CMS Finds 2.8 Million Americans Potentially Enrolled in Two or More Medicaid/ACA Exchange Plans",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2883,7 +2928,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "CMS Finds 2.8 Million Americans Potentially Enrolled in Duplicate Medicaid/ACA Plans"
     },
     {
       "id": "doj-2025-07-08-cvs-omnicare-949m-judgment",
@@ -2918,7 +2964,7 @@
       "date": "2025-07-04",
       "agency": "Congress",
       "type": "Legislation",
-      "title": "One Big Beautiful Bill Act Signed Into Law With Health Care Program-Integrity Reforms",
+      "title": "H.R.1 - 119th Congress (2025-2026): An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -2932,14 +2978,15 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "One Big Beautiful Bill Act Signed Into Law With Health Care Program-Integrity Reforms"
     },
     {
       "id": "doj-2025-07-fca-working-group",
       "date": "2025-07-02",
       "agency": "DOJ",
       "type": "Structural/Organizational",
-      "title": "DOJ and HHS Launch False Claims Act Working Group",
+      "title": "DOJ-HHS False Claims Act Working Group",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -2957,14 +3004,15 @@
       "entities": [],
       "related_agencies": [
         "HHS"
-      ]
+      ],
+      "narrative_title": "DOJ and HHS Launch False Claims Act Working Group"
     },
     {
       "id": "congress-2025-07-02-house-oversight-ny-medicaid-investigation",
       "date": "2025-07-02",
       "agency": "Congress",
       "type": "Investigation",
-      "title": "House Oversight Committee Launches Investigation into Alleged Abuse in New York's Medicaid Program",
+      "title": "Oversight Committee Launches Investigation into New York’s Abuse of Federal Funds in Medicaid Program",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -2977,7 +3025,8 @@
       "entities": [],
       "state": "NY",
       "source_type": "official",
-      "auto_fetched": false
+      "auto_fetched": false,
+      "narrative_title": "House Oversight Committee Launches Investigation into Alleged Abuse in New York's Medicaid Program"
     },
     {
       "id": "doj-2025-07-peter-roussonicolos-dme-sentenced",
@@ -3117,7 +3166,7 @@
       "date": "2025-06-30",
       "agency": "DOJ",
       "type": "Structural/Organizational",
-      "title": "DOJ Announces Health Care Fraud Data Fusion Center",
+      "title": "National Health Care Fraud Takedown Results in 324 Defendants Charged in Connection with Over $14.6 Billion in Alleged Fraud",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -3136,7 +3185,8 @@
       "entities": [],
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "narrative_title": "DOJ Announces Health Care Fraud Data Fusion Center"
     },
     {
       "id": "doj-2025-07-nd-bismarck-1-8m-fraud",
@@ -3188,7 +3238,7 @@
       "date": "2025-06-20",
       "agency": "CMS",
       "type": "Rule/Regulation",
-      "title": "CMS Finalizes Marketplace Integrity and Affordability Rule to Combat ACA Enrollment Fraud",
+      "title": "2025 Marketplace Integrity and Affordability Final Rule",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -3201,14 +3251,15 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "CMS Finalizes Marketplace Integrity and Affordability Rule to Combat ACA Enrollment Fraud"
     },
     {
       "id": "legislation-2025-06-06-presidential-memo-medicaid-fraud",
       "date": "2025-06-06",
       "agency": "White House",
       "type": "Presidential Action",
-      "title": "Presidential Memorandum: Eliminating Waste, Fraud, and Abuse in Medicaid",
+      "title": "Eliminating Waste, Fraud, and Abuse in Medicaid",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -3222,7 +3273,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "Presidential Memorandum: Eliminating Waste, Fraud, and Abuse in Medicaid"
     },
     {
       "id": "doj-2025-06-gary-cox-dmerx-conviction",
@@ -3254,7 +3306,7 @@
       "date": "2025-06-02",
       "agency": "HHS-OIG",
       "type": "Report",
-      "title": "HHS-OIG Spring 2025 Report Highlights Health Care Fraud Enforcement",
+      "title": "Spring 2025 Semiannual Report to Congress",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -3270,7 +3322,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "HHS-OIG Spring 2025 Report Highlights Health Care Fraud Enforcement"
     },
     {
       "id": "doj-2025-05-25-raju-sharma-dme-plea",
@@ -3418,7 +3471,7 @@
       "date": "2025-05-12",
       "agency": "CMS",
       "type": "Rule/Regulation",
-      "title": "CMS Proposes Rule Closing Medicaid Financing Loophole; Projected to Save $30B Over Five Years",
+      "title": "CMS Moves to Shut Down Medicaid Loophole—Protects Vulnerable Americans, Saves Billions",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -3433,7 +3486,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "CMS Proposes Rule Closing Medicaid Financing Loophole; Projected to Save $30B Over Five Years"
     },
     {
       "id": "doj-2025-05-06-fichidzhyan-sentenced-hospice",
@@ -14385,7 +14439,7 @@
       "date": "2026-03-30",
       "agency": "MACPAC",
       "type": "Report",
-      "title": "Comment Letter: Medicaid Program Integrity",
+      "title": "In response to a Centers for Medicare & Medicaid Services (CMS) request for information on combatting fraud, waste, and abuse in federal health care programs, MACPAC outlined four...",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -14400,7 +14454,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "Comment Letter: Medicaid Program Integrity"
     },
     {
       "id": "doj-2026-04-07-692450150",
@@ -14803,7 +14858,7 @@
       "date": "2025-03-14",
       "agency": "HHS-OIG",
       "type": "Report",
-      "title": "HHS-OIG Strategic Plan 2025-2030: Managed Care, Nursing Homes, and Grants Identified as Priority Areas",
+      "title": "The Office of Inspector General Strategic Plan 2025–2030 establishes the goals and priorities that guide OIG’s work to carry out its mission to provide objective oversight to promote the economy, efficiency, effectiveness, and integrity of HHS programs, as well as the health and welfare of the people they serve.",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -14821,7 +14876,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "HHS-OIG Strategic Plan 2025-2030: Managed Care, Nursing Homes, and Grants Identified as Priority Areas"
     },
     {
       "id": "doj-2025-01-23-arbor-homecare-100m-masshealth",
@@ -14852,7 +14908,7 @@
       "date": "2026-02-03",
       "agency": "HHS-OIG",
       "type": "Report",
-      "title": "HHS-OIG Releases Medicare Advantage Industry Segment-Specific Compliance Program Guidance (ICPG) — First MA-Specific Guidance Since 1999",
+      "title": "Medicare Advantage Industry Segment-Specific Compliance Program Guidance",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -14867,7 +14923,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "HHS-OIG Releases Medicare Advantage Industry Segment-Specific Compliance Program Guidance (ICPG) — First MA-Specific Guidance Since 1999"
     },
     {
       "id": "doj-2026-04-10-1461471060",
@@ -15556,7 +15613,7 @@
       "date": "2026-04-09",
       "agency": "MACPAC",
       "type": "Report",
-      "title": "Introduction to Medicaid Program Integrity",
+      "title": "MACPAC conducted a literature review and federal policy review on Medicaid program integrity.",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -15570,7 +15627,8 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "Introduction to Medicaid Program Integrity"
     },
     {
       "id": "hhs-oig-2025-11-05-3143992849",
@@ -15750,7 +15808,7 @@
       "date": "2026-04-15",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "Sessions Opens Hearing on Preventing Fraud in State-Run Federal Programs - United States House Committee on Oversight and Government Reform",
+      "title": "Fraud Prevention: Understanding Fraud in Federally Funded Programs Run by the States",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
