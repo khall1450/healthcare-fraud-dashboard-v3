@@ -27,6 +27,7 @@ AREA_TAGS = frozenset({
     "Hospice",
     "Pharmacy",
     "Genetic Testing",
+    "Lab Testing",
     "Telehealth",
     "Home Health",
     "Nursing Home",
@@ -37,6 +38,7 @@ AREA_TAGS = frozenset({
     "Behavioral Health",
     "Prenatal Care",
     "Skin Substitutes",
+    "Personal Care",
     "Physical Therapy",
     "Assisted Living",
     "Ambulance",
@@ -79,7 +81,14 @@ TAG_PATTERNS = [
     (r"\bdurable medical|\bdme\b|\bdmepos\b|wheelchair|orthotic brace|power mobility", "DME"),
     (r"\bhospice\b", "Hospice"),
     (r"\bpharmac", "Pharmacy"),
-    (r"genetic test", "Genetic Testing"),
+    # Genetic Testing must come before Lab Testing so CGX/PGX schemes
+    # get the more specific tag
+    (r"genetic test|\bcgx\b|\bpgx\b|pharmacogenom|cancer\s+genomic|hereditary\s+cancer\s+(test|panel)", "Genetic Testing"),
+    # Lab Testing — broader lab fraud (toxicology, blood panels, COVID, pathology)
+    (r"\blaboratory\b|\btoxicolog|\burine\s+drug\s+test|urinalysis.*fraud|"
+     r"blood\s+(test|panel)\s+fraud|\bcovid.*test(ing)?.*fraud|"
+     r"pathology\s+lab|lab\s+(kickback|billing|test)\s+(scheme|fraud)|"
+     r"unnecessary\s+lab\s+test", "Lab Testing"),
     (r"telehealth|telemedic", "Telehealth"),
     (r"\bhome health\b", "Home Health"),
     (r"nursing home|skilled nursing|long.term care facility", "Nursing Home"),
@@ -90,6 +99,10 @@ TAG_PATTERNS = [
     (r"behavioral health|mental health.*fraud|psychiatric.*fraud|counseling.*fraud", "Behavioral Health"),
     (r"prenatal care|prenatal.*coordination", "Prenatal Care"),
     (r"skin substitute|allograft", "Skin Substitutes"),
+    # Personal Care — Medicaid PCA/PCS (personal care attendant/services), non-medical ADL help
+    (r"personal\s+care\s+(attendant|assistant|service|program)|\bpca\b\s+(fraud|service|program|scheme)|"
+     r"\bpcs\b\s+(service|program|fraud)|home\s+care\s+attendant|"
+     r"consumer.directed\s+personal|cdpap", "Personal Care"),
     (r"physical therapy", "Physical Therapy"),
     (r"assisted living", "Assisted Living"),
     (r"ambulance", "Ambulance"),

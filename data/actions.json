@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T09:54:21.980391",
+    "last_updated": "2026-04-16T10:04:43.121364",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -252,7 +252,8 @@
         "Medicaid",
         "Medicare",
         "Physical Therapy",
-        "TRICARE"
+        "TRICARE",
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": "MI, IL, IN, WI, GA",
@@ -275,7 +276,9 @@
       "link_label": "Fox News",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Hospice",
+        "Home Health"
       ],
       "entities": [],
       "state": "CA",
@@ -1213,7 +1216,8 @@
       "social_posts": [],
       "tags": [
         "Genetic Testing",
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "state": "TX",
       "source_type": "official",
@@ -1328,7 +1332,8 @@
       "social_posts": [],
       "tags": [
         "Home Health",
-        "Medicaid"
+        "Medicaid",
+        "Personal Care"
       ],
       "entities": [],
       "state": "NY",
@@ -1756,7 +1761,8 @@
       "social_posts": [],
       "tags": [
         "Adult Day Care",
-        "Medicaid"
+        "Medicaid",
+        "Home Health"
       ],
       "state": "NY",
       "source_type": "official",
@@ -2250,7 +2256,8 @@
       "tags": [
         "Medicaid",
         "Medicare",
-        "TRICARE"
+        "TRICARE",
+        "Lab Testing"
       ],
       "state": "AR, TX, VA",
       "source_type": "official",
@@ -2599,7 +2606,8 @@
       "tags": [
         "Medicaid",
         "Medicare",
-        "TRICARE"
+        "TRICARE",
+        "Lab Testing"
       ],
       "state": "TX",
       "source_type": "official",
@@ -3974,7 +3982,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Genetic Testing"
+        "Genetic Testing",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "FL",
@@ -4114,7 +4123,9 @@
       "link": "https://www.justice.gov/opa/pr/south-carolina-laboratory-pleads-guilty-and-agrees-pay-least-68m-settle-allegations",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "SC",
       "source_type": "official",
@@ -4586,7 +4597,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "CA",
@@ -5034,7 +5046,9 @@
       "link": "https://www.justice.gov/opa/pr/health-care-providers-and-laboratory-marketers-agree-pay-over-19-million-settle-kickback",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "FL",
       "source_type": "official",
@@ -5263,7 +5277,9 @@
       "link": "https://www.justice.gov/opa/pr/marketers-and-healthcare-providers-texas-virginia-and-south-carolina-agree-pay-over-11m",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "SC",
       "source_type": "official",
@@ -5472,7 +5488,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "TN",
@@ -6846,7 +6863,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "IN",
@@ -6869,7 +6887,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "AZ",
@@ -7106,7 +7125,9 @@
       "link": "https://www.justice.gov/usao-md/pr/diagnostic-laboratory-agrees-pay-more-9-million-settle-alleged-false-claims-act",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "IN",
       "source_type": "official",
@@ -8081,7 +8102,8 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "TRICARE"
+        "TRICARE",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "MI",
@@ -10003,7 +10025,9 @@
       "link": "https://www.justice.gov/usao-edtn/pr/agendia-inc-knoxville-comprehensive-breast-center-pllc-and-knoxville-0",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "TN",
       "source_type": "official",
@@ -10472,7 +10496,9 @@
       "link": "https://www.justice.gov/usao-edtx/pr/two-former-laboratory-sales-executives-sentenced-federal-prison-roles-health-care",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "TX",
       "source_type": "official",
@@ -10765,7 +10791,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "NC",
@@ -12477,7 +12504,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "LA",
@@ -12637,7 +12665,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "NC",
@@ -12776,7 +12805,8 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Addiction Treatment"
+        "Addiction Treatment",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "NC",
@@ -12822,7 +12852,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "FL",
@@ -14199,7 +14230,8 @@
       "link_label": "HHS-OIG Compliance Guidance",
       "social_posts": [],
       "tags": [
-        "Medicare Advantage"
+        "Medicare Advantage",
+        "Medicare"
       ],
       "entities": [],
       "state": null,
@@ -14771,7 +14803,8 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "Home Health"
+        "Home Health",
+        "Personal Care"
       ],
       "entities": [],
       "state": "NJ",
