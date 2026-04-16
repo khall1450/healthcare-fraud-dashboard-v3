@@ -312,10 +312,10 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <input type="text" id="searchInput" class="form-control search-input" placeholder="Search actions..." oninput="currentView === 'landscape' ? filterLandscape() : currentView === 'oversight' ? applyOversightFilters() : applyFilters()" />
       </div>
       <div id="enforcementFilters" class="d-flex flex-wrap align-items-center gap-2">
-        <select class="form-select filter-select" id="agencyFilter" onchange="applyFilters()">
+        <select class="form-select filter-select" id="agencyFilter" onchange="refreshCrossFilters(enforcementActions, 'agencyFilter', 'typeFilter'); applyFilters()">
           <option value="all">All Agencies</option>
         </select>
-        <select class="form-select filter-select" id="typeFilter" onchange="applyFilters()">
+        <select class="form-select filter-select" id="typeFilter" onchange="refreshCrossFilters(enforcementActions, 'agencyFilter', 'typeFilter'); applyFilters()">
           <option value="all">All Types</option>
         </select>
         <select class="form-select filter-select" id="stateFilter" onchange="applyFilters()">
@@ -328,10 +328,10 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         </button>
       </div>
       <div id="oversightFilters" class="d-flex flex-wrap align-items-center gap-2 d-none">
-        <select class="form-select filter-select" id="oversightAgencyFilter" onchange="refreshTypeFilter(oversightActions, this.value, 'oversightTypeFilter'); applyOversightFilters()">
+        <select class="form-select filter-select" id="oversightAgencyFilter" onchange="refreshCrossFilters(oversightActions, 'oversightAgencyFilter', 'oversightTypeFilter'); applyOversightFilters()">
           <option value="all">All Agencies</option>
         </select>
-        <select class="form-select filter-select" id="oversightTypeFilter" onchange="applyOversightFilters()">
+        <select class="form-select filter-select" id="oversightTypeFilter" onchange="refreshCrossFilters(oversightActions, 'oversightAgencyFilter', 'oversightTypeFilter'); applyOversightFilters()">
           <option value="all">All Types</option>
         </select>
         <select class="form-select filter-select" id="oversightStateFilter" onchange="applyOversightFilters()">
@@ -769,6 +769,46 @@ function refreshTypeFilter(actionsArray, agencyValue, typeSelectId) {
     : actionsArray.filter(a => a.agency === agencyValue || (a.related_agencies||[]).includes(agencyValue));
   populateFilterOptions(typeSelectId, subset, 'type');
   document.getElementById(typeSelectId).value = 'all';
+}
+
+// Bidirectional cross-filter: picking an agency narrows the type dropdown
+// to types that exist for that agency, AND picking a type narrows the
+// agency dropdown to agencies that have items of that type. The value
+// already chosen on the OTHER dropdown is preserved if it's still valid;
+// otherwise it's reset to "all".
+function refreshCrossFilters(actionsArray, agencyId, typeId) {
+  const agencyValue = document.getElementById(agencyId).value;
+  const typeValue   = document.getElementById(typeId).value;
+
+  // Narrow types based on current agency selection
+  const typesSubset = agencyValue === 'all'
+    ? actionsArray
+    : actionsArray.filter(a => a.agency === agencyValue || (a.related_agencies||[]).includes(agencyValue));
+  populateFilterOptions(typeId, typesSubset, 'type');
+  _restoreSelectValue(typeId, typeValue);
+
+  // Narrow agencies based on current type selection
+  const agenciesSubset = typeValue === 'all'
+    ? actionsArray
+    : actionsArray.filter(a => a.type === typeValue);
+  populateFilterOptions(agencyId, agenciesSubset, 'agency');
+  _restoreSelectValue(agencyId, agencyValue);
+}
+
+function _restoreSelectValue(selectId, prevValue) {
+  if (!prevValue || prevValue === 'all') {
+    document.getElementById(selectId).value = 'all';
+    return;
+  }
+  const sel = document.getElementById(selectId);
+  for (const opt of sel.options) {
+    if (opt.value === prevValue) {
+      sel.value = prevValue;
+      return;
+    }
+  }
+  // Previously-selected value is no longer in the narrowed list
+  sel.value = 'all';
 }
 
 function populateFilterOptions(selectId, dataArray, field) {
