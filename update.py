@@ -1237,6 +1237,20 @@ def scrape_oig_press(session):
                 # Prefer structured canonical date over the listing-card span
                 if _detail_date:
                     date_str = _detail_date
+                # Dedup-against-report: many OIG news releases are summaries
+                # of audit reports. If the press-release body links to a
+                # report at /reports/all/, prefer the report as the canonical
+                # item and skip this news release. (The report is typically
+                # already on the dashboard via scrape_oig_reports.)
+                if detail_text:
+                    linked_report = re.search(
+                        r'https?://oig\.hhs\.gov/reports/all/[^\s<>"]+',
+                        detail_text)
+                    if linked_report:
+                        # Stash the linked report URL so downstream dedup
+                        # (audit_new_items + actions.json comparison) can
+                        # use it to detect the duplicate.
+                        pass  # handled as _report_ref below
                 desc = ""
                 if detail_text:
                     cleaned = detail_text
@@ -1247,13 +1261,24 @@ def scrape_oig_press(session):
                         last_period = desc.rfind('.')
                         if last_period > 200:
                             desc = desc[:last_period + 1]
-                items.append({
+                item = {
                     'title': title,
                     'description': desc,
                     'link': href,
                     'pub_date': date_str,
                     '_full_text': detail_text,
-                })
+                }
+                # If body links to an OIG report, record the report URL.
+                # The main dedup pass (in update.py's promote-to-actions
+                # logic) treats items with _report_ref as candidates to
+                # drop when a matching report is already present.
+                if detail_text:
+                    rlink = re.search(
+                        r'https?://oig\.hhs\.gov/reports/all/[^\s<>"]+',
+                        detail_text)
+                    if rlink:
+                        item['_report_ref'] = rlink.group().rstrip('.,)"\'')
+                items.append(item)
             # Backfill early-stop: all new items on this page below floor.
             if backfill and page_n >= 1:
                 page_items = items[prev_len:]
@@ -1963,15 +1988,21 @@ def scrape_oig_reports(session):
                 title = a_tag.get_text(strip=True)
                 if not title or len(title) < 10:
                     continue
-                # Skip clean-bill-of-health audits. HHS-OIG uses three
-                # stock phrases when an auditee passed compliance review:
+                # Skip clean-bill-of-health audits. HHS-OIG uses several stock
+                # phrases when an auditee passed compliance review:
                 #   "in accordance with"
-                #   "Generally Complied With"
+                #   "Generally Complied With [...] Requirements"
                 #   "Generally Ensured That"
+                #   "Generally Met [Federal/Medicare/Medicaid] Requirements"
+                #   "Complied With Federal Requirements"
                 # None of these are fraud findings — auditee did the right
                 # thing and the OIG is just documenting that. Skip them.
-                if re.search(r'\b(in accordance with|generally complied with|'
-                             r'generally ensured that)\b', title, re.I):
+                if re.search(r'\b(in\s+accordance\s+with|generally\s+complied\s+with|'
+                             r'generally\s+ensured\s+that|'
+                             r'generally\s+met\s+(federal|medicare|medicaid)\s+requirements|'
+                             r'complied\s+with\s+(federal|medicare|medicaid)\s+requirements|'
+                             r'substantially\s+complied|did\s+comply)\b',
+                             title, re.I):
                     continue
                 # Skip IT security / cybersecurity audits — these aren't
                 # HC fraud oversight, they're information security reviews.
@@ -2554,6 +2585,16 @@ def main():
         # Normalize title for fuzzy dedup
         existing_titles.add(re.sub(r'[^a-z0-9 ]', '', a.get("title", "").lower()).strip())
 
+    # If an incoming item references an existing audit report via _report_ref
+    # (e.g. an OIG news release summarizing a report already on the dashboard),
+    # we want to skip it. Rather than threading this through all dedup sites,
+    # add the known report URLs to `existing_links` so they match OIG press
+    # releases that stashed _report_ref during scraping.
+    for a in data.get("actions", []):
+        link = a.get("link", "")
+        if link and "/reports/all/" in link:
+            existing_links.add(normalize_link(link))
+
     # Also dedup against needs_review.json so we don't re-scrape items that
     # are either pending review or have been permanently rejected.
     review_path = os.path.join(SCRIPT_DIR, "data", "needs_review.json")
@@ -2658,6 +2699,14 @@ def main():
                 # Dedup by normalized title
                 norm_title = re.sub(r'[^a-z0-9 ]', '', title.lower()).strip()
                 if norm_title in existing_titles:
+                    continue
+                # Dedup-against-report: if this item references an OIG report
+                # URL that's already on the dashboard (captured from scrape_
+                # oig_press body), skip — the report is the canonical action
+                # and the news release is just a summary.
+                report_ref = item.get('_report_ref')
+                if report_ref and normalize_link(report_ref) in existing_links:
+                    log(f"  skipping OIG news release (references existing report: {report_ref[:80]})")
                     continue
 
                 date_str = item.get('pub_date', '')

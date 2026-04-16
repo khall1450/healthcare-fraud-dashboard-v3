@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T15:32:55.905193",
+    "last_updated": "2026-04-16T15:36:35.079450",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -1699,29 +1699,6 @@
       ]
     },
     {
-      "id": "oig-2026-01-22-maine-autism-audit",
-      "date": "2026-01-22",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "HHS-OIG Audit Finds Maine Made At Least $45.6 Million in Improper Medicaid Payments for Autism Services",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/newsroom/news-releases-articles/hhs-oig-audit-finds-maine-made-at-least-456-million-in-improper-medicaid-payments-for-autism-services/",
-      "link_label": "HHS-OIG News Release",
-      "social_posts": [],
-      "tags": [
-        "Autism/ABA",
-        "Behavioral Health",
-        "Medicaid"
-      ],
-      "state": "ME",
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": [],
-      "narrative_title": "HHS-OIG Maine Audit: $45.6M Improper Medicaid Payments for Autism Services"
-    },
-    {
       "id": "congress-2026-01-22-house-ec-wm-insurance-ceo-hearings",
       "date": "2026-01-22",
       "agency": "Congress",
@@ -3125,7 +3102,7 @@
         "Wound Care",
         "DME"
       ],
-      "state": "AZ",
+      "state": "",
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
@@ -3209,7 +3186,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "ND",
+      "state": "",
       "source_type": "official",
       "auto_fetched": false,
       "related_agencies": [
@@ -3533,7 +3510,7 @@
         "Medicare",
         "Medicare Advantage"
       ],
-      "state": "MA",
+      "state": "",
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
@@ -12787,7 +12764,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "IL",
+      "state": "",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -15182,28 +15159,6 @@
       "related_agencies": []
     },
     {
-      "id": "hhs-oig-2025-12-02-3305036856",
-      "date": "2025-12-02",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "Florida Retina Institute Generally Met Medicare Requirements for Ophthalmology Services Provided on the Same Day as Eye Injections",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/florida-retina-institute-generally-met-medicare-requirements-for-ophthalmology-services-provided-on-the-same-day-as-eye-injections/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": "FL",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
       "id": "hhs-oig-2025-12-01-1624616005",
       "date": "2025-12-01",
       "agency": "HHS-OIG",
@@ -15262,28 +15217,6 @@
       "link_label": "HHS-OIG Press Release",
       "social_posts": [],
       "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
-      "id": "hhs-oig-2025-11-18-1841187742",
-      "date": "2025-11-18",
-      "agency": "HHS-OIG",
-      "type": "Audit",
-      "title": "Dermatology Providers Generally Met Medicare Requirements for Evaluation and Management Services Performed on Same Day as Minor Surgical Procedures",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/reports/all/2025/dermatology-providers-generally-met-medicare-requirements-for-evaluation-and-management-services-performed-on-same-day-as-minor-surgical-procedures/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicaid"
-      ],
       "entities": [],
       "state": null,
       "source_type": "official",
