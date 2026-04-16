@@ -1205,6 +1205,12 @@ def scrape_oig_press(session):
                 title = a_tag.get_text(strip=True)
                 if not title or len(title) < 15:
                     continue
+                # Skip "At a Glance" summary press releases — these are
+                # 2-page digests of the biannual semiannual Reports to
+                # Congress. The full report is captured elsewhere; we don't
+                # need both.
+                if re.match(r'^at\s+a\s+glance\b', title, re.I):
+                    continue
                 href = a_tag.get('href', '')
                 if href.startswith('/'):
                     href = 'https://oig.hhs.gov' + href

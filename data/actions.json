@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T15:27:54.421002",
+    "last_updated": "2026-04-16T15:28:49.332025",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -14619,44 +14619,6 @@
       "related_agencies": [
         "HHS-OIG"
       ]
-    },
-    {
-      "id": "hhs-oig-2026-01-21-302086731",
-      "date": "2026-01-21",
-      "agency": "HHS-OIG",
-      "type": "Report",
-      "title": "At a Glance: Fall 2025 Semiannual Report to Congress",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/newsroom/news-releases-articles/at-a-glance-fall-2025-semiannual-report-to-congress/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
-      "id": "hhs-oig-2025-06-02-2636960552",
-      "date": "2025-06-02",
-      "agency": "HHS-OIG",
-      "type": "Report",
-      "title": "At a Glance: Spring 2025 Semiannual Report to Congress",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/newsroom/news-releases-articles/at-a-glance-spring-2025-semiannual-report-to-congress/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
     },
     {
       "id": "cms-2025-06-25-exchange-integrity",
