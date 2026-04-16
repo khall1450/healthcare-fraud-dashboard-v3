@@ -82,6 +82,8 @@ def process_items(items: list, label: str, page, ai_client, args) -> int:
         items = [it for it in items if it.get("type") == args.type]
     if args.agency:
         items = [it for it in items if it.get("agency") == args.agency]
+    if args.untagged_only:
+        items = [it for it in items if not it.get("tags")]
     if args.limit:
         items = items[: args.limit]
 
@@ -147,6 +149,8 @@ def main():
     ap.add_argument("--since", help="Only items dated >= YYYY-MM-DD")
     ap.add_argument("--type", help="Only items with this type field")
     ap.add_argument("--agency", help="Only items from this agency")
+    ap.add_argument("--untagged-only", action="store_true",
+                    help="Only process items with an empty tags list")
     ap.add_argument("--sleep", type=float, default=0.0,
                     help="Seconds to sleep between items")
     args = ap.parse_args()

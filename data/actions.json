@@ -1546,7 +1546,9 @@
       "link": "https://www.justice.gov/opa/pr/doctor-convicted-trial-defrauding-irs-and-health-care-insurers",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medical Devices"
+      ],
       "state": "MA",
       "source_type": "official",
       "auto_fetched": false,
@@ -2445,7 +2447,10 @@
       "link": "https://oig.hhs.gov/reports/all/2025/cms-put-112-billion-at-risk-of-fraud-waste-and-abuse-by-not-properly-closing-contracts/",
       "link_label": "HHS-OIG Report",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
@@ -3051,7 +3056,11 @@
       "link": "https://www.justice.gov/opa/pr/national-health-care-fraud-takedown-results-324-defendants-charged-connection-over-146",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid"
+      ],
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
@@ -4029,7 +4038,11 @@
       "link": "https://www.justice.gov/opa/pr/justice-department-files-false-claims-act-complaint-against-priority-hospital-group-and",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "ACA",
+        "Hospital"
+      ],
       "entities": [],
       "state": "LA",
       "source_type": "official",
@@ -4169,7 +4182,15 @@
       "link": "https://www.justice.gov/opa/pr/digital-health-company-and-medical-practice-indicted-100m-adderall-distribution-scheme",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "ACA",
+        "Pharmacy",
+        "Telehealth",
+        "Behavioral Health",
+        "Addiction Treatment"
+      ],
       "entities": [],
       "state": "CA",
       "source_type": "official",
@@ -4884,7 +4905,13 @@
       "link": "https://www.justice.gov/opa/pr/texas-doctor-who-falsely-diagnosed-patients-sentenced-10-years-imprisonment-118m-health-care",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "ACA",
+        "Telehealth"
+      ],
       "entities": [],
       "state": "TX",
       "source_type": "official",
@@ -5164,7 +5191,16 @@
       "link": "https://www.justice.gov/opa/pr/woman-sentenced-fraud-scheme-involving-claims-unnecessary-respiratory-tests-submitted-covid",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "ACA",
+        "Lab Testing",
+        "Telehealth",
+        "Nursing Home",
+        "Assisted Living",
+        "Addiction Treatment"
+      ],
       "entities": [],
       "state": "CA",
       "source_type": "official",
@@ -5208,7 +5244,9 @@
       "link": "https://www.justice.gov/opa/pr/bioreference-health-and-opko-health-agree-pay-704349-settle-allegations-they-billed",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "DE",
       "source_type": "official",
@@ -5393,7 +5431,10 @@
       "link": "https://www.justice.gov/usao-ak/pr/anchorage-doctor-sentenced-prison-multi-million-dollar-health-care-tax-fraud-schemes",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "TRICARE",
+        "Opioids"
+      ],
       "entities": [],
       "state": "AK",
       "source_type": "official",
@@ -5583,7 +5624,12 @@
       "link": "https://www.justice.gov/usao-wdpa/pr/foundersowners-hertel-brown-physical-and-aquatic-therapy-each-sentenced-six-years",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "Physical Therapy"
+      ],
       "entities": [],
       "state": "PA",
       "source_type": "official",
@@ -5652,7 +5698,9 @@
       "link": "https://www.justice.gov/usao-ndin/pr/highland-physician-sentenced-97-months-prison",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare"
+      ],
       "entities": [],
       "state": "IN",
       "source_type": "official",
@@ -5697,7 +5745,9 @@
       "link": "https://www.justice.gov/usao-edtx/pr/healthcare-executives-guilty-multimillion-dollar-healthcare-fraud-conspiracy",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "TX",
       "source_type": "official",
@@ -5764,7 +5814,10 @@
       "link": "https://www.justice.gov/usao-edmi/pr/oakland-county-sleep-specialists-agree-pay-76395474-settle-false-claims-act",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid",
+        "DME"
+      ],
       "entities": [],
       "state": "MI",
       "source_type": "official",
@@ -5785,7 +5838,13 @@
       "link": "https://www.justice.gov/usao-sdtx/pr/houston-transplant-doctor-indicted-making-false-statements-patients-medical-records",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Hospice",
+        "Lab Testing",
+        "Adult Day Care",
+        "Hospital"
+      ],
       "entities": [],
       "state": "TX",
       "source_type": "official",
@@ -5831,7 +5890,10 @@
       "link": "https://www.justice.gov/usao-edwi/pr/delafield-man-sentenced-18-months-imprisonment-conspiracy-pay-healthcare-kickbacks",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "DME"
+      ],
       "entities": [],
       "state": "WI",
       "source_type": "official",
@@ -6321,7 +6383,9 @@
       "link": "https://www.justice.gov/usao-edmo/pr/former-doctor-sentenced-stealing-identity-apply-medical-jobs",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Opioids"
+      ],
       "entities": [],
       "state": "MO",
       "source_type": "official",
@@ -6367,7 +6431,10 @@
       "link": "https://www.justice.gov/usao-ma/pr/former-new-york-doctor-sentenced-receiving-kickbacks-0",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "MA",
       "source_type": "official",
@@ -7221,7 +7288,10 @@
       "link": "https://www.justice.gov/usao-edpa/pr/bucks-county-home-care-company-and-its-owners-and-managers-charged-alleged-health-care",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid",
+        "Home Health"
+      ],
       "entities": [],
       "state": "NJ",
       "source_type": "official",
@@ -7409,7 +7479,12 @@
       "link": "https://www.justice.gov/usao-wdva/pr/three-more-plead-guilty-1st-adult-n-pediatric-healthcare-fraud-case",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid",
+        "Home Health",
+        "Nursing Home",
+        "Personal Care"
+      ],
       "entities": [],
       "state": "MD",
       "source_type": "official",
@@ -7502,7 +7577,9 @@
       "link": "https://www.justice.gov/usao-wdpa/pr/owner-facility-intellectually-disabled-adults-pleads-guilty-health-care-fraud",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid"
+      ],
       "entities": [],
       "state": "PA",
       "source_type": "official",
@@ -7523,7 +7600,10 @@
       "link": "https://www.justice.gov/usao-wdva/pr/owners-1st-adult-n-pediatric-healthcare-pled-guilty",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid",
+        "Home Health"
+      ],
       "entities": [],
       "state": "MD",
       "source_type": "official",
@@ -7639,7 +7719,11 @@
       "link": "https://www.justice.gov/usao-wdva/pr/maryland-woman-pleads-guilty-conspiracy-commit-healthcare-fraud",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid",
+        "Home Health",
+        "Nursing Home"
+      ],
       "entities": [],
       "state": "MD",
       "source_type": "official",
@@ -7869,7 +7953,12 @@
       "link": "https://www.justice.gov/usao-ct/pr/connecticut-lab-its-owners-and-officers-pay-more-12-million-settle-false-claims-act",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Lab Testing",
+        "Opioids"
+      ],
       "entities": [],
       "state": "CT",
       "source_type": "official",
@@ -7890,7 +7979,9 @@
       "link": "https://www.justice.gov/usao-wdpa/pr/superseding-indictment-against-pittsburgh-health-care-facility-owner-adds-charges",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid"
+      ],
       "entities": [],
       "state": "PA",
       "source_type": "official",
@@ -7934,7 +8025,11 @@
       "link": "https://www.justice.gov/usao-edva/pr/richmond-psychotherapist-convicted-healthcare-fraud-pay-over-1m",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Behavioral Health"
+      ],
       "entities": [],
       "state": "VA",
       "source_type": "official",
@@ -8197,7 +8292,11 @@
       "link": "https://www.justice.gov/usao-cdil/pr/rossi-sentenced-additional-three-years-prison-healthcare-fraud-related-covid-testing-0",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "IL",
       "source_type": "official",
@@ -8338,7 +8437,10 @@
       "link": "https://www.justice.gov/usao-id/pr/urgent-care-operator-pays-3-million-dollars-resolve-alleged-violations-false-claims-act",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Lab Testing",
+        "Hospital"
+      ],
       "entities": [],
       "state": "ID",
       "source_type": "official",
@@ -8382,7 +8484,18 @@
       "link": "https://www.justice.gov/usao-sdfl/pr/law-enforcement-recovers-over-6-million-forfeited-assets-miami-couple-sentenced-9-and",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "ACA",
+        "Pharmacy",
+        "Genetic Testing",
+        "Lab Testing",
+        "Behavioral Health",
+        "Physical Therapy",
+        "Addiction Treatment"
+      ],
       "entities": [],
       "state": "FL",
       "source_type": "official",
@@ -8927,7 +9040,13 @@
       "link": "https://www.justice.gov/usao-sc/pr/sc-cases-among-hundreds-announced-national-health-care-fraud-takedown",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "DME",
+        "Telehealth",
+        "Opioids"
+      ],
       "entities": [],
       "state": "SC",
       "source_type": "official",
@@ -9046,7 +9165,14 @@
       "link": "https://www.justice.gov/usao-edva/pr/us-attorney-erik-s-siebert-announces-charges-part-dojs-national-health-care-fraud",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "DME",
+        "Hospital",
+        "Addiction Treatment",
+        "Opioids"
+      ],
       "entities": [],
       "state": "VA",
       "source_type": "official",
@@ -9090,7 +9216,9 @@
       "link": "https://www.justice.gov/usao-mdla/pr/national-health-care-fraud-takedown-results-324-defendants-charged-connection-over-146",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Opioids"
+      ],
       "entities": [],
       "state": "LA",
       "source_type": "official",
@@ -9795,7 +9923,9 @@
       "link": "https://www.justice.gov/usao-edtx/pr/collin-county-physician-agrees-pay-35-million-resolve-false-claims-act-allegations",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "TX",
       "source_type": "official",
@@ -10519,7 +10649,12 @@
       "link": "https://www.justice.gov/usao-mdpa/pr/former-owner-york-pain-management-practice-sentenced-42-months-health-care-fraud-money",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Lab Testing",
+        "Opioids"
+      ],
       "entities": [],
       "state": "FL",
       "source_type": "official",
@@ -10540,7 +10675,13 @@
       "link": "https://www.justice.gov/usao-nj/pr/vault-agrees-pay-8-million-settle-allegations-billing-false-claims-covid-19-uninsured",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "DME",
+        "Genetic Testing",
+        "Lab Testing",
+        "Telehealth",
+        "Opioids"
+      ],
       "entities": [],
       "state": "NJ",
       "source_type": "official",
@@ -10585,7 +10726,13 @@
       "link": "https://www.justice.gov/usao-nj/pr/operators-new-jersey-company-sentenced-prison-and-enter-related-civil-settlement",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "TRICARE",
+        "DME",
+        "Genetic Testing",
+        "Telehealth"
+      ],
       "entities": [],
       "state": "GA",
       "source_type": "official",
@@ -10699,7 +10846,12 @@
       "link": "https://www.justice.gov/usao-mdtn/pr/ashland-city-doctor-sentenced-3-years-conspiracy-commit-health-care-fraud",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Genetic Testing",
+        "Telehealth"
+      ],
       "entities": [],
       "state": "TN",
       "source_type": "official",
@@ -10814,7 +10966,12 @@
       "link": "https://www.justice.gov/usao-ri/pr/pain-management-clinic-owners-and-operators-indicted-health-care-fraud-charges",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicare Advantage",
+        "Medicaid",
+        "Physical Therapy"
+      ],
       "entities": [],
       "state": "RI",
       "source_type": "official",
@@ -10906,7 +11063,12 @@
       "link": "https://www.justice.gov/usao-ma/pr/national-sales-director-new-york-based-mobile-diagnostic-company-pleads-guilty-kickback",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "DME",
+        "Genetic Testing",
+        "Telehealth"
+      ],
       "entities": [],
       "state": "MA",
       "source_type": "official",
@@ -11069,7 +11231,11 @@
       "link": "https://www.justice.gov/usao-ndtx/pr/convicted-nurse-practitioner-forfeit-over-40-million-foreign-accounts-health-care",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy"
+      ],
       "entities": [],
       "state": "TX",
       "source_type": "official",
@@ -11090,7 +11256,9 @@
       "link": "https://www.justice.gov/usao-sdny/pr/acting-us-attorney-announces-5-million-false-claims-act-settlement-providers-programs",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid"
+      ],
       "entities": [],
       "state": "NY",
       "source_type": "official",
@@ -11205,7 +11373,10 @@
       "link": "https://www.justice.gov/usao-nj/pr/new-jersey-pain-clinic-admits-health-care-fraud-and-agrees-criminal-and-civil-penalties",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "entities": [],
       "state": "NJ",
       "source_type": "official",
@@ -11435,7 +11606,11 @@
       "link": "https://www.justice.gov/usao-mdla/pr/baton-rouge-man-falsely-holding-himself-medical-doctor-pleads-guilty-false-statements",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid",
+        "Pharmacy",
+        "Ambulance"
+      ],
       "entities": [],
       "state": "LA",
       "source_type": "official",
@@ -11593,7 +11768,10 @@
       "link": "https://www.justice.gov/usao-mdpa/pr/harrisburg-woman-sentenced-41-months-prison-health-care-fraud-and-bank-fraud-charges",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid",
+        "Home Health"
+      ],
       "entities": [],
       "state": "PA",
       "source_type": "official",
@@ -12207,7 +12385,12 @@
       "link": "https://www.justice.gov/usao-edtx/pr/texas-hospital-ceo-sentenced-federal-prison-role-health-care-kickback-conspiracy",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Hospital",
+        "Lab Testing",
+        "Medicare",
+        "Medicaid"
+      ],
       "entities": [],
       "state": "TX",
       "source_type": "official",
@@ -12439,7 +12622,9 @@
       "link": "https://www.justice.gov/usao-edva/pr/virginia-beach-doctor-agrees-625000-false-claims-act-settlement",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare"
+      ],
       "entities": [],
       "state": "VA",
       "source_type": "official",
@@ -12550,7 +12735,9 @@
       "link": "https://www.justice.gov/usao-edmi/pr/oncologist-sentenced-prison-illegally-selling-cancer-drugs",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Pharmacy"
+      ],
       "entities": [],
       "state": "MI",
       "source_type": "official",
@@ -12618,7 +12805,10 @@
       "link": "https://www.justice.gov/usao-ndca/pr/california-behavioral-medicine-provider-agrees-pay-275-million-resolve-alleged-false",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Behavioral Health",
+        "TRICARE"
+      ],
       "entities": [],
       "state": "CA",
       "source_type": "official",
@@ -12948,7 +13138,10 @@
       "link": "https://www.justice.gov/usao-ma/pr/former-new-york-national-sales-director-sentenced-three-years-prison-kickback-scheme",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "MA",
       "source_type": "official",
@@ -12972,7 +13165,9 @@
       "link": "https://www.justice.gov/usao-ma/pr/new-york-man-sentenced-eight-months-prison-kickback-scheme",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare"
+      ],
       "entities": [],
       "state": "MA",
       "source_type": "official",
@@ -12996,7 +13191,9 @@
       "link": "https://www.justice.gov/usao-ma/pr/new-york-man-sentenced-14-months-prison-kickback-scheme",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare"
+      ],
       "entities": [],
       "state": "MA",
       "source_type": "official",
@@ -13020,7 +13217,11 @@
       "link": "https://www.justice.gov/usao-ndin/pr/indiana-woman-sentenced-84-months-prison",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid",
+        "Medicare Advantage",
+        "Behavioral Health"
+      ],
       "entities": [],
       "state": "IN",
       "source_type": "official",
@@ -13071,7 +13272,12 @@
       "link": "https://www.justice.gov/usao-md/pr/baltimore-county-woman-sentenced-impersonating-nurses-and-aggravated-identity-theft",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Nursing Home",
+        "Opioids"
+      ],
       "entities": [],
       "state": "MD",
       "source_type": "official",
@@ -13095,7 +13301,9 @@
       "link": "https://www.justice.gov/usao-edpa/pr/business-owner-sentenced-more-five-years-prison-fraud-and-money-laundering-schemes",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid"
+      ],
       "entities": [],
       "state": "PA",
       "source_type": "official",
@@ -13120,7 +13328,12 @@
       "link": "https://www.justice.gov/usao-md/pr/baltimore-county-woman-admits-impersonating-nurses-pleads-guilty-aggravated-identity",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Nursing Home",
+        "Opioids"
+      ],
       "entities": [],
       "state": "MD",
       "source_type": "official",
@@ -13144,7 +13357,11 @@
       "link": "https://www.justice.gov/usao-wdva/pr/former-chief-operating-officer-pain-care-centers-sentenced",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Opioids",
+        "Addiction Treatment",
+        "Medicaid"
+      ],
       "entities": [],
       "state": "VA",
       "source_type": "official",
@@ -13168,7 +13385,10 @@
       "link": "https://www.justice.gov/usao-ma/pr/new-york-man-pleads-guilty-70-million-kickback-scheme",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "MA",
       "source_type": "official",
@@ -13192,7 +13412,9 @@
       "link": "https://www.justice.gov/usao-edpa/pr/business-owner-pleads-guilty-fraud-and-money-laundering-schemes",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid"
+      ],
       "entities": [],
       "state": "PA",
       "source_type": "official",
@@ -13246,7 +13468,10 @@
       "link": "https://www.justice.gov/usao-ct/pr/woman-previously-convicted-fraud-and-identity-theft-offenses-sentenced-additional-prison",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid",
+        "Autism/ABA"
+      ],
       "entities": [],
       "state": "CT",
       "source_type": "official",
@@ -13272,7 +13497,10 @@
       "link": "https://www.justice.gov/usao-ma/pr/operations-manager-pleads-guilty-kickback-scheme",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Lab Testing"
+      ],
       "entities": [],
       "state": "MA",
       "source_type": "official",
@@ -13296,7 +13524,10 @@
       "link": "https://www.justice.gov/usao-edpa/pr/us-attorney-announces-additional-enforcement-action-part-national-effort-combat",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medical Devices"
+      ],
       "entities": [],
       "state": "MO",
       "source_type": "official",
@@ -13811,7 +14042,10 @@
       "link": "https://www.justice.gov/usao-mdpa/pr/florida-man-pleads-guilty-health-care-fraud-and-kickback-scheme-involving-foot-baths",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Pharmacy"
+      ],
       "entities": [],
       "state": "FL",
       "source_type": "official",
@@ -13856,7 +14090,9 @@
       "link": "https://www.justice.gov/opa/pr/trinity-hospital-agrees-pay-17m-resolve-alleged-stark-law-violations",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Hospital"
+      ],
       "entities": [],
       "state": "OH",
       "source_type": "official",
