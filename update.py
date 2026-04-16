@@ -163,6 +163,9 @@ STATE_MAP = {
     'South Dakota': 'SD', 'Tennessee': 'TN', 'Texas': 'TX', 'Utah': 'UT',
     'Vermont': 'VT', 'Virginia': 'VA', 'Washington': 'WA', 'West Virginia': 'WV',
     'Wisconsin': 'WI', 'Wyoming': 'WY',
+    # Federal district + territories
+    'District of Columbia': 'DC', 'Puerto Rico': 'PR', 'Guam': 'GU',
+    'U.S. Virgin Islands': 'VI', 'American Samoa': 'AS',
 }
 
 # ---------------------------------------------------------------------------
@@ -203,7 +206,7 @@ def get_action_type(title, desc, agency=None, link=None):
 
     Title-only checks run first, in priority order, so a criminal
     prosecution press release whose body text mentions "court hearing"
-    or "testified" doesn't get mislabeled as a Congressional Hearing.
+    or "testified" doesn't get mislabeled as a Hearing.
     Full text is only consulted as a fallback for ambiguous titles.
 
     If `agency` or `link` is provided, they're used as source hints:
@@ -243,7 +246,7 @@ def get_action_type(title, desc, agency=None, link=None):
         return 'Legislation'
     if re.search(r'\b(hearing|testimony|testifies?|subcommittee hearing|'
                  r'committee (hearing|held|examines?|votes?))\b', title_l):
-        return 'Congressional Hearing'
+        return 'Hearing'
     if re.search(r'\b(audit|inspection|evaluation report)\b', title_l):
         return 'Audit'
     if re.search(r'\b(senate report|house report|congressional report|'
@@ -286,7 +289,14 @@ def get_action_type(title, desc, agency=None, link=None):
     return 'Administrative Action'
 
 def get_state(text):
-    for name, abbr in STATE_MAP.items():
+    """Return the 2-letter state code for the longest state name found in text.
+
+    Iterates state names from longest to shortest so that "West Virginia"
+    wins over "Virginia" and "North Carolina" wins over "Carolina". Without
+    this ordering, the shorter substring would match first and tag the item
+    with the wrong state.
+    """
+    for name, abbr in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
         if re.search(r'\b' + re.escape(name) + r'\b', text):
             return abbr
     return None
@@ -2387,7 +2397,7 @@ def main():
                              'Investigation, Administrative Action, '
                              'Rule/Regulation, Hearing, Report, '
                              'Structural/Organizational, Legislation, '
-                             'Congressional Hearing, Technology/Innovation). '
+                             'Hearing, Technology/Innovation). '
                              'Routes results to data/needs_review_oversight.json '
                              'instead of actions.json. Used by the daily '
                              'oversight pipeline which feeds the Oversight & '

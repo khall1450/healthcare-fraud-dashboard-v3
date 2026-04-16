@@ -13848,7 +13848,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "VA",
+      "state": "WV",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
@@ -15337,7 +15337,7 @@
       "id": "congress-2026-04-15-4121773732",
       "date": "2026-04-15",
       "agency": "Congress",
-      "type": "Congressional Hearing",
+      "type": "Hearing",
       "title": "Sessions Opens Hearing on Preventing Fraud in State-Run Federal Programs - United States House Committee on Oversight and Government Reform",
       "amount": null,
       "amount_numeric": 0,

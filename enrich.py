@@ -62,7 +62,7 @@ Return ONLY valid JSON, no markdown fencing, no explanation:
 
 {{
   "relevant": true/false,
-  "type": one of: "Criminal Enforcement", "Civil Action", "Audit", "Investigation", "Investigative Report", "Congressional Hearing", "Legislation", "Executive Order", "Rule/Regulation", "Administrative Action", "Structural/Organizational", "Technology/Innovation",
+  "type": one of: "Criminal Enforcement", "Civil Action", "Audit", "Investigation", "Investigative Report", "Hearing", "Legislation", "Executive Order", "Rule/Regulation", "Administrative Action", "Structural/Organizational", "Technology/Innovation",
   "state": "Two-letter state abbreviation if specific to one state, null if national/multi-state",
   "amount": "Dollar amount as string like '$52M' or '$14.6B' or null if none",
   "amount_numeric": numeric value in dollars (e.g. 52000000) or 0,

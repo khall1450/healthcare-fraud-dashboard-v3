@@ -94,7 +94,7 @@ Return ONLY valid JSON:
 {{
   "relevant": true/false,
   "reason": "one sentence explaining why relevant or not",
-  "type": "Criminal Enforcement" or "Civil Action" or "Audit" or "Investigation" or "Investigative Report" or "Congressional Hearing" or "Legislation" or "Administrative Action",
+  "type": "Criminal Enforcement" or "Civil Action" or "Audit" or "Investigation" or "Investigative Report" or "Hearing" or "Legislation" or "Administrative Action",
   "state": "Two-letter abbreviation or null",
   "tags": ["from approved list — programs + vulnerable areas only"],
   "agency": "DOJ/CMS/HHS/HHS-OIG/GAO/Congress/White House/State Agency/Media"

@@ -18,6 +18,7 @@ PROGRAM_TAGS = frozenset({
     "Medicare",
     "Medicaid",
     "Medicare Advantage",
+    "Medicaid Managed Care",
     "TRICARE",
     "ACA",
 })
@@ -75,6 +76,12 @@ TAG_PATTERNS = [
     (r"\bmedicare advantage\b|\brisk adjust", "Medicare Advantage"),
     (r"\bmedicare\b", "Medicare"),
     (r"\bmedicaid\b|\bmedi-cal\b", "Medicaid"),
+    # Medicaid Managed Care (Medicaid MCO) — must come after Medicaid
+    # so base program tag is also applied; mirrors how Medicare Advantage
+    # coexists with Medicare (when the body discusses both).
+    (r"medicaid\s+managed\s+care|\bmco\b|managed\s+care\s+organization|"
+     r"\bcentene\b|\bmolina\s+healthcare\b|capitation.*medicaid|"
+     r"medicaid.*capitation", "Medicaid Managed Care"),
     (r"\btricare\b", "TRICARE"),
     (r"affordable care act|\baca\b|obamacare", "ACA"),
     # Areas
