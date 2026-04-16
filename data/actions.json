@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T14:23:12.592367",
+    "last_updated": "2026-04-16T14:30:17.017181",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -1066,8 +1066,8 @@
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
-      "link": "https://oversight.house.gov/release/hearing-wrap-up-minnesota-governor-walz-and-attorney-general-ellison-lied-about-knowledge-of-fraud-and-silenced-whistleblowers/",
-      "link_label": "House Oversight Press Release",
+      "link": "https://oversight.house.gov/hearing/oversight-of-fraud-and-misuse-of-federal-funds-in-minnesota-part-ii/",
+      "link_label": "Committee Hearing Page",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -2022,8 +2022,8 @@
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
-      "link": "https://oversight.house.gov/release/hearing-wrap-up-minnesota-governor-walz-and-attorney-general-ellison-ignored-rampant-taxpayer-fraud-and-silenced-state-whistleblowers/",
-      "link_label": "House Oversight Hearing Wrap-Up",
+      "link": "https://oversight.house.gov/hearing/oversight-of-fraud-and-misuse-of-federal-funds-in-minnesota/",
+      "link_label": "Committee Hearing Page",
       "social_posts": [],
       "tags": [
         "Autism/ABA",
@@ -15775,8 +15775,8 @@
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
-      "link": "https://oversight.house.gov/release/sessions-opens-hearing-on-preventing-fraud-in-state-run-federal-programs/",
-      "link_label": "Congress Press Release",
+      "link": "https://oversight.house.gov/hearing/fraud-prevention-understanding-fraud-in-federally-funded-programs-run-by-the-states/",
+      "link_label": "Committee Hearing Page",
       "social_posts": [],
       "tags": [
         "Medicaid"
@@ -15896,28 +15896,6 @@
         "Senate Judiciary Subcommittee on Border Security and Immigration"
       ],
       "_filter_reason": "fraud keyword + HC committee (Senate Judiciary Subcommittee on Border Security and Immigration)"
-    },
-    {
-      "id": "congress-house-119082",
-      "date": "2026-03-18",
-      "agency": "Congress",
-      "type": "Hearing",
-      "title": "the full Committee to consider the following:                 1) H.R. 6916, Federal Program Integrity and Fraud Prevention Act of 2025;\r\n\r\n2) H.R. 428, Bonuses for Cost-Cutters Act of 2025;\r\n\r\n3) H.R. 1722, Billion Dollar Boondoggle Act of 2025;\r\n\r\n4) H.R. 4642, Fiscal Contingency Preparedness Act;\r\n\r\n5) H.R. 2069, Stop Secret Spending Act of 2025;\r\n\r\n6) H.R. 7934, Settlement Agreement Information Database Act of 2026;\r\n\r\n7) H.R. 2766, Special District Fairness and Accessibility Act;\r\n\r\n8) H.R. 5525, Stop DC Capital Authoritarian Motorvehicle Enforcement and Restoration of Autonomy (CAMERA) Act;\r\n      \r\n9) H.R. 6399, To direct the United States Postal Service to designate a single, unique ZIP Code for Highland City, Utah;\r\n\r\n10) Several postal naming measures.",
-      "amount": "",
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.congress.gov/event/119-congress/house-event/119082",
-      "link_label": "Congress.gov Event",
-      "tags": [],
-      "state": "",
-      "source_type": "official",
-      "auto_fetched": true,
-      "entities": [],
-      "_source": "congress.gov committee-meeting 119082",
-      "_committees": [
-        "House Oversight and Government Reform"
-      ],
-      "_filter_reason": "explicit HC-fraud phrase in title"
     }
   ]
 }

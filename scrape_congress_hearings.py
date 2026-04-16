@@ -198,26 +198,42 @@ def fetch_meeting_detail(detail_url):
 def is_hearing(meeting):
     """True if the meeting is a hearing (vs markup, vote, business meeting).
 
-    Signals (any one is sufficient):
-      - A meetingDocument has "hearing" in its documentType
-      - The title contains "hearing" or "hearings"
-      - The type field mentions "hearing"
-
-    Senate meetings frequently lack meetingDocuments entirely, so we
-    fall through to title/type signals. House meetings usually have
-    documents, but we still check title to cover pre-scheduled hearings
-    with no documents posted yet.
+    Priority order:
+      1. The `type` field is the authoritative signal. Values like "Markup",
+         "Business Meeting", "Hearing" etc. Reject anything that isn't a
+         hearing type. (Previously we fell through to documentType and title
+         checks which produced false positives on markups that happen to have
+         a "Hearing: Member Roster" document — every committee meeting does.)
+      2. If the type field is absent or vague ("Meeting" on Senate items),
+         fall back to title-based detection: "Hearings to examine ..." is
+         the Senate convention.
+      3. Finally, documentType fallback — but only accept strong hearing-
+         specific documents (witness statements/testimony), not the generic
+         "Hearing: Member Roster" that appears on markups.
     """
-    # Signal 1: documentType
-    for doc in (meeting.get("meetingDocuments") or []):
-        if "hearing" in (doc.get("documentType") or "").lower():
+    mtype = (meeting.get("type") or "").strip().lower()
+    if mtype:
+        # Explicit non-hearing types → not a hearing
+        if mtype in {"markup", "business meeting", "conference", "briefing",
+                     "field hearing", "bill signing", "organizational meeting"}:
+            # "field hearing" IS a hearing — correct below
+            if "hearing" in mtype:
+                return True
+            return False
+        if "hearing" in mtype:
             return True
-    # Signal 2: title mentions hearing (Senate pattern: "Hearings to examine...")
+        # For "Meeting" (Senate default), fall through to title check
+    # Title-based: "Hearings to examine ..." Senate pattern
     title = (meeting.get("title") or "").lower()
-    if re.search(r"\bhearings?\b", title):
+    if re.match(r"\s*hearings?\s+to\s+(examine|consider|receive|review)\b", title):
         return True
-    # Signal 3: type field
-    return "hearing" in (meeting.get("type") or "").lower()
+    # Strong document-type signals (not generic Member Roster)
+    for doc in (meeting.get("meetingDocuments") or []):
+        dt = (doc.get("documentType") or "").lower()
+        if dt in ("hearing: witness statement", "hearing transcript",
+                  "hearing: witness biography", "hearing: witness truth in testimony"):
+            return True
+    return False
 
 
 def witness_blob(meeting):
@@ -443,6 +459,65 @@ def _slugify(s):
     return s
 
 
+# Committee-specific URL patterns for /hearing/ pages. Keyed by committee
+# systemCode prefix (matches main committee + any subcommittee via prefix).
+# Format: (base_url, slug_format). slug_format is a Python format string
+# that takes {slug} (the slugified title).
+COMMITTEE_URL_PATTERNS = {
+    # House
+    "hsgo": "https://oversight.house.gov/hearing/{slug}/",
+    "hsif": "https://energycommerce.house.gov/events/{slug}",
+    "hswm": "https://waysandmeans.house.gov/event/{slug}",
+    "hsju": "https://judiciary.house.gov/committee-activity/hearings/{slug}",
+    # Senate
+    "ssfi": "https://www.finance.senate.gov/hearings/{slug}",
+    "sshe": "https://www.help.senate.gov/hearings/{slug}",
+    "ssju": "https://www.judiciary.senate.gov/committee-activity/hearings/{slug}",
+    "ssga": "https://www.hsgac.senate.gov/hearings/{slug}",
+}
+
+
+def resolve_committee_url(title, committee_code, session=None):
+    """Try to resolve a hearing to its committee's own page URL.
+
+    Slugifies the title, builds the expected committee URL, and does a
+    HEAD request to verify it exists. Returns the committee URL if reachable,
+    otherwise None (caller should fall back to the congress.gov URL).
+    """
+    if not title or not committee_code:
+        return None
+    # Find matching URL pattern by committee prefix
+    pattern = None
+    for prefix, url_fmt in COMMITTEE_URL_PATTERNS.items():
+        if committee_code.startswith(prefix):
+            pattern = url_fmt
+            break
+    if not pattern:
+        return None
+    # Slugify title (strip leading quotes, limit length)
+    clean_title = re.sub(r"[\"\u201c\u201d\u2018\u2019]", "", title).strip()
+    slug = _slugify(clean_title)
+    # Some committee sites trim long slugs; try the first 100 chars
+    if len(slug) > 110:
+        slug = slug[:110].rsplit("-", 1)[0]
+    candidate = pattern.format(slug=slug)
+    try:
+        import requests as _req
+        r = _req.head(candidate, timeout=6, allow_redirects=True,
+                      headers={"User-Agent": "Mozilla/5.0"})
+        if r.status_code == 200:
+            return candidate
+        # Some sites return 405 for HEAD; try GET
+        if r.status_code in (405, 403):
+            r = _req.get(candidate, timeout=10, allow_redirects=True,
+                         headers={"User-Agent": "Mozilla/5.0"})
+            if r.status_code == 200:
+                return candidate
+    except Exception:
+        pass
+    return None
+
+
 def _matches_existing_hearing(new_row, existing_items):
     """True if a new hearing looks like an existing Hearing-type item.
 
@@ -480,10 +555,22 @@ def apply_to_actions(results):
     # Dedup AUTO against existing
     new_items = []
     skipped_dup = 0
+    resolved_committee = 0
     for r in auto:
         if _matches_existing_hearing(r, existing):
             skipped_dup += 1
             continue
+        # Try to resolve to committee's own page URL — nicer than congress.gov
+        # URL (committee pages have video, witness docs, etc.)
+        primary_cc = r["committee_codes"][0] if r.get("committee_codes") else ""
+        committee_url = resolve_committee_url(r["title"], primary_cc)
+        if committee_url:
+            link = committee_url
+            link_label = f"{r['committees'][0] if r['committees'] else 'Committee'} Hearing"
+            resolved_committee += 1
+        else:
+            link = r["congress_url"]
+            link_label = "Congress.gov Event"
         new_items.append({
             "id": f"congress-{r['chamber']}-{r['eventId']}",
             "date": r["date"],
@@ -493,8 +580,8 @@ def apply_to_actions(results):
             "amount": "",
             "amount_numeric": 0,
             "officials": [],
-            "link": r["congress_url"],
-            "link_label": "Congress.gov Event",
+            "link": link,
+            "link_label": link_label,
             "tags": [],  # will be filled by retag_existing or next run
             "state": "",
             "source_type": "official",
@@ -524,6 +611,7 @@ def apply_to_actions(results):
     print(f"\nAPPLY:")
     print(f"  AUTO new items added to actions.json: {len(new_items)}")
     print(f"  AUTO duplicates skipped: {skipped_dup}")
+    print(f"  AUTO with resolved committee URL: {resolved_committee}")
     print(f"  REVIEW items queued to {REVIEW_QUEUE_FILE}: {len(review)}")
 
 
