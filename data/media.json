@@ -236,27 +236,6 @@
       "auto_fetched": false
     },
     {
-      "id": "wsj-2025-05-14-unitedhealth-criminal-medicare-fraud",
-      "date": "2025-05-14",
-      "agency": "Media",
-      "type": "Investigative Report",
-      "title": "UnitedHealth Is Under Criminal Investigation for Possible Medicare Fraud",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.wsj.com/us-news/unitedhealth-medicare-fraud-investigation-df80667f",
-      "link_label": "Wall Street Journal Investigation",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Medicare Advantage"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "news",
-      "auto_fetched": false
-    },
-    {
       "id": "media-2025-05-21-guardian-unitedhealth-nursing-home-kickbacks",
       "date": "2025-05-21",
       "agency": "Media",

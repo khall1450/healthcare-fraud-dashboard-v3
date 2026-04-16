@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-16T13:34:51.578665",
+    "last_updated": "2026-04-16T14:01:12.605919",
     "version": "1.0",
     "last_scraped": "2026-04-16T09:00:59.717572"
   },
@@ -43,7 +43,8 @@
       "tags": [
         "Medicaid",
         "Medicare",
-        "Opioids"
+        "Opioids",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "KY",
@@ -181,7 +182,8 @@
       "tags": [
         "DME",
         "Genetic Testing",
-        "Medicare"
+        "Medicare",
+        "Telehealth"
       ],
       "entities": [],
       "state": "TX",
@@ -205,7 +207,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Pharmacy"
+        "Pharmacy",
+        "Telehealth"
       ],
       "entities": [],
       "state": "CA, FL",
@@ -278,7 +281,8 @@
       "tags": [
         "Medicare",
         "Hospice",
-        "Home Health"
+        "Home Health",
+        "Medicaid"
       ],
       "entities": [],
       "state": "CA",
@@ -302,7 +306,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicare Advantage"
+        "Medicare Advantage",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "CA",
@@ -326,7 +331,8 @@
       "social_posts": [],
       "tags": [
         "Hospice",
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "CA",
@@ -372,7 +378,8 @@
       "tags": [
         "DME",
         "Genetic Testing",
-        "Medicare"
+        "Medicare",
+        "Telehealth"
       ],
       "entities": [],
       "state": "FL",
@@ -446,7 +453,8 @@
       "tags": [
         "DME",
         "Medicare",
-        "Medicare Advantage"
+        "Medicare Advantage",
+        "Medical Devices"
       ],
       "entities": [],
       "state": "CA",
@@ -588,7 +596,8 @@
       "social_posts": [],
       "tags": [
         "Assisted Living",
-        "Medicare"
+        "Medicare",
+        "Adult Day Care"
       ],
       "entities": [],
       "state": "PA, NJ",
@@ -611,7 +620,8 @@
       "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Personal Care"
       ],
       "entities": [],
       "state": null,
@@ -654,7 +664,8 @@
       "tags": [
         "Autism/ABA",
         "Medicaid",
-        "Medicare"
+        "Medicare",
+        "DME"
       ],
       "entities": [],
       "state": "FL",
@@ -769,7 +780,9 @@
       "agency": "DOJ",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing",
+        "Medicaid"
       ],
       "date": "2026-03-11",
       "amount_numeric": 0,
@@ -985,7 +998,8 @@
       "tags": [
         "Ambulance",
         "Medicaid",
-        "Medicare"
+        "Medicare",
+        "Medicaid Managed Care"
       ],
       "date": "2026-03-06",
       "amount_numeric": 6850000,
@@ -1123,7 +1137,13 @@
       "social_posts": [],
       "tags": [
         "DME",
-        "Medicaid"
+        "Medicaid",
+        "Lab Testing",
+        "Hospital",
+        "Genetic Testing",
+        "Medicare Advantage",
+        "ACA",
+        "Medicare"
       ],
       "state": null,
       "source_type": "official",
@@ -1145,7 +1165,10 @@
       "tags": [
         "DME",
         "Medicaid",
-        "Medicare"
+        "Medicare",
+        "Skin Substitutes",
+        "Personal Care",
+        "Home Health"
       ],
       "state": "MN",
       "source_type": "official",
@@ -1168,7 +1191,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Wound Care"
       ],
       "state": "TX",
       "source_type": "official",
@@ -1240,7 +1264,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "ACA"
+        "ACA",
+        "Addiction Treatment"
       ],
       "state": "FL, TX",
       "source_type": "official",
@@ -1264,7 +1289,8 @@
       "social_posts": [],
       "tags": [
         "DME",
-        "TRICARE"
+        "TRICARE",
+        "Medical Devices"
       ],
       "state": "CO, RI",
       "source_type": "official",
@@ -1309,7 +1335,8 @@
       "social_posts": [],
       "tags": [
         "DME",
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "date": "2026-02-12",
       "amount_numeric": 10000000,
@@ -1374,7 +1401,8 @@
       "agency": "DOJ",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Addiction Treatment"
       ],
       "date": "2026-02-10",
       "amount_numeric": 3500000,
@@ -1442,7 +1470,8 @@
       "link_label": "CMS Blog Post",
       "social_posts": [],
       "tags": [
-        "Hospice"
+        "Hospice",
+        "Medicare"
       ],
       "state": "AZ, CA, GA, NV, OH, TX",
       "source_type": "official",
@@ -1524,7 +1553,8 @@
       "social_posts": [],
       "tags": [
         "DME",
-        "Medicare"
+        "Medicare",
+        "TRICARE"
       ],
       "state": "MS",
       "source_type": "official",
@@ -1570,7 +1600,8 @@
       "link_label": "CMS Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Medicaid Managed Care"
       ],
       "state": null,
       "source_type": "official",
@@ -1612,7 +1643,8 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Medicare"
+        "Medicare",
+        "Adult Day Care"
       ],
       "state": null,
       "source_type": "official",
@@ -1633,7 +1665,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Nursing Home"
+        "Nursing Home",
+        "DME"
       ],
       "state": "FL",
       "source_type": "official",
@@ -1789,7 +1822,8 @@
       "tags": [
         "Medicaid",
         "Medicare",
-        "Medicare Advantage"
+        "Medicare Advantage",
+        "ACA"
       ],
       "state": null,
       "source_type": "official",
@@ -1964,7 +1998,9 @@
       "tags": [
         "DME",
         "Medicare",
-        "Telehealth"
+        "Telehealth",
+        "TRICARE",
+        "Medical Devices"
       ],
       "date": "2026-01-08",
       "amount_numeric": 30000000.0,
@@ -1987,7 +2023,9 @@
       "social_posts": [],
       "tags": [
         "Autism/ABA",
-        "Medicaid"
+        "Medicaid",
+        "Adult Day Care",
+        "Behavioral Health"
       ],
       "state": "MN",
       "source_type": "official",
@@ -2047,7 +2085,8 @@
       "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Medicaid Managed Care"
       ],
       "state": null,
       "source_type": "official",
@@ -2111,7 +2150,8 @@
       "tags": [
         "DME",
         "Medicare",
-        "Telehealth"
+        "Telehealth",
+        "TRICARE"
       ],
       "state": "AZ",
       "source_type": "official",
@@ -2134,7 +2174,8 @@
       "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Medicaid Managed Care"
       ],
       "state": "IL",
       "source_type": "official",
@@ -2173,7 +2214,9 @@
       "link": "https://www.justice.gov/opa/pr/dana-farber-cancer-institute-agrees-pay-15m-settle-fraud-allegations-related-scientific",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "ACA"
+      ],
       "state": "MA",
       "source_type": "official",
       "auto_fetched": false,
@@ -2216,7 +2259,9 @@
       "link_label": "House Judiciary Committee",
       "social_posts": [],
       "tags": [
-        "ACA"
+        "ACA",
+        "Medicaid Managed Care",
+        "Medicaid"
       ],
       "state": null,
       "source_type": "official",
@@ -2326,7 +2371,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medical Devices"
+        "Medical Devices",
+        "Medicaid"
       ],
       "entities": [],
       "state": "WA",
@@ -2399,7 +2445,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Telehealth"
+        "Telehealth",
+        "Medicare",
+        "Medicaid"
       ],
       "state": "CA",
       "source_type": "official",
@@ -2493,7 +2541,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Skin Substitutes"
+        "Skin Substitutes",
+        "Wound Care"
       ],
       "entities": [],
       "state": null,
@@ -2661,7 +2710,9 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Skin Substitutes"
+        "Skin Substitutes",
+        "Wound Care",
+        "Medicare Advantage"
       ],
       "entities": [],
       "state": null,
@@ -2682,7 +2733,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medical Devices"
+        "Medical Devices",
+        "Hospital"
       ],
       "entities": [],
       "state": "TX",
@@ -2706,7 +2758,8 @@
       "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Medicare Advantage"
       ],
       "entities": [],
       "state": null,
@@ -2843,7 +2896,9 @@
         "Medicaid",
         "Medicare",
         "Nursing Home",
-        "Pharmacy"
+        "Pharmacy",
+        "Assisted Living",
+        "TRICARE"
       ],
       "entities": [],
       "state": "NY",
@@ -2957,7 +3012,8 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Medicare"
+        "Medicare",
+        "DME"
       ],
       "state": null,
       "source_type": "official",
@@ -2982,7 +3038,8 @@
       "social_posts": [],
       "tags": [
         "DME",
-        "Medicare"
+        "Medicare",
+        "Opioids"
       ],
       "state": null,
       "source_type": "official",
@@ -3008,7 +3065,8 @@
       "tags": [
         "Medicaid",
         "Medicare",
-        "Wound Care"
+        "Wound Care",
+        "DME"
       ],
       "state": "AZ",
       "source_type": "official",
@@ -3033,7 +3091,12 @@
       "social_posts": [],
       "tags": [
         "Addiction Treatment",
-        "Medicaid"
+        "Medicaid",
+        "Wound Care",
+        "TRICARE",
+        "Hospice",
+        "Skin Substitutes",
+        "Medicare"
       ],
       "state": "AZ",
       "source_type": "official",
@@ -3059,7 +3122,8 @@
       "tags": [
         "Medicare Advantage",
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "DME"
       ],
       "state": null,
       "source_type": "official",
@@ -3082,7 +3146,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Ambulance",
+        "Medicare"
       ],
       "entities": [],
       "state": "ND",
@@ -3240,7 +3306,8 @@
       "agency": "DOJ",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "date": "2025-05-22",
       "amount_numeric": 227000000.0,
@@ -3264,7 +3331,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicare Advantage"
+        "Medicare Advantage",
+        "Medicaid"
       ],
       "state": null,
       "source_type": "official",
@@ -3308,7 +3376,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Hospital"
+        "Hospital",
+        "Medicare"
       ],
       "state": "CA",
       "source_type": "official",
@@ -3352,7 +3421,8 @@
       "link_label": "CMS Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": null,
@@ -3503,7 +3573,8 @@
         "Medicaid",
         "Medical Devices",
         "Medicare",
-        "Off-Label"
+        "Off-Label",
+        "Lab Testing"
       ],
       "state": "PA",
       "source_type": "official",
@@ -3579,7 +3650,8 @@
       "tags": [
         "Medicaid",
         "Medicare",
-        "Opioids"
+        "Opioids",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "NC",
@@ -3693,7 +3765,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "TRICARE"
+        "TRICARE",
+        "Medicaid Managed Care",
+        "Medicaid"
       ],
       "state": "CA",
       "source_type": "official",
@@ -3742,7 +3816,8 @@
       "tags": [
         "Medicaid",
         "Medicare",
-        "Opioids"
+        "Opioids",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "CT",
@@ -3869,7 +3944,9 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Pharmacy"
+        "Pharmacy",
+        "TRICARE",
+        "Medicaid"
       ],
       "state": null,
       "source_type": "official",
@@ -3893,7 +3970,9 @@
       "social_posts": [],
       "tags": [
         "DME",
-        "Medicare"
+        "Medicare",
+        "TRICARE",
+        "Medicaid"
       ],
       "state": "GA",
       "source_type": "official",
@@ -3967,7 +4046,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "ACA",
+        "Telehealth",
+        "Medicaid"
       ],
       "entities": [],
       "state": "NY",
@@ -4137,7 +4219,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Lab Testing"
+        "Lab Testing",
+        "TRICARE"
       ],
       "entities": [],
       "state": "SC",
@@ -4160,7 +4243,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Medical Devices"
       ],
       "entities": [],
       "state": "CA",
@@ -4263,7 +4347,9 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Wound Care"
+        "Wound Care",
+        "Skin Substitutes",
+        "TRICARE"
       ],
       "entities": [],
       "state": "AZ",
@@ -4287,7 +4373,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "IL",
@@ -4432,7 +4519,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Medical Devices"
       ],
       "entities": [],
       "state": "FL",
@@ -4479,7 +4567,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Pharmacy",
+        "Medicare"
       ],
       "entities": [],
       "state": "PA",
@@ -4502,7 +4592,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Genetic Testing"
+        "Genetic Testing",
+        "Medicare"
       ],
       "entities": [],
       "state": "FL",
@@ -4526,7 +4617,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "DME"
+        "DME",
+        "Medical Devices"
       ],
       "entities": [],
       "state": "FL",
@@ -4549,7 +4641,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": "CA",
@@ -4572,7 +4665,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Addiction Treatment"
+        "Addiction Treatment",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "LA",
@@ -4595,7 +4690,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Nursing Home"
+        "Nursing Home",
+        "Wound Care"
       ],
       "entities": [],
       "state": "OH",
@@ -4666,7 +4762,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Wound Care"
       ],
       "entities": [],
       "state": null,
@@ -4738,7 +4835,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "DME"
+        "DME",
+        "Telehealth"
       ],
       "entities": [],
       "state": "MI",
@@ -4883,7 +4981,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Nursing Home"
+        "Nursing Home",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "SC",
@@ -4934,7 +5033,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "FL",
@@ -5005,7 +5105,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Pharmacy",
+        "Medicare"
       ],
       "entities": [],
       "state": null,
@@ -5028,7 +5130,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "FL",
@@ -5051,7 +5154,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Addiction Treatment"
+        "Addiction Treatment",
+        "Physical Therapy"
       ],
       "entities": [],
       "state": "LA",
@@ -5074,7 +5178,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Lab Testing"
+        "Lab Testing",
+        "TRICARE",
+        "Medicare"
       ],
       "entities": [],
       "state": "FL",
@@ -5097,7 +5203,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "CA",
@@ -5169,7 +5276,9 @@
       "tags": [
         "Medicare",
         "DME",
-        "Genetic Testing"
+        "Genetic Testing",
+        "Assisted Living",
+        "Adult Day Care"
       ],
       "entities": [],
       "state": "NY",
@@ -5222,7 +5331,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Nursing Home"
+        "Nursing Home",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": null,
@@ -5293,7 +5404,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "NJ",
@@ -5316,7 +5429,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Lab Testing"
+        "Lab Testing",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "SC",
@@ -5361,7 +5476,9 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Nursing Home"
+        "Nursing Home",
+        "Wound Care",
+        "Medicaid"
       ],
       "entities": [],
       "state": "TN",
@@ -5384,7 +5501,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medical Devices"
+        "Medical Devices",
+        "Medicaid"
       ],
       "entities": [],
       "state": "WA",
@@ -5409,7 +5527,9 @@
       "tags": [
         "Medicare",
         "TRICARE",
-        "DME"
+        "DME",
+        "Pharmacy",
+        "Telehealth"
       ],
       "entities": [],
       "state": "MD",
@@ -5433,7 +5553,8 @@
       "social_posts": [],
       "tags": [
         "TRICARE",
-        "Opioids"
+        "Opioids",
+        "Pharmacy"
       ],
       "entities": [],
       "state": "AK",
@@ -5506,7 +5627,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing",
+        "Medicaid"
       ],
       "entities": [],
       "state": "FL",
@@ -5651,7 +5774,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "SC",
@@ -5769,7 +5893,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Ambulance"
       ],
       "entities": [],
       "state": "CO",
@@ -5792,7 +5917,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "CT",
@@ -5963,7 +6089,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "LA",
@@ -5986,7 +6113,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Behavioral Health",
+        "Telehealth"
       ],
       "entities": [],
       "state": "NH",
@@ -6009,7 +6138,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "PA",
@@ -6032,7 +6162,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Pharmacy"
       ],
       "entities": [],
       "state": "NC",
@@ -6056,7 +6187,9 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Pharmacy",
+        "Telehealth"
       ],
       "entities": [],
       "state": "NY",
@@ -6079,7 +6212,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Home Health"
+        "Home Health",
+        "Medicare"
       ],
       "entities": [],
       "state": "FL",
@@ -6102,7 +6236,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "GA",
@@ -6125,7 +6260,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Physical Therapy"
+        "Physical Therapy",
+        "Medicare"
       ],
       "entities": [],
       "state": "FL",
@@ -6171,7 +6307,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "NJ",
@@ -6194,7 +6332,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": "NC",
@@ -6217,7 +6356,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "DME",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "OH",
@@ -6240,7 +6381,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Adult Day Care"
+        "Adult Day Care",
+        "Medicare"
       ],
       "entities": [],
       "state": "TX",
@@ -6263,7 +6405,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "WA",
@@ -6287,7 +6430,9 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Opioids",
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": "VA",
@@ -6456,7 +6601,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "DME"
+        "DME",
+        "TRICARE",
+        "Medicare"
       ],
       "entities": [],
       "state": "CT",
@@ -6479,7 +6626,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Pharmacy",
+        "Telehealth"
       ],
       "entities": [],
       "state": "FL",
@@ -6526,7 +6675,11 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Lab Testing",
+        "TRICARE",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "TX",
@@ -6550,7 +6703,8 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Opioids"
+        "Opioids",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "DE",
@@ -6573,7 +6727,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Pharmacy",
+        "DME",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MA",
@@ -6644,7 +6801,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Addiction Treatment"
+        "Addiction Treatment",
+        "Physical Therapy"
       ],
       "entities": [],
       "state": "NY",
@@ -6738,7 +6896,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "WA",
@@ -6811,7 +6970,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Behavioral Health",
+        "Medicare"
       ],
       "entities": [],
       "state": "FL",
@@ -6834,7 +6995,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medical Devices"
+        "Medical Devices",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "MA",
@@ -6907,7 +7069,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Opioids"
+        "Opioids",
+        "Hospital"
       ],
       "entities": [],
       "state": "CO",
@@ -6931,7 +7094,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Lab Testing"
+        "Lab Testing",
+        "Nursing Home"
       ],
       "entities": [],
       "state": "IN",
@@ -7003,7 +7167,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "AR",
@@ -7050,7 +7215,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "TN",
@@ -7122,7 +7288,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "DME",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "ID",
@@ -7146,7 +7314,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "WA",
@@ -7170,7 +7339,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Pharmacy"
+        "Pharmacy",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "FL",
@@ -7193,7 +7363,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Lab Testing"
+        "Lab Testing",
+        "Medicare"
       ],
       "entities": [],
       "state": "IN",
@@ -7218,7 +7389,8 @@
       "tags": [
         "DME",
         "Genetic Testing",
-        "Telehealth"
+        "Telehealth",
+        "Medicare"
       ],
       "entities": [],
       "state": "AL",
@@ -7241,7 +7413,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Behavioral Health",
+        "Telehealth"
       ],
       "entities": [],
       "state": "NH",
@@ -7290,7 +7464,8 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Home Health"
+        "Home Health",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": "NJ",
@@ -7313,7 +7488,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "TX",
@@ -7336,7 +7512,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Medicare"
       ],
       "entities": [],
       "state": "CA",
@@ -7360,7 +7537,9 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Physical Therapy"
+        "Physical Therapy",
+        "Prenatal Care",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": "NV",
@@ -7531,7 +7710,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "MD",
@@ -7578,7 +7758,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Adult Day Care"
       ],
       "entities": [],
       "state": "PA",
@@ -7602,7 +7783,8 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Home Health"
+        "Home Health",
+        "Personal Care"
       ],
       "entities": [],
       "state": "MD",
@@ -7625,7 +7807,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "DME"
+        "DME",
+        "Medicare Advantage"
       ],
       "entities": [],
       "state": "CT",
@@ -7697,7 +7880,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Personal Care",
+        "Home Health"
       ],
       "entities": [],
       "state": "VA",
@@ -7722,7 +7907,8 @@
       "tags": [
         "Medicaid",
         "Home Health",
-        "Nursing Home"
+        "Nursing Home",
+        "Personal Care"
       ],
       "entities": [],
       "state": "MD",
@@ -7793,7 +7979,8 @@
       "social_posts": [],
       "tags": [
         "Pharmacy",
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "LA",
@@ -7815,7 +8002,10 @@
       "link": "https://www.justice.gov/usao-sdny/pr/brooklyn-cardiologist-sentenced-37-months-prison-connection-health-care-fraud-and-0",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "entities": [],
       "state": "NY",
       "source_type": "official",
@@ -7862,7 +8052,8 @@
       "tags": [
         "DME",
         "Genetic Testing",
-        "Telehealth"
+        "Telehealth",
+        "Medicare"
       ],
       "entities": [],
       "state": "AL",
@@ -7885,7 +8076,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Medicaid"
       ],
       "entities": [],
       "state": "NJ",
@@ -7908,7 +8100,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MI",
@@ -7931,7 +8125,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "IA",
@@ -7980,7 +8175,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Adult Day Care"
       ],
       "entities": [],
       "state": "PA",
@@ -8003,7 +8199,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Medical Devices"
       ],
       "entities": [],
       "state": "MD",
@@ -8051,7 +8248,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medical Devices"
+        "Medical Devices",
+        "Medicare"
       ],
       "entities": [],
       "state": "TX",
@@ -8124,7 +8322,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "CT",
@@ -8222,7 +8421,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "DME"
+        "DME",
+        "Telehealth"
       ],
       "entities": [],
       "state": "FL",
@@ -8391,7 +8591,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "FL",
@@ -8415,7 +8616,8 @@
       "social_posts": [],
       "tags": [
         "Nursing Home",
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "IA",
@@ -8462,7 +8664,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Personal Care"
       ],
       "entities": [],
       "state": "DC",
@@ -8494,7 +8697,8 @@
         "Lab Testing",
         "Behavioral Health",
         "Physical Therapy",
-        "Addiction Treatment"
+        "Addiction Treatment",
+        "DME"
       ],
       "entities": [],
       "state": "FL",
@@ -8517,7 +8721,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Home Health"
+        "Home Health",
+        "Personal Care",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MI",
@@ -8614,7 +8821,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "DE",
@@ -8686,7 +8894,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Nursing Home",
+        "Medicare"
       ],
       "entities": [],
       "state": "OR",
@@ -8709,7 +8919,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing",
+        "Telehealth",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "LA",
@@ -8757,7 +8970,11 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing",
+        "DME",
+        "Medicare Advantage",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "IL",
@@ -8804,7 +9021,15 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Lab Testing",
+        "Medicare",
+        "Genetic Testing",
+        "Opioids",
+        "Physical Therapy",
+        "TRICARE",
+        "Addiction Treatment",
+        "Medicaid"
       ],
       "entities": [],
       "state": "TX",
@@ -8828,7 +9053,8 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Opioids"
+        "Opioids",
+        "Pharmacy"
       ],
       "entities": [],
       "state": "KY",
@@ -8851,7 +9077,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Pharmacy"
       ],
       "entities": [],
       "state": "CA",
@@ -8875,7 +9102,10 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Skin Substitutes",
+        "Hospice",
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": "AZ",
@@ -8898,7 +9128,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Behavioral Health",
+        "Personal Care"
       ],
       "entities": [],
       "state": "DC",
@@ -8923,7 +9155,9 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "TRICARE"
+        "TRICARE",
+        "Behavioral Health",
+        "Personal Care"
       ],
       "entities": [],
       "state": "DC",
@@ -8946,7 +9180,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "DME",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "CT",
@@ -8992,7 +9229,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Wound Care",
+        "Medicare"
       ],
       "entities": [],
       "state": "NV",
@@ -9018,7 +9257,10 @@
         "Medicare",
         "Medicaid",
         "TRICARE",
-        "Pharmacy"
+        "Pharmacy",
+        "Physical Therapy",
+        "DME",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "NJ",
@@ -9045,7 +9287,8 @@
         "Medicaid",
         "DME",
         "Telehealth",
-        "Opioids"
+        "Opioids",
+        "TRICARE"
       ],
       "entities": [],
       "state": "SC",
@@ -9070,7 +9313,8 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "Opioids"
+        "Opioids",
+        "Nursing Home"
       ],
       "entities": [],
       "state": "MI",
@@ -9095,7 +9339,8 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "Pharmacy"
+        "Pharmacy",
+        "DME"
       ],
       "entities": [],
       "state": "NY",
@@ -9120,7 +9365,10 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "DME"
+        "DME",
+        "TRICARE",
+        "Behavioral Health",
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": "NC",
@@ -9143,7 +9391,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Home Health"
       ],
       "entities": [],
       "state": "PA",
@@ -9171,7 +9420,9 @@
         "DME",
         "Hospital",
         "Addiction Treatment",
-        "Opioids"
+        "Opioids",
+        "Personal Care",
+        "Medical Devices"
       ],
       "entities": [],
       "state": "VA",
@@ -9194,7 +9445,11 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "DME",
+        "Telehealth",
+        "Medicare",
+        "Physical Therapy"
       ],
       "entities": [],
       "state": "FL",
@@ -9264,7 +9519,12 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Opioids",
+        "DME",
+        "Medicare Advantage",
+        "Telehealth",
+        "Medicaid"
       ],
       "entities": [],
       "state": "CA",
@@ -9287,7 +9547,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MS",
@@ -9312,7 +9574,9 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "Opioids"
+        "Opioids",
+        "DME",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "FL",
@@ -9336,7 +9600,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": "OH",
@@ -9364,7 +9629,11 @@
         "DME",
         "Hospice",
         "Genetic Testing",
-        "Opioids"
+        "Opioids",
+        "Pharmacy",
+        "Wound Care",
+        "Skin Substitutes",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "TX",
@@ -9387,7 +9656,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "DME",
+        "Medicare"
       ],
       "entities": [],
       "state": "MI",
@@ -9411,7 +9682,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "DME"
+        "DME",
+        "Telehealth"
       ],
       "entities": [],
       "state": "NY",
@@ -9457,7 +9729,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Nursing Home"
       ],
       "entities": [],
       "state": "OK",
@@ -9480,7 +9753,11 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Hospital"
+        "Hospital",
+        "Opioids",
+        "TRICARE",
+        "Skin Substitutes",
+        "Medicare"
       ],
       "entities": [],
       "state": "WA",
@@ -9504,7 +9781,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "IL",
@@ -9527,7 +9805,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MD",
@@ -9550,7 +9829,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": "MN",
@@ -9573,7 +9853,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Telehealth"
       ],
       "entities": [],
       "state": "GA",
@@ -9643,7 +9924,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Lab Testing",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MO",
@@ -9689,7 +9973,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "DME",
+        "Telehealth"
       ],
       "entities": [],
       "state": "FL",
@@ -9712,7 +9998,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Addiction Treatment",
+        "Ambulance"
       ],
       "entities": [],
       "state": "NY",
@@ -9735,7 +10023,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Hospice"
+        "Hospice",
+        "Medicare"
       ],
       "entities": [],
       "state": "GA",
@@ -9758,7 +10047,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "VA",
@@ -9783,7 +10073,9 @@
       "tags": [
         "Medicaid",
         "TRICARE",
-        "Telehealth"
+        "Telehealth",
+        "Lab Testing",
+        "Prenatal Care"
       ],
       "entities": [],
       "state": "IL",
@@ -9830,7 +10122,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "DME"
       ],
       "entities": [],
       "state": "FL",
@@ -9877,7 +10170,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Medical Devices"
       ],
       "entities": [],
       "state": "TX",
@@ -9901,7 +10195,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "ME",
@@ -9969,7 +10264,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "DME"
+        "DME",
+        "Medicare Advantage"
       ],
       "entities": [],
       "state": "FL",
@@ -9992,7 +10288,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Addiction Treatment"
+        "Addiction Treatment",
+        "ACA",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "CA",
@@ -10015,7 +10313,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Nursing Home",
+        "Medicaid"
       ],
       "entities": [],
       "state": "IL",
@@ -10039,7 +10339,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Telehealth"
+        "Telehealth",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "LA",
@@ -10086,7 +10387,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "DME"
+        "DME",
+        "Medicare"
       ],
       "entities": [],
       "state": "KY",
@@ -10133,7 +10435,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Pharmacy"
       ],
       "entities": [],
       "state": "NY",
@@ -10156,7 +10459,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Lab Testing"
+        "Lab Testing",
+        "Medicaid",
+        "Medicare",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "TN",
@@ -10203,7 +10509,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "MA",
@@ -10322,7 +10629,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Opioids",
+        "Medicare"
       ],
       "entities": [],
       "state": "FL",
@@ -10345,7 +10654,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing",
+        "Hospital"
       ],
       "entities": [],
       "state": "NY",
@@ -10369,7 +10680,8 @@
       "social_posts": [],
       "tags": [
         "Addiction Treatment",
-        "Opioids"
+        "Opioids",
+        "Pharmacy"
       ],
       "entities": [],
       "state": "VA",
@@ -10393,7 +10705,8 @@
       "social_posts": [],
       "tags": [
         "Pharmacy",
-        "Opioids"
+        "Opioids",
+        "Medicaid"
       ],
       "entities": [],
       "state": "LA",
@@ -10416,7 +10729,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "WA",
@@ -10464,7 +10778,9 @@
       "tags": [
         "Medicare",
         "DME",
-        "Pharmacy"
+        "Pharmacy",
+        "Lab Testing",
+        "Telehealth"
       ],
       "entities": [],
       "state": "NY",
@@ -10487,7 +10803,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Home Health"
       ],
       "entities": [],
       "state": "NC",
@@ -10534,7 +10851,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": "NJ",
@@ -10627,7 +10945,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Lab Testing"
+        "Lab Testing",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "TX",
@@ -10754,7 +11074,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": "VT",
@@ -10824,7 +11145,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "DME"
       ],
       "entities": [],
       "state": "FL",
@@ -10873,7 +11195,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "DME",
+        "Telehealth",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "OH",
@@ -10897,7 +11222,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "MN",
@@ -10970,7 +11296,9 @@
         "Medicare",
         "Medicare Advantage",
         "Medicaid",
-        "Physical Therapy"
+        "Physical Therapy",
+        "Medical Devices",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": "RI",
@@ -11017,7 +11345,9 @@
       "social_posts": [],
       "tags": [
         "DME",
-        "Genetic Testing"
+        "Genetic Testing",
+        "Telehealth",
+        "Medicare"
       ],
       "entities": [],
       "state": "KS",
@@ -11067,7 +11397,8 @@
         "Medicare",
         "DME",
         "Genetic Testing",
-        "Telehealth"
+        "Telehealth",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "NY",
@@ -11115,7 +11446,9 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Addiction Treatment",
+        "Telehealth"
       ],
       "entities": [],
       "state": "VA",
@@ -11162,7 +11495,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Physical Therapy"
+        "Physical Therapy",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "NY",
@@ -11257,7 +11592,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Adult Day Care"
       ],
       "entities": [],
       "state": "NY",
@@ -11305,7 +11641,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "WI",
@@ -11328,7 +11665,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "DME"
       ],
       "entities": [],
       "state": "FL",
@@ -11398,7 +11736,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Opioids",
+        "Addiction Treatment",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": "VA",
@@ -11444,7 +11785,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Off-Label"
       ],
       "entities": [],
       "state": "GA",
@@ -11492,7 +11834,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Pharmacy"
       ],
       "entities": [],
       "state": "IA",
@@ -11515,7 +11858,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "DME"
+        "DME",
+        "Medicare"
       ],
       "entities": [],
       "state": "KY",
@@ -11538,7 +11882,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Personal Care"
       ],
       "entities": [],
       "state": "VA",
@@ -11561,7 +11906,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medical Devices"
+        "Medical Devices",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "MA",
@@ -11584,7 +11930,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Telehealth",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "LA",
@@ -11632,7 +11980,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Hospice"
+        "Hospice",
+        "Medicare"
       ],
       "entities": [],
       "state": "TX",
@@ -11656,7 +12005,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "DME"
+        "DME",
+        "TRICARE"
       ],
       "entities": [],
       "state": "FL",
@@ -11723,7 +12073,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Addiction Treatment"
+        "Addiction Treatment",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "RI",
@@ -11746,7 +12098,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Ambulance"
       ],
       "entities": [],
       "state": "NY",
@@ -11819,7 +12172,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medical Devices"
+        "Medical Devices",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "TN",
@@ -11866,7 +12221,11 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Nursing Home"
+        "Nursing Home",
+        "Physical Therapy",
+        "Medicaid",
+        "Medicaid Managed Care",
+        "Medicare"
       ],
       "entities": [],
       "state": "CT",
@@ -11889,7 +12248,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Personal Care",
+        "Home Health"
       ],
       "entities": [],
       "state": "VA",
@@ -11912,7 +12273,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Off-Label"
       ],
       "entities": [],
       "state": "IL",
@@ -11935,7 +12297,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "CT",
@@ -11958,7 +12321,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Medical Devices"
       ],
       "entities": [],
       "state": "OH",
@@ -11981,7 +12345,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "DME"
+        "DME",
+        "Medicare"
       ],
       "entities": [],
       "state": "MA",
@@ -12032,7 +12397,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "DME",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "MO",
@@ -12151,7 +12518,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": "CT",
@@ -12174,7 +12542,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Telehealth"
       ],
       "entities": [],
       "state": "FL",
@@ -12245,7 +12614,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "WI",
@@ -12268,7 +12638,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Home Health"
+        "Home Health",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MA",
@@ -12291,7 +12662,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Autism/ABA"
       ],
       "entities": [],
       "state": "CT",
@@ -12315,7 +12687,9 @@
       "social_posts": [],
       "tags": [
         "Pharmacy",
-        "Opioids"
+        "Opioids",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "IL",
@@ -12363,7 +12737,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Telehealth"
+        "Telehealth",
+        "DME"
       ],
       "entities": [],
       "state": "IA",
@@ -12412,7 +12787,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Pharmacy"
       ],
       "entities": [],
       "state": "VA",
@@ -12435,7 +12811,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Medicare"
       ],
       "entities": [],
       "state": "TX",
@@ -12482,7 +12859,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "CA",
@@ -12553,7 +12931,11 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Opioids",
+        "TRICARE",
+        "Medicaid",
+        "Medicare"
       ],
       "entities": [],
       "state": "VA",
@@ -12600,7 +12982,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "TN",
@@ -12646,7 +13029,8 @@
       "link_label": "HHS-OIG Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Hospital"
       ],
       "entities": [],
       "state": null,
@@ -12713,7 +13097,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Opioids"
       ],
       "entities": [],
       "state": "CT",
@@ -12736,7 +13121,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Medical Devices"
       ],
       "entities": [],
       "state": "MI",
@@ -12760,7 +13146,9 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Wound Care",
+        "Skin Substitutes"
       ],
       "entities": [],
       "state": "CA",
@@ -12783,7 +13171,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Opioids",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "TN",
@@ -12879,7 +13270,10 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Behavioral Health",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "MO",
@@ -12902,7 +13296,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Physical Therapy"
       ],
       "entities": [],
       "state": "CT",
@@ -12971,7 +13366,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Medical Devices"
       ],
       "entities": [],
       "state": "CA",
@@ -13019,7 +13415,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Medicare"
       ],
       "entities": [],
       "state": "TX",
@@ -13066,7 +13463,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Nursing Home"
+        "Nursing Home",
+        "Medicaid"
       ],
       "entities": [],
       "state": "NJ",
@@ -13089,7 +13487,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Medicaid",
+        "Medicare"
       ],
       "entities": [],
       "state": "MO",
@@ -13112,7 +13512,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "TN",
@@ -13140,7 +13542,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Lab Testing"
+        "Lab Testing",
+        "Medical Devices"
       ],
       "entities": [],
       "state": "NY",
@@ -13166,7 +13569,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "NY",
@@ -13192,7 +13596,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Lab Testing"
       ],
       "entities": [],
       "state": "NY",
@@ -13247,7 +13652,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "DME"
       ],
       "entities": [],
       "state": "NJ",
@@ -13387,7 +13793,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Lab Testing"
+        "Lab Testing",
+        "Medical Devices"
       ],
       "entities": [],
       "state": "NY",
@@ -13578,7 +13985,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medical Devices"
+        "Medical Devices",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": "TN",
@@ -13624,7 +14033,8 @@
       "link_label": "HHS-OIG Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Pharmacy"
       ],
       "entities": [],
       "state": null,
@@ -13713,7 +14123,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Hospital"
       ],
       "entities": [],
       "state": null,
@@ -13758,7 +14169,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": "UT",
@@ -13845,7 +14257,9 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Pharmacy",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": "WV",
@@ -13868,7 +14282,8 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "Genetic Testing"
+        "Genetic Testing",
+        "Lab Testing"
       ],
       "entities": [],
       "state": null,
@@ -13934,7 +14349,8 @@
       "link_label": "MACPAC Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": null,
@@ -14068,7 +14484,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "TRICARE"
       ],
       "entities": [],
       "state": "GA",
@@ -14100,54 +14517,6 @@
       "related_agencies": [
         "HHS-OIG"
       ]
-    },
-    {
-      "id": "medpac-2026-03-12-1289941730",
-      "date": "2026-03-12",
-      "agency": "MedPAC",
-      "type": "Report",
-      "title": "March 2026 Report to the Congress: Medicare Payment Policy",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.medpac.gov/document/march-2026-report-to-the-congress-medicare-payment-policy/",
-      "link_label": "MedPAC Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare Advantage",
-        "Medicare",
-        "Medicaid",
-        "Hospice",
-        "Home Health",
-        "Nursing Home"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
-    },
-    {
-      "id": "macpac-2026-03-12-613531730",
-      "date": "2026-03-12",
-      "agency": "MACPAC",
-      "type": "Report",
-      "title": "March 2026 Report to Congress on Medicaid and CHIP",
-      "amount": null,
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://www.macpac.gov/publication/march-2026-report-to-congress-on-medicaid-and-chip/",
-      "link_label": "MACPAC Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid",
-        "Behavioral Health"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
     },
     {
       "id": "macpac-2026-03-05-45262624",
@@ -14243,7 +14612,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Skin Substitutes"
+        "Skin Substitutes",
+        "Wound Care"
       ],
       "entities": [],
       "state": null,
@@ -14421,7 +14791,8 @@
         "Medicare",
         "Medicaid",
         "Medicare Advantage",
-        "Nursing Home"
+        "Nursing Home",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": null,
@@ -14488,7 +14859,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Genetic Testing"
       ],
       "entities": [],
       "state": "LA",
@@ -14511,7 +14883,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Opioids"
+        "Opioids",
+        "Pharmacy"
       ],
       "entities": [],
       "state": "CA",
@@ -14584,7 +14957,11 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Wound Care",
+        "Skin Substitutes",
+        "Medicare",
+        "Medicaid"
       ],
       "entities": [],
       "state": null,
@@ -14612,7 +14989,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Hospital"
       ],
       "entities": [],
       "state": null,
@@ -14706,7 +15084,8 @@
       "link_label": "HHS-OIG Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": "OK",
@@ -14794,7 +15173,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Nursing Home"
       ],
       "entities": [],
       "state": null,
@@ -14925,7 +15305,9 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Pharmacy",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": "PA",
@@ -14972,7 +15354,8 @@
         "Medicare Advantage",
         "Medicare",
         "Medicaid",
-        "Behavioral Health"
+        "Behavioral Health",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": null,
@@ -15016,7 +15399,8 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "Opioids"
+        "Opioids",
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": null,
@@ -15040,7 +15424,8 @@
         "Medicare",
         "Medicaid",
         "Home Health",
-        "Personal Care"
+        "Personal Care",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": "NJ",
@@ -15133,7 +15518,8 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "Lab Testing"
       ],
       "entities": [],
       "state": null,
@@ -15220,7 +15606,8 @@
       "link_label": "MACPAC Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": null,
@@ -15353,6 +15740,138 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "congress-house-117887",
+      "date": "2025-02-12",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "“The War on Waste: Stamping Out the Scourge of Improper Payments and Fraud”",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.congress.gov/event/119-congress/house-event/117887",
+      "link_label": "Congress.gov Event",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 117887",
+      "_committees": [
+        "House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency"
+      ],
+      "_filter_reason": "fraud keyword + HC committee (House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency)"
+    },
+    {
+      "id": "congress-house-118002",
+      "date": "2025-03-11",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "“Shifting Gears: Moving from Recovery to Prevention of Improper Payments and Fraud”",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.congress.gov/event/119-congress/house-event/118002",
+      "link_label": "Congress.gov Event",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 118002",
+      "_committees": [
+        "House Oversight and Government Reform Subcommittee on Government Operations"
+      ],
+      "_filter_reason": "fraud keyword + HC committee (House Oversight and Government Reform Subcommittee on Government Operations)"
+    },
+    {
+      "id": "congress-house-118410",
+      "date": "2025-06-24",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "“Locking in the DOGE Cuts: Ending Waste, Fraud, and Abuse for Good”",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.congress.gov/event/119-congress/house-event/118410",
+      "link_label": "Congress.gov Event",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 118410",
+      "_committees": [
+        "House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency"
+      ],
+      "_filter_reason": "fraud keyword + HC committee (House Oversight and Government Reform Subcommittee on Delivering on Government Efficiency)"
+    },
+    {
+      "id": "congress-house-118732",
+      "date": "2025-12-10",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "“Fighting Obamacare Subsidy Fraud: Is the Administrative Procedure Act Working as Intended?”",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.congress.gov/event/119-congress/house-event/118732",
+      "link_label": "Congress.gov Event",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 118732",
+      "_committees": [
+        "House Judiciary Subcommittee on Oversight"
+      ],
+      "_filter_reason": "fraud keyword + HC committee (House Judiciary Subcommittee on Oversight)"
+    },
+    {
+      "id": "congress-senate-337967",
+      "date": "2026-02-10",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "Hearings to examine fraud in Minnesota.",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.congress.gov/event/119-congress/senate-event/337967",
+      "link_label": "Congress.gov Event",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 337967",
+      "_committees": [
+        "Senate Judiciary Subcommittee on Border Security and Immigration"
+      ],
+      "_filter_reason": "fraud keyword + HC committee (Senate Judiciary Subcommittee on Border Security and Immigration)"
+    },
+    {
+      "id": "congress-house-119082",
+      "date": "2026-03-18",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "the full Committee to consider the following:                 1) H.R. 6916, Federal Program Integrity and Fraud Prevention Act of 2025;\r\n\r\n2) H.R. 428, Bonuses for Cost-Cutters Act of 2025;\r\n\r\n3) H.R. 1722, Billion Dollar Boondoggle Act of 2025;\r\n\r\n4) H.R. 4642, Fiscal Contingency Preparedness Act;\r\n\r\n5) H.R. 2069, Stop Secret Spending Act of 2025;\r\n\r\n6) H.R. 7934, Settlement Agreement Information Database Act of 2026;\r\n\r\n7) H.R. 2766, Special District Fairness and Accessibility Act;\r\n\r\n8) H.R. 5525, Stop DC Capital Authoritarian Motorvehicle Enforcement and Restoration of Autonomy (CAMERA) Act;\r\n      \r\n9) H.R. 6399, To direct the United States Postal Service to designate a single, unique ZIP Code for Highland City, Utah;\r\n\r\n10) Several postal naming measures.",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.congress.gov/event/119-congress/house-event/119082",
+      "link_label": "Congress.gov Event",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 119082",
+      "_committees": [
+        "House Oversight and Government Reform"
+      ],
+      "_filter_reason": "explicit HC-fraud phrase in title"
     }
   ]
 }

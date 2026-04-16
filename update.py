@@ -366,13 +366,43 @@ def extract_amount(text, title=""):
 
     return None
 
-def generate_tags(text):
-    """Generate relevant tags from text content.
+_AI_CLIENT = None
+_AI_CLIENT_CHECKED = False
 
-    Tags are restricted to the canonical allowlist in tag_allowlist.py
-    (programs + vulnerable fraud areas only). Anything else is filtered out.
+def _get_ai_client():
+    """Lazy-init Anthropic client. Returns None if no API key or SDK unavailable."""
+    global _AI_CLIENT, _AI_CLIENT_CHECKED
+    if _AI_CLIENT_CHECKED:
+        return _AI_CLIENT
+    _AI_CLIENT_CHECKED = True
+    try:
+        from tag_extractor import make_client
+        _AI_CLIENT = make_client()
+    except Exception:
+        _AI_CLIENT = None
+    return _AI_CLIENT
+
+
+def generate_tags(title, full_text=""):
+    """Generate allowlist tags from title + body text.
+
+    If ANTHROPIC_API_KEY is set, uses the anchored AI extractor
+    (tag_extractor.extract_tags_with_evidence) which cites verbatim
+    phrases from the source — much more accurate than regex on body
+    content. Otherwise falls back to the regex matcher from
+    tag_allowlist.auto_tags.
+
+    Both paths return only canonical tags from ALLOWED_TAGS.
     """
-    return _auto_tags(text)
+    client = _get_ai_client()
+    if client is not None and full_text:
+        try:
+            from tag_extractor import extract_tags_with_evidence
+            return extract_tags_with_evidence(client, title, full_text)
+        except Exception as e:
+            log(f"  tag_extractor failed, falling back to regex: {e}", "yellow")
+    # Regex fallback: title + body
+    return _auto_tags(f"{title} {full_text}")
 
 # Site-specific suffixes that pollute <title> tags. Stripped during
 # canonical-title extraction so item titles match the actual headline.
@@ -2042,6 +2072,12 @@ def scrape_medpac(session):
             href = link_el.get('href', '')
             if not title or not href:
                 continue
+            # Skip general biannual Reports to Congress (March/June payment-
+            # policy reports cover broad Medicare landscape, not fraud-focused).
+            # Topical issue briefs + comment letters remain eligible.
+            if re.search(r'^(march|june|december|annual)\s+\d{4}\s+'
+                         r'report\s+to\s+(the\s+)?congress', title, re.I):
+                continue
             # Fetch detail page for description + canonical title
             detail_text = ""
             _detail_title = ""
@@ -2102,6 +2138,15 @@ def scrape_macpac(session):
             # Skip chapter sub-documents
             class_str = " ".join(art.get('class', []))
             if 'publication-type-chapter' in class_str:
+                continue
+            # Skip general biannual Reports to Congress. These span the entire
+            # Medicaid/CHIP landscape (payment, access, enrollment, managed
+            # care, program integrity, etc.) and are too broad to tag as a
+            # single fraud-oversight action. Individual topical chapters are
+            # already skipped above; specific issue briefs + comment letters
+            # remain eligible.
+            if re.search(r'^(march|june|december|annual)\s+\d{4}\s+'
+                         r'report\s+to\s+(the\s+)?congress', title, re.I):
                 continue
             # Fetch detail page
             detail_text = ""
@@ -2607,7 +2652,7 @@ def main():
                                else get_action_type(title, search_text,
                                                     agency=feed.get('agency'),
                                                     link=link))
-                tags = generate_tags(search_text)
+                tags = generate_tags(title, full_text)
 
                 # Enforcement-only filter: only add items classified as
                 # Criminal Enforcement or Civil Action. Oversight items

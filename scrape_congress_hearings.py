@@ -196,17 +196,28 @@ def fetch_meeting_detail(detail_url):
 # ---------------------------------------------------------------------------
 
 def is_hearing(meeting):
-    """True if meetingDocuments indicates this is a hearing, not a markup/vote."""
-    docs = meeting.get("meetingDocuments", []) or []
-    if not docs:
-        # No documents yet — could be a pre-scheduled hearing. Use meetingType fallback.
-        meeting_type = (meeting.get("type") or "").lower()
-        return "hearing" in meeting_type
-    for doc in docs:
-        dt = (doc.get("documentType") or "").lower()
-        if "hearing" in dt:
+    """True if the meeting is a hearing (vs markup, vote, business meeting).
+
+    Signals (any one is sufficient):
+      - A meetingDocument has "hearing" in its documentType
+      - The title contains "hearing" or "hearings"
+      - The type field mentions "hearing"
+
+    Senate meetings frequently lack meetingDocuments entirely, so we
+    fall through to title/type signals. House meetings usually have
+    documents, but we still check title to cover pre-scheduled hearings
+    with no documents posted yet.
+    """
+    # Signal 1: documentType
+    for doc in (meeting.get("meetingDocuments") or []):
+        if "hearing" in (doc.get("documentType") or "").lower():
             return True
-    return False
+    # Signal 2: title mentions hearing (Senate pattern: "Hearings to examine...")
+    title = (meeting.get("title") or "").lower()
+    if re.search(r"\bhearings?\b", title):
+        return True
+    # Signal 3: type field
+    return "hearing" in (meeting.get("type") or "").lower()
 
 
 def witness_blob(meeting):
@@ -412,8 +423,108 @@ def main():
     print(f"\nFull report written to {out_path}")
 
     if args.apply:
-        print("\n--apply not yet implemented; would write to data/actions.json")
-        # TODO: dedup against existing Hearing items; add new ones with type=Hearing
+        apply_to_actions(results)
+
+
+# ---------------------------------------------------------------------------
+# --apply: dedup + write new hearings to actions.json
+# ---------------------------------------------------------------------------
+
+ACTIONS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                            "data", "actions.json")
+REVIEW_QUEUE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                 "data", "tmp_hearings_review_queue.json")
+
+
+def _slugify(s):
+    """Lowercase, collapse non-alnum to dashes, strip trailing dashes."""
+    s = (s or "").lower()
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    return s
+
+
+def _matches_existing_hearing(new_row, existing_items):
+    """True if a new hearing looks like an existing Hearing-type item.
+
+    Dedup rules:
+      - Same congress.gov event URL
+      - Same date AND title fuzzy-matches (shared 5+ word sequence)
+    """
+    new_date = new_row["date"]
+    new_title_words = set(_slugify(new_row["title"]).split("-"))
+    for ex in existing_items:
+        if ex.get("type") != "Hearing":
+            continue
+        link = ex.get("link", "")
+        # Event URL match
+        if f"-event/{new_row['eventId']}" in link:
+            return True
+        # Date + title fuzzy match
+        if ex.get("date") == new_date:
+            ex_words = set(_slugify(ex.get("title", "")).split("-"))
+            overlap = len(new_title_words & ex_words)
+            if overlap >= 5:
+                return True
+    return False
+
+
+def apply_to_actions(results):
+    """Write new auto-include hearings to actions.json; review queue to tmp file."""
+    with open(ACTIONS_FILE, encoding="utf-8") as f:
+        actions = json.load(f)
+    existing = actions.get("actions", [])
+
+    auto = [r for r in results if r["verdict"] == "include_auto"]
+    review = [r for r in results if r["verdict"] == "include_review"]
+
+    # Dedup AUTO against existing
+    new_items = []
+    skipped_dup = 0
+    for r in auto:
+        if _matches_existing_hearing(r, existing):
+            skipped_dup += 1
+            continue
+        new_items.append({
+            "id": f"congress-{r['chamber']}-{r['eventId']}",
+            "date": r["date"],
+            "agency": "Congress",
+            "type": "Hearing",
+            "title": r["title"],
+            "amount": "",
+            "amount_numeric": 0,
+            "officials": [],
+            "link": r["congress_url"],
+            "link_label": "Congress.gov Event",
+            "tags": [],  # will be filled by retag_existing or next run
+            "state": "",
+            "source_type": "official",
+            "auto_fetched": True,
+            "entities": [],
+            "_source": f"congress.gov committee-meeting {r['eventId']}",
+            "_committees": r["committees"],
+            "_filter_reason": r["reason"],
+        })
+
+    if new_items:
+        actions.setdefault("actions", []).extend(new_items)
+        actions.setdefault("metadata", {})["last_updated"] = datetime.now().isoformat()
+        with open(ACTIONS_FILE, "w", encoding="utf-8") as f:
+            json.dump(actions, f, indent=2, ensure_ascii=False)
+
+    # Write review queue separately (not into actions.json)
+    with open(REVIEW_QUEUE_FILE, "w", encoding="utf-8") as f:
+        json.dump({
+            "generated": datetime.now().isoformat(),
+            "count": len(review),
+            "note": "Hearings needing human review before auto-include. "
+                   "Promote with: move entries into actions.json with type=Hearing.",
+            "items": review,
+        }, f, indent=2, ensure_ascii=False)
+
+    print(f"\nAPPLY:")
+    print(f"  AUTO new items added to actions.json: {len(new_items)}")
+    print(f"  AUTO duplicates skipped: {skipped_dup}")
+    print(f"  REVIEW items queued to {REVIEW_QUEUE_FILE}: {len(review)}")
 
 
 if __name__ == "__main__":

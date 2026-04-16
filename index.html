@@ -72,16 +72,16 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 .btn-refresh:hover { background: var(--sunrise); color: #fff; transform: translateY(-1px); box-shadow: 0 3px 8px rgba(255,148,26,0.4); }
 
 /* SPOTLIGHT CARD (in header) */
-.spotlight-card { flex: 0 1 480px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); padding: 12px 18px; position: relative; overflow: hidden; min-height: 80px; display: flex; align-items: stretch; }
+.spotlight-card { flex: 0 1 560px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); padding: 14px 22px; position: relative; overflow: hidden; min-height: 92px; display: flex; align-items: stretch; }
 .spotlight-slide { display: none; width: 100%; animation: fadeSlide 0.45s ease; flex-direction: column; }
 .spotlight-slide.active { display: flex; }
 @keyframes fadeSlide { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-.spotlight-eyebrow { font-family: 'Public Sans', sans-serif; font-size: 0.58rem; color: var(--blaze); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 6px; white-space: nowrap; }
-.spotlight-body { display: flex; align-items: flex-start; gap: 12px; }
-.spotlight-stat { font-family: 'Bona Nova', Georgia, serif; font-size: 1.6rem; font-weight: 700; color: var(--sunrise); line-height: 1.1; flex-shrink: 0; }
+.spotlight-eyebrow { font-family: 'Public Sans', sans-serif; font-size: 0.65rem; color: var(--blaze); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 7px; white-space: nowrap; }
+.spotlight-body { display: flex; align-items: flex-start; gap: 14px; }
+.spotlight-stat { font-family: 'Bona Nova', Georgia, serif; font-size: 1.85rem; font-weight: 700; color: var(--sunrise); line-height: 1.1; flex-shrink: 0; }
 .spotlight-text-col { flex: 1; min-width: 0; }
-.spotlight-desc { font-family: 'Public Sans', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.75); line-height: 1.4; }
-.spotlight-link { font-size: 0.68rem; margin-top: 3px; }
+.spotlight-desc { font-family: 'Public Sans', sans-serif; font-size: 0.82rem; color: rgba(255,255,255,0.75); line-height: 1.4; }
+.spotlight-link { font-size: 0.72rem; margin-top: 4px; }
 .spotlight-link a { color: var(--atlantic); text-decoration: none; font-weight: 600; }
 .spotlight-link a:hover { text-decoration: underline; }
 .spotlight-dots { position: absolute; bottom: 6px; right: 12px; display: flex; gap: 5px; }
@@ -272,9 +272,6 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         </div>
       </div>
 
-      <div class="d-flex align-items-center gap-3">
-        <button class="last-updated-badge" style="cursor:pointer;border:1px solid rgba(255,255,255,0.2);transition:background 0.2s;" data-bs-toggle="modal" data-bs-target="#aboutModal"><i class="fa-solid fa-user me-1"></i> About</button>
-      </div>
     </div>
   </div>
 </header>
