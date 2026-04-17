@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T15:25:03.238530",
+    "last_updated": "2026-04-17T15:26:20.892892",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -1610,27 +1610,6 @@
       "auto_fetched": false,
       "entities": [],
       "narrative_title": "CMS Issues Final Rule Closing Medicaid Provider Tax Loophole; $78.2B Decade Savings"
-    },
-    {
-      "id": "cms-2026-01-27-newsom-demand",
-      "date": "2026-01-27",
-      "agency": "CMS",
-      "type": "Administrative Action",
-      "title": "CMS Letter to California Re: CAA Enforcement and Dispute Resolution",
-      "amount": "",
-      "amount_numeric": 0.0,
-      "officials": [],
-      "link": "https://www.cms.gov/files/document/cms-letter-ca-caa-enforcement-and-dispute-resolution.pdf",
-      "link_label": "CMS Letter",
-      "social_posts": [],
-      "tags": [
-        "Home Health",
-        "Hospice"
-      ],
-      "state": "CA",
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": []
     },
     {
       "id": "congress-2026-01-27-senate-help-fraud-task-force",
