@@ -504,36 +504,48 @@ _NATIONAL_TITLE_RE = re.compile(
 def get_state(text, title=None, link=None):
     """Return a state code (or comma-separated list) from available signals.
 
-    Priority order (highest evidence first):
-      1. If the TITLE describes a national/nationwide/multi-state action,
-         return None (no single-state tag for inherently national items).
-      2. All state names matched in TITLE — if 1+, return them as a
-         comma-separated string. Multi-state titles ("Texas, Virginia and
-         South Carolina") capture all three in textual order.
-      3. USAO district code from LINK (DOJ items only) — authoritative
-         prosecuting state; overrides body/city extraction.
-      4. Cities matched in TITLE via `_CITY_TO_STATE`.
-      5. State names matched in the full `text` blob (body fallback).
-      6. None.
+    When title and USAO district disagree, BOTH are preserved as multi-state.
+    A Florida-man-prosecuted-in-DC case doesn't lose either signal — readers
+    filtering by FL (defendant origin) OR DC (prosecuting venue) will find it.
+
+    Priority order + merging:
+      0. National/nationwide titles short-circuit to None (no single-state tag
+         for inherently-national actions like the "324 Defendants" takedowns).
+      1. All state names matched in TITLE — multi-state aware.
+      2. USAO district from LINK (DOJ items only). If this disagrees with a
+         title state, the result is multi-state (title states first, then USAO).
+      3. City in TITLE via `_CITY_TO_STATE` — only when neither title
+         states nor USAO produced a result.
+      4. Body-text fallback for items without title/link signals.
     """
-    # Path 0: short-circuit for national-scope items
+    # Path 0: national-scope short-circuit
     if title and _NATIONAL_TITLE_RE.search(title):
         return None
-    # Path 1: state names in title (multi-state aware)
+
+    merged = []  # preserves textual order while deduping
+
+    # Path 1: state names in title
     if title:
-        title_states = extract_all_state_names(title)
-        if title_states:
-            return ", ".join(title_states)
-    # Path 2: USAO district code
+        for abbr in extract_all_state_names(title):
+            if abbr not in merged:
+                merged.append(abbr)
+
+    # Path 2: USAO district. When it adds a new state, that's a second data
+    # point (prosecution venue distinct from defendant origin). Append.
     usao = extract_usao_state(link) if link else None
-    if usao:
-        return usao
-    # Path 3: city in title
+    if usao and usao not in merged:
+        merged.append(usao)
+
+    if merged:
+        return ", ".join(merged)
+
+    # Path 3: city lookup (only if no state or USAO match)
     if title:
         city_states = extract_city_states(title)
         if city_states:
             return ", ".join(city_states)
-    # Path 4: state name in full text (legacy body fallback)
+
+    # Path 4: body-text fallback
     for name, abbr in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
         if re.search(r'\b' + re.escape(name) + r'\b', text):
             return abbr
