@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T16:13:55.191674",
+    "last_updated": "2026-04-17T16:17:12.895928",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -313,7 +313,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "CA, OR",
+      "state": "CA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -386,7 +386,7 @@
         "Telehealth"
       ],
       "entities": [],
-      "state": "FL, MA",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -487,7 +487,7 @@
         "Telehealth"
       ],
       "entities": [],
-      "state": "AL, MA",
+      "state": "AL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -532,7 +532,7 @@
         "TRICARE"
       ],
       "entities": [],
-      "state": "MS, AL",
+      "state": "MS",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -949,7 +949,7 @@
       "id": "hhs-oig-2026-03-06-illinois-dme",
       "auto_fetched": false,
       "officials": [],
-      "state": "IL, MA",
+      "state": "IL",
       "source_type": "official",
       "title": "Illinois Man Sentenced to Two Years in Prison for Durable Medical Equipment Scheme",
       "link_label": "DOJ Press Release",
@@ -973,7 +973,7 @@
       "id": "hhs-oig-2026-03-06-kansas-doctor-8m",
       "auto_fetched": false,
       "officials": [],
-      "state": "KS, MO",
+      "state": "KS",
       "source_type": "official",
       "title": "Kansas Doctor Sentenced to 3 Years in Prison for $8 Million Medicare Fraud",
       "link_label": "DOJ Press Release",
@@ -5995,7 +5995,7 @@
         "DME"
       ],
       "entities": [],
-      "state": "FL, MA",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -6190,7 +6190,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "GA, LA",
+      "state": "GA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -6534,7 +6534,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "NY, MA",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -6559,7 +6559,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "CT, NJ",
+      "state": "CT",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -6584,7 +6584,7 @@
         "Telehealth"
       ],
       "entities": [],
-      "state": "FL, NJ",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7152,7 +7152,7 @@
         "DME"
       ],
       "entities": [],
-      "state": "FL, SC",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7350,7 +7350,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "AL, MA",
+      "state": "AL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7672,7 +7672,7 @@
         "Behavioral Health"
       ],
       "entities": [],
-      "state": "MD, DC",
+      "state": "MD",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7696,7 +7696,7 @@
         "DME"
       ],
       "entities": [],
-      "state": "FL, NJ",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7869,7 +7869,7 @@
         "Personal Care"
       ],
       "entities": [],
-      "state": "MD, VA",
+      "state": "MD",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -8014,7 +8014,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "AL, MA",
+      "state": "AL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -8554,7 +8554,7 @@
         "Genetic Testing"
       ],
       "entities": [],
-      "state": "FL, NJ",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -9865,7 +9865,7 @@
         "DME"
       ],
       "entities": [],
-      "state": "FL, NY",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -10087,7 +10087,7 @@
         "DME"
       ],
       "entities": [],
-      "state": "FL, WI",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -10230,7 +10230,7 @@
         "Medicare Advantage"
       ],
       "entities": [],
-      "state": "FL, NY",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -10280,7 +10280,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "IL, IA",
+      "state": "IL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -10598,7 +10598,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "FL, MA",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -11120,7 +11120,7 @@
         "DME"
       ],
       "entities": [],
-      "state": "FL, NH",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -11321,7 +11321,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "KS, MO",
+      "state": "KS",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -11373,7 +11373,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "NY, MA",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -12840,7 +12840,7 @@
         "Genetic Testing"
       ],
       "entities": [],
-      "state": "CA, NJ",
+      "state": "CA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -13057,7 +13057,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "TX, MO",
+      "state": "TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -13208,7 +13208,7 @@
         "Pharmacy"
       ],
       "entities": [],
-      "state": "FL, NH",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -13528,7 +13528,7 @@
         "Medical Devices"
       ],
       "entities": [],
-      "state": "NY, MA",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "doj_topics": [
@@ -13555,7 +13555,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "NY, MA",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "doj_topics": [
@@ -13582,7 +13582,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "NY, MA",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "doj_topics": [
@@ -13779,7 +13779,7 @@
         "Medical Devices"
       ],
       "entities": [],
-      "state": "NY, MA",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "doj_topics": [
@@ -14445,7 +14445,7 @@
         "Pharmacy"
       ],
       "entities": [],
-      "state": "FL, PA",
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -15729,7 +15729,7 @@
         "DME"
       ],
       "entities": [],
-      "state": "IL, MA",
+      "state": "IL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [

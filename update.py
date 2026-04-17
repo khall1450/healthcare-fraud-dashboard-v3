@@ -504,47 +504,43 @@ _NATIONAL_TITLE_RE = re.compile(
 def get_state(text, title=None, link=None):
     """Return a state code (or comma-separated list) from available signals.
 
-    When title and USAO district disagree, BOTH are preserved as multi-state.
-    A Florida-man-prosecuted-in-DC case doesn't lose either signal — readers
-    filtering by FL (defendant origin) OR DC (prosecuting venue) will find it.
+    **Title-first rule**: if the title names one or more states, those are
+    authoritative — they're usually the fraud-location signal ("Waukesha
+    Medical Equipment Company..." -> WI). USAO district is only used as a
+    FALLBACK when no state appears in the title, because prosecution venue
+    (the USAO district) is often incidental to the fraud itself and mixing
+    the two kinds of signal makes state filters noisy.
 
-    Priority order + merging:
-      0. National/nationwide titles short-circuit to None (no single-state tag
-         for inherently-national actions like the "324 Defendants" takedowns).
+    Priority order:
+      0. National/nationwide titles short-circuit to None (no single-state
+         tag for inherently-national actions like the "324 Defendants"
+         takedowns).
       1. All state names matched in TITLE — multi-state aware.
-      2. USAO district from LINK (DOJ items only). If this disagrees with a
-         title state, the result is multi-state (title states first, then USAO).
-      3. City in TITLE via `_CITY_TO_STATE` — only when neither title
-         states nor USAO produced a result.
+      2. USAO district from LINK (DOJ items only) — ONLY when no title state.
+      3. City in TITLE via `_CITY_TO_STATE` — only when nothing above matched.
       4. Body-text fallback for items without title/link signals.
+
+    See project note `state_tag_meaning_tbd.md` for the deferred question of
+    whether "state" should mean fraud-location, defendant origin, or
+    prosecution venue when they differ. Current rule prefers fraud-location.
     """
     # Path 0: national-scope short-circuit
     if title and _NATIONAL_TITLE_RE.search(title):
         return None
-
-    merged = []  # preserves textual order while deduping
-
-    # Path 1: state names in title
+    # Path 1: state names in title (multi-state aware)
     if title:
-        for abbr in extract_all_state_names(title):
-            if abbr not in merged:
-                merged.append(abbr)
-
-    # Path 2: USAO district. When it adds a new state, that's a second data
-    # point (prosecution venue distinct from defendant origin). Append.
+        title_states = extract_all_state_names(title)
+        if title_states:
+            return ", ".join(title_states)
+    # Path 2: USAO district (fallback only)
     usao = extract_usao_state(link) if link else None
-    if usao and usao not in merged:
-        merged.append(usao)
-
-    if merged:
-        return ", ".join(merged)
-
-    # Path 3: city lookup (only if no state or USAO match)
+    if usao:
+        return usao
+    # Path 3: city in title (fallback only)
     if title:
         city_states = extract_city_states(title)
         if city_states:
             return ", ".join(city_states)
-
     # Path 4: body-text fallback
     for name, abbr in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
         if re.search(r'\b' + re.escape(name) + r'\b', text):
