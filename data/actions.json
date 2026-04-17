@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T15:26:20.892892",
+    "last_updated": "2026-04-17T15:28:59.082959",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -1315,26 +1315,6 @@
       "related_agencies": [
         "HHS-OIG"
       ]
-    },
-    {
-      "id": "doge-2026-02-13-medicaid-data-release",
-      "date": "2026-02-13",
-      "agency": "CMS",
-      "type": "Administrative Action",
-      "title": "DOGE Releases Largest Medicaid Dataset in History to Crowdsource Fraud Detection",
-      "amount": "",
-      "amount_numeric": 0.0,
-      "officials": [],
-      "link": "https://www.cms.gov/newsroom/press-releases/cms-releases-medicaid-chip-t-msis-data-provide-public-access-transparency-program-performance",
-      "link_label": "CMS Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicaid"
-      ],
-      "entities": [],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false
     },
     {
       "link": "https://www.justice.gov/opa/pr/two-foreign-nationals-indicted-chicago-part-10m-health-care-fraud-scheme",
