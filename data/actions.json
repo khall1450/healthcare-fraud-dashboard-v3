@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T15:28:59.082959",
+    "last_updated": "2026-04-17T15:39:35.159404",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -273,7 +273,7 @@
       "date": "2026-03-25",
       "agency": "White House",
       "type": "Administrative Action",
-      "title": "Task Force to Eliminate Fraud and CMS Suspend 70 Los Angeles Hospice and Home Health Providers",
+      "title": "JD Vance's anti-fraud task force 'ramps up' identifying fraud across US after suspending 70 providers in LA",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -292,7 +292,8 @@
       "auto_fetched": false,
       "related_agencies": [
         "CMS"
-      ]
+      ],
+      "narrative_title": "Task Force to Eliminate Fraud and CMS Suspend 70 Los Angeles Hospice and Home Health Providers"
     },
     {
       "id": "doj-2026-03-24-1684712863",
@@ -498,7 +499,7 @@
       "date": "2026-03-19",
       "agency": "CMS",
       "type": "Administrative Action",
-      "title": "CMS Approves Minnesota’s Revised Medicaid Corrective Action Plan",
+      "title": "Feds accept Minnesota's corrective action plan for Medicaid-based programs",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
@@ -511,7 +512,8 @@
       "state": "MN",
       "source_type": "news",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "CMS Approves Minnesota’s Revised Medicaid Corrective Action Plan"
     },
     {
       "id": "hhs-oig-2026-03-19-827656511",
@@ -1801,7 +1803,7 @@
       "date": "2026-01-14",
       "agency": "CMS",
       "type": "Administrative Action",
-      "title": "CMS Withholds $300M from California Over Unlawful Health Care Spending on Illegal Immigrants",
+      "title": "CMS Increasing Oversight on States Illegally Using Federal Medicaid Funding for Health Care for Illegal Immigrants",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -1814,7 +1816,8 @@
       "state": "CA",
       "source_type": "official",
       "auto_fetched": false,
-      "entities": []
+      "entities": [],
+      "narrative_title": "CMS Withholds $300M from California Over Unlawful Health Care Spending on Illegal Immigrants"
     },
     {
       "id": "doj-2026-01-kaiser-permanente-556m-settlement",
@@ -4095,7 +4098,7 @@
       "date": "2026-01-15",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
-      "title": "Two Individuals Plead Guilty to $68 Million Adult Day Care Fraud Scheme",
+      "title": "Two Individuals Plead Guilty to $68M Adult Day Care Fraud Scheme",
       "amount": "$68 Million",
       "amount_numeric": 68000000.0,
       "officials": [],
@@ -4113,7 +4116,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "narrative_title": "Two Individuals Plead Guilty to $68 Million Adult Day Care Fraud Scheme"
     },
     {
       "id": "doj-2026-01-13-1788919544",
@@ -4169,7 +4173,7 @@
       "date": "2025-12-18",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
-      "title": "Doctor Indicted for Orchestrating $45 Million Botox Fraud Scheme Targeting Medicare",
+      "title": "Doctor Indicted for Orchestrating $45M Botox Fraud Scheme Targeting Medicare",
       "amount": "$45 Million",
       "amount_numeric": 45000000.0,
       "officials": [],
@@ -4186,14 +4190,15 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "narrative_title": "Doctor Indicted for Orchestrating $45 Million Botox Fraud Scheme Targeting Medicare"
     },
     {
       "id": "doj-2025-12-17-3932038928",
       "date": "2025-12-17",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
-      "title": "Digital Health Company and Medical Practice Indicted in $100 Million Adderall Distribution Scheme",
+      "title": "Digital Health Company and Medical Practice Indicted in $100M Adderall Distribution Scheme",
       "amount": "$100 Million",
       "amount_numeric": 100000000.0,
       "officials": [],
@@ -4215,14 +4220,15 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "narrative_title": "Digital Health Company and Medical Practice Indicted in $100 Million Adderall Distribution Scheme"
     },
     {
       "id": "doj-2025-12-12-700946067",
       "date": "2025-12-12",
       "agency": "DOJ",
       "type": "Civil Action",
-      "title": "Missouri Man Sentenced to 10 Years in Prison for $174 Million Health Care Fraud Conspiracy",
+      "title": "Missouri Man Sentenced to 10 Years in Prison for $174M Health Care Fraud Conspiracy",
       "amount": "$174 Million",
       "amount_numeric": 174000000.0,
       "officials": [],
@@ -4240,14 +4246,15 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "narrative_title": "Missouri Man Sentenced to 10 Years in Prison for $174 Million Health Care Fraud Conspiracy"
     },
     {
       "id": "doj-2025-12-12-1077195743",
       "date": "2025-12-12",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
-      "title": "Pharmacist Sentenced to Over Six Years in Prison for $6 Million Health Care Fraud Scheme",
+      "title": "Pharmacist Sentenced to Over Six Years in Prison for $6M Health Care Fraud Scheme",
       "amount": "$6 Million",
       "amount_numeric": 6000000.0,
       "officials": [],
@@ -4265,7 +4272,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "narrative_title": "Pharmacist Sentenced to Over Six Years in Prison for $6 Million Health Care Fraud Scheme"
     },
     {
       "id": "doj-2025-12-12-263213136",
@@ -4789,7 +4797,7 @@
       "date": "2025-06-23",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
-      "title": "California Man Pleads Guilty In Connection With Laundering Proceeds Of $16 Million Hospice Fraud Scheme",
+      "title": "California Man Pleads Guilty in Connection with Laundering Proceeds of $16M Hospice Fraud Scheme",
       "amount": "$16 Million",
       "amount_numeric": 16000000.0,
       "officials": [],
@@ -4806,7 +4814,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "narrative_title": "California Man Pleads Guilty In Connection With Laundering Proceeds Of $16 Million Hospice Fraud Scheme"
     },
     {
       "id": "doj-2025-06-12-1573660464",
