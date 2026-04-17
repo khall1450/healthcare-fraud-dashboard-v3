@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T15:13:15.161742",
+    "last_updated": "2026-04-17T15:15:10.132881",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -2045,7 +2045,7 @@
       "date": "2026-01-06",
       "agency": "White House",
       "type": "Administrative Action",
-      "title": "CMS Escalates Oversight of Minnesota Medicaid Over Fraud, Waste, and Abuse Concerns",
+      "title": "Here’s What the Trump Administration Is Doing to Crush Minnesota’s Fraud Epidemic",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -2060,8 +2060,10 @@
       "auto_fetched": false,
       "entities": [],
       "related_agencies": [
-        "CMS"
-      ]
+        "DOJ",
+        "HHS"
+      ],
+      "narrative_title": "CMS Escalates Oversight of Minnesota Medicaid Over Fraud, Waste, and Abuse Concerns"
     },
     {
       "id": "hhs-oig-2025-12-medicaid-deceased-enrollees-207m",
