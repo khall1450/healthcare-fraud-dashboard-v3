@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T16:12:56.681412",
+    "last_updated": "2026-04-17T16:13:55.191674",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -8344,7 +8344,7 @@
       "date": "2025-07-31",
       "agency": "DOJ",
       "type": "Criminal Enforcement",
-      "title": "CEO and Medical Director Charged in $500 Million COVID-19 Test Billing Fraud",
+      "title": "CEO and Medical Director Charged in $500M COVID-19 Test Billing Fraud",
       "amount": "$500 Million",
       "amount_numeric": 500000000.0,
       "officials": [],
@@ -8363,7 +8363,8 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
-      ]
+      ],
+      "narrative_title": "CEO and Medical Director Charged in $500 Million COVID-19 Test Billing Fraud"
     },
     {
       "id": "doj-2025-07-25-3257727530",
