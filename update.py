@@ -169,6 +169,205 @@ STATE_MAP = {
     'U.S. Virgin Islands': 'VI', 'American Samoa': 'AS',
 }
 
+_VALID_STATE_ABBR = set(STATE_MAP.values())
+
+# DOJ USAO district URL -> state code. For DOJ items, the prosecuting district
+# is the authoritative state (defendant's home state is noise). Audited at
+# 95% agreement with existing stored states; every disagreement in the audit
+# favored the USAO code over the stored state.
+_USAO_LINK_RE = re.compile(r'/usao-([a-z]+)/', re.I)
+
+
+def extract_usao_state(link):
+    """Extract prosecuting-state code from a justice.gov USAO URL, or None.
+
+    Handles both single-district (`/usao-ct/` -> CT, `/usao-ri/` -> RI) and
+    multi-district (`/usao-sdny/` -> NY, `/usao-edmi/` -> MI) patterns.
+    """
+    if not link:
+        return None
+    m = _USAO_LINK_RE.search(link.lower())
+    if not m:
+        return None
+    code = m.group(1)
+    if len(code) == 2 and code.upper() in _VALID_STATE_ABBR:
+        return code.upper()
+    # Multi-district: [emwnsc]d + 2-letter state, e.g. sdny, edmi, ndga, cdca
+    if len(code) == 4 and code[1] == 'd' and code[0] in 'emwnsc':
+        st = code[2:].upper()
+        if st in _VALID_STATE_ABBR:
+            return st
+    return None
+
+
+# Top US cities -> state. Used as a fallback for items whose title names a
+# city but not a state. Covers top-50 metros, state capitals, and cities that
+# appear frequently in federal healthcare-fraud press releases. Intentionally
+# small — cities not in this dict just fall through (state stays empty).
+# When a city name is ambiguous (e.g., "Springfield" in multiple states),
+# it's OMITTED entirely rather than guessed.
+_CITY_TO_STATE = {
+    'birmingham': 'AL', 'montgomery': 'AL', 'huntsville': 'AL', 'mobile': 'AL',
+    'anchorage': 'AK',
+    'phoenix': 'AZ', 'tucson': 'AZ', 'mesa': 'AZ', 'scottsdale': 'AZ', 'tempe': 'AZ', 'chandler': 'AZ',
+    'little rock': 'AR', 'fayetteville': 'AR',
+    'los angeles': 'CA', 'san diego': 'CA', 'san jose': 'CA', 'san francisco': 'CA',
+    'fresno': 'CA', 'sacramento': 'CA', 'long beach': 'CA', 'oakland': 'CA',
+    'bakersfield': 'CA', 'anaheim': 'CA', 'santa ana': 'CA', 'riverside': 'CA',
+    'stockton': 'CA', 'irvine': 'CA', 'modesto': 'CA', 'huntington beach': 'CA',
+    'santa rosa': 'CA', 'rancho cucamonga': 'CA', 'ontario': 'CA', 'santa clarita': 'CA',
+    'garden grove': 'CA', 'oceanside': 'CA', 'elk grove': 'CA', 'corona': 'CA',
+    'lancaster': 'CA', 'palmdale': 'CA', 'pasadena': 'CA', 'orange': 'CA',
+    'fullerton': 'CA', 'thousand oaks': 'CA', 'visalia': 'CA', 'berkeley': 'CA',
+    'simi valley': 'CA', 'torrance': 'CA', 'sunnyvale': 'CA', 'hayward': 'CA',
+    'concord': 'CA', 'roseville': 'CA', 'salinas': 'CA', 'escondido': 'CA',
+    'san bernardino': 'CA',
+    'denver': 'CO', 'colorado springs': 'CO', 'aurora': 'CO', 'fort collins': 'CO',
+    'lakewood': 'CO', 'boulder': 'CO', 'thornton': 'CO',
+    'bridgeport': 'CT', 'new haven': 'CT', 'hartford': 'CT', 'stamford': 'CT',
+    'waterbury': 'CT', 'norwalk': 'CT', 'danbury': 'CT', 'bloomfield': 'CT',
+    'north haven': 'CT',
+    'wilmington': 'DE', 'dover': 'DE',
+    'jacksonville': 'FL', 'miami': 'FL', 'tampa': 'FL', 'orlando': 'FL',
+    'st petersburg': 'FL', 'saint petersburg': 'FL', 'hialeah': 'FL', 'tallahassee': 'FL',
+    'port st lucie': 'FL', 'cape coral': 'FL', 'fort lauderdale': 'FL',
+    'pembroke pines': 'FL', 'hollywood': 'FL', 'miramar': 'FL', 'gainesville': 'FL',
+    'coral springs': 'FL', 'lehigh acres': 'FL', 'miami gardens': 'FL',
+    'clearwater': 'FL', 'palm bay': 'FL', 'pompano beach': 'FL', 'west palm beach': 'FL',
+    'lakeland': 'FL', 'sarasota': 'FL', 'naples': 'FL', 'fort myers': 'FL',
+    'boca raton': 'FL', 'daytona beach': 'FL', 'key west': 'FL', 'pensacola': 'FL',
+    'atlanta': 'GA', 'augusta': 'GA', 'macon': 'GA', 'savannah': 'GA',
+    'athens': 'GA', 'sandy springs': 'GA', 'roswell': 'GA',
+    'honolulu': 'HI', 'hilo': 'HI',
+    'boise': 'ID',
+    'chicago': 'IL', 'rockford': 'IL', 'joliet': 'IL', 'naperville': 'IL',
+    'peoria': 'IL',
+    'indianapolis': 'IN', 'fort wayne': 'IN', 'evansville': 'IN', 'south bend': 'IN',
+    'des moines': 'IA', 'cedar rapids': 'IA', 'davenport': 'IA', 'marshalltown': 'IA',
+    'dubuque': 'IA',
+    'wichita': 'KS', 'overland park': 'KS', 'topeka': 'KS',
+    'louisville': 'KY', 'lexington': 'KY', 'bowling green': 'KY', 'frankfort': 'KY',
+    'ashland city': 'KY',
+    'new orleans': 'LA', 'baton rouge': 'LA', 'shreveport': 'LA', 'lafayette': 'LA',
+    'lake charles': 'LA',
+    'bangor': 'ME', 'lewiston': 'ME',
+    'baltimore': 'MD', 'annapolis': 'MD', 'rockville': 'MD', 'frederick': 'MD',
+    'boston': 'MA', 'worcester': 'MA', 'cambridge': 'MA', 'lowell': 'MA',
+    'brockton': 'MA', 'new bedford': 'MA', 'quincy': 'MA',
+    'detroit': 'MI', 'grand rapids': 'MI', 'warren': 'MI', 'sterling heights': 'MI',
+    'ann arbor': 'MI', 'lansing': 'MI', 'flint': 'MI', 'dearborn': 'MI',
+    'southfield': 'MI', 'oakton': 'MI',
+    'minneapolis': 'MN', 'st paul': 'MN', 'saint paul': 'MN', 'duluth': 'MN',
+    'jackson': 'MS', 'gulfport': 'MS',
+    'kansas city mo': 'MO', 'st louis': 'MO', 'saint louis': 'MO',
+    'independence': 'MO', 'jefferson city': 'MO',
+    'billings': 'MT', 'helena': 'MT',
+    'omaha': 'NE', 'lincoln': 'NE',
+    'las vegas': 'NV', 'henderson': 'NV', 'reno': 'NV', 'north las vegas': 'NV',
+    'carson city': 'NV',
+    'manchester nh': 'NH', 'nashua': 'NH',
+    'newark': 'NJ', 'jersey city': 'NJ', 'paterson': 'NJ', 'trenton': 'NJ',
+    'elizabeth nj': 'NJ', 'edison': 'NJ', 'hoboken': 'NJ',
+    'albuquerque': 'NM', 'las cruces': 'NM', 'santa fe': 'NM',
+    'new york city': 'NY', 'buffalo': 'NY', 'yonkers': 'NY', 'syracuse': 'NY',
+    'albany': 'NY', 'new rochelle': 'NY', 'brooklyn': 'NY', 'bronx': 'NY',
+    'queens': 'NY', 'manhattan': 'NY', 'staten island': 'NY', 'harlem': 'NY',
+    'larchmont': 'NY', 'long island': 'NY',
+    'charlotte': 'NC', 'raleigh': 'NC', 'greensboro': 'NC', 'durham': 'NC',
+    'winston-salem': 'NC', 'cary': 'NC', 'kinston': 'NC',
+    'fargo': 'ND', 'bismarck': 'ND',
+    'cleveland': 'OH', 'cincinnati': 'OH', 'toledo': 'OH', 'akron': 'OH',
+    'dayton': 'OH', 'youngstown': 'OH',
+    'oklahoma city': 'OK', 'tulsa': 'OK', 'norman': 'OK',
+    'eugene': 'OR', 'gresham': 'OR',
+    'philadelphia': 'PA', 'pittsburgh': 'PA', 'allentown': 'PA', 'erie': 'PA',
+    'reading': 'PA', 'scranton': 'PA', 'bethlehem': 'PA', 'harrisburg': 'PA',
+    'york pa': 'PA',
+    'providence': 'RI', 'warwick': 'RI', 'cranston': 'RI',
+    'myrtle beach': 'SC',
+    'sioux falls': 'SD', 'rapid city': 'SD', 'pierre': 'SD',
+    'nashville': 'TN', 'memphis': 'TN', 'knoxville': 'TN', 'chattanooga': 'TN',
+    'clarksville': 'TN', 'murfreesboro': 'TN', 'hendersonville': 'TN',
+    'houston': 'TX', 'san antonio': 'TX', 'dallas': 'TX', 'austin': 'TX',
+    'fort worth': 'TX', 'el paso': 'TX', 'corpus christi': 'TX', 'plano': 'TX',
+    'laredo': 'TX', 'lubbock': 'TX', 'garland': 'TX', 'irving': 'TX',
+    'amarillo': 'TX', 'grand prairie': 'TX', 'brownsville': 'TX', 'mckinney': 'TX',
+    'mesquite': 'TX', 'killeen': 'TX', 'waco': 'TX', 'beaumont': 'TX',
+    'midland': 'TX', 'carrollton': 'TX', 'collin county': 'TX',
+    'salt lake city': 'UT', 'provo': 'UT', 'west valley city': 'UT',
+    'burlington vt': 'VT', 'montpelier': 'VT',
+    'virginia beach': 'VA', 'richmond': 'VA', 'norfolk': 'VA', 'chesapeake': 'VA',
+    'newport news': 'VA', 'roanoke': 'VA', 'north chesterfield': 'VA',
+    'seattle': 'WA', 'spokane': 'WA', 'tacoma': 'WA', 'vancouver wa': 'WA',
+    'bellevue': 'WA', 'kent': 'WA', 'olympia': 'WA',
+    'morgantown': 'WV', 'huntington wv': 'WV', 'wheeling': 'WV',
+    'milwaukee': 'WI', 'madison': 'WI', 'green bay': 'WI', 'kenosha': 'WI',
+    'racine': 'WI', 'waukesha': 'WI',
+    'cheyenne': 'WY', 'casper': 'WY',
+    'san juan': 'PR',
+}
+
+# Intentionally AMBIGUOUS cities (omitted from _CITY_TO_STATE):
+# - "Springfield" (MO, MA, IL, OH, VA, and many more)
+# - "Columbia" (SC, MO, MD)
+# - "Washington" (DC, WA, county in PA, etc.)
+# - "Portland" (OR, ME)
+# - "Columbus" (OH, GA, IN)
+# - "Aurora" (CO, IL)
+# - "Charleston" (SC, WV)
+# - "Kansas City" (MO or KS — we only map "kansas city mo")
+# - "Glendale" (CA or AZ)
+# - "Arlington" (VA, TX)
+
+# Regex matching any city name as a whole word, longest-first.
+_CITY_RE = re.compile(
+    r'\b(' + '|'.join(re.escape(c) for c in sorted(_CITY_TO_STATE.keys(), key=lambda x: -len(x))) + r')\b',
+    re.IGNORECASE,
+)
+
+
+def extract_city_states(text):
+    """Return a list of state codes implied by city names found in text.
+    Handles multi-state when multiple cities appear."""
+    if not text:
+        return []
+    found = []
+    for m in _CITY_RE.finditer(text):
+        code = _CITY_TO_STATE.get(m.group(0).lower())
+        if code and code not in found:
+            found.append(code)
+    return found
+
+
+def extract_all_state_names(text):
+    """Return a list of state codes matched by state names in text.
+
+    Iterates state names longest-first and masks out matched spans so a
+    shorter substring (e.g., "Virginia" inside "West Virginia") doesn't
+    also match. Returns list in the order matches appear in the original
+    text, deduplicated.
+    """
+    if not text:
+        return []
+    # Work on a mutable copy we can blank out as we match longer names
+    scratch = text
+    # Collect (start_pos, abbr) so we can sort by textual order at the end
+    matches = []
+    for name, abbr in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
+        pat = re.compile(r'\b' + re.escape(name) + r'\b', re.IGNORECASE)
+        for m in pat.finditer(scratch):
+            matches.append((m.start(), abbr))
+        # Mask every occurrence so subsequent shorter-name iterations don't
+        # re-match inside the same span. Replace with same-length space.
+        scratch = pat.sub(lambda m: ' ' * len(m.group()), scratch)
+    # Sort by occurrence order in original text, dedup preserving order
+    matches.sort()
+    out = []
+    for _, abbr in matches:
+        if abbr not in out:
+            out.append(abbr)
+    return out
+
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
@@ -289,14 +488,52 @@ def get_action_type(title, desc, agency=None, link=None):
         return 'Technology/Innovation'
     return 'Administrative Action'
 
-def get_state(text):
-    """Return the 2-letter state code for the longest state name found in text.
+# Titles that describe inherently national actions shouldn't be tagged with
+# a single state just because a USAO office published them. Nationwide
+# takedowns, multi-district lawsuits, and agency-level announcements apply
+# across the country.
+_NATIONAL_TITLE_RE = re.compile(
+    r"^national\s+(health|healthcare|health\s*care)\s+fraud\s+takedown|"
+    r"\bnationwide\b|"
+    r"\b\d+\s+(additional\s+)?states\b|"
+    r"\bmulti-?state\b",
+    re.IGNORECASE,
+)
 
-    Iterates state names from longest to shortest so that "West Virginia"
-    wins over "Virginia" and "North Carolina" wins over "Carolina". Without
-    this ordering, the shorter substring would match first and tag the item
-    with the wrong state.
+
+def get_state(text, title=None, link=None):
+    """Return a state code (or comma-separated list) from available signals.
+
+    Priority order (highest evidence first):
+      1. If the TITLE describes a national/nationwide/multi-state action,
+         return None (no single-state tag for inherently national items).
+      2. All state names matched in TITLE — if 1+, return them as a
+         comma-separated string. Multi-state titles ("Texas, Virginia and
+         South Carolina") capture all three in textual order.
+      3. USAO district code from LINK (DOJ items only) — authoritative
+         prosecuting state; overrides body/city extraction.
+      4. Cities matched in TITLE via `_CITY_TO_STATE`.
+      5. State names matched in the full `text` blob (body fallback).
+      6. None.
     """
+    # Path 0: short-circuit for national-scope items
+    if title and _NATIONAL_TITLE_RE.search(title):
+        return None
+    # Path 1: state names in title (multi-state aware)
+    if title:
+        title_states = extract_all_state_names(title)
+        if title_states:
+            return ", ".join(title_states)
+    # Path 2: USAO district code
+    usao = extract_usao_state(link) if link else None
+    if usao:
+        return usao
+    # Path 3: city in title
+    if title:
+        city_states = extract_city_states(title)
+        if city_states:
+            return ", ".join(city_states)
+    # Path 4: state name in full text (legacy body fallback)
     for name, abbr in sorted(STATE_MAP.items(), key=lambda x: -len(x[0])):
         if re.search(r'\b' + re.escape(name) + r'\b', text):
             return abbr
@@ -3020,7 +3257,9 @@ def main():
                 # mentions unrelated states (defendant's prior out-of-state convictions,
                 # venue transfers, comparison data). Title almost always names the
                 # relevant state for the case.
-                state = get_state(title) or get_state(search_text)
+                # State priority: title > USAO district > city > body.
+                # See get_state() — multi-state titles return comma-separated.
+                state = get_state(search_text, title=title, link=link)
                 action_type = ('Investigative Report' if is_media
                                else get_action_type(title, search_text,
                                                     agency=feed.get('agency'),

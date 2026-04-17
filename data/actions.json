@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T15:39:35.159404",
+    "last_updated": "2026-04-17T16:08:35.029235",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -2609,7 +2609,7 @@
         "Medical Devices",
         "Medicare"
       ],
-      "state": "FL",
+      "state": "AL",
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
@@ -5384,7 +5384,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "SC",
+      "state": "TX, VA, SC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -5629,7 +5629,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "MD",
+      "state": "DC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -6239,7 +6239,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "CO",
+      "state": "RI",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -6931,7 +6931,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7079,7 +7079,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "AZ",
+      "state": "MD",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7104,7 +7104,7 @@
         "Telehealth"
       ],
       "entities": [],
-      "state": "GA",
+      "state": "LA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7250,7 +7250,7 @@
         "Genetic Testing"
       ],
       "entities": [],
-      "state": "ID",
+      "state": "WA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7324,7 +7324,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "IN",
+      "state": "MD",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7400,7 +7400,7 @@
         "Hospice"
       ],
       "entities": [],
-      "state": "MO",
+      "state": "TX",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7425,7 +7425,7 @@
         "Medicaid Managed Care"
       ],
       "entities": [],
-      "state": "NJ",
+      "state": "PA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7473,7 +7473,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "CA",
+      "state": "NJ",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7573,7 +7573,7 @@
         "Medical Devices"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "MD",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7623,7 +7623,7 @@
         "Personal Care"
       ],
       "entities": [],
-      "state": "MD",
+      "state": "VA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -7745,7 +7745,7 @@
         "Personal Care"
       ],
       "entities": [],
-      "state": "MD",
+      "state": "VA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -8504,7 +8504,7 @@
         "Genetic Testing"
       ],
       "entities": [],
-      "state": "SC",
+      "state": "GA, CO, SC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -8711,7 +8711,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "VA",
+      "state": "WV",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -8961,7 +8961,7 @@
         "Nursing Home"
       ],
       "entities": [],
-      "state": "KS",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -9745,7 +9745,7 @@
         "Genetic Testing"
       ],
       "entities": [],
-      "state": "IL",
+      "state": "TN",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -9769,7 +9769,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "MD",
+      "state": "DC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -10723,7 +10723,7 @@
         "ACA"
       ],
       "entities": [],
-      "state": "NJ",
+      "state": "PA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -10944,7 +10944,7 @@
         "Opioids"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "PA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -11219,7 +11219,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "NC",
+      "state": "MS",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -11422,7 +11422,7 @@
         "Telehealth"
       ],
       "entities": [],
-      "state": "VA",
+      "state": "WV",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -11446,7 +11446,7 @@
         "Pharmacy"
       ],
       "entities": [],
-      "state": "GA",
+      "state": "MA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -11665,7 +11665,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "MD",
+      "state": "DC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -11715,7 +11715,7 @@
         "Medicaid Managed Care"
       ],
       "entities": [],
-      "state": "VA",
+      "state": "WV",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -11738,7 +11738,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -11983,7 +11983,7 @@
         "TRICARE"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "NJ",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -12202,7 +12202,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "CT",
+      "state": "MA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -12473,7 +12473,7 @@
         "DME"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "NC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -12863,7 +12863,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": "VA",
+      "state": "WV",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -12939,7 +12939,7 @@
         "Telehealth"
       ],
       "entities": [],
-      "state": "CT",
+      "state": "KY",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -13424,7 +13424,7 @@
         "Lab Testing"
       ],
       "entities": [],
-      "state": "FL",
+      "state": "MI",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -13917,7 +13917,7 @@
         "Medical Devices"
       ],
       "entities": [],
-      "state": "MO",
+      "state": "PA",
       "source_type": "official",
       "auto_fetched": true,
       "doj_topics": [
@@ -14108,7 +14108,7 @@
         "Hospital"
       ],
       "entities": [],
-      "state": null,
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
@@ -14196,7 +14196,7 @@
         "Home Health"
       ],
       "entities": [],
-      "state": null,
+      "state": "OH",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
@@ -14888,7 +14888,7 @@
         "Medicaid"
       ],
       "entities": [],
-      "state": null,
+      "state": "CA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -15701,7 +15701,7 @@
       "link": "https://www.congress.gov/event/119-congress/senate-event/337967",
       "link_label": "Congress.gov Event",
       "tags": [],
-      "state": "",
+      "state": "MN",
       "source_type": "official",
       "auto_fetched": true,
       "entities": [],
