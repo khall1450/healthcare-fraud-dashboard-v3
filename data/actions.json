@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T17:02:14.734006",
+    "last_updated": "2026-04-17T17:08:41.826465",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -1337,9 +1337,7 @@
       "state": null,
       "source_type": "news",
       "auto_fetched": false,
-      "related_agencies": [
-        "CMS"
-      ]
+      "related_agencies": []
     },
     {
       "link": "https://www.justice.gov/opa/pr/two-foreign-nationals-indicted-chicago-part-10m-health-care-fraud-scheme",
