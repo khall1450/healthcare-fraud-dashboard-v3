@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T09:00:06.387075",
+    "last_updated": "2026-04-17T09:53:12.614498",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -15855,6 +15855,111 @@
       "doj_topics": [
         "Health Care Fraud"
       ]
+    },
+    {
+      "id": "congress-2026-04-16-747015175",
+      "date": "2026-04-16",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "Hearing Wrap Up: Fraud Runs Rampant When States Do Not Prevent It - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/hearing-wrap-up-fraud-runs-rampant-when-states-do-not-prevent-it/",
+      "link_label": "Congress Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "KY",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "congress-2026-04-16-1824692934",
+      "date": "2026-04-16",
+      "agency": "Congress",
+      "type": "Administrative Action",
+      "title": "Sessions Introduces Bill to Fight Fraud and Promote Accountability in Federally Funded Programs - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/sessions-introduces-bill-to-fight-fraud-and-promote-accountability-in-federally-funded-programs/",
+      "link_label": "Congress Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "congress-2026-04-15-4121773732",
+      "date": "2026-04-15",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "Sessions Opens Hearing on Preventing Fraud in State-Run Federal Programs - United States House Committee on Oversight and Government Reform",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oversight.house.gov/release/sessions-opens-hearing-on-preventing-fraud-in-state-run-federal-programs/",
+      "link_label": "Congress Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MS",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "hhs-oig-2026-01-22-1976565815",
+      "date": "2026-01-22",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "HHS-OIG Audit Finds Maine Made At Least $45.6 Million in Improper Medicaid Payments for Autism Services",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/newsroom/news-releases-articles/hhs-oig-audit-finds-maine-made-at-least-456-million-in-improper-medicaid-payments-for-autism-services/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Autism/ABA"
+      ],
+      "entities": [],
+      "state": "ME",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "macpac-2026-04-16-1062808214",
+      "date": "2026-04-16",
+      "agency": "MACPAC",
+      "type": "Report",
+      "title": "Medicaid Program Integrity",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.macpac.gov/publication/medicaid-program-integrity/",
+      "link_label": "MACPAC Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }

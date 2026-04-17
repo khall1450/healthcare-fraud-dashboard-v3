@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-16T09:54:21.811185"
+    "last_scraped": "2026-04-17T09:53:12.438659"
   },
   "items": [
     {
@@ -655,6 +655,36 @@
       "ai_confidence": 85,
       "ai_reason": "This is a Senate HELP Committee press release announcing a chairman's agenda on healthcare affordability, which is a general healthcare policy initiative unrelated to fraud, improper payments, or prog",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "congress-2026-04-16-3421972024",
+      "date": "2026-04-16",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "Chairman Smith Opening Statement at HHS Secretary Kennedy Hearing: Americans are Demanding Better Than the Health Care Status Quo - Ways and Means",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://waysandmeans.house.gov/2026/04/16/chairman-smith-opening-statement-at-hhs-secretary-kennedy-hearing-americans-are-demanding-better-than-the-health-care-status-quo/",
+      "link_label": "Congress Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "ACA",
+        "Hospice",
+        "Pharmacy",
+        "Hospital"
+      ],
+      "entities": [],
+      "state": "MO",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title looks like a statement/op-ed — needs AI review to confirm action vs messaging",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 78,
+      "ai_reason": "An HHS Secretary confirmation or general oversight hearing focused on healthcare policy and status quo, not specifically on fraud, improper payments, or program integrity findings.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
@@ -736,6 +766,10 @@
     "http://www.finance.senate.gov/ranking-members-news/wyden-whitehouse-sound-alarm-on-illegal-scheme-from-hhs-to-share-child-support-data-with-immigration-enforcement",
     "https://www.help.senate.gov/rep/newsroom/press/next-week-senate-help-committee-to-hold-hearing-with-secretary-kennedy-on-hhs-budget",
     "https://waysandmeans.house.gov/2026/04/15/chairman-smith-floor-statement-on-tax-day-resolution-republicans-made-workers-families-farmers-and-small-businesses-our-top-priority/",
-    "https://waysandmeans.house.gov/2026/04/15/chairman-smith-in-washington-examiner-working-families-tax-cuts-delivered-historic-tax-refund-season/"
+    "https://waysandmeans.house.gov/2026/04/15/chairman-smith-in-washington-examiner-working-families-tax-cuts-delivered-historic-tax-refund-season/",
+    "https://oversight.house.gov/release/burlison-opens-roundtable-on-artificial-intelligence-and-american-prosperity/",
+    "https://waysandmeans.house.gov/2026/04/16/president-trumps-las-vegas-visit-highlights-huge-wins-for-hardworking-americans/",
+    "https://www.gao.gov/products/gao-26-108070",
+    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-during-hearing-on-making-prescription-drugs-more-affordable-for-families-using-free-market-approach"
   ]
 }
