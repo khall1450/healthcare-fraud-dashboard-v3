@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T16:17:12.895928",
+    "last_updated": "2026-04-17T16:49:26.914371",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -1317,6 +1317,30 @@
       "related_agencies": [
         "HHS-OIG"
       ]
+    },
+    {
+      "id": "hhs-2026-02-13-medicaid-dataset-release",
+      "date": "2026-02-13",
+      "agency": "HHS",
+      "type": "Administrative Action",
+      "title": "Elon Musk says new Medicaid database could help the public find fraud",
+      "amount": "",
+      "amount_numeric": 0.0,
+      "officials": [],
+      "link": "https://www.axios.com/2026/02/14/elon-musk-doge-medicaid-fraud-hhs-database",
+      "link_label": "Axios",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agencies": [
+        "CMS"
+      ],
+      "narrative_title": "HHS/DOGE Releases Largest Medicaid Dataset in Agency History to Crowdsource Fraud Detection"
     },
     {
       "link": "https://www.justice.gov/opa/pr/two-foreign-nationals-indicted-chicago-part-10m-health-care-fraud-scheme",
