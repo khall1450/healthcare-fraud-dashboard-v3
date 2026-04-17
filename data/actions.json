@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T09:53:12.614498",
+    "last_updated": "2026-04-17T10:45:48.847934",
     "version": "1.0",
     "last_scraped": "2026-04-17T09:00:06.387066"
   },
@@ -1520,12 +1520,12 @@
       "date": "2026-02-03",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "Chairmen Guthrie and Joyce Announce Oversight and Investigations Hearing on Medicare and Medicaid Fraud Schemes",
+      "title": "Common Schemes, Real Harm: Examining Fraud in Medicare and Medicaid",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
-      "link": "https://energycommerce.house.gov/posts/chairmen-guthrie-and-joyce-announce-oversight-and-investigations-hearing-on-medicare-and-medicaid-fraud-schemes",
-      "link_label": "House E&C Committee",
+      "link": "https://www.congress.gov/event/119-congress/house-event/118917",
+      "link_label": "Congress.gov Event",
       "social_posts": [],
       "tags": [
         "Medicaid",
@@ -1536,27 +1536,6 @@
       "auto_fetched": false,
       "entities": [],
       "narrative_title": "House Energy & Commerce Hearing: Common Schemes, Real Harm — Examining Medicare/Medicaid Fraud"
-    },
-    {
-      "id": "legislation-2026-02-03-appropriations-pbm-reform",
-      "date": "2026-02-03",
-      "agency": "Congress",
-      "type": "Legislation",
-      "title": "H.R.7148 - 119th Congress (2025-2026): Consolidated Appropriations Act, 2026",
-      "amount": "",
-      "amount_numeric": 0.0,
-      "officials": [],
-      "link": "https://www.congress.gov/bill/119th-congress/house-bill/7148",
-      "link_label": "Congress.gov",
-      "social_posts": [],
-      "tags": [
-        "Pharmacy"
-      ],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": [],
-      "narrative_title": "Consolidated Appropriations Act 2026 Signed: PBM Transparency Reform and Anti-Fraud Provisions"
     },
     {
       "id": "doj-2026-02-joel-french-197m-dme-braces",
@@ -1703,12 +1682,12 @@
       "date": "2026-01-22",
       "agency": "Congress",
       "type": "Hearing",
-      "title": "Chair Smith Opening Statement: Hearing with Health Insurance CEOs - Ways and Means",
+      "title": "Full Committee Hearing with Health Insurance CEOs",
       "amount": "",
       "amount_numeric": 0.0,
       "officials": [],
-      "link": "https://waysandmeans.house.gov/2026/01/22/chair-smith-opening-statement-hearing-with-health-insurance-ceos/",
-      "link_label": "Ways & Means Hearing",
+      "link": "https://waysandmeans.house.gov/event/full-committee-hearing-with-health-insurance-ceos/",
+      "link_label": "Committee Hearing Page",
       "social_posts": [],
       "tags": [
         "Medicare",
@@ -2938,28 +2917,6 @@
       "related_agencies": [
         "HHS-OIG"
       ]
-    },
-    {
-      "id": "legislation-2025-07-04-one-big-beautiful-bill",
-      "date": "2025-07-04",
-      "agency": "Congress",
-      "type": "Legislation",
-      "title": "H.R.1 - 119th Congress (2025-2026): An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
-      "amount": "",
-      "amount_numeric": 0.0,
-      "officials": [],
-      "link": "https://www.congress.gov/bill/119th-congress/house-bill/1",
-      "link_label": "Congress.gov",
-      "social_posts": [],
-      "tags": [
-        "ACA",
-        "Medicaid"
-      ],
-      "state": null,
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": [],
-      "narrative_title": "One Big Beautiful Bill Act Signed Into Law With Health Care Program-Integrity Reforms"
     },
     {
       "id": "doj-2025-07-fca-working-group",

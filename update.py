@@ -1102,6 +1102,51 @@ def scrape_cms_fraud_page(session):
     return items
 
 
+# Pattern for press releases that describe/announce/recap a hearing
+# (but aren't the hearing itself). These get rejected by committee
+# scrapers because the hearing-proper is already captured via
+# scrape_congress_hearings.py (Congress.gov API). Keeping both on the
+# dashboard creates duplicate coverage of the same event.
+#
+# Examples:
+#   "Chairmen Guthrie and Joyce Announce ... Hearing on ..."
+#   "Chairman Comer Opening Statement at Hearing on ..."
+#   "Hearing Wrap-Up: ..."
+#   "Press Release: Committee Holds Hearing on ..."
+#   "Chair Smith's Opening Statement: Hearing with ..."
+_HEARING_ABOUT_PATTERN = re.compile(
+    r"("
+    # "Announce(s/d) ... Hearing" with up to 60 chars between
+    r"\bannounc\w*\s[\w\s,.&'-]{0,60}?\bhearing\b|"
+    # "Opens / Opened ... Hearing"
+    r"\bopen(s|ed|ing)?\s[\w\s,.&'-]{0,30}?\bhearing\b|"
+    # "Opening Statement ... Hearing" or "Opening Statement: Hearing"
+    r"\bopening\s+(statement|remarks)[\s\S]{0,30}?\bhearing\b|"
+    # Wrap-up phrasing
+    r"\bhearing\s+wrap[-\s]?up\b|"
+    r"\bwrap[-\s]?up[\s\S]{0,20}?\bhearing\b|"
+    # "Committee to hold/convene hearing"
+    r"\bcommittee\s+(to\s+)?(hold|holds|holding|convene|convenes|will\s+hold)\s+(an?\s+|the\s+)?hearing\b|"
+    r"\b(will\s+)?(hold|convene)\s+(an?\s+|the\s+|upcoming\s+)?hearing\b|"
+    # Closing statements
+    r"\bclosing\s+(statement|remarks)[\s\S]{0,20}?\bhearing\b|"
+    # Recap/readout about a hearing
+    r"\b(recap|readout|summary)\s[\w\s,.&'-]{0,20}?\bhearing\b"
+    r")",
+    re.IGNORECASE,
+)
+
+
+def _is_hearing_about(title):
+    """True if the title describes a hearing event (announcement/wrap-up/
+    opening statement) rather than being the hearing's own page.
+    Used by committee press-release scrapers to reject hearing-about items;
+    the hearing itself is captured via Congress.gov API."""
+    if not title:
+        return False
+    return bool(_HEARING_ABOUT_PATTERN.search(title))
+
+
 def scrape_h_oversight(session):
     """Scrape House Oversight Committee press releases using Playwright.
 
@@ -1148,6 +1193,12 @@ def scrape_h_oversight(session):
                 pass
             if _detail_title:
                 title = _detail_title
+            # Reject press releases that describe a hearing (announcement,
+            # opening statement, wrap-up) — the hearing itself is captured
+            # via scrape_congress_hearings.py (Congress.gov API). Avoids
+            # duplicate coverage of the same event.
+            if _is_hearing_about(title):
+                continue
             desc = ""
             if detail_text:
                 cleaned = detail_text
@@ -1380,6 +1431,11 @@ def scrape_senate_judiciary(session):
                         pass
                 if _detail_title:
                     title = _detail_title
+                # Reject hearing-about press releases (announcement, opening
+                # statement, wrap-up). Hearing itself is captured via
+                # scrape_congress_hearings.py (Congress.gov API).
+                if _is_hearing_about(title):
+                    continue
                 desc = ""
                 if detail_text:
                     cleaned = detail_text
@@ -1455,6 +1511,12 @@ def scrape_house_judiciary(session):
                 pass
             if _detail_title:
                 title = _detail_title
+            # Reject press releases that describe a hearing (announcement,
+            # opening statement, wrap-up) — the hearing itself is captured
+            # via scrape_congress_hearings.py (Congress.gov API). Avoids
+            # duplicate coverage of the same event.
+            if _is_hearing_about(title):
+                continue
             desc = ""
             if detail_text:
                 cleaned = detail_text
@@ -1507,6 +1569,12 @@ def scrape_energy_commerce(session):
                 pass
             if _detail_title:
                 title = _detail_title
+            # Reject press releases that describe a hearing (announcement,
+            # opening statement, wrap-up) — the hearing itself is captured
+            # via scrape_congress_hearings.py (Congress.gov API). Avoids
+            # duplicate coverage of the same event.
+            if _is_hearing_about(title):
+                continue
             desc = ""
             if detail_text:
                 cleaned = detail_text
@@ -1564,6 +1632,12 @@ def scrape_help_committee(session):
                 pass
             if _detail_title:
                 title = _detail_title
+            # Reject press releases that describe a hearing (announcement,
+            # opening statement, wrap-up) — the hearing itself is captured
+            # via scrape_congress_hearings.py (Congress.gov API). Avoids
+            # duplicate coverage of the same event.
+            if _is_hearing_about(title):
+                continue
             desc = ""
             if detail_text:
                 cleaned = detail_text
@@ -1632,6 +1706,12 @@ def scrape_ways_means(session):
                 pass
             if _detail_title:
                 title = _detail_title
+            # Reject press releases that describe a hearing (announcement,
+            # opening statement, wrap-up) — the hearing itself is captured
+            # via scrape_congress_hearings.py (Congress.gov API). Avoids
+            # duplicate coverage of the same event.
+            if _is_hearing_about(title):
+                continue
             desc = ""
             if detail_text:
                 cleaned = detail_text
