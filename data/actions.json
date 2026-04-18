@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T17:58:29.618848",
+    "last_updated": "2026-04-18T08:09:18.952026",
     "version": "1.0",
-    "last_scraped": "2026-04-17T09:00:06.387066"
+    "last_scraped": "2026-04-18T08:09:18.952018"
   },
   "actions": [
     {
@@ -15862,6 +15862,29 @@
       "source_type": "official",
       "auto_fetched": false,
       "entities": []
+    },
+    {
+      "id": "doj-2026-04-17-381019267",
+      "date": "2026-04-17",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Former Teacher Pleads Guilty in $51 Million Medicare Fraud Scheme in National Fraud Enforcement Division Prosecution",
+      "amount": "$51 Million",
+      "amount_numeric": 51000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdca/pr/former-teacher-pleads-guilty-51-million-medicare-fraud-scheme-national-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
