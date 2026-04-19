@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-19T17:48:53.435407",
+    "last_updated": "2026-04-19T18:42:27.032400",
     "version": "1.0",
     "last_scraped": "2026-04-19T08:18:17.501093"
   },
@@ -44,7 +44,7 @@
         "Medicaid",
         "Medicare",
         "Opioids",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "KY",
@@ -671,7 +671,6 @@
       "tags": [
         "Autism/ABA",
         "Medicaid",
-        "Medicare",
         "DME"
       ],
       "entities": [],
@@ -1102,9 +1101,10 @@
       "social_posts": [],
       "tags": [
         "Adult Day Care",
-        "Behavioral Health",
+        "Mental Health",
         "Home Health",
-        "Medicaid"
+        "Medicaid",
+        "Personal Care"
       ],
       "state": "NY",
       "source_type": "news",
@@ -1998,7 +1998,7 @@
         "Autism/ABA",
         "Medicaid",
         "Adult Day Care",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "state": "MN",
       "source_type": "official",
@@ -2109,7 +2109,7 @@
       "social_posts": [],
       "tags": [
         "Autism/ABA",
-        "Behavioral Health",
+        "Mental Health",
         "Medicaid"
       ],
       "state": "MN",
@@ -3774,7 +3774,7 @@
         "Medicaid",
         "Medicare",
         "Opioids",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "CT",
@@ -4232,7 +4232,7 @@
         "ACA",
         "Pharmacy",
         "Telehealth",
-        "Behavioral Health",
+        "Mental Health",
         "Addiction Treatment"
       ],
       "entities": [],
@@ -5550,7 +5550,7 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "MO",
@@ -5746,7 +5746,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "SC",
@@ -5889,7 +5889,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "CT",
@@ -6085,7 +6085,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Behavioral Health",
+        "Mental Health",
         "Telehealth"
       ],
       "entities": [],
@@ -6679,7 +6679,7 @@
       "tags": [
         "Medicaid",
         "Opioids",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "DE",
@@ -6729,7 +6729,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "VA",
@@ -6898,7 +6898,7 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "NC",
@@ -6948,7 +6948,7 @@
       "social_posts": [],
       "tags": [
         "Opioids",
-        "Behavioral Health",
+        "Mental Health",
         "Medicare"
       ],
       "entities": [],
@@ -7146,7 +7146,7 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "AR",
@@ -7392,7 +7392,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Behavioral Health",
+        "Mental Health",
         "Telehealth"
       ],
       "entities": [],
@@ -7467,7 +7467,7 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "TX",
@@ -7690,7 +7690,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "DC",
@@ -8204,7 +8204,7 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "VA",
@@ -8302,7 +8302,7 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "CT",
@@ -8427,7 +8427,7 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "MO",
@@ -8676,7 +8676,7 @@
         "Pharmacy",
         "Genetic Testing",
         "Lab Testing",
-        "Behavioral Health",
+        "Mental Health",
         "Physical Therapy",
         "Addiction Treatment",
         "DME"
@@ -9111,7 +9111,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Behavioral Health",
+        "Mental Health",
         "Personal Care"
       ],
       "entities": [],
@@ -9138,7 +9138,7 @@
         "Medicare",
         "Medicaid",
         "TRICARE",
-        "Behavioral Health",
+        "Mental Health",
         "Personal Care"
       ],
       "entities": [],
@@ -9349,7 +9349,7 @@
         "Medicaid",
         "DME",
         "TRICARE",
-        "Behavioral Health",
+        "Mental Health",
         "Addiction Treatment"
       ],
       "entities": [],
@@ -9558,7 +9558,7 @@
         "Medicaid",
         "Opioids",
         "DME",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "FL",
@@ -9615,7 +9615,7 @@
         "Pharmacy",
         "Wound Care",
         "Skin Substitutes",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "TX",
@@ -11215,7 +11215,7 @@
       "tags": [
         "Medicare",
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "MN",
@@ -11415,7 +11415,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "SC",
@@ -11537,7 +11537,7 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Behavioral Health",
+        "Mental Health",
         "Medicaid"
       ],
       "entities": [],
@@ -12194,7 +12194,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "LA",
@@ -12294,7 +12294,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "CT",
@@ -12368,7 +12368,7 @@
         "Medicare Advantage",
         "Medicare",
         "Medicaid",
-        "Behavioral Health",
+        "Mental Health",
         "Physical Therapy",
         "Addiction Treatment"
       ],
@@ -12587,7 +12587,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "PA",
@@ -13200,7 +13200,7 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Behavioral Health",
+        "Mental Health",
         "TRICARE"
       ],
       "entities": [],
@@ -13274,7 +13274,7 @@
       "social_posts": [],
       "tags": [
         "Opioids",
-        "Behavioral Health",
+        "Mental Health",
         "Medicare",
         "Medicaid"
       ],
@@ -13628,7 +13628,7 @@
       "tags": [
         "Medicaid",
         "Medicare Advantage",
-        "Behavioral Health"
+        "Mental Health"
       ],
       "entities": [],
       "state": "IN",
@@ -14386,7 +14386,7 @@
         "Medicaid",
         "ACA",
         "Telehealth",
-        "Behavioral Health",
+        "Mental Health",
         "Hospital",
         "Addiction Treatment",
         "Opioids"
@@ -14835,7 +14835,7 @@
         "Medicaid",
         "ACA",
         "Pharmacy",
-        "Behavioral Health",
+        "Mental Health",
         "Addiction Treatment",
         "Opioids"
       ],
@@ -15234,7 +15234,7 @@
         "Medicare Advantage",
         "Medicare",
         "Medicaid",
-        "Behavioral Health",
+        "Mental Health",
         "Medicaid Managed Care"
       ],
       "entities": [],
