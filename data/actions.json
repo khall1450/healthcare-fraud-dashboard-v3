@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T17:30:33.634230",
+    "last_updated": "2026-04-20T17:32:45.649249",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -3352,7 +3352,8 @@
       "link_label": "CMS Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": null,
