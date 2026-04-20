@@ -839,7 +839,7 @@ function populateTagFilter(selectId, dataArray) {
     programTags.forEach(t => {
       const opt = document.createElement('option');
       opt.value = t;
-      opt.textContent = t + ' (' + counts.get(t) + ')';
+      opt.textContent = t;
       gp.appendChild(opt);
     });
     sel.appendChild(gp);
@@ -851,7 +851,7 @@ function populateTagFilter(selectId, dataArray) {
     areaTags.forEach(t => {
       const opt = document.createElement('option');
       opt.value = t;
-      opt.textContent = t + ' (' + counts.get(t) + ')';
+      opt.textContent = t;
       ga.appendChild(opt);
     });
     sel.appendChild(ga);
