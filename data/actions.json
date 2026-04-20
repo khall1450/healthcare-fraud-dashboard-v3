@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T13:27:44.543912",
+    "last_updated": "2026-04-20T13:40:58.663713",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -3134,8 +3134,7 @@
       "link_label": "White House Release",
       "social_posts": [],
       "tags": [
-        "Medicaid",
-        "Medicare"
+        "Medicaid"
       ],
       "state": null,
       "source_type": "official",
@@ -7141,7 +7140,7 @@
       "id": "doj-2025-11-17-1430537948",
       "date": "2025-11-17",
       "agency": "DOJ",
-      "type": "Criminal Enforcement",
+      "type": "Civil Action",
       "title": "Aesculap Implant Systems Agrees to Pay $38.5 Million to Resolve False Claims Act Allegations Related to Knee Implant Failures",
       "amount": "$38.5 Million",
       "amount_numeric": 38500000.0,

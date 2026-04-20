@@ -456,12 +456,36 @@ def get_action_type(title, desc, agency=None, link=None):
     is_fincen = 'fincen' in agency_l or 'fincen.gov' in link_l or 'treasury' in agency_l
 
     # ---- Title-only enforcement detection (highest priority) ----
-    if re.search(r'\b(plead|pleads|pleaded|convict|convicted|indict|indicted|'
-                 r'charg(ed|es|ing)|guilty|sentenc(e|ed|ing)|arrest(ed)?|'
-                 r'prosecut(ed|ion)?)\b', title_l):
+    #
+    # Hybrid cases (title mentions BOTH criminal and civil signals, e.g.,
+    # "Pleads Guilty and Agrees to Pay $X Settlement") use a "first
+    # signal in title wins" rule. This mirrors DOJ press-release
+    # convention: the more-primary action is named first. So:
+    #   - "Pleads Guilty and Agrees to Pay ..." -> Criminal
+    #   - "Agrees to Pay ... and Pleads Guilty" -> Civil (rare)
+    #   - "Agrees to Pay ... to Resolve FCA Allegations Related to NPA" -> Civil
+    # DPA/NPA are criminal signals but usually appear later in titles
+    # where the civil component is named first (e.g., Aesculap case).
+    # If DPA/NPA is in the title and NO other criminal verbs, Criminal
+    # still wins; otherwise first-signal applies.
+    _crim_re = re.compile(
+        r'\b(plead|pleads|pleaded|convict|convicted|indict|indicted|'
+        r'charg(ed|es|ing)|guilty|sentenc(e|ed|ing)|arrest(ed)?|'
+        r'prosecut(ed|ion)?|deferred\s+prosecution|non-?prosecution\s+agreement|'
+        r'criminal\s+resolution)\b', re.I)
+    _civ_re = re.compile(
+        r'\b(settlement|settles?|to\s+pay|agree(s|d)?\s+to\s+pay|'
+        r'consent\s+(judgment|decree)|civil\s+action|false\s+claims\s+act|'
+        r'qui\s+tam|to\s+resolve\s+(false\s+claims|allegations)|'
+        r'to\s+settle\s+allegations)\b', re.I)
+    crim_m = _crim_re.search(title_l)
+    civ_m = _civ_re.search(title_l)
+    if crim_m and civ_m:
+        # Both present — first signal wins
+        return 'Criminal Enforcement' if crim_m.start() <= civ_m.start() else 'Civil Action'
+    if crim_m:
         return 'Criminal Enforcement'
-    if re.search(r'\b(settlement|settles?|to pay|agree(s|d)? to pay|consent (judgment|decree)|'
-                 r'civil action|false claims act|qui tam)\b', title_l):
+    if civ_m:
         return 'Civil Action'
 
     # ---- Title-only legislation/hearing/report detection ----
