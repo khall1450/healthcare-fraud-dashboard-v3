@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T09:38:27.072150",
+    "last_updated": "2026-04-20T09:55:15.640746",
     "version": "1.0",
     "last_scraped": "2026-04-20T09:23:48.423009"
   },
@@ -15927,6 +15927,27 @@
       ],
       "entities": [],
       "state": "MI",
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-04-07-nfed-establishment",
+      "date": "2026-04-07",
+      "agency": "DOJ",
+      "type": "Structural/Organizational",
+      "title": "Acting Attorney General Todd Blanche Issues Memorandum on the Creation of the National Fraud Enforcement Division",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/acting-attorney-general-todd-blanche-issues-memorandum-creation-national-fraud-enforcement",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": null,
       "source_type": "official",
       "auto_fetched": false,
       "related_agencies": [
