@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T18:27:36.255530",
+    "last_updated": "2026-04-20T18:29:24.446549",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -487,8 +487,8 @@
       ]
     },
     {
-      "id": "cms-2026-03-19-minnesota-cap-approved",
-      "date": "2026-03-19",
+      "id": "cms-2026-03-20-minnesota-cap-approved",
+      "date": "2026-03-20",
       "agency": "CMS",
       "type": "Administrative Action",
       "title": "Feds accept Minnesota's corrective action plan for Medicaid-based programs",
