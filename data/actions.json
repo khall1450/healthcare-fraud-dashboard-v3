@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T13:51:13.021244",
+    "last_updated": "2026-04-20T14:13:51.326739",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -273,7 +273,11 @@
       "link": "https://www.foxnews.com/politics/jd-vances-anti-fraud-task-force-ramps-up-identifying-fraud-across-us-after-suspending-70-providers-la",
       "link_label": "Fox News",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Hospice"
+      ],
       "entities": [],
       "state": "CA",
       "source_type": "news",
@@ -665,7 +669,7 @@
       "id": "whitehouse-2026-03-16-task-force-eliminate-fraud",
       "date": "2026-03-16",
       "agency": "White House",
-      "type": "Presidential Action",
+      "type": "Structural/Organizational",
       "title": "Fact Sheet: President Donald J. Trump Establishes the Task Force to Eliminate Fraud",
       "amount": "",
       "amount_numeric": 0.0,
@@ -673,7 +677,10 @@
       "link": "https://www.whitehouse.gov/fact-sheets/2026/03/fact-sheet-president-donald-j-trump-establishes-the-task-force-to-eliminate-fraud/",
       "link_label": "White House Fact Sheet",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "entities": [],
       "state": "MN, CA, IL, NY, ME, CO",
       "source_type": "official",
@@ -1291,7 +1298,7 @@
     },
     {
       "id": "hhs-2026-02-13-medicaid-dataset-release",
-      "date": "2026-02-13",
+      "date": "2026-02-14",
       "agency": "HHS",
       "type": "Administrative Action",
       "title": "HHS Releases Medicaid Dataset to Crowdsource Fraud Detection",
@@ -1872,7 +1879,7 @@
     },
     {
       "id": "cms-hhs-2026-01-minnesota-mission",
-      "date": "2026-01-10",
+      "date": "2026-01-14",
       "agency": "CMS",
       "type": "Investigation",
       "title": "Dr. Oz on Medicaid fraud 'fact-finding mission' in Minnesota, $2B could be at stake",
@@ -1992,8 +1999,7 @@
       "link_label": "White House Release",
       "social_posts": [],
       "tags": [
-        "Medicaid",
-        "Home Health"
+        "Medicaid"
       ],
       "state": "MN",
       "source_type": "official",
@@ -3605,7 +3611,10 @@
       "link": "https://www.gao.gov/products/gao-25-108172",
       "link_label": "GAO Report",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "entities": [],
       "state": null,
       "source_type": "official",
@@ -3625,7 +3634,10 @@
       "link": "https://www.gao.gov/products/gao-25-107743",
       "link_label": "GAO Report",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "entities": [],
       "state": null,
       "source_type": "official",
@@ -14157,7 +14169,7 @@
     },
     {
       "id": "macpac-2026-03-30-1479748036",
-      "date": "2026-03-30",
+      "date": "2026-03",
       "agency": "MACPAC",
       "type": "Report",
       "title": "Comment Letter: Medicaid Program Integrity",
@@ -15204,7 +15216,7 @@
     },
     {
       "id": "macpac-2026-04-09-3786719833",
-      "date": "2026-04-09",
+      "date": "2026-04",
       "agency": "MACPAC",
       "type": "Report",
       "title": "Introduction to Medicaid Program Integrity",
@@ -15269,7 +15281,7 @@
     },
     {
       "id": "macpac-2026-04-09-3856359816",
-      "date": "2026-04-09",
+      "date": "2026-04",
       "agency": "MACPAC",
       "type": "Report",
       "title": "State and Federal Tools for Ensuring Accountability of Medicaid Managed Care Plans: Draft Chapter",
@@ -15578,7 +15590,7 @@
     },
     {
       "id": "macpac-2026-04-16-1062808214",
-      "date": "2026-04-16",
+      "date": "2026-04",
       "agency": "MACPAC",
       "type": "Report",
       "title": "Medicaid Program Integrity",

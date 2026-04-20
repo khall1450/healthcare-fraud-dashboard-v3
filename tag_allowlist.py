@@ -52,20 +52,21 @@ ALLOWED_TAGS = PROGRAM_TAGS | AREA_TAGS
 
 
 # Co-apply rules: presence of KEY implies presence of VALUE.
-# Used by taggers to preserve parent-program tags on items whose body
-# text may not explicitly say "Medicare" but whose fraud is inherent
-# to a Medicare-specific service/product.
 #
-# Hospice is a Medicare Part A benefit (Medicaid hospice coverage is
-# narrow, usually just dual-eligibles). DMEPOS and Skin Substitutes
-# are Medicare Part B product categories. Medicare Advantage is a
-# Medicare program. Medicaid Managed Care is a Medicaid program.
+# Strict interpretation: only include co-applies where the child is an
+# unambiguous SUBprogram of the parent. Medicare Advantage IS Medicare
+# (a specific Medicare program variant); Medicaid Managed Care IS
+# Medicaid.
+#
+# Service/product categories like Hospice, DME, Skin Substitutes are
+# NOT strict subprograms — they can be covered under Medicare OR
+# Medicaid (Medicaid covers hospice for dual-eligibles; state Medicaid
+# DME exists; TRICARE covers DME too). Tagging Hospice doesn't imply
+# the case is exclusively Medicare. Users who want Medicare must have
+# it explicitly in the body text or manually added.
 CO_APPLY = {
     "Medicare Advantage":    "Medicare",
     "Medicaid Managed Care": "Medicaid",
-    "Hospice":               "Medicare",
-    "DME":                   "Medicare",
-    "Skin Substitutes":      "Medicare",
 }
 
 

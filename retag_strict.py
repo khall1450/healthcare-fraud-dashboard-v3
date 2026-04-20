@@ -57,26 +57,15 @@ ACTIONS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
 REPORT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                             "tmp_retag_strict_report.json")
 
-# Tag co-apply rules. When a child tag is present, its parent must also
-# appear. This preserves program-level tags on items whose body text
-# may not explicitly say "Medicare" or "Medicaid" because the fraud
-# is framed around a specific program (e.g., a Hospice case is
-# inherently about Medicare because Hospice is a Medicare Part A
-# benefit — even if the DOJ press release uses "federal health care
-# programs" rather than literally saying "Medicare").
-#
-# Rules are directional: presence of the child implies presence of
-# the parent.
+# Tag co-apply rules. Only strict subprogram -> program mappings.
+# Service/product categories like Hospice, DME, Skin Substitutes are
+# NOT included because they can be covered by multiple programs
+# (Medicaid hospice for dual-eligibles, state Medicaid DME, TRICARE
+# DME, etc.). Tags like Hospice or DME do not imply Medicare unless
+# the body text confirms it.
 _CO_APPLY = {
-    # Subprogram -> parent program
     "Medicare Advantage":    "Medicare",
     "Medicaid Managed Care": "Medicaid",
-    # Medicare-specific service/product categories. These exist almost
-    # exclusively within Medicare (Medicaid doesn't cover hospice the
-    # same way, and DMEPOS + Skin Substitutes are Medicare Part B).
-    "Hospice":               "Medicare",
-    "DME":                   "Medicare",
-    "Skin Substitutes":      "Medicare",
 }
 
 

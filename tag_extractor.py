@@ -96,7 +96,7 @@ Examples that should NOT get tagged:
 
 5. **Program tag rules:**
    - "Medicare Advantage" requires the phrase "Medicare Advantage", "MA plan", "Part C", or explicit MA-specific billing context. When it applies, also apply "Medicare".
-   - "Medicare" applies when the word "Medicare" appears as the subject of the case (not just in CMS boilerplate). Also apply "Medicare" whenever you apply "Hospice", "DME", or "Skin Substitutes" — those are Medicare-specific service/product categories (Hospice is a Medicare Part A benefit; DMEPOS and Skin Substitutes are Medicare Part B).
+   - "Medicare" applies when the word "Medicare" appears as the subject of the case (not just in CMS boilerplate). Do NOT infer Medicare from Hospice, DME, Skin Substitutes, or other service/product tags alone — those categories can be covered by Medicare or Medicaid (or TRICARE, private insurance) depending on the case. Medicare must be literally mentioned.
    - "Medicaid Managed Care" requires the phrase "Medicaid Managed Care", "Medicaid MCO", or explicit context that a Medicaid managed care plan is the payer. When it applies, also apply "Medicaid".
    - "Medicaid" applies when the word "Medicaid" or "Medi-Cal" appears as the subject.
    - "TRICARE" requires the word TRICARE or CHAMPUS.
