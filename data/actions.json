@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T18:19:14.715037",
+    "last_updated": "2026-04-20T18:23:25.113372",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -1451,31 +1451,6 @@
       "related_agencies": [
         "HHS-OIG"
       ]
-    },
-    {
-      "id": "cms-2026-02-05-hospice-spreading",
-      "date": "2026-02-05",
-      "agency": "CMS",
-      "type": "Administrative Action",
-      "title": "CMS is Taking Action to Address Benefit Integrity Issues Related to Hospice Care",
-      "amount": "",
-      "amount_numeric": 0.0,
-      "officials": [],
-      "link": "https://www.cms.gov/blog/cms-taking-action-address-benefit-integrity-issues-related-hospice-care",
-      "link_label": "CMS Blog Post",
-      "social_posts": [],
-      "tags": [
-        "Hospice",
-        "Medicaid",
-        "Medicare",
-        "Medicare Advantage",
-        "Lab Testing",
-        "Home Health"
-      ],
-      "state": "AZ, CA, GA, NV, OH, TX",
-      "source_type": "official",
-      "auto_fetched": false,
-      "entities": []
     },
     {
       "id": "congress-2026-02-04-senate-judiciary-somali-fraud",
