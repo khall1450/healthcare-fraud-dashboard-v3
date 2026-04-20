@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T17:27:21.986971",
+    "last_updated": "2026-04-20T17:29:10.029978",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -14401,7 +14401,7 @@
       "date": "2025-03-24",
       "agency": "CMS",
       "type": "Structural/Organizational",
-      "title": "CMS sets up real-time medical fraud center with DOGE; Federal contractor rolls out commercial tool",
+      "title": "CMS Launches Fraud Defense Operations Center (FDOC) Pilot",
       "amount": null,
       "amount_numeric": 0,
       "officials": [],
@@ -14420,7 +14420,8 @@
       "state": null,
       "source_type": "news",
       "auto_fetched": false,
-      "related_agencies": []
+      "related_agencies": [],
+      "narrative_title": "CMS sets up real-time medical fraud center with DOGE; Federal contractor rolls out commercial tool"
     },
     {
       "id": "cms-2025-06-17-fdoc-permanent-launch",
