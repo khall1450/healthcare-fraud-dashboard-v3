@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T18:05:58.448743",
+    "last_updated": "2026-04-20T18:14:09.406565",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -14371,8 +14371,8 @@
       "related_agencies": []
     },
     {
-      "id": "cms-2026-01-01-skin-substitute-lcds",
-      "date": "2026-01-01",
+      "id": "cms-2025-12-24-skin-substitute-lcds",
+      "date": "2025-12-24",
       "agency": "CMS",
       "type": "Rule/Regulation",
       "title": "Final Local Coverage Determinations (LCDs) for Certain Skin Substitutes Withdrawn",
@@ -14384,7 +14384,6 @@
       "social_posts": [],
       "tags": [
         "Skin Substitutes",
-        "Medicaid",
         "Medicare"
       ],
       "entities": [],

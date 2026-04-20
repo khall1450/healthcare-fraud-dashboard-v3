@@ -14,7 +14,23 @@
       "Bash(cp -r C:/Users/khall/HealthcareFraudDashboard C:/Users/khall/HealthcareFraudDashboard-v2)",
       "Read(//c/Users/khall/**)",
       "Bash(python -c \":*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" merge origin/main --no-edit)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m ' *)",
+      "Bash(start SCRAPING_REPORT.docx)",
+      "Bash(cmd.exe /c start SCRAPING_REPORT.docx)",
+      "Bash(explorer.exe SCRAPING_REPORT.docx)",
+      "WebFetch(domain:oig.hhs.gov)",
+      "WebFetch(domain:www.fda.gov)",
+      "Bash(break)",
+      "WebFetch(domain:www.fbi.gov)",
+      "Bash(awk '{print \"running PID\",$2,\"started\",$5}')",
+      "WebFetch(domain:www.whitehouse.gov)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Add Medicaid tag to GAO Combating Fraud report *)",
+      "Bash(awk '/^\\\\[[0-9]+\\\\/166\\\\] [a-z]/{p=1;print;next} /^\\\\[[0-9]+\\\\/166\\\\] body empty/{p=0;next} p' C:/Users/khall/AppData/Local/Temp/claude/C--Users-khall-HealthcareFraudDashboard-v3/663f04b4-8bf6-457c-aa9d-5ddcb76f2fb2/tasks/bxpyta3jx.output)",
+      "WebFetch(domain:www.judiciary.senate.gov)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'FDOC item: drop \"Pilot\" from title \\(not in source\\) *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Fix LCD item date \\(2025-12-24, posting date\\) and drop Medicaid tag\")"
     ]
   }
 }
