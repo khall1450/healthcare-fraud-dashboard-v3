@@ -52,6 +52,98 @@ AREA_TAGS = frozenset({
 ALLOWED_TAGS = PROGRAM_TAGS | AREA_TAGS
 
 
+# ---------------------------------------------------------------------------
+# DOJ boilerplate stripping
+# ---------------------------------------------------------------------------
+# DOJ press releases reliably end with boilerplate paragraphs describing the
+# Medicare Fraud Strike Force, ACA enforcement authority, and multi-agency
+# partnerships. These paragraphs enumerate programs and fraud types
+# generically ("including Medicare, Medicaid, and the Affordable Care Act")
+# and cause false-positive tags when the press release is about something
+# else entirely (a pure Medicare DME scheme gets tagged ACA because the
+# boilerplate mentions ACA once).
+#
+# `strip_boilerplate(text)` blanks out these known-boilerplate passages so
+# tag detection only sees substantive case content. Use before running
+# `auto_tags` on body text.
+#
+# Patterns are intentionally specific — they match only well-established
+# DOJ boilerplate phrases so legitimate mentions are never removed.
+
+import re as _re
+
+_BOILERPLATE_PATTERNS = [
+    # Strike Force operational footer
+    _re.compile(
+        r"(?:The\s+)?(?:Health\s+Care\s+Fraud|Medicare\s+Fraud)\s+"
+        r"(?:Unit'?s?\s+)?Strike\s+Force\s+(?:operates|operated)\s+"
+        r"(?:in\s+)?\d+\s+(?:strike\s+force\s+)?(?:districts|teams)[^.]*\.",
+        _re.IGNORECASE,
+    ),
+    # Strike Force "since inception" historical record
+    _re.compile(
+        r"(?:Since\s+its?\s+inception\s+in\s+\w+\s+\d{4}[^.]*?)?"
+        r"(?:have\s+)?charged\s+more\s+than\s+[\d,]+\s+defendants\s+"
+        r"who\s+(?:have\s+)?(?:collectively\s+)?billed[^.]*?"
+        r"(?:billion|million)[^.]*\.",
+        _re.IGNORECASE,
+    ),
+    # ACA enforcement authority paragraph(s) — the main ACA false-positive source
+    _re.compile(
+        r"The\s+Affordable\s+Care\s+Act\s+"
+        r"(?:significantly\s+)?(?:increased|gave|expanded|provided)\s+"
+        r"(?:HHS(?:'s)?\s+|authorities\s+|the\s+federal\s+government\s+)?"
+        r"(?:ability|authority|tools?|authorities)[^.]*\.",
+        _re.IGNORECASE,
+    ),
+    # CMS suspension-authority + ACA
+    _re.compile(
+        r"(?:The\s+)?(?:HHS\s+)?Centers\s+for\s+Medicare\s+(?:&|and)\s+"
+        r"Medicaid\s+Services[^.]*?suspension\s+authority[^.]*?"
+        r"Affordable\s+Care\s+Act[^.]*\.",
+        _re.IGNORECASE,
+    ),
+    # Generic "including Medicare, Medicaid, and the Affordable Care Act" enumeration
+    _re.compile(
+        r"\b(?:including|such\s+as)\s+Medicare,?\s+Medicaid,?\s+"
+        r"(?:and\s+(?:the\s+)?Affordable\s+Care\s+Act|"
+        r"(?:TRICARE|the\s+Indian\s+Health\s+Service),?\s+and\s+"
+        r"(?:the\s+)?Affordable\s+Care\s+Act)",
+        _re.IGNORECASE,
+    ),
+    # Health Care Fraud Unit leadership paragraph
+    _re.compile(
+        r"The\s+Health\s+Care\s+Fraud\s+Unit\s+leads[^.]*\.",
+        _re.IGNORECASE,
+    ),
+    # "indictment is merely an allegation" standard disclaimer
+    _re.compile(
+        r"An?\s+(?:indictment|information|complaint)\s+is\s+merely\s+"
+        r"an?\s+allegation[^.]*presumed\s+innocent[^.]*\.",
+        _re.IGNORECASE,
+    ),
+]
+
+
+def strip_boilerplate(text):
+    """Blank out known DOJ boilerplate passages in text.
+
+    Replaces each matched passage with spaces of equal length so that
+    offsets into the text don't shift (callers that care about position
+    can still reason about the document). Use before running `auto_tags`
+    on body text to suppress boilerplate-driven false positives like
+    ACA being tagged on a pure Medicare DME case because the standard
+    Strike Force paragraph enumerates it.
+
+    Returns the cleaned text. If input is falsy, returns "".
+    """
+    if not text:
+        return ""
+    for pat in _BOILERPLATE_PATTERNS:
+        text = pat.sub(lambda m: " " * len(m.group(0)), text)
+    return text
+
+
 def filter_tags(tags):
     """Return a list of tags filtered to the allowlist, preserving order
     and removing duplicates. Accepts None / non-list input safely.

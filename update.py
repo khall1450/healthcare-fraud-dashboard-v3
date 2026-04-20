@@ -15,7 +15,11 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 
-from tag_allowlist import auto_tags as _auto_tags, filter_tags as _filter_tags
+from tag_allowlist import (
+    auto_tags as _auto_tags,
+    filter_tags as _filter_tags,
+    strip_boilerplate as _strip_boilerplate,
+)
 
 try:
     from playwright.sync_api import sync_playwright
@@ -813,8 +817,12 @@ def generate_tags(title, full_text=""):
             return extract_tags_with_evidence(client, title, full_text)
         except Exception as e:
             log(f"  tag_extractor failed, falling back to regex: {e}", "yellow")
-    # Regex fallback: title + body
-    return _auto_tags(f"{title} {full_text}")
+    # Regex fallback: strip DOJ boilerplate from body (Strike Force
+    # paragraph, ACA enforcement-authority sentences, etc.) so passing
+    # mentions in standard closing language don't trip false-positive
+    # ACA/Medicare/Medicaid tags. Title always counts as-is.
+    clean_body = _strip_boilerplate(full_text) if full_text else ""
+    return _auto_tags(f"{title} {clean_body}")
 
 # Site-specific suffixes that pollute <title> tags. Stripped during
 # canonical-title extraction so item titles match the actual headline.
@@ -2334,6 +2342,14 @@ def scrape_doj_opa(session):
 def scrape_doj_usao(session):
     """Scrape DOJ USAO (district-level) press releases using Playwright.
 
+    Walks the consolidated DOJ USAO listing at /usao/pressreleases
+    across multiple pages. USAO press releases come in from all 93
+    districts combined, ~20-50/day — a single page (~25 items) covers
+    less than one day of output, so items can scroll off between our
+    7:17 UTC daily runs. Paginating to 5 pages (normal) / 20 pages
+    (backfill) recovers the last ~3-5 days / ~2-3 weeks respectively
+    and makes the scraper resilient to timing gaps.
+
     Uses the same topic-tag gate as scrape_doj_opa: each candidate's
     detail page is checked for a 'Health Care Fraud' tag in its
     .node-topics field, and items without that tag are skipped. This
@@ -2346,39 +2362,58 @@ def scrape_doj_usao(session):
     if not HAS_PLAYWRIGHT:
         log("    Skipping DOJ-USAO (requires Playwright)")
         return []
-    url = "https://www.justice.gov/usao/pressreleases"
+    base_url = "https://www.justice.gov/usao/pressreleases"
     items = []
     try:
         from audit_new_items import fetch_doj_topics, has_hc_topic
     except ImportError as e:
         log(f"  DOJ-USAO: cannot import topic helpers: {e}")
         return []
+
+    backfill = globals().get('BACKFILL_MODE', False)
+    max_pages = 20 if backfill else 5
+
     try:
-        soup = scrape_page_with_browser(url)
         candidates = []
         seen = set()
-        for a_tag in soup.find_all('a', href=re.compile(r'/usao-.*/pr/')):
-            title = a_tag.get_text(strip=True)
-            if not title or len(title) < 10:
-                continue
-            href = a_tag.get('href', '')
-            if href in seen:
-                continue
-            seen.add(href)
-            if href.startswith('/'):
-                href = 'https://www.justice.gov' + href
-            parent = a_tag.find_parent(['li', 'div', 'article', 'tr'])
-            date_str = ""
-            if parent:
-                dm = re.search(
-                    r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
-                    parent.get_text()
-                )
-                if dm:
-                    date_str = dm.group()
-            candidates.append((title, href, date_str))
+        prev_count = 0
+        for page_n in range(max_pages):
+            page_url = base_url if page_n == 0 else f"{base_url}?page={page_n}"
+            try:
+                soup = scrape_page_with_browser(page_url)
+            except Exception as e:
+                log(f"    DOJ-USAO page {page_n}: fetch failed ({e})")
+                break
+            page_new = 0
+            for a_tag in soup.find_all('a', href=re.compile(r'/usao-.*/pr/')):
+                title = a_tag.get_text(strip=True)
+                if not title or len(title) < 10:
+                    continue
+                href = a_tag.get('href', '')
+                if href in seen:
+                    continue
+                seen.add(href)
+                if href.startswith('/'):
+                    href = 'https://www.justice.gov' + href
+                parent = a_tag.find_parent(['li', 'div', 'article', 'tr'])
+                date_str = ""
+                if parent:
+                    dm = re.search(
+                        r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
+                        parent.get_text()
+                    )
+                    if dm:
+                        date_str = dm.group()
+                candidates.append((title, href, date_str))
+                page_new += 1
+            # Early-stop: if a page added 0 new candidates, the pagination
+            # probably walked off the end (or the listing is cached).
+            if page_new == 0 and page_n > 0:
+                log(f"    DOJ-USAO: page {page_n} had 0 new candidates, stopping pagination")
+                break
+            prev_count = len(candidates)
 
-        log(f"    DOJ-USAO: {len(candidates)} candidates, checking topic tags...")
+        log(f"    DOJ-USAO: {len(candidates)} candidates across {page_n + 1} pages, checking topic tags...")
         browser = get_browser()
         page = None
         if browser is not None:

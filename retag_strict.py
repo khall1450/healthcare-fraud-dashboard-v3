@@ -46,7 +46,7 @@ except ImportError:
     HAS_PLAYWRIGHT = False
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from tag_allowlist import auto_tags, filter_tags, ALLOWED_TAGS
+from tag_allowlist import auto_tags, filter_tags, ALLOWED_TAGS, strip_boilerplate
 from tag_extractor import extract_tags_with_evidence, make_client
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -119,8 +119,16 @@ def strict_tags_for(title: str, body: str, client=None,
     # Pass A: title
     title_tags = set(filter_tags(auto_tags(title or "")))
 
-    # Pass B: full body with boilerplate neutered
-    body_clean = body or ""
+    # Pass B: full body with boilerplate neutered. Two layers of stripping:
+    #  1. strip_boilerplate() removes known DOJ Strike Force paragraphs,
+    #     ACA enforcement-authority sentences, "including Medicare,
+    #     Medicaid, and the Affordable Care Act" enumerations. This is
+    #     the main Option-C fix — passing mentions in DOJ standard
+    #     closing language no longer drive tag additions.
+    #  2. "Centers for Medicare & Medicaid Services" (the agency phrase)
+    #     gets collapsed to "cms" so literal Medicare/Medicaid mentions
+    #     are counted only when they refer to programs, not the agency.
+    body_clean = strip_boilerplate(body or "")
     body_clean = re.sub(
         r"centers\s+for\s+medicare\s+(&|and)\s+medicaid\s+services",
         "cms", body_clean, flags=re.I)

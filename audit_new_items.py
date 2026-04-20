@@ -882,6 +882,7 @@ The tab tracks third-party investigative journalism that exposes specific health
 - Generic "healthcare costs are rising" pieces
 - Roundups, "year in review" pieces, or summary articles unless they detail a specific scheme
 - AGENCY-LED stories: if the article is primarily about a federal agency (DOJ, CMS, HHS-OIG) announcing or taking an action, that item belongs on the Oversight tab, not the Media tab. Reject from media in that case.
+- PRESS-RELEASE REHASHES: if the article is just a news report about a single DOJ/USAO sentencing, indictment, guilty plea, or settlement — and appears to summarize the DOJ press release without original investigation — reject. These cases already live in Federal Enforcement (from the DOJ press release itself). The Media tab is for journalism that adds original reporting: interviews, document review, data analysis, systemic pattern identification, or whistleblower accounts. A short news-wire item titled like "Surgeon Gets X Years for $Y Fraud" or "Company Agrees to Pay $Z in FCA Settlement" is almost always a rehash — reject unless the article clearly adds something the press release doesn't (e.g., patient interviews, prior warnings that were ignored, broader scheme context the DOJ didn't name).
 
 ## OUTPUT
 

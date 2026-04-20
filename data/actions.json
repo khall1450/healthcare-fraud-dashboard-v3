@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-19T18:42:27.032400",
+    "last_updated": "2026-04-20T09:01:57.271419",
     "version": "1.0",
     "last_scraped": "2026-04-19T08:18:17.501093"
   },
@@ -15908,6 +15908,29 @@
       "auto_fetched": true,
       "related_agencies": [
         "CMS"
+      ]
+    },
+    {
+      "id": "doj-2026-04-16-hares-metro-detroit-surgeon-7m",
+      "date": "2026-04-16",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Metro Detroit Surgeon Was Sentenced to Year in Prison for $7 Million Dollar Medicare Fraud Scheme",
+      "amount": "$7 Million",
+      "amount_numeric": 7000000,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edmi/pr/metro-detroit-surgeon-was-sentenced-year-prison-7-million-dollar-medicare-fraud-scheme",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "MI",
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": [
+        "HHS-OIG"
       ]
     }
   ]
