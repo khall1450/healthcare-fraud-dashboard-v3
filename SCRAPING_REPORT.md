@@ -1,6 +1,6 @@
 # Scraping Coverage Report
 
-*Auto-generated 2026-04-20 09:23 UTC from `build_scraping_report.py`. Source of truth is live code + data; to edit narrative sections, edit `_scraping_report_template.md`. Feed list, scraper descriptions, and coverage counts are regenerated from `update.py`, `.github/workflows/*.yml`, and `data/actions.json`.*
+*Auto-generated 2026-04-20 09:27 UTC from `build_scraping_report.py`. Source of truth is live code + data; to edit narrative sections, edit `_scraping_report_template.md`. Feed list, scraper descriptions, and coverage counts are regenerated from `update.py`, `.github/workflows/*.yml`, and `data/actions.json`.*
 
 Summary: 23 configured feeds, 18 scrape_* functions.
 
@@ -211,7 +211,8 @@ If none resolve, scraper falls back to body-text regex then `parse_date(strict=F
 
 **Strict extraction rule**: tags are never inferred from external knowledge — only literal keyword matches or recognized synonyms.
 
-**Boilerplate stripping (`tag_allowlist.strip_boilerplate`)**: before regex matching runs against body text, known DOJ boilerplate passages are blanked out. This suppresses the false-positive pattern where a pure Medicare DME case gets tagged ACA because the standard Strike Force closing paragraph enumerates "Medicare, Medicaid, and the Affordable Care Act." Patterns targeted:
+**Boilerplate stripping (`tag_allowlist.strip_boilerplate`)**: before either the AI extractor or the regex matcher runs against body text, known DOJ boilerplate passages are blanked out. This suppresses the false-positive pattern where a pure Medicare DME case gets tagged ACA because the standard Strike Force closing paragraph enumerates "Medicare, Medicaid, and the Affordable Care Act." Patterns stripped:
+
 - Strike Force operational paragraph ("operates in 27 districts…")
 - Strike Force historical record ("charged more than X defendants…")
 - ACA enforcement-authority sentences ("The Affordable Care Act significantly increased HHS's ability to…")
@@ -220,7 +221,15 @@ If none resolve, scraper falls back to body-text regex then `parse_date(strict=F
 - Health Care Fraud Unit leadership paragraph
 - "An indictment is merely an allegation" disclaimer
 
+**Where it's applied** (defense-in-depth, both paths):
+
+- `update.py` `generate_tags`: regex fallback receives `strip_boilerplate(full_text)` instead of raw text
+- `tag_extractor.extract_tags_with_evidence`: the AI receives the stripped text as its INPUT; evidence validation still runs against the ORIGINAL text so cited phrases must match the real source. All five internal fallback paths (no client, API error, JSON parse error, non-array response, AI-returns-zero safety net) also use the stripped body.
+- `retag_strict.py` `strict_tags_for`: also applies `strip_boilerplate` before running the regex matcher.
+
 After boilerplate strip, program and area tags both require just 1+ keyword occurrence in the remaining body text. Because boilerplate is removed first, the single-occurrence threshold no longer produces the old false-positive noise.
+
+**AI extractor evidence rule**: for every tag selected, the model must cite a verbatim 8+-word phrase from the source. Each phrase is validated by substring-match against the original text; unmatched phrases are dropped. This means the model cannot hallucinate a tag without real textual grounding.
 
 **Co-apply rules** (applied after extraction):
 - `Medicare Advantage` → also `Medicare`
