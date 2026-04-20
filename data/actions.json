@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T14:13:51.326739",
+    "last_updated": "2026-04-20T15:10:34.644952",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -15394,7 +15394,9 @@
       "link": "https://www.gao.gov/products/gao-26-109093",
       "link_label": "GAO Report",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicaid"
+      ],
       "entities": [],
       "state": null,
       "source_type": "official",
