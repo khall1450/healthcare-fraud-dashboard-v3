@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T17:25:11.330288",
+    "last_updated": "2026-04-20T17:27:21.986971",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -14410,7 +14410,11 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid"
+        "Medicaid",
+        "ACA",
+        "Medicare Advantage",
+        "Hospice",
+        "Wound Care"
       ],
       "entities": [],
       "state": null,
