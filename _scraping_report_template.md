@@ -56,11 +56,44 @@ If none resolve, scraper falls back to body-text regex then `parse_date(strict=F
 1. Uses `tag_extractor.extract_tags_with_evidence` (AI anchored extractor with evidence citations) when `ANTHROPIC_API_KEY` is set
 2. Falls back to `tag_allowlist.auto_tags` (regex matcher) otherwise
 
-**Strict extraction rule**: tags are never inferred from external knowledge — only literal keyword matches or recognized synonyms. Body-text mentions of program names (Medicare, Medicaid) require 2+ occurrences to count, to suppress boilerplate agency-name false positives. Area-tag mentions require 1+ occurrence.
+**Strict extraction rule**: tags are never inferred from external knowledge — only literal keyword matches or recognized synonyms.
+
+**Boilerplate stripping (`tag_allowlist.strip_boilerplate`)**: before regex matching runs against body text, known DOJ boilerplate passages are blanked out. This suppresses the false-positive pattern where a pure Medicare DME case gets tagged ACA because the standard Strike Force closing paragraph enumerates "Medicare, Medicaid, and the Affordable Care Act." Patterns targeted:
+- Strike Force operational paragraph ("operates in 27 districts…")
+- Strike Force historical record ("charged more than X defendants…")
+- ACA enforcement-authority sentences ("The Affordable Care Act significantly increased HHS's ability to…")
+- CMS suspension-authority + ACA attribution
+- Enumeration phrase "including Medicare, Medicaid, and the Affordable Care Act"
+- Health Care Fraud Unit leadership paragraph
+- "An indictment is merely an allegation" disclaimer
+
+After boilerplate strip, program and area tags both require just 1+ keyword occurrence in the remaining body text. Because boilerplate is removed first, the single-occurrence threshold no longer produces the old false-positive noise.
+
+**Co-apply rules** (applied after extraction):
+- `Medicare Advantage` → also `Medicare`
+- `Medicaid Managed Care` → also `Medicaid`
 
 ### State extraction
 
-`get_state(text)` iterates `STATE_MAP` longest-first to prevent the "West Virginia matches Virginia first" bug. Prefers title over body (body often mentions unrelated states — defendant's prior convictions, comparison data, etc.). Multi-state items use a comma-separated string (e.g., `"CA, FL"`).
+`get_state(text, title, link)` in `update.py` (state rule v3, 2026-04-19).
+
+**Meaning**: state = "where the case was prosecuted / where fraud happened," NOT the defendant's home state. Demonyms like "Florida Man" or "Illinois Doctor" are defendant-origin signals and don't count on their own.
+
+**Priority order**:
+
+0. **National-scope guard** — if title OR body matches `nationwide`, `multi-state`, `across the country`, etc., return `None` (no single-state tag for inherently national actions like takedowns)
+1. **USAO district from link** (DOJ items only) → primary state. `/usao-ma/` → MA, `/usao-edmi/` → MI, etc. The `extract_usao_state()` helper maps both 2-letter state-code districts and 4-letter district codes (`sdny` → NY, `cdca` → CA).
+2. **State-as-party patterns** → append. Matches `"State of X"`, `"the States of X, Y, and Z"`, `"X ex rel"` (qui tam). Handles genuinely multi-state claims.
+3. **Non-demonym title state names** → append. "Fraud in Illinois" counts, "Illinois Doctor" does not.
+4. **City in title** via `_CITY_TO_STATE` — ONLY when USAO is absent (to avoid noise from incidental cities in USAO-district items). The city match skips `"X County"` so "Raleigh County" (WV) doesn't resolve to Raleigh (NC). Ambiguous cities like Springfield, Portland, Columbia, Oakland, Lancaster, Larchmont, Billings, Reading, Mobile, Ontario, Queens, Corona are intentionally excluded from the dict.
+5. **Title demonyms** ("Florida Man", "Illinois Doctor") → append ONLY if corroborated by a non-demonym mention of that state in body text (e.g., "Florida pharmacy", "operated in Florida"). A demonym alone is a weak signal.
+6. **Body-text fallback** (longest state-name match) — final fallback if nothing above produced a result.
+
+**Multi-state name collision**: `extract_all_state_names()` iterates longest-first and masks matched spans, so "West Virginia" matches first and "Virginia" doesn't re-match inside the same span.
+
+**Demonym detection**: state name + role noun (`Man, Woman, Doctor, Nurse, Chiropractor, Businessman, Owner, Clinic Operator, Company, …`). Full list in `_DEMONYM_ROLE_WORDS`.
+
+**Output**: state abbreviation, or comma-separated list for multi-state items (e.g., `"GA, CO, SC"` for a joint suit).
 
 ### Validation at ingest
 
@@ -80,7 +113,7 @@ Items are deduped against existing `actions.json` by:
 
 - `data/needs_review.json` — enforcement items scraped but flagged for AI/human review
 - `data/needs_review_oversight.json` — oversight items
-- `data/tmp_hearings_review_queue.json` — Congress.gov hearings with ambiguous signal
+- `data/needs_review_media.json` — media-tab candidates from Google News RSS awaiting Claude Haiku classification
 - `rejected_links` lists in each review file — permanent rejections; the scraper skips these forever
 
 ---
@@ -93,11 +126,10 @@ Items are deduped against existing `actions.json` by:
 
 ## Known gaps + limitations
 
-- **HHS press room** (`scrape_hhs_press`) is disabled — hhs.gov is behind Akamai Bot Manager which 403s both `requests` and default Playwright. Would need `playwright-stealth` tooling to bypass. HHS-proper items are currently curated manually (~1–2/month).
+- **HHS press room** (`scrape_hhs_press`) is disabled — hhs.gov is behind Akamai Bot Manager which 403s both `requests` and default Playwright. Would need `playwright-stealth` tooling to bypass. HHS-proper items are currently curated manually. In practice most HHS fraud announcements cross-post to CMS (auto-scraped) so the gap is small (~1-2 pure-HHS items/quarter).
 - **FDA** RSS feed is disabled — FDA fraud cases mostly surface through DOJ prosecutions which appear via `DOJ-OPA`/`DOJ-USAO`.
-- **Congress.gov hearings** review queue (`data/tmp_hearings_review_queue.json`) has ~400 items with ambiguous signal awaiting human triage. These are hearings on HC-relevant committees with vague titles.
-- **DOGE actions** are not systematically tracked. Only 2 items mention DOGE and both are tangential to healthcare-fraud reporting.
-- **State tag coverage**: items that name only a city (e.g., "Sarasota Memorial Hospital") currently go untagged with a state. On the roadmap: city → state fallback dictionary + USAO district → state extraction from justice.gov URLs (`/usao-ri/` → RI).
+- **DOJ-USAO single-page pagination limit**: `scrape_doj_usao` now walks pages 0-4 (normal) / 0-19 (backfill) of `justice.gov/usao/pressreleases`. Prior single-page behavior could miss items published mid-day that scrolled off before the next 7:17 UTC scrape.
+- **DOGE actions** are not systematically tracked. Only a handful of items mention DOGE and all are tangential to healthcare-fraud reporting.
 - **Bot-blocked sources** — DOJ, GAO, and some committee sites return 200-with-empty-body to plain `requests`. All require Playwright fallback, which makes those scrapers slower but more reliable.
 
 ---
@@ -118,7 +150,7 @@ Scrapers that require Playwright (JS-rendered or bot-blocked):
 Standalone pipelines:
 - `scrape_congress_hearings.py` — Congress.gov API (requires `CONGRESS_GOV_API_KEY`)
 - `retag_existing.py` — re-tag existing items via AI extractor
-- `retag_strict.py` — re-tag with strict extraction rules (title + 2-occurrence body)
+- `retag_strict.py` — re-tag with strict extraction rules (title + boilerplate-stripped body via `strip_boilerplate()`, 1+ occurrence threshold)
 - `check_news_sources.py` — weekly news-sourced upgrade scanner
 
 ---
