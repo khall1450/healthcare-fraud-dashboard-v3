@@ -66,7 +66,15 @@ _CO_APPLY = {
 
 
 def fetch_body(page, url: str) -> str:
-    """Fetch page body via Playwright. Returns cleaned text."""
+    """Fetch page body via Playwright. Returns cleaned text.
+
+    Strips "Related Press Releases" / "Related Content" sidebars BEFORE
+    text extraction. DOJ pages and many news sites include sidebars
+    listing other cases' titles and excerpts — when left in, those
+    unrelated titles drive false-positive tag matches (e.g., a pure
+    Medicare DME case gets tagged ACA because the sidebar links to an
+    ACA-enrollment-fraud case under "Related Content").
+    """
     try:
         page.goto(url, wait_until="domcontentloaded", timeout=30000)
         page.wait_for_timeout(1200)
@@ -84,6 +92,20 @@ def fetch_body(page, url: str) -> str:
     if not main:
         return ""
     for t in main.find_all(["nav", "footer", "aside", "script", "style"]):
+        t.decompose()
+    # Strip related-content sidebars (DOJ + common news patterns). Class
+    # matching is done via regex because DOJ uses long compound class
+    # names like "block-views-blockrelated-content--related-content-block".
+    related_re = re.compile(
+        r"(?:^|\s)(related-content|related-press|related-stor|"
+        r"views-blockrelated|more-news|more-press|you-may-also-like|"
+        r"further-reading|recommend)",
+        re.I,
+    )
+    for t in main.find_all(class_=related_re):
+        t.decompose()
+    # Also strip common social/share widgets that can embed unrelated titles
+    for t in main.find_all(class_=re.compile(r"social-share|share-links", re.I)):
         t.decompose()
     return re.sub(r"\s+", " ", main.get_text(" ", strip=True))[:12000]
 

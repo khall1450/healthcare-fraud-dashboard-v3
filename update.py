@@ -1013,6 +1013,21 @@ def fetch_detail_page(session, url):
         if main:
             for tag in main.find_all(['nav', 'footer', 'aside', 'script', 'style']):
                 tag.decompose()
+            # Strip "Related Press Releases" / "Related Content" sidebars
+            # that embed unrelated case titles (which drive tag-extraction
+            # false positives like ACA being tagged on a Medicare DME
+            # case because the sidebar links to an ACA case).
+            related_re = re.compile(
+                r"(?:^|\s)(related-content|related-press|related-stor|"
+                r"views-blockrelated|more-news|more-press|"
+                r"you-may-also-like|further-reading|recommend)",
+                re.I,
+            )
+            for tag in main.find_all(class_=related_re):
+                tag.decompose()
+            for tag in main.find_all(class_=re.compile(
+                    r"social-share|share-links", re.I)):
+                tag.decompose()
             return (re.sub(r'\s+', ' ', main.get_text(' ', strip=True)),
                     doj_link, canonical_title, canonical_date)
         return "", doj_link, canonical_title, canonical_date
