@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T11:05:08.816133",
+    "last_updated": "2026-04-20T11:12:33.199239",
     "version": "1.0",
     "last_scraped": "2026-04-20T09:23:48.423009"
   },
@@ -126,7 +126,7 @@
       "id": "treasury-2026-03-30-whistleblower-reward",
       "date": "2026-03-30",
       "agency": "Treasury",
-      "type": "Administrative Action",
+      "type": "Structural/Organizational",
       "title": "Treasury Accepting Whistleblower Tips on Fraud, Money Laundering, Sanctions Violations",
       "amount": "",
       "amount_numeric": 0.0,
@@ -2862,7 +2862,7 @@
       "id": "cms-2025-07-duplicate-enrollment-28m",
       "date": "2025-07-17",
       "agency": "CMS",
-      "type": "Administrative Action",
+      "type": "Investigation",
       "title": "CMS Finds 2.8 Million Americans Potentially Enrolled in Two or More Medicaid/ACA Exchange Plans",
       "amount": null,
       "amount_numeric": 0,
@@ -3345,7 +3345,7 @@
       "id": "doj-2025-05-12-white-collar-enforcement-plan",
       "date": "2025-05-12",
       "agency": "DOJ",
-      "type": "Administrative Action",
+      "type": "Structural/Organizational",
       "title": "DOJ Criminal Division Names Health Care Fraud an Enforcement Priority",
       "amount": "",
       "amount_numeric": 0.0,
@@ -15540,7 +15540,7 @@
       "id": "hhs-2026-01-22-scott-brady-fraud-hire",
       "date": "2026-01-22",
       "agency": "HHS",
-      "type": "Administrative Action",
+      "type": "Structural/Organizational",
       "title": "HHS Adds Former U.S. Attorney for Fraud Efforts",
       "amount": "",
       "amount_numeric": 0,
