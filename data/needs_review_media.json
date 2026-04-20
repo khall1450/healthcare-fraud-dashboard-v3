@@ -23,6 +23,32 @@
       "ai_confidence": 78,
       "ai_reason": "This is primarily a policy/legislative story about a proposed law change to payment procedures, not investigative reporting on a specific healthcare fraud scheme or provider.",
       "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "media-2026-04-20-144360270",
+      "date": "2026-04-20",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Trump Pardoned a Nursing Home Owner Who Owed Almost $19 Million to a Grieving Family",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.propublica.org/article/trump-joseph-schwartz-pardon-lawsuit",
+      "link_label": "ProPublica Report",
+      "social_posts": [],
+      "tags": [
+        "Nursing Home"
+      ],
+      "state": "",
+      "source_type": "news",
+      "auto_fetched": true,
+      "entities": [],
+      "flagged_at": "2026-04-20T10:25:41.231737",
+      "flag_reason": "HC keyword but no fraud/investigation signal — needs AI review",
+      "ai_decision": "not_journalism",
+      "ai_confidence": 75,
+      "ai_reason": "This article appears to focus on a presidential pardon decision and its political implications rather than investigative reporting on a specific healthcare fraud scheme itself.",
+      "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
   "rejected_links": [
