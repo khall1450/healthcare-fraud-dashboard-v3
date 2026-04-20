@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T17:32:45.649249",
+    "last_updated": "2026-04-20T17:36:49.130212",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -15643,7 +15643,12 @@
       "officials": [],
       "link": "https://www.cms.gov/files/document/cms-fraud-waste-and-abuse-sprint-strategy.pdf",
       "link_label": "CMS Report",
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Skin Substitutes",
+        "Lab Testing",
+        "Genetic Testing"
+      ],
       "state": "",
       "source_type": "official",
       "auto_fetched": false,
