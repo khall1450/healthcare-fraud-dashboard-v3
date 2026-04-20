@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T15:44:07.100672",
+    "last_updated": "2026-04-20T15:58:43.635284",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -769,7 +769,7 @@
       "title": "Former Greenville CEO, Employees Indicted in Multi-Million Dollar Health Care Fraud Scheme",
       "link_label": "DOJ Press Release",
       "type": "Criminal Enforcement",
-      "amount": null,
+      "amount": "$250,000",
       "agency": "DOJ",
       "social_posts": [],
       "tags": [
@@ -777,7 +777,7 @@
         "Lab Testing"
       ],
       "date": "2026-03-11",
-      "amount_numeric": 0,
+      "amount_numeric": 250000,
       "entities": [],
       "related_agencies": [
         "HHS-OIG"
@@ -3327,7 +3327,10 @@
       "link": "https://www.justice.gov/criminal/media/1400046/dl",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
       "state": null,
       "source_type": "official",
       "auto_fetched": false,
@@ -3872,7 +3875,7 @@
         "TRICARE",
         "Medicare"
       ],
-      "state": null,
+      "state": "NY",
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
