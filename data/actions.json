@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T18:29:24.446549",
+    "last_updated": "2026-04-20T18:34:43.729108",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -274,9 +274,9 @@
       "link_label": "Fox News",
       "social_posts": [],
       "tags": [
-        "Medicare",
         "Medicaid",
-        "Hospice"
+        "Hospice",
+        "Home Health"
       ],
       "entities": [],
       "state": null,
