@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T09:53:11.377814",
+    "last_updated": "2026-04-21T10:03:15.595662",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -14775,13 +14775,13 @@
       ]
     },
     {
-      "id": "doj-2025-08-28-4032621475",
+      "id": "hhs-oig-2025-08-28-novitas-cost-report-audit",
       "date": "2025-08-28",
-      "agency": "DOJ",
-      "type": "Civil Action",
+      "agency": "HHS-OIG",
+      "type": "Audit",
       "title": "Novitas Solutions, Inc., Reopened and Corrected Cost Report Final Settlements for Desk Reviews Only With Obvious Errors To Correct Payments Made to Medicare Providers",
-      "amount": "$9.4 million",
-      "amount_numeric": 9400000.0,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/novitas-solutions-inc-reopened-and-corrected-cost-report-final-settlements-for-desk-reviews-only-with-obvious-errors-to-correct-payments-made-to-medicare-providers/",
       "link_label": "HHS-OIG Report",
@@ -14793,9 +14793,7 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": [
-        "HHS-OIG"
-      ]
+      "related_agencies": []
     },
     {
       "id": "hhs-oig-2025-12-15-2920030945",
