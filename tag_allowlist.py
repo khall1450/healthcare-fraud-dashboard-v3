@@ -310,7 +310,7 @@ TAG_PATTERNS = [
     # Covers both ambulance fraud (Medicare) and NEMT fraud (Medicaid).
     # Regulators and DOJ typically talk about "medical transportation"
     # as the umbrella term spanning both.
-    (r"\bambulance\b|non[-\s]emergency\s+(medical\s+)?transport|"
+    (r"\bambulance\b|non[-\s]emergen(?:cy|t)\s+(medical\s+)?transport|"
      r"\bNEMT\b|"
      r"\bmedical\s+transportation\b", "Medical Transportation"),
     (r"\baddiction\s+(treatment|recovery)\b|\bsober\s+living\b|"
