@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T09:58:12.675472",
+    "last_updated": "2026-04-21T10:43:05.573828",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -16005,6 +16005,28 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "congress-house-119201",
+      "date": "2026-04-21",
+      "agency": "Congress",
+      "type": "Hearing",
+      "title": "Full Committee Hearing on Protecting Patients and Taxpayers: Cracking Down on Medicare Fraud",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://waysandmeans.house.gov/event/full-committee-hearing-on-protecting-patients-and-taxpayers-cracking-down-on-medicare-fraud",
+      "link_label": "House Ways and Means Hearing",
+      "tags": [],
+      "state": "",
+      "source_type": "official",
+      "auto_fetched": true,
+      "entities": [],
+      "_source": "congress.gov committee-meeting 119201",
+      "_committees": [
+        "House Ways and Means"
+      ],
+      "_filter_reason": "explicit HC-fraud phrase in title"
     }
   ]
 }
