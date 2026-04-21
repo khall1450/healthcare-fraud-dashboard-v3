@@ -1093,6 +1093,70 @@ def _looks_like_bad_title(t):
     return False
 
 
+# Host -> IANA timezone map for converting UTC publication timestamps
+# into the publisher's local date. Without this, a news article
+# published at 7:47 PM CST shows up as the next UTC day in its
+# article:published_time meta tag, causing our stored date to be
+# off by one. Default for anything not listed is ET (most US media
+# HQ in ET).
+_HOST_TIMEZONES = {
+    # Central Time
+    'wsmv.com': 'America/Chicago',
+    'kstp.com': 'America/Chicago',
+    'kare11.com': 'America/Chicago',
+    'fox9.com': 'America/Chicago',
+    'foxillinois.com': 'America/Chicago',
+    'deadlinedetroit.com': 'America/Detroit',  # Michigan = ET but close to CT border
+    'clickondetroit.com': 'America/Detroit',
+    # Pacific Time
+    'latimes.com': 'America/Los_Angeles',
+    'californiaglobe.com': 'America/Los_Angeles',
+    'foxla.com': 'America/Los_Angeles',
+    # Mountain / Arizona (no DST)
+    'azcir.org': 'America/Phoenix',
+    # Florida
+    'clickorlando.com': 'America/New_York',
+}
+
+
+def _iso_to_local_date(iso_str, url):
+    """Convert an ISO datetime string to the publisher's local date.
+
+    If the ISO string has a UTC 'Z' suffix or an explicit offset, we
+    parse it and convert to the host's local timezone. If the string
+    is a bare date ('2026-02-19') or bare datetime with no TZ, we
+    treat it as already-local and return the date portion.
+
+    Falls back to ET for hosts not in _HOST_TIMEZONES (US media default).
+    Returns 'YYYY-MM-DD' or None on parse failure.
+    """
+    if not iso_str:
+        return None
+    # Bare date — no conversion needed
+    if re.match(r'^\d{4}-\d{2}-\d{2}$', iso_str):
+        return iso_str
+    try:
+        from datetime import datetime as _dt
+        try:
+            from zoneinfo import ZoneInfo
+        except ImportError:
+            # Python <3.9 fallback: no conversion, return date portion
+            return iso_str[:10] if len(iso_str) >= 10 else None
+        # Parse ISO datetime (handles 'Z' suffix and +hh:mm offsets)
+        s = iso_str.replace('Z', '+00:00')
+        dt = _dt.fromisoformat(s)
+        # If TZ-naive, assume UTC (safer than assuming local)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=ZoneInfo('UTC'))
+        host = urlparse(url).netloc.lower().replace('www.', '')
+        tz_name = _HOST_TIMEZONES.get(host, 'America/New_York')
+        local_dt = dt.astimezone(ZoneInfo(tz_name))
+        return local_dt.strftime('%Y-%m-%d')
+    except Exception:
+        # Parse failed — fall back to raw first 10 chars
+        return iso_str[:10] if len(iso_str) >= 10 else None
+
+
 def _extract_canonical_date(soup, url, response_headers=None):
     """Extract a publication date from structured markup.
 
@@ -1106,12 +1170,16 @@ def _extract_canonical_date(soup, url, response_headers=None):
     Returns an ISO date string 'YYYY-MM-DD' or None if nothing was found.
     Visual body-text scraping is intentionally NOT done here — callers
     keep their existing regex fallback for that case.
+
+    Timestamps are converted from UTC to the publisher's local timezone
+    before extracting the date, so a 7:47 PM CST article isn't stored
+    as the next UTC day. See _iso_to_local_date().
     """
     # 1. OpenGraph
     og = soup.find('meta', attrs={'property': 'article:published_time'})
     if og and og.get('content'):
-        iso = og['content'][:10]
-        if re.match(r'^\d{4}-\d{2}-\d{2}$', iso):
+        iso = _iso_to_local_date(og['content'], url)
+        if iso and re.match(r'^\d{4}-\d{2}-\d{2}$', iso):
             return iso
     # 2. JSON-LD datePublished (may be array of scripts; take first valid)
     for script in soup.find_all('script', attrs={'type': 'application/ld+json'}):
@@ -1133,14 +1201,14 @@ def _extract_canonical_date(soup, url, response_headers=None):
                 candidates = [data]
         for obj in candidates:
             if isinstance(obj, dict) and obj.get('datePublished'):
-                iso = str(obj['datePublished'])[:10]
-                if re.match(r'^\d{4}-\d{2}-\d{2}$', iso):
+                iso = _iso_to_local_date(str(obj['datePublished']), url)
+                if iso and re.match(r'^\d{4}-\d{2}-\d{2}$', iso):
                     return iso
     # 3. <time datetime="..."> — prefer elements marked as publication
     for time_el in soup.find_all('time', attrs={'datetime': True}):
         dt = time_el['datetime']
-        iso = dt[:10]
-        if re.match(r'^\d{4}-\d{2}-\d{2}$', iso):
+        iso = _iso_to_local_date(dt, url)
+        if iso and re.match(r'^\d{4}-\d{2}-\d{2}$', iso):
             return iso
     # 4. URL path /YYYY/MM/DD/
     m = re.search(r'/(\d{4})/(\d{1,2})/(\d{1,2})(?:/|$)', url)
