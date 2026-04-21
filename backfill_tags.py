@@ -33,12 +33,10 @@ from tag_allowlist import filter_tags
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ACTIONS_FILE = os.path.join(SCRIPT_DIR, "data", "actions.json")
 
-# MFCU phrases → imply Medicaid tag
-_MFCU_RE = re.compile(
-    r"\bMedicaid\s+Fraud\s+(?:Control\s+Unit|Division|and\s+Abuse)\b|"
-    r"\bOffice\s+of\s+Medicaid\s+Fraud\b",
-    re.IGNORECASE,
-)
+# MFCU → Medicaid rule DISABLED (2026-04-21). MFCUs frequently
+# investigate Medicare-only cases as joint partners, so their
+# presence is not a reliable Medicaid signal. See
+# memory/project_mfcu_implies_medicaid.md for rationale.
 
 
 def fetch_body(url, session):
@@ -123,9 +121,6 @@ def main():
 
         # Extract fresh tags
         fresh = filter_tags(generate_tags(x.get("title", "") or "", body))
-        # Apply MFCU→Medicaid signal
-        if _MFCU_RE.search(body) and "Medicaid" not in fresh:
-            fresh.append("Medicaid")
 
         old = list(x.get("tags") or [])
         old_set = set(old)
