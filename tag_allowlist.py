@@ -43,7 +43,6 @@ AREA_TAGS = frozenset({
     "Physical Therapy",
     "Assisted Living",
     "Medical Transportation",
-    "Hospital",
     "Addiction Treatment",
     "Opioids",
 })
@@ -290,11 +289,6 @@ TAG_PATTERNS = [
     (r"\bambulance\b|non[-\s]emergency\s+(medical\s+)?transport|"
      r"\bNEMT\b|"
      r"\bmedical\s+transportation\b", "Medical Transportation"),
-    # Hospital: require explicit hospital fraud/billing context (not just
-    # "investigated by hospital staff" mentions).
-    (r"\bhospital\s+(fraud|scheme|kickback|billing|overpayment|paid\s+kickbacks?)\b|"
-     r"\bhospital\s+(group|system)\s+(agrees|charged|settles)\b|"
-     r"(charged|fraudulently\s+billed)\s+\w+\s+hospital", "Hospital"),
     (r"\baddiction\s+(treatment|recovery)\b|\bsober\s+living\b|"
      r"\bsubstance\s+abuse\s+treatment\b|\brehab(ilitation)?\s+(fraud|scheme|clinic)\b|"
      r"\bsuboxone\b|\bmethadone\s+(fraud|clinic)\b|"

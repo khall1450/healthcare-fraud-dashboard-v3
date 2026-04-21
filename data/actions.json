@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T18:35:03.350831",
+    "last_updated": "2026-04-20T21:29:42.537376",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -1140,7 +1140,6 @@
         "DME",
         "Medicaid",
         "Medicare",
-        "Hospital",
         "Medicare Advantage",
         "Lab Testing",
         "ACA"

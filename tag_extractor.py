@@ -107,7 +107,6 @@ Examples that should NOT get tagged:
    - "Mental Health" requires psychiatry, psychology, psychotherapy, counseling, or "mental health" as the subject. Do NOT apply to autism or addiction cases (those have their own tags).
    - "Autism/ABA" requires autism, applied behavior analysis, or ABA therapy as the subject.
    - "Addiction Treatment" requires substance use / addiction / rehab / sober living / suboxone / methadone clinics as the subject.
-   - "Hospital" requires hospital billing / hospital fraud / hospital-group defendant; NOT "investigated by hospital staff" or incidental hospital mentions.
    - "Genetic Testing" requires genetic/genomic testing — not just lab tests.
    - "Lab Testing" requires a laboratory, toxicology, pathology lab, COVID testing fraud, or urine drug testing as the subject.
    - "Wound Care" requires wound care / wound grafts. Often co-occurs with Skin Substitutes.
