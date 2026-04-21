@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T09:29:22.769287",
+    "last_updated": "2026-04-21T09:42:30.444440",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -14213,17 +14213,15 @@
       "date": "2026-04-07",
       "agency": "DOJ",
       "type": "Civil Action",
-      "title": "National Partnership of Insurance Brokers and its Former Subsidiary Agree to Pay Over $135 Million For Affordable Care Act Enrollment Fraud Scheme",
-      "amount": "$135 Million",
-      "amount_numeric": 135000000.0,
+      "title": "National Partnership of Insurance Brokers and its Former Subsidiary Agree to Pay Over $160 Million For Affordable Care Act Enrollment Fraud Scheme",
+      "amount": "$160 Million",
+      "amount_numeric": 160000000,
       "officials": [],
-      "link": "https://www.justice.gov/opa/pr/national-partnership-insurance-brokers-and-its-former-subsidiary-agree-pay-over-135-million",
+      "link": "https://www.justice.gov/opa/pr/national-partnership-insurance-brokers-and-its-former-subsidiary-agree-pay-over-160-million",
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "ACA",
-        "Medicaid",
-        "Opioids"
+        "ACA"
       ],
       "entities": [],
       "state": "CA",
@@ -15966,6 +15964,28 @@
         "House Ways and Means"
       ],
       "_filter_reason": "explicit HC-fraud phrase in title"
+    },
+    {
+      "id": "hhs-oig-2026-03-18-consent-judgment-entered-against-bucks-county-company-resolv",
+      "date": "2026-03-18",
+      "agency": "HHS-OIG",
+      "type": "Civil Action",
+      "title": "Consent Judgment Entered Against Bucks County Company Resolving Allegations of False Claims for Billing Group Art Classes in Assisted Living and Adult Day Facilities as Occupational Therapy",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/fraud/enforcement/consent-judgment-entered-against-bucks-county-company-resolving-allegations-of-false-claims-for-billing-group-art-classes-in-assisted-living-and-adult-day-facilities-as-occupational-therapy/",
+      "link_label": "HHS-OIG Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Assisted Living"
+      ],
+      "entities": [],
+      "state": "PA",
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": []
     }
   ]
 }

@@ -41,7 +41,14 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" pull --rebase)",
       "Bash(git stash *)",
       "Bash(git reset *)",
-      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Remove 3 unwanted auto-promoted HHS-OIG items *)"
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Remove 3 unwanted auto-promoted HHS-OIG items *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add scrape_congress_hearings.py data/actions.json)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Generate tags for Congress hearings at scrape time \\(was empty, never filled\\) *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add update.py data/actions.json)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Prefer HHS-OIG '\\\\''Issued'\\\\'' date over canonical page-posted date *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add index.html)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Split tag filter into separate Programs + Vulnerable Areas dropdowns *)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Restore ACA Insurance Brokers + add Bucks County, Pharmacy President items *)"
     ]
   }
 }
