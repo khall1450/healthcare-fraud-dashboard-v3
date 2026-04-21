@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T11:01:53.446685",
+    "last_updated": "2026-04-21T11:06:04.507059",
     "version": "1.0"
   },
   "stories": [
@@ -291,7 +291,14 @@
       "link_label": "KARE 11 Investigation",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Addiction Treatment",
+        "Autism/ABA",
+        "Medical Transportation",
+        "Mental Health",
+        "Personal Care",
+        "Adult Day Care",
+        "Home Health"
       ],
       "entities": [],
       "state": "MN",
