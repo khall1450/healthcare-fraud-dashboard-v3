@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T15:09:51.680600",
+    "last_updated": "2026-04-21T15:16:57.605092",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -14666,8 +14666,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Nine Charged in Benefit Fraud Crackdown",
-      "amount": "$9 million",
-      "amount_numeric": 9000000.0,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.justice.gov/usao-ma/pr/nine-charged-benefit-fraud-crackdown",
       "link_label": "DOJ Press Release",
