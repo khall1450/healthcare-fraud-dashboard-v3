@@ -124,6 +124,9 @@ def main():
     fetch_failures = 0
 
     for i, x in enumerate(doj_items, 1):
+        # Progress heartbeat every item so long runs show life
+        if i % 20 == 0 or i == 1:
+            print(f"... [{i}/{len(doj_items)}] processing", flush=True)
         link = x["link"]
         old_ra = list(x.get("related_agencies") or [])
         old_date = x.get("date", "")
