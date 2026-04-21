@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T09:45:34.172605",
+    "last_updated": "2026-04-21T09:51:04.553714",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -15964,28 +15964,6 @@
         "House Ways and Means"
       ],
       "_filter_reason": "explicit HC-fraud phrase in title"
-    },
-    {
-      "id": "hhs-oig-2026-03-18-consent-judgment-entered-against-bucks-county-company-resolv",
-      "date": "2026-03-18",
-      "agency": "HHS-OIG",
-      "type": "Civil Action",
-      "title": "Consent Judgment Entered Against Bucks County Company Resolving Allegations of False Claims for Billing Group Art Classes in Assisted Living and Adult Day Facilities as Occupational Therapy",
-      "amount": "",
-      "amount_numeric": 0,
-      "officials": [],
-      "link": "https://oig.hhs.gov/fraud/enforcement/consent-judgment-entered-against-bucks-county-company-resolving-allegations-of-false-claims-for-billing-group-art-classes-in-assisted-living-and-adult-day-facilities-as-occupational-therapy/",
-      "link_label": "HHS-OIG Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Assisted Living"
-      ],
-      "entities": [],
-      "state": "PA",
-      "source_type": "official",
-      "auto_fetched": false,
-      "related_agencies": []
     },
     {
       "id": "hhs-oig-2026-04-20-former-pharmacy-president-sentenced-to-24-months-in-prison-f",
