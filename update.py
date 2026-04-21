@@ -141,8 +141,12 @@ FEEDS = [
     # --- Congressional Judiciary committees (HC fraud oversight of DOJ) ---
     {"name": "S-Judiciary",  "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "senate_judiciary"},
     {"name": "H-Judiciary",  "agency": "Congress",      "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "house_judiciary"},
+    # FDA + DEA feeds disabled 2026-04-21: dashboard tracks federal HC fraud
+    # enforcement + policy; DEA/FDA cases are captured via Opioids and
+    # Medical Devices area tags on DOJ prosecutions, and we don't separately
+    # track these agencies in primary or related_agencies anymore.
     {"name": "FDA",         "agency": "FDA",           "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml", "enabled": False, "source_type": "official"},
-    {"name": "DEA",         "agency": "DEA",           "url": "https://www.dea.gov/press-releases/rss",                                   "enabled": True,  "source_type": "official", "browser_fallback": True},
+    {"name": "DEA",         "agency": "DEA",           "url": "https://www.dea.gov/press-releases/rss",                                   "enabled": False, "source_type": "official", "browser_fallback": True},
     # --- Commissions + Treasury anti-fraud (added Tier 2) ---
     {"name": "MedPAC",      "agency": "MedPAC",        "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "medpac"},
     {"name": "MACPAC",      "agency": "MACPAC",        "url": None,                                                                       "enabled": True,  "source_type": "official", "scrape": "macpac"},
@@ -3919,8 +3923,7 @@ def main():
                     'Treasury':     ('fincen.gov', 'treasury.gov', 'home.treasury.gov'),
                     'White House':  'whitehouse.gov',
                     'Congress':     ('house.gov', 'senate.gov', 'congress.gov'),
-                    'DEA':          'dea.gov',
-                    'FDA':          'fda.gov',
+                    # DEA/FDA removed from agency map 2026-04-21
                     'MedPAC':       'medpac.gov',
                     'MACPAC':       'macpac.gov',
                 }

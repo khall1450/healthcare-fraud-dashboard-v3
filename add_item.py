@@ -64,8 +64,6 @@ _AGENCY_DOMAINS = {
     "White House": "whitehouse.gov",
     "MACPAC":     "macpac.gov",
     "MedPAC":     "medpac.gov",
-    "DEA":        "dea.gov",
-    "FDA":        "fda.gov",
     "Congress":   None,  # many subdomains
 }
 
@@ -99,8 +97,6 @@ def _guess_agency(host: str) -> str:
     if "treasury.gov" in h or "fincen.gov" in h: return "Treasury"
     if "macpac.gov" in h: return "MACPAC"
     if "medpac.gov" in h: return "MedPAC"
-    if "dea.gov" in h: return "DEA"
-    if "fda.gov" in h: return "FDA"
     if any(s in h for s in ["senate.gov", "house.gov", "congress.gov"]):
         return "Congress"
     return ""

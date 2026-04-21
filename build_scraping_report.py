@@ -168,7 +168,7 @@ def gen_feeds_list(feeds, scrape_fns):
 
     out = []
     order = ["DOJ", "HHS-OIG", "CMS", "HHS", "Congress", "White House",
-             "GAO", "DEA", "MedPAC", "MACPAC", "Treasury", "FDA"]
+             "GAO", "MedPAC", "MACPAC", "Treasury"]
     # Put known ones in preferred order, then any leftovers alphabetized
     seen = set()
     ordered_agencies = []
