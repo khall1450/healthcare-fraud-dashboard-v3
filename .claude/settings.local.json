@@ -52,7 +52,8 @@
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Add 2 missed HHS-OIG enforcement items; reject St. Louis pandemic fraud *)",
       "Bash(gh run *)",
       "Bash(awk '/Fetching HHS-OIG\\\\.\\\\.\\\\./,/HHS-OIG: 0/')",
-      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Novitas cost report item: reclassify DOJ Civil Action -> HHS-OIG Audit *)"
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Novitas cost report item: reclassify DOJ Civil Action -> HHS-OIG Audit *)",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Reclassify 2 more misrouted OIG reports: DOJ enforcement -> HHS-OIG Audit *)"
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T10:03:15.595662",
+    "last_updated": "2026-04-21T10:03:44.483801",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -14731,11 +14731,11 @@
     {
       "id": "doj-2025-09-23-1367908120",
       "date": "2025-09-23",
-      "agency": "DOJ",
-      "type": "Criminal Enforcement",
+      "agency": "HHS-OIG",
+      "type": "Audit",
       "title": "Hospitals Charged CMS for Trauma Team Activations That Did Not Comply With Federal Requirements",
-      "amount": "$2.4 billion",
-      "amount_numeric": 2400000000.0,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/hospitals-charged-cms-for-trauma-team-activations-that-did-not-comply-with-federal-requirements/",
       "link_label": "HHS-OIG Report",
@@ -14747,18 +14747,16 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": [
-        "HHS-OIG"
-      ]
+      "related_agencies": []
     },
     {
       "id": "doj-2025-08-29-2477526905",
       "date": "2025-08-29",
-      "agency": "DOJ",
-      "type": "Civil Action",
+      "agency": "HHS-OIG",
+      "type": "Audit",
       "title": "National Government Services, Inc., Reopened and Corrected Cost Report Final Settlements for Desk Reviews Only With Obvious Errors To Correct Payments Made to Medicare Providers",
-      "amount": "$5.6 million",
-      "amount_numeric": 5600000.0,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://oig.hhs.gov/reports/all/2025/national-government-services-inc-reopened-and-corrected-cost-report-final-settlements-for-desk-reviews-only-with-obvious-errors-to-correct-payments-made-to-medicare-providers/",
       "link_label": "HHS-OIG Report",
@@ -14770,9 +14768,7 @@
       "state": null,
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": [
-        "HHS-OIG"
-      ]
+      "related_agencies": []
     },
     {
       "id": "hhs-oig-2025-08-28-novitas-cost-report-audit",
