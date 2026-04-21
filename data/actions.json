@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T16:56:56.167838",
+    "last_updated": "2026-04-21T16:59:40.570014",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -1494,7 +1494,7 @@
         "DME",
         "Telehealth"
       ],
-      "state": "MS",
+      "state": "FL, MS",
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
