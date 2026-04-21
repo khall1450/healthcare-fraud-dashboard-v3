@@ -168,6 +168,22 @@ _BOILERPLATE_PATTERNS = [
         r"(?:'s)?",
         _re.IGNORECASE,
     ),
+    # Anti-Kickback Statute boilerplate. DOJ kickback-case releases
+    # routinely include a paragraph describing AKS scope — "items or
+    # services covered by Medicare, Medicaid, and other federally funded
+    # healthcare programs" — even when the specific case is Medicare-only.
+    # Strip the paragraph so Medicaid doesn't get tagged from law-scope
+    # boilerplate.
+    _re.compile(
+        r"(?:The\s+)?Anti-?Kickback\s+Statute\s+(?:prohibits|seeks)"
+        r"[^.]*?(?:Medicare|Medicaid|federally\s+funded)[^.]*?\.",
+        _re.IGNORECASE,
+    ),
+    _re.compile(
+        r"prohibit(?:s|ing)\s+(?:offering|paying|soliciting|receiving)[^.]*?"
+        r"(?:Medicare|Medicaid)[^.]*?federally\s+funded\s+healthcare\s+programs",
+        _re.IGNORECASE,
+    ),
 ]
 
 
