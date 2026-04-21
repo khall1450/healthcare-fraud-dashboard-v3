@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T21:41:30.015466",
+    "last_updated": "2026-04-20T21:44:22.227568",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -14080,7 +14080,8 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Pharmacy"
+        "Pharmacy",
+        "Drug Pricing"
       ],
       "entities": [],
       "state": "MO",
@@ -14102,7 +14103,8 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Medicaid Managed Care"
+        "Medicaid Managed Care",
+        "Drug Pricing"
       ],
       "entities": [],
       "state": "WV",
@@ -14996,7 +14998,8 @@
       "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Drug Pricing"
       ],
       "entities": [],
       "state": "PA",

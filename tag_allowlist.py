@@ -45,6 +45,7 @@ AREA_TAGS = frozenset({
     "Medical Transportation",
     "Addiction Treatment",
     "Opioids",
+    "Drug Pricing",
 })
 
 ALLOWED_TAGS = PROGRAM_TAGS | AREA_TAGS
@@ -295,6 +296,19 @@ TAG_PATTERNS = [
      r"\bopioid\s+treatment\s+program\b", "Addiction Treatment"),
     (r"\bopioid(s)?\b|\bfentanyl\b|\boxycodone\b|\bhydrocodone\b|"
      r"\bcontrolled\s+substance\b|\bpill\s+mill\b", "Opioids"),
+    # Drug Pricing: manufacturer/PBM/state-rebate/340B vector. Distinct
+    # from Pharmacy (dispensing) and Opioids (controlled substances).
+    # Captures: drug rebates, 340B program, PBM spread/rebate fraud,
+    # inflated average wholesale price (AWP), physician-administered
+    # drug rebate programs, Medicaid Drug Rebate Program.
+    (r"\bdrug\s+rebate(s)?\b|\bmedicaid\s+drug\s+rebate\b|"
+     r"\b340b\b|\bpbm\s+(rebate|spread|pricing|fraud)\b|"
+     r"\bpharmacy\s+benefit\s+manager|"
+     r"\bpharmaceutical\s+(pricing|price\s+fix)|\bdrug\s+pricing\b|"
+     r"\baverage\s+wholesale\s+price\b|\bawp\s+fraud\b|"
+     r"\bphysician[-\s]administered\s+drug|"
+     r"\bbest\s+price\s+(reporting|fraud|rule)",
+     "Drug Pricing"),
 ]
 
 
