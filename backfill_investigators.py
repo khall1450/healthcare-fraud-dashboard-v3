@@ -40,7 +40,14 @@ def fetch_body_and_date(url):
     """Fetch DOJ body + canonical date via Playwright.
 
     Returns (body_text, canonical_date_str_or_None).
+    Skips URLs that look like downloads or non-HTML (Playwright will
+    hang on these waiting for the download handler).
     """
+    # Skip download endpoints, PDFs, and other non-HTML
+    url_l = url.lower()
+    if (url_l.endswith('.pdf') or url_l.endswith('/dl') or
+            '/media/' in url_l or '/download' in url_l):
+        return "", None
     try:
         soup = scrape_page_with_browser(url)
         if not soup:
