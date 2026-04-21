@@ -47,6 +47,7 @@ AREA_TAGS = frozenset({
     "Opioids",
     "Drug Pricing",
     "Behavioral Health",
+    "Long-Term Care",
 })
 
 ALLOWED_TAGS = PROGRAM_TAGS | AREA_TAGS
@@ -280,6 +281,13 @@ TAG_PATTERNS = [
     (r"\btelehealth\b|\btelemedicin(e|al)\b", "Telehealth"),
     (r"\bhome\s+health\b(?!\s+aides?\s+who\s+|\s+agency\s+staff)", "Home Health"),
     (r"\bnursing\s+homes?\b|\bskilled\s+nursing\b|\blong[-\s]term\s+care\s+facility\b", "Nursing Home"),
+    # Long-Term Care: specifically long-term care hospitals (LTCH/LTAC),
+    # a distinct Medicare category from nursing homes or acute-care
+    # hospitals. Narrow scope — doesn't duplicate Nursing Home / Home
+    # Health / Assisted Living which cover other LTC subcategories.
+    # Lowercase per auto_tags's case-folded-body convention.
+    (r"\blong[-\s]term\s+care\s+hospitals?\b|\bltch\b|\bltac\b|"
+     r"\blong[-\s]term\s+acute\s+care\b", "Long-Term Care"),
     # Medical Devices: require explicit device word, not just "medical"
     (r"\bmedical\s+device(s)?\b|\bdevice\s+(manufactur|kickback)", "Medical Devices"),
     # Autism/ABA: explicit phrase required. "ABA" as bare acronym shouldn't count.
