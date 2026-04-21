@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T10:52:49.635419",
+    "last_updated": "2026-04-21T10:54:04.034380",
     "version": "1.0"
   },
   "stories": [
@@ -69,8 +69,8 @@
       "entities": []
     },
     {
-      "id": "media-2026-03-11-wsj-autism-aba-medicaid",
-      "date": "2026-03-11",
+      "id": "media-2026-03-10-wsj-autism-aba-medicaid",
+      "date": "2026-03-10",
       "agency": "Media",
       "type": "Investigative Report",
       "title": "The Boom in Autism Therapy Is Medicaid's Fastest-Growing Jackpot",
@@ -82,7 +82,6 @@
       "social_posts": [],
       "tags": [
         "Autism/ABA",
-        "Behavioral Health",
         "Medicaid"
       ],
       "state": "IN",
