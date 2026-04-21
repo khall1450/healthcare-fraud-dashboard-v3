@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T15:41:29.247234",
+    "last_updated": "2026-04-21T15:41:47.081064",
     "version": "1.0",
     "last_scraped": "2026-04-21T09:07:37.536006"
   },
@@ -852,8 +852,7 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "DME",
-        "Medicaid"
+        "DME"
       ],
       "date": "2026-03-09",
       "amount_numeric": 59000000,
