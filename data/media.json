@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T10:51:25.975072",
+    "last_updated": "2026-04-21T10:51:51.665818",
     "version": "1.0"
   },
   "stories": [
@@ -299,8 +299,8 @@
       "auto_fetched": false
     },
     {
-      "id": "media-2026-03-nick-shirley-ca-hospice-daycare-fraud",
-      "date": "2026-03-15",
+      "id": "media-2026-03-17-nick-shirley-ca-hospice-daycare-fraud",
+      "date": "2026-03-17",
       "agency": "Media",
       "type": "Investigative Report",
       "title": "Nick Shirley Uncovers Over $170 Million in Alleged Fraud Across California Daycare and Hospice Operations",
@@ -312,7 +312,8 @@
       "social_posts": [],
       "tags": [
         "Hospice",
-        "Medicare"
+        "Medicare",
+        "Adult Day Care"
       ],
       "entities": [],
       "state": "CA",
