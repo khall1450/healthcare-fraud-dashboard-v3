@@ -313,7 +313,13 @@ TAG_PATTERNS = [
      r"\bpharmaceutical\s+(pricing|price\s+fix)|\bdrug\s+pricing\b|"
      r"\baverage\s+wholesale\s+price\b|\bawp\s+fraud\b|"
      r"\bphysician[-\s]administered\s+drug|"
-     r"\bbest\s+price\s+(reporting|fraud|rule)",
+     r"\bbest\s+price\s+(reporting|fraud|rule)|"
+     # Medicare Part B drug payment / biosimilar / ASP-based pricing
+     r"\bbiosimilar(s)?\b|"
+     r"\bpart\s+b\s+(drug|payment|biologic)|"
+     r"\baverage\s+sales\s+price\b|\bASP\s+(payment|pricing|data)|"
+     r"\bmedicare\s+(drug|biologic)\s+pric|"
+     r"\bnoncovered\s+version",
      "Drug Pricing"),
 ]
 

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T21:47:50.300950",
+    "last_updated": "2026-04-20T21:56:03.186479",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -2641,7 +2641,8 @@
       "tags": [
         "Medicare",
         "Skin Substitutes",
-        "Medicare Advantage"
+        "Medicare Advantage",
+        "Drug Pricing"
       ],
       "entities": [],
       "state": null,
@@ -13888,7 +13889,8 @@
       "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Drug Pricing"
       ],
       "entities": [],
       "state": null,
@@ -15694,7 +15696,8 @@
       "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Drug Pricing"
       ],
       "entities": [],
       "state": null,
