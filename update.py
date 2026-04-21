@@ -2669,7 +2669,8 @@ def extract_investigator_agencies(body_text):
         r"praised\s+the\s+work|work\s+of\s+the|assisted\s+in|"
         r"partnered\s+with|in\s+coordination\s+with|"
         r"made\s+the\s+announcement|agent\s+in\s+charge|"
-        r"inspector\s+in\s+charge)\b",
+        r"inspector\s+in\s+charge|with\s+assistance\s+from|"
+        r"handling\s+the\s+matter|handled\s+by)\b",
         re.IGNORECASE,
     )
     # HHS-OIG name variants. Uses (?:and|&) since DOJ releases vary
