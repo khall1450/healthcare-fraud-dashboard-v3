@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-21T11:10:52.105617",
+    "last_updated": "2026-04-21T11:13:14.034892",
     "version": "1.0"
   },
   "stories": [
@@ -402,7 +402,8 @@
       "link_label": "ProPublica Investigation",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Addiction Treatment"
       ],
       "state": "AZ",
       "source_type": "news",
