@@ -58,7 +58,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" add update.py reenrich_manual.py)",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Harden DOJ/OIG pipeline: date extraction + URL-path guard *)",
       "Bash(pip index *)",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Add Medicaid tag to RCI citizen-sleuths article \\(13 Medicaid mentions in body\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Add Medicaid tag to RCI citizen-sleuths article \\(13 Medicaid mentions in body\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Nick Shirley CA daycare/hospice article: drop Medicaid tag\")"
     ]
   }
 }
