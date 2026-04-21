@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T21:47:07.953458",
+    "last_updated": "2026-04-20T21:47:50.300950",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -2004,7 +2004,8 @@
       "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Medicaid Managed Care"
       ],
       "state": null,
       "source_type": "official",
