@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-20T21:29:42.537376",
+    "last_updated": "2026-04-20T21:41:30.015466",
     "version": "1.0",
     "last_scraped": "2026-04-20T11:23:57.676436"
   },
@@ -14101,7 +14101,8 @@
       "link_label": "HHS-OIG Report",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Medicaid Managed Care"
       ],
       "entities": [],
       "state": "WV",
