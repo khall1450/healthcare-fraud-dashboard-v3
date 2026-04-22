@@ -169,7 +169,9 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Oncologist drug diversion item: drop Medicare + Pharmacy \\(black market drug resale; no Medicare billing; oncologist runs practice not pharmacy\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"VRA Enterprises \\\\$17M item: restore HHS-OIG \\(investigator per body\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Telemarketing Genetic Testing item: state FL -> FL, TX \\(both co-defendants operated scheme; one in TX, one in FL\\)\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"PCL \\\\$9M diagnostic lab item: fix state to MD, IN + add Long-Term Care tag \\(scheme targeted LTC facility residents\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"PCL \\\\$9M diagnostic lab item: fix state to MD, IN + add Long-Term Care tag \\(scheme targeted LTC facility residents\\)\")",
+      "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Long-Term Care threshold rule + restore HHS-OIG on AL Doctor telemed item *)",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Repeat Offender NH item: date -> 2025-10-23\")"
     ]
   }
 }
