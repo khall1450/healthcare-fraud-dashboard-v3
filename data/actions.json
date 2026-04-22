@@ -7483,7 +7483,7 @@
       "id": "doj-2025-09-10-286393915",
       "date": "2025-09-10",
       "agency": "DOJ",
-      "type": "Civil Action",
+      "type": "Criminal Enforcement",
       "title": "Maryland Woman Arraigned for Defrauding the D.C. Medicaid Program",
       "amount": null,
       "amount_numeric": 0,
@@ -7498,7 +7498,9 @@
       "state": "DC",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-10-3071756259",
@@ -7514,8 +7516,7 @@
       "social_posts": [],
       "tags": [
         "DME",
-        "Medicare",
-        "Opioids"
+        "Medicare"
       ],
       "entities": [],
       "state": "NJ",
@@ -7544,7 +7545,9 @@
       "state": "PA",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-09-08-68394441",
@@ -7566,7 +7569,9 @@
       "state": "VA",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-29-507674245",
@@ -12799,13 +12804,16 @@
       "tags": [
         "Pharmacy",
         "Medicare",
+        "Medicaid",
         "Opioids"
       ],
       "entities": [],
       "state": "TN",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-19-2542748640",
