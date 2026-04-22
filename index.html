@@ -343,8 +343,12 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <select class="form-select filter-select" id="areaFilter" onchange="tagFilterChanged('areaFilter', applyFilters)">
           <option value="all">All Vulnerable Areas</option>
         </select>
-        <input type="date" class="form-control filter-date" id="dateFrom" onchange="applyFilters()" title="From date" min="2025-01-01" />
-        <input type="date" class="form-control filter-date" id="dateTo" onchange="applyFilters()" title="To date" min="2025-01-01" />
+        <select class="form-select filter-select" id="dateFrom" onchange="applyFilters()" title="From month">
+          <option value="">From</option>
+        </select>
+        <select class="form-select filter-select" id="dateTo" onchange="applyFilters()" title="To month">
+          <option value="">To</option>
+        </select>
         <button class="btn btn-outline-secondary btn-sm" onclick="clearFilters()">
           <i class="fa-solid fa-xmark me-1"></i>Clear
         </button>
@@ -365,8 +369,12 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <select class="form-select filter-select" id="oversightAreaFilter" onchange="tagFilterChanged('oversightAreaFilter', applyOversightFilters)">
           <option value="all">All Vulnerable Areas</option>
         </select>
-        <input type="date" class="form-control filter-date" id="oversightDateFrom" onchange="applyOversightFilters()" title="From date" min="2025-01-01" />
-        <input type="date" class="form-control filter-date" id="oversightDateTo" onchange="applyOversightFilters()" title="To date" min="2025-01-01" />
+        <select class="form-select filter-select" id="oversightDateFrom" onchange="applyOversightFilters()" title="From month">
+          <option value="">From</option>
+        </select>
+        <select class="form-select filter-select" id="oversightDateTo" onchange="applyOversightFilters()" title="To month">
+          <option value="">To</option>
+        </select>
         <button class="btn btn-outline-secondary btn-sm" onclick="clearOversightFilters()">
           <i class="fa-solid fa-xmark me-1"></i>Clear
         </button>
@@ -381,8 +389,12 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         <select class="form-select filter-select" id="landscapeAreaFilter" onchange="tagFilterChanged('landscapeAreaFilter', filterLandscape)">
           <option value="all">All Vulnerable Areas</option>
         </select>
-        <input type="date" class="form-control filter-date" id="landscapeDateFrom" onchange="filterLandscape()" title="From date" min="2025-01-01" />
-        <input type="date" class="form-control filter-date" id="landscapeDateTo" onchange="filterLandscape()" title="To date" min="2025-01-01" />
+        <select class="form-select filter-select" id="landscapeDateFrom" onchange="filterLandscape()" title="From month">
+          <option value="">From</option>
+        </select>
+        <select class="form-select filter-select" id="landscapeDateTo" onchange="filterLandscape()" title="To month">
+          <option value="">To</option>
+        </select>
         <button class="btn btn-outline-secondary btn-sm" onclick="clearLandscapeFilters()">
           <i class="fa-solid fa-xmark me-1"></i>Clear
         </button>
@@ -731,8 +743,8 @@ function applyFilters() {
   const agency   = document.getElementById('agencyFilter').value;
   const type     = document.getElementById('typeFilter').value;
   const state    = document.getElementById('stateFilter').value;
-  const dateFrom = document.getElementById('dateFrom').value;
-  const dateTo   = document.getElementById('dateTo').value;
+  const dateFrom = ymToFromDate(document.getElementById('dateFrom').value);
+  const dateTo   = ymToToDate(document.getElementById('dateTo').value);
 
   let filtered = enforcementActions.filter(a => {
     if (agency !== 'all' && a.agency !== agency
@@ -773,8 +785,8 @@ function applyOversightFilters() {
   const agency   = document.getElementById('oversightAgencyFilter').value;
   const type     = document.getElementById('oversightTypeFilter').value;
   const state    = document.getElementById('oversightStateFilter').value;
-  const dateFrom = document.getElementById('oversightDateFrom').value;
-  const dateTo   = document.getElementById('oversightDateTo').value;
+  const dateFrom = ymToFromDate(document.getElementById('oversightDateFrom').value);
+  const dateTo   = ymToToDate(document.getElementById('oversightDateTo').value);
 
   let filtered = oversightActions.filter(a => {
     if (agency !== 'all' && a.agency !== agency && !(a.related_agencies||[]).includes(agency)) return false;
@@ -1179,8 +1191,8 @@ function renderStoryCards(stories) {
 function filterLandscape() {
   const search = document.getElementById('searchInput').value.trim().toLowerCase();
   const state  = document.getElementById('landscapeStateFilter').value;
-  const from   = document.getElementById('landscapeDateFrom').value;
-  const to     = document.getElementById('landscapeDateTo').value;
+  const from   = ymToFromDate(document.getElementById('landscapeDateFrom').value);
+  const to     = ymToToDate(document.getElementById('landscapeDateTo').value);
   const filtered = allStories.filter(s => {
     if (search) {
       const hay = [s.title, (s.tags || []).join(' ')].join(' ').toLowerCase();
@@ -1212,13 +1224,57 @@ function clearLandscapeFilters() {
 
 
 
+// Populate year-month select dropdowns with options from Jan 2025
+// through the current month. Replaces native date pickers so earlier
+// years (pre-2025) never appear in the UI at all.
+function populateMonthSelects() {
+  const now = new Date();
+  const curY = now.getFullYear();
+  const curM = now.getMonth(); // 0-indexed
+  const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const options = [];
+  for (let y = 2025; y <= curY; y++) {
+    const endMonth = (y === curY) ? curM : 11;
+    for (let m = 0; m <= endMonth; m++) {
+      const ym = `${y}-${String(m+1).padStart(2,'0')}`;
+      options.push({ value: ym, label: `${monthNames[m]} ${y}` });
+    }
+  }
+  // Newest first
+  options.reverse();
+  ['dateFrom','dateTo','oversightDateFrom','oversightDateTo',
+   'landscapeDateFrom','landscapeDateTo'].forEach(id => {
+    const sel = document.getElementById(id);
+    if (!sel) return;
+    const firstOption = sel.querySelector('option');
+    const firstLabel = firstOption ? firstOption.textContent : 'From';
+    // Keep the placeholder option
+    while (sel.options.length > 1) sel.remove(1);
+    options.forEach(o => {
+      const opt = document.createElement('option');
+      opt.value = o.value;
+      opt.textContent = o.label;
+      sel.appendChild(opt);
+    });
+  });
+}
+
+// Translate "YYYY-MM" select value to a comparable date string.
+// fromDate uses the 1st of month; toDate uses end-of-month.
+function ymToFromDate(ym) {
+  if (!ym) return '';
+  return `${ym}-01`;
+}
+function ymToToDate(ym) {
+  if (!ym) return '';
+  const [y, m] = ym.split('-').map(Number);
+  const last = new Date(y, m, 0).getDate(); // last day of month
+  return `${ym}-${String(last).padStart(2,'0')}`;
+}
+
 // Init
 document.addEventListener('DOMContentLoaded', () => {
-  const today = new Date().toISOString().slice(0, 10);
-  ['dateFrom','dateTo','oversightDateFrom','oversightDateTo','landscapeDateFrom','landscapeDateTo'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.max = today;
-  });
+  populateMonthSelects();
   loadData();
 });
 
