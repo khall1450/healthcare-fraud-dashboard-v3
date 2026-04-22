@@ -169,6 +169,15 @@ _BOILERPLATE_PATTERNS = [
         r"(?:'s)?",
         _re.IGNORECASE,
     ),
+    # DOJ prosecutor unit names containing program keywords. The name
+    # "Health Care Fraud & Opioid Abuse Prevention Unit" (USAO NJ etc.)
+    # would otherwise trigger an Opioids tag on any case that unit
+    # prosecutes, regardless of whether the case involves opioids.
+    # Strip these unit-name phrases before tag regex runs.
+    _re.compile(
+        r"Health\s+Care\s+Fraud\s+(?:&|and)\s+Opioid\s+Abuse\s+Prevention\s+Unit",
+        _re.IGNORECASE,
+    ),
     # Anti-Kickback Statute boilerplate. DOJ kickback-case releases
     # routinely include a paragraph describing AKS scope — "items or
     # services covered by Medicare, Medicaid, and other federally funded
