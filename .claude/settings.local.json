@@ -166,7 +166,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Little Rock Psychologist item: add HHS-OIG \\(body credits Acting SAC of HHS-OIG Dallas Regional Office\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Four CA Residents \\\\$16M Hospice item: date -> 2025-11-18\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Coeur d'Alene item: restore Telehealth \\(HHS-OIG agent's quote explicitly calls this 'telemedicine fraud scheme' — hybrid telemarketing + telemed\\)\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Oncologist drug diversion item: drop Medicare + Pharmacy \\(black market drug resale; no Medicare billing; oncologist runs practice not pharmacy\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Oncologist drug diversion item: drop Medicare + Pharmacy \\(black market drug resale; no Medicare billing; oncologist runs practice not pharmacy\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"VRA Enterprises \\\\$17M item: restore HHS-OIG \\(investigator per body\\)\")"
     ]
   }
 }
