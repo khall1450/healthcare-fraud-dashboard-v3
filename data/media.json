@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T09:20:48.234352",
+    "last_updated": "2026-04-22T09:42:34.669742",
     "version": "1.0"
   },
   "stories": [
@@ -17,7 +17,8 @@
       "link_label": "Los Angeles Times Report",
       "social_posts": [],
       "tags": [
-        "Hospice"
+        "Hospice",
+        "Medicare"
       ],
       "state": "CA",
       "source_type": "news",
@@ -37,7 +38,8 @@
       "link_label": "Los Angeles Times Report",
       "social_posts": [],
       "tags": [
-        "Hospice"
+        "Hospice",
+        "Medicare"
       ],
       "state": "CA",
       "source_type": "news",
