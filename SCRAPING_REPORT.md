@@ -1,6 +1,6 @@
 # Scraping Coverage Report
 
-*Auto-generated 2026-04-21 12:12 UTC from `build_scraping_report.py`. Source of truth is live code + data; to edit narrative sections, edit `_scraping_report_template.md`. Feed list, scraper descriptions, and coverage counts are regenerated from `update.py`, `.github/workflows/*.yml`, and `data/actions.json`.*
+*Auto-generated 2026-04-22 12:12 UTC from `build_scraping_report.py`. Source of truth is live code + data; to edit narrative sections, edit `_scraping_report_template.md`. Feed list, scraper descriptions, and coverage counts are regenerated from `update.py`, `.github/workflows/*.yml`, and `data/actions.json`.*
 
 Summary: 23 configured feeds, 18 scrape_* functions.
 
@@ -145,12 +145,6 @@ Times are deliberately off-minute (not `:00` or `:30`) to spread API load. Each 
   - Method: RSS feed
   - URL: https://www.gao.gov/rss/reports.xml
 
-### DEA
-
-- **`DEA`** — *official* (enabled)
-  - Method: RSS feed
-  - URL: https://www.dea.gov/press-releases/rss
-
 ### MedPAC
 
 - **`MedPAC`** — *official* (enabled)
@@ -172,6 +166,12 @@ Times are deliberately off-minute (not `:00` or `:30`) to spread API load. Each 
   - Scrape FinCEN press releases + advisories.
   - URL: https://www.fincen.gov/news/press-releases
   - URL: https://www.fincen.gov
+
+### DEA
+
+- **`DEA`** — *official* (**disabled**)
+  - Method: RSS feed
+  - URL: https://www.dea.gov/press-releases/rss
 
 ### FDA
 
@@ -284,17 +284,17 @@ Items are deduped against existing `actions.json` by:
 
 | Source | Items |
 |---|---|
-| DOJ | 532 |
-| HHS-OIG | 55 |
+| DOJ | 531 |
+| HHS-OIG | 58 |
 | CMS | 30 |
 | Congress | 27 |
+| GAO | 6 |
 | White House | 5 |
-| GAO | 5 |
 | MACPAC | 4 |
 | Treasury | 3 |
 | HHS | 2 |
-| Media (manual) | 21 |
-| **Total** | **684** |
+| Media (manual) | 24 |
+| **Total** | **690** |
 
 ---
 
