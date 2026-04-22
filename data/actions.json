@@ -2625,27 +2625,6 @@
       "narrative_title": "HHS-OIG Flags Medicare Skin Substitute Billing as Vulnerable to Fraud, Waste, and Abuse"
     },
     {
-      "id": "fda-2025-08-29-kimberly-clark-40m-surgical-gowns",
-      "date": "2025-08-28",
-      "agency": "DOJ",
-      "type": "Criminal Enforcement",
-      "title": "Kimberly-Clark Corporation to Pay Up to $40M to Resolve Criminal Charge Related to the Sale of Adulterated MicroCool Surgical Gowns",
-      "amount": "$40.4 Million",
-      "amount_numeric": 40400000,
-      "officials": [],
-      "link": "https://www.justice.gov/opa/pr/kimberly-clark-corporation-pay-40m-resolve-criminal-charge-related-sale-adulterated",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [
-        "Medical Devices"
-      ],
-      "entities": [],
-      "state": "TX",
-      "source_type": "official",
-      "auto_fetched": false,
-      "related_agencies": []
-    },
-    {
       "id": "hhs-oig-2025-08-remote-patient-monitoring",
       "date": "2025-08-25",
       "agency": "HHS-OIG",
