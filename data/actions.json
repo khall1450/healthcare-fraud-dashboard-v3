@@ -7699,7 +7699,9 @@
       "state": "NC",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-08-22-2608032975",
