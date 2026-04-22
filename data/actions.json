@@ -13393,8 +13393,7 @@
       "social_posts": [],
       "tags": [
         "Opioids",
-        "Addiction Treatment",
-        "Medicaid"
+        "Addiction Treatment"
       ],
       "entities": [],
       "state": "VA",
@@ -13403,7 +13402,9 @@
       "doj_topics": [
         "Health Care Fraud"
       ],
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-11-475422216",
