@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T15:51:01.865693",
+    "last_updated": "2026-04-22T15:53:33.189125",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -5575,7 +5575,7 @@
       "social_posts": [],
       "tags": [
         "Medicaid",
-        "Mental Health"
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "SC",
@@ -6693,7 +6693,7 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Mental Health"
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "NC",
@@ -11214,7 +11214,7 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Mental Health"
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "MA",
@@ -12826,7 +12826,7 @@
         "Medicaid",
         "TRICARE",
         "Medicare",
-        "Mental Health"
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "CA",
@@ -14801,7 +14801,7 @@
         "Medicare",
         "Medicaid",
         "Medicaid Managed Care",
-        "Mental Health"
+        "Behavioral Health"
       ],
       "entities": [],
       "state": null,
