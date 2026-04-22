@@ -157,7 +157,9 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"TX Man Controlled Substance: drop Opioids \\(drugs not specified — could be any controlled substance\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Local Physician Adulterating item: date -> 2025-12-18, restore HHS-OIG\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"NP 18 months item: drop Opioids \\(drug was amphetamine/Adderall — consistent with Cheshire Nurse + TX Man corrections\\)\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"NJ Pharmacy Owner Dificid item: drop Opioids \\(Dificid is antibiotic, not opioid\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"NJ Pharmacy Owner Dificid item: drop Opioids \\(Dificid is antibiotic, not opioid\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -m \"Expand HHS-OIG regex: 'Health and Human Services Agency Office of Inspector General' variant. Restore NJ Pharmacy item.\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Diagnostic Lab item: drop Nursing Home \\(LTC facilities were referral source, not fraud vector; fraud is lab kickbacks\\)\")"
     ]
   }
 }

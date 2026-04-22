@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T11:51:59.579280",
+    "last_updated": "2026-04-22T11:57:41.198090",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -3958,7 +3958,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Long-Term Care"
       ],
       "entities": [],
       "state": "LA",
@@ -6905,8 +6906,7 @@
       "social_posts": [],
       "tags": [
         "Lab Testing",
-        "Medicare",
-        "Nursing Home"
+        "Medicare"
       ],
       "entities": [],
       "state": "MD",
