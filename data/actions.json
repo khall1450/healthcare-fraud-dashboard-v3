@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T11:26:10.758011",
+    "last_updated": "2026-04-22T11:28:42.284552",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -6546,7 +6546,8 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid"
+        "Medicaid",
+        "Mental Health"
       ],
       "entities": [],
       "state": "VA",
