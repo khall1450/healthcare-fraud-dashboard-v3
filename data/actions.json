@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T12:22:44.642782",
+    "last_updated": "2026-04-22T12:24:02.815469",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -7077,7 +7077,8 @@
       "tags": [
         "Medicare",
         "DME",
-        "Genetic Testing"
+        "Genetic Testing",
+        "Telehealth"
       ],
       "entities": [],
       "state": "WA",
