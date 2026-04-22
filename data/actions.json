@@ -8406,8 +8406,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Healthcare Worker Pleads Guilty to Double Billing District of Columbia Medicaid Programs",
-      "amount": null,
-      "amount_numeric": 0,
+      "amount": "$113,243",
+      "amount_numeric": 113243,
       "officials": [],
       "link": "https://www.justice.gov/usao-dc/pr/healthcare-worker-pleads-guilty-double-billing-district-columbia-medicaid-programs",
       "link_label": "DOJ Press Release",
@@ -8415,7 +8415,8 @@
       "tags": [
         "Medicaid",
         "Personal Care",
-        "Mental Health"
+        "Mental Health",
+        "Behavioral Health"
       ],
       "entities": [],
       "state": "DC",
