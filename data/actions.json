@@ -4583,10 +4583,11 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicare"
+        "Medicare",
+        "Wound Care"
       ],
       "entities": [],
-      "state": null,
+      "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
