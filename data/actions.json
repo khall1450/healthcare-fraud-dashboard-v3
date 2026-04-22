@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T09:57:22.105856",
+    "last_updated": "2026-04-22T09:45:09.172827",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -15699,7 +15699,9 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Pharmacy"
+        "Pharmacy",
+        "Medicare",
+        "TRICARE"
       ],
       "entities": [],
       "state": "NJ",

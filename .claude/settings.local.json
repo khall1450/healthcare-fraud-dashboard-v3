@@ -140,7 +140,10 @@
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -m 'Revert MFCU->Medicaid inference on 2 items + disable rule in backfill_tags.py *)",
       "Bash(git fetch *)",
       "Bash(git -c user.name=khall1450 -c user.email=khall1450@users.noreply.github.com commit -am 'Tighten media AI review: reject hearing / testimony rewrites *)",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Both LA Times hospice pieces: add Medicare tag\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Both LA Times hospice pieces: add Medicare tag\")",
+      "Bash(grep -v \"^---\\\\|^-$\\\\|last_updated\\\\|last_scraped\")",
+      "Bash(grep -v \"^---\\\\|^-$\\\\|last_updated\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Former Pharmacy President item: add Medicare + TRICARE tags\")"
     ]
   }
 }
