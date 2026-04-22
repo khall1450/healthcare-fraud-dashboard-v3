@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T14:29:38.702954",
+    "last_updated": "2026-04-22T14:30:17.537433",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -2545,7 +2545,7 @@
         "Medical Devices",
         "Medicare"
       ],
-      "state": "AL, FL",
+      "state": "AL, FL, MD",
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
@@ -7402,7 +7402,7 @@
         "Medical Devices"
       ],
       "entities": [],
-      "state": "MD, FL",
+      "state": "MD, FL, AL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
