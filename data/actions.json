@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T11:21:41.040759",
+    "last_updated": "2026-04-22T11:23:59.600793",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -4104,11 +4104,10 @@
         "Medicaid",
         "Telehealth",
         "Medicare",
-        "Pharmacy",
-        "Opioids"
+        "Pharmacy"
       ],
       "entities": [],
-      "state": "CA",
+      "state": "CA, FL",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
