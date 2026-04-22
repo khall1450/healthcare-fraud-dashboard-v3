@@ -163,7 +163,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"GTI \\\\$1M diagnostic lab item: state MD -> MD, AZ \\(AZ = lab HQ/ops, MD = prosecution venue\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"PCL \\\\$9M diagnostic lab item: state -> MD, IN \\(MD = USAO-MD co-prosecution, IN = Indianapolis HQ + USAO-SDIN co-prosecution\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"TX Businessman COVID test kit item: state MO -> MO, TX \\(operated labs in both states\\)\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Little Rock Psychologist item: add HHS-OIG \\(body credits Acting SAC of HHS-OIG Dallas Regional Office\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Little Rock Psychologist item: add HHS-OIG \\(body credits Acting SAC of HHS-OIG Dallas Regional Office\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Four CA Residents \\\\$16M Hospice item: date -> 2025-11-18\")"
     ]
   }
 }
