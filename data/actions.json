@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T11:33:36.077243",
+    "last_updated": "2026-04-22T11:33:58.315278",
     "version": "1.0",
     "last_scraped": "2026-04-22T09:02:11.249285"
   },
@@ -6593,17 +6593,12 @@
       "link": "https://www.justice.gov/usao-sdny/pr/owner-physical-rehabilitation-company-pleads-guilty-submitting-more-20-million",
       "link_label": "DOJ Press Release",
       "social_posts": [],
-      "tags": [
-        "Medicare",
-        "Physical Therapy"
-      ],
+      "tags": [],
       "entities": [],
       "state": "NY",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": [
-        "HHS-OIG"
-      ]
+      "related_agencies": []
     },
     {
       "id": "doj-2025-12-10-2302354038",
