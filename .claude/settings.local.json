@@ -161,7 +161,8 @@
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -m \"Expand HHS-OIG regex: 'Health and Human Services Agency Office of Inspector General' variant. Restore NJ Pharmacy item.\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"Diagnostic Lab item: drop Nursing Home \\(LTC facilities were referral source, not fraud vector; fraud is lab kickbacks\\)\")",
       "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"GTI \\\\$1M diagnostic lab item: state MD -> MD, AZ \\(AZ = lab HQ/ops, MD = prosecution venue\\)\")",
-      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"PCL \\\\$9M diagnostic lab item: state -> MD, IN \\(MD = USAO-MD co-prosecution, IN = Indianapolis HQ + USAO-SDIN co-prosecution\\)\")"
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"PCL \\\\$9M diagnostic lab item: state -> MD, IN \\(MD = USAO-MD co-prosecution, IN = Indianapolis HQ + USAO-SDIN co-prosecution\\)\")",
+      "Bash(git -c user.name=\"khall1450\" -c user.email=\"khall1450@users.noreply.github.com\" commit -am \"TX Businessman COVID test kit item: state MO -> MO, TX \\(operated labs in both states\\)\")"
     ]
   }
 }
