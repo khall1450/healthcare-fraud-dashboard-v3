@@ -412,25 +412,12 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
     <div>
       <p style="font-size:0.8rem;color:var(--text-muted);margin:0;">Federal criminal and civil actions against health care fraud</p>
       <p style="font-size:0.75rem;color:var(--text-muted);margin:0.25rem 0 0 0;">
-        <em><strong>Agencies:</strong> Primary agency is DOJ (the prosecutor). HHS-OIG is tagged when named as investigator or credited for assistance.<span class="disclaimer-more d-none"> Other federal investigators (FBI, DEA, FDA OCI, IRS-CI, HSI, USPIS, DCIS) and state Medicaid Fraud Control Units are not tagged individually.</span></em><br>
-        <em><strong>Amounts:</strong> Aim to reflect size of the fraud — stated loss or scheme size when the press release names one, else the resolution amount.<span class="disclaimer-more d-none"> FCA settlements/judgments include statutory multipliers (up to 3× government loss plus per-claim penalties), so those typically exceed the underlying loss by 1.5×–3×. Ability-to-pay-adjusted criminal penalties are excluded.</span></em>
-        <a href="#" id="disclaimerToggle" style="font-size:0.75rem;margin-left:0.25rem;color:var(--text-muted);text-decoration:underline;font-style:italic;">Read more</a>
+        <em><strong>Agencies:</strong> Primary agency is DOJ (the prosecutor). HHS-OIG is tagged when named as investigator or credited for assistance.<span class="disclaimer-more more-enforcement d-none"> Other federal investigators (FBI, DEA, FDA OCI, IRS-CI, HSI, USPIS, DCIS) and state Medicaid Fraud Control Units are not tagged individually.</span></em><br>
+        <em><strong>Amounts:</strong> Aim to reflect size of the fraud — stated loss or scheme size when the press release names one, else the resolution amount.<span class="disclaimer-more more-enforcement d-none"> FCA settlements/judgments include statutory multipliers (up to 3× government loss plus per-claim penalties), so those typically exceed the underlying loss by 1.5×–3×. Ability-to-pay-adjusted criminal penalties are excluded.</span></em>
+        <a href="#" class="disclaimer-toggle" data-target="more-enforcement" style="font-size:0.75rem;margin-left:0.25rem;color:var(--text-muted);text-decoration:underline;font-style:italic;">Read more</a>
       </p>
     </div>
   </div>
-  <script>
-    (function() {
-      var toggle = document.getElementById('disclaimerToggle');
-      if (!toggle) return;
-      toggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        var mores = document.querySelectorAll('.disclaimer-more');
-        var expanded = !mores[0].classList.contains('d-none');
-        mores.forEach(function(m) { m.classList.toggle('d-none'); });
-        toggle.textContent = expanded ? 'Read more' : 'Read less';
-      });
-    })();
-  </script>
   <div id="noResults" class="text-center py-5 d-none">
     <i class="fa-solid fa-circle-exclamation fa-3x text-muted mb-3"></i>
     <p class="text-muted">No actions match your filters.</p>
@@ -449,7 +436,11 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
   <div class="d-flex align-items-center justify-content-between mb-3">
     <div>
       <p style="font-size:0.8rem;color:var(--text-muted);margin:0;">Federal audits, agency initiatives, congressional hearings, and investigations to combat health care fraud</p>
-      <p style="font-size:0.75rem;color:var(--text-muted);margin:0;"><em>Scope by agency: <strong>CMS</strong> — rulemaking, program-integrity initiatives, and enforcement actions specific to fraud. <strong>Congress</strong> — health care fraud hearings, investigations, committee reports, and press releases (legislation and general oversight not tracked). <strong>GAO</strong> — fraud-related reports. <strong>HHS-OIG</strong> — audits, evaluations, and semiannual reports to Congress. <strong>MACPAC / MedPAC</strong> — fraud/integrity-relevant advisory reports (general payment-policy work excluded). <strong>White House</strong> — executive orders and fraud-related task force announcements. Items must involve federal health care fraud, waste, or abuse; pandemic relief, SNAP, housing, and other non-HC oversight are excluded.</em></p>
+      <p style="font-size:0.75rem;color:var(--text-muted);margin:0;">
+        <em><strong>Scope:</strong> Federal audits, initiatives, hearings, and policy actions focused on health care fraud, waste, or abuse.<span class="disclaimer-more more-oversight d-none"> Pandemic relief, SNAP, housing, and other non-HC oversight are excluded.</span></em><span class="disclaimer-more more-oversight d-none"><br>
+        <em><strong>By agency:</strong> <strong>CMS</strong> — rulemaking, program-integrity initiatives, and enforcement actions specific to fraud. <strong>Congress</strong> — health care fraud hearings, investigations, committee reports, and press releases (legislation and general oversight not tracked). <strong>GAO</strong> — fraud-related reports. <strong>HHS-OIG</strong> — audits, evaluations, and semiannual reports to Congress. <strong>MACPAC / MedPAC</strong> — fraud/integrity-relevant advisory reports (general payment-policy work excluded). <strong>White House</strong> — executive orders and fraud-related task force announcements.</em></span>
+        <a href="#" class="disclaimer-toggle" data-target="more-oversight" style="font-size:0.75rem;margin-left:0.25rem;color:var(--text-muted);text-decoration:underline;font-style:italic;">Read more</a>
+      </p>
     </div>
   </div>
   <div id="oversightNoResults" class="text-center py-5 d-none">
@@ -470,7 +461,10 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
     <div class="d-flex align-items-center justify-content-between mb-3">
       <div>
         <p style="font-size:0.8rem;color:var(--text-muted);margin:0;">Major investigations and media coverage uncovering health care fraud</p>
-        <p style="font-size:0.75rem;color:var(--text-muted);margin:0;"><em>Highlights notable investigative reporting and media coverage of federal health care fraud — not a comprehensive record of all fraud-related news. Items are curated for substantive investigative work (original reporting, data analysis, long-form investigations) rather than daily news rewrites of agency press releases. Outlets shown on each card.</em></p>
+        <p style="font-size:0.75rem;color:var(--text-muted);margin:0;">
+          <em><strong>Scope:</strong> Notable investigative reporting on federal health care fraud — not a comprehensive news archive.<span class="disclaimer-more more-media d-none"> Curated for substantive investigative work (original reporting, data analysis, long-form investigations), not daily rewrites of agency press releases. Outlets shown on each card.</span></em>
+          <a href="#" class="disclaimer-toggle" data-target="more-media" style="font-size:0.75rem;margin-left:0.25rem;color:var(--text-muted);text-decoration:underline;font-style:italic;">Read more</a>
+        </p>
       </div>
     </div>
     <div id="landscapeGrid" class="row g-3"></div>
@@ -1043,6 +1037,22 @@ function updateAgencyLists(actions) {
       : agencies[0];
   }
 }
+
+// Generic "Read more" toggle for disclaimers across tabs.
+(function() {
+  document.addEventListener('click', function(e) {
+    var toggle = e.target.closest('.disclaimer-toggle');
+    if (!toggle) return;
+    e.preventDefault();
+    var target = toggle.getAttribute('data-target');
+    if (!target) return;
+    var mores = document.querySelectorAll('.' + target);
+    if (!mores.length) return;
+    var expanded = !mores[0].classList.contains('d-none');
+    mores.forEach(function(m) { m.classList.toggle('d-none'); });
+    toggle.textContent = expanded ? 'Read more' : 'Read less';
+  });
+})();
 
 async function loadData() {
   let data = null;
