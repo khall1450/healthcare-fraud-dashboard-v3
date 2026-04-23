@@ -63,7 +63,9 @@ body { background: var(--bg); font-family: 'Public Sans', 'Segoe UI', system-ui,
 h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 
 /* HEADER */
-.dashboard-header { background: var(--paragon-blue); color: white; box-shadow: var(--shadow); }
+.dashboard-header { background: var(--paragon-blue); color: white; box-shadow: var(--shadow); border-bottom: 3px solid var(--blaze); }
+.header-narrative { font-family: 'Bona Nova', Georgia, serif; font-size: 1.0rem; line-height: 1.55; color: rgba(255,255,255,0.85); }
+.header-narrative .highlight { color: rgba(255,255,255,0.85); }
 .header-seal { color: var(--blaze); display: flex; align-items: center; }
 .header-title { font-family: 'Bona Nova', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #ffffff; letter-spacing: 0; line-height: 1.1; }
 .header-subtitle { font-family: 'Public Sans', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.6); letter-spacing: 0.07em; text-transform: uppercase; font-weight: 500; line-height: 1.2; margin-top: 2px !important; }
@@ -90,10 +92,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 .spotlight-dot:hover { background: rgba(255,255,255,0.4); }
 
 /* NARRATIVE BANNER */
-.narrative-banner { background: var(--paragon-blue); padding: 4px 0 18px; border-bottom: 3px solid var(--blaze); }
-.narrative-banner p { font-family: 'Bona Nova', Georgia, serif; font-size: 1.05rem; line-height: 1.65; color: rgba(255,255,255,0.85); margin: 0; max-width: 900px; }
-.narrative-banner .highlight { color: var(--sunrise); font-weight: 700; }
-.narrative-banner .narrative-sub { font-family: 'Public Sans', sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.38); margin-top: 6px; letter-spacing: 0.03em; }
+/* .narrative-banner styles removed — paragraph now lives inside .dashboard-header */
 
 /* FILTER BAR */
 .view-tab { background: none; border: none; padding: 12px 24px; font-family: 'Public Sans', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.2s; }
@@ -230,16 +229,22 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 <!-- HEADER -->
 <header class="dashboard-header">
   <div class="container-fluid px-4">
-    <div class="d-flex align-items-center py-3" style="min-height: 200px;">
-      <div class="d-flex align-items-center gap-3" style="flex: 1 1 50%; min-width: 0;">
-        <div class="header-seal"><i class="fa-solid fa-shield-halved fa-2x"></i></div>
-        <div>
-          <h1 class="header-title mb-0">Health Care Fraud Dashboard</h1>
-          <p class="header-subtitle mb-0" id="headerAgencyList">DOJ &bull; HHS &bull; HHS-OIG &bull; CMS &bull; GAO &bull; Congress &bull; Treasury &bull; White House &bull; MedPAC &bull; MACPAC &bull; Media</p>
+    <div class="d-flex align-items-center py-4">
+      <!-- Left: title block + narrative paragraph stacked -->
+      <div style="flex: 1 1 55%; min-width: 0;">
+        <div class="d-flex align-items-center gap-3" style="margin-bottom: 14px;">
+          <div class="header-seal"><i class="fa-solid fa-shield-halved fa-2x"></i></div>
+          <div>
+            <h1 class="header-title mb-0">Health Care Fraud Dashboard</h1>
+            <p class="header-subtitle mb-0" id="headerAgencyList">DOJ &bull; HHS &bull; HHS-OIG &bull; CMS &bull; GAO &bull; Congress &bull; Treasury &bull; White House &bull; MedPAC &bull; MACPAC &bull; Media</p>
+          </div>
         </div>
+        <p class="header-narrative mb-0">
+          An estimated <a href="https://www.nhcaa.org/tools-insights/about-health-care-fraud/the-challenge-of-health-care-fraud/" target="_blank" rel="noopener" class="highlight" style="color:inherit;text-decoration:underline dotted;">3% to 10%</a> of total U.S. health spending is lost to health care fraud every year. This dashboard tracks the federal response starting in 2025, including criminal and civil enforcement actions and federal oversight and accountability measures. It also highlights investigative media coverage exposing fraud across the system.
+        </p>
       </div>
-      <!-- Rotating Paragon Spotlight (vertically centered in the right half of the header) -->
-      <div style="flex: 1 1 50%; display: flex; justify-content: center; align-items: center; min-width: 0;">
+      <!-- Rotating Paragon Spotlight (vertically centered across the combined header area) -->
+      <div style="flex: 1 1 45%; display: flex; justify-content: center; align-items: center; min-width: 0;">
       <div class="spotlight-card" id="spotlightCard">
         <div class="spotlight-slide active" data-index="0">
           <div class="spotlight-eyebrow">Paragon Research: ACA</div>
@@ -304,15 +309,6 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
     </div>
   </div>
 </header>
-
-<!-- NARRATIVE BANNER -->
-<div class="narrative-banner">
-  <div class="container-fluid px-4">
-    <p>
-      An estimated <a href="https://www.nhcaa.org/tools-insights/about-health-care-fraud/the-challenge-of-health-care-fraud/" target="_blank" rel="noopener" class="highlight" style="color:inherit;text-decoration:underline dotted;">3% to 10%</a> of total U.S. health spending is lost to health care fraud every year. This dashboard tracks the federal response starting in 2025, including criminal and civil enforcement actions and federal oversight and accountability measures. It also highlights investigative media coverage exposing fraud across the system.
-    </p>
-  </div>
-</div>
 
 <!-- VIEW TABS -->
 <div class="view-tabs sticky-top" style="background:#fff;border-bottom:1px solid var(--border);box-shadow:0 2px 8px rgba(0,46,109,0.08);z-index:100;">
