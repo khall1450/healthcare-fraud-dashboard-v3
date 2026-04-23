@@ -9322,9 +9322,11 @@
         "Medicare",
         "Pharmacy",
         "Lab Testing",
+        "Genetic Testing",
         "Opioids",
         "Hospice",
-        "Home Health"
+        "Home Health",
+        "Mental Health"
       ],
       "entities": [],
       "state": "TX",
