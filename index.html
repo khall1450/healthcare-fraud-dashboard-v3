@@ -1402,12 +1402,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Official government sources (auto-scraped daily)</div>
         <ul style="padding-left:20px;margin-bottom:18px;">
-          <li><strong>DOJ</strong> &mdash; the Office of Public Affairs press feed (filtered on the "Health Care Fraud" topic tag) plus individual U.S. Attorney's Office district scrapers covering every district that posts health-care-fraud enforcement.</li>
+          <li><strong>DOJ</strong> &mdash; the Office of Public Affairs press feed (filtered on the "Health Care Fraud" topic tag) plus a consolidated DOJ scraper that surfaces U.S. Attorney's Office releases from all 93 federal districts.</li>
           <li><strong>HHS-OIG</strong> &mdash; the Office of Inspector General press releases and the audit/evaluation reports feed.</li>
-          <li><strong>CMS</strong> &mdash; the CMS newsroom, fact sheets, and the dedicated <code>/fraud</code> page.</li>
+          <li><strong>CMS</strong> &mdash; the CMS newsroom and the dedicated <code>/fraud</code> page.</li>
           <li><strong>HHS</strong> &mdash; the HHS press room (structurally constrained by Akamai bot protection; fraud-relevant HHS items typically cross-post to CMS, which is captured automatically).</li>
           <li><strong>GAO</strong> &mdash; the Government Accountability Office RSS feed for healthcare-fraud-related reports and testimony.</li>
-          <li><strong>Congress</strong> &mdash; committee pages (House Oversight, House Energy &amp; Commerce, Senate Finance, Senate HSGAC) for investigations, hearings, and legislative action.</li>
+          <li><strong>Congress</strong> &mdash; committee pages (House Oversight, House Energy &amp; Commerce, House Judiciary, Senate Finance, Senate Judiciary) for investigations, hearings, and legislative action.</li>
           <li><strong>White House</strong> &mdash; whitehouse.gov press releases, fact sheets, and executive orders.</li>
           <li><strong>Treasury / FinCEN</strong> &mdash; financial-crime advisories and enforcement actions tied to healthcare fraud.</li>
           <li><strong>MACPAC and MedPAC</strong> &mdash; congressional advisory commission reports on Medicaid and Medicare program integrity.</li>
@@ -1416,10 +1416,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Investigative media</div>
         <p style="margin-bottom:10px;">
           Media items are pulled via Google News queries filtered to a whitelist of outlets with a documented
-          record of healthcare-fraud reporting (ProPublica, KFF Health News, STAT News, CBS News, NYT, WSJ,
-          Washington Post, NPR, Fox News, Bloomberg, Reuters, Axios, The Guardian, NY Post, LA Times, and several
-          regional outlets with active investigative desks). Each candidate is AI-screened against the dashboard's
-          inclusion criteria before it's added.
+          record of healthcare-fraud reporting: ProPublica, KFF Health News, STAT News, The New York Times,
+          The Wall Street Journal, The Washington Post, CBS News, NPR, Bloomberg, Reuters, The Atlantic,
+          The New Yorker, Los Angeles Times, Chicago Tribune, Boston Globe, Miami Herald, Tampa Bay Times,
+          and the San Francisco Chronicle. Each candidate is AI-screened against the dashboard's inclusion
+          criteria before it's added. Individual stories from outlets outside the whitelist can also be
+          added manually when editorially warranted.
         </p>
 
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:16px 0 8px;">How items are classified</div>
