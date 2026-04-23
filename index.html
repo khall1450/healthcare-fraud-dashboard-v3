@@ -1441,10 +1441,9 @@ document.addEventListener('DOMContentLoaded', () => {
           Tags, state, amount, and action type are extracted from the source text using regex rules plus AI
           extraction with anchored citations (the model must quote the source verbatim for any field it
           populates, and the code validates that the quoted phrase actually appears in the article). The
-          author also makes manual edits where automated classification got something wrong &mdash; re-reading
-          items and adjusting tags, state, amount, or action type as needed. Titles generally match the
-          official press-release headline (or, for media, the article headline) verbatim, with occasional
-          manual edits for readability.
+          author also makes manual edits to improve accuracy. Titles generally match the official
+          press-release headline (or, for media, the article headline) verbatim, with occasional manual
+          edits for readability.
         </p>
 
         <p style="margin-bottom:10px;font-size:0.82rem;color:#666;font-style:italic;">
