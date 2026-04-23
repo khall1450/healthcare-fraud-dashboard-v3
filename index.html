@@ -1408,12 +1408,18 @@ document.addEventListener('DOMContentLoaded', () => {
           following hold &mdash; the title contains a health-care-specific term, the body contains a
           fraud/enforcement keyword, and the body contains health care context.
         </p>
-        <p style="margin-bottom:18px;">
+        <p style="margin-bottom:10px;">
           The <strong>HHS-OIG press releases</strong> scraper also feeds this tab indirectly: OIG regularly
           announces enforcement outcomes by linking out to the DOJ press release. When an OIG item's link
           points to <code>justice.gov</code> or its title contains enforcement keywords (sentenced, indicted,
           convicted, agrees to pay, settlement, etc.), the ingestion code rewrites the agency field from
           HHS-OIG to DOJ and the item lands here instead of on Oversight.
+        </p>
+        <p style="margin-bottom:18px;">
+          A second gate ensures purity: if any Criminal Enforcement or Civil Action item comes through with
+          an agency other than DOJ after all re-labeling, the ingestion code reclassifies its type to Audit
+          so it routes to Oversight instead. The result is that 100% of items on the Federal Enforcement
+          tab are DOJ.
         </p>
 
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Federal Oversight &amp; Accountability tab</div>
@@ -1426,6 +1432,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <li><strong>CMS</strong> &mdash; the CMS newsroom and the dedicated <code>/fraud</code> page.</li>
           <li><strong>GAO</strong> &mdash; the Government Accountability Office reports RSS feed.</li>
           <li><strong>Congress</strong> &mdash; committee-page scrapers for House Oversight, House Energy &amp; Commerce, House Ways &amp; Means, House Judiciary, Senate Finance, Senate HELP, and Senate Judiciary.</li>
+          <li><strong>Congress.gov hearings</strong> &mdash; a separate daily job that pulls congressional hearing records via the Congress.gov API, keeps items whose title matches a health-care-fraud phrase list (Medicare/Medicaid/TRICARE/etc. + fraud/kickback/anti-kickback/false claims/pill mill/etc.) or whose committee is a health care committee with fraud-context title wording, and files the result as action type <em>Hearing</em>.</li>
           <li><strong>White House</strong> &mdash; whitehouse.gov press releases, fact sheets, and executive orders.</li>
           <li><strong>Treasury / FinCEN</strong> &mdash; FinCEN financial-crime advisories and enforcement actions.</li>
           <li><strong>MACPAC and MedPAC</strong> &mdash; congressional advisory commission reports on Medicaid and Medicare program integrity.</li>
