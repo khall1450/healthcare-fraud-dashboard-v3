@@ -485,7 +485,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 <footer class="dashboard-footer">
   <div class="container-fluid px-4">
     <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
-      <p class="mb-0 text-muted small" style="color:rgba(255,255,255,0.5)!important">Data sourced from <span id="footerAgencyList">DOJ, HHS, HHS-OIG, CMS, GAO, Congress, Treasury, White House, MedPAC, and MACPAC</span>, plus investigative media reports. <a href="#" data-bs-toggle="modal" data-bs-target="#sourcesModal" style="color:rgba(255,255,255,0.7);text-decoration:underline;text-underline-offset:2px;">Read more &rarr;</a></p>
+      <p class="mb-0 text-muted small" style="color:rgba(255,255,255,0.5)!important">Data sourced from <span id="footerAgencyList">DOJ, HHS, HHS-OIG, CMS, GAO, Congress, Treasury, White House, MedPAC, and MACPAC</span>, plus investigative media reports. Errors are possible &mdash; verify against the linked primary source. <a href="#" data-bs-toggle="modal" data-bs-target="#sourcesModal" style="color:rgba(255,255,255,0.7);text-decoration:underline;text-underline-offset:2px;">Read more &rarr;</a></p>
       <p class="mb-0 text-muted small" style="color:rgba(255,255,255,0.5)!important">Built by <a href="https://paragoninstitute.org/profile/katherine-hall/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.7);text-decoration:underline;text-underline-offset:2px;">Katherine Hall</a>, <a href="https://paragoninstitute.org/" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.7);text-decoration:underline;text-underline-offset:2px;">Paragon Health Institute</a></p>
     </div>
   </div>
@@ -1432,9 +1432,18 @@ document.addEventListener('DOMContentLoaded', () => {
           Federal Enforcement tab match the official press-release headline verbatim.
         </p>
 
-        <p style="margin-bottom:0;font-size:0.82rem;color:#666;font-style:italic;">
+        <p style="margin-bottom:10px;font-size:0.82rem;color:#666;font-style:italic;">
           This dashboard does not generate original reporting. It aggregates publicly available federal enforcement
           and oversight activity into a single filterable view and links back to the original source for every item.
+        </p>
+
+        <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:16px 0 8px;">Accuracy and corrections</div>
+        <p style="margin-bottom:0;font-size:0.85rem;color:#303030;">
+          Classifications, tags, and dollar amounts on this dashboard are generated from a mix of automated
+          extraction and manual curation, and errors are possible. The linked primary source is always the
+          authoritative record. Please verify any specific figure, charge, or agency attribution against the
+          underlying press release or report before citing it. Found a mistake?
+          <a href="https://paragoninstitute.org/profile/katherine-hall/" target="_blank" rel="noopener noreferrer" style="color:#002E6D;text-decoration:underline;">Contact the author</a>.
         </p>
       </div>
     </div>
