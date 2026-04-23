@@ -8790,14 +8790,15 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "District of Arizona: District of Arizona Charges 7 Defendants as Part of National Health Care Fraud Takedown",
-      "amount": "$1.1 Billion",
-      "amount_numeric": 1100000000.0,
+      "amount": "$1.65 Billion",
+      "amount_numeric": 1650000000.0,
       "officials": [],
       "link": "https://www.justice.gov/usao-az/pr/district-arizona-charges-7-defendants-part-national-health-care-fraud-takedown",
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
         "Skin Substitutes",
+        "Wound Care",
         "Medicaid",
         "TRICARE",
         "Medicare",
@@ -8808,7 +8809,9 @@
       "state": "AZ",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-3560403939",
