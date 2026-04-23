@@ -72,7 +72,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 .btn-refresh:hover { background: var(--sunrise); color: #fff; transform: translateY(-1px); box-shadow: 0 3px 8px rgba(255,148,26,0.4); }
 
 /* SPOTLIGHT CARD (in header) */
-.spotlight-card { flex: 0 1 560px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); padding: 14px 22px 18px; position: relative; overflow: hidden; min-height: 92px; display: flex; align-items: stretch; }
+.spotlight-card { flex: 0 1 420px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); padding: 18px 24px 22px; position: relative; overflow: hidden; min-height: 140px; display: flex; align-items: center; }
 .spotlight-slide { display: none; width: 100%; animation: fadeSlide 0.45s ease; flex-direction: column; justify-content: center; }
 .spotlight-slide.active { display: flex; }
 @keyframes fadeSlide { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
@@ -239,7 +239,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
         </div>
       </div>
       <!-- Rotating Paragon Spotlight (centered within the right half of the header) -->
-      <div style="flex: 1 1 50%; display: flex; justify-content: center; min-width: 0;">
+      <div style="flex: 1 1 50%; display: flex; justify-content: center; align-items: center; min-width: 0;">
       <div class="spotlight-card" id="spotlightCard">
         <div class="spotlight-slide active" data-index="0">
           <div class="spotlight-eyebrow">Paragon Research: ACA</div>
