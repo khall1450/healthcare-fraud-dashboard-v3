@@ -9132,7 +9132,6 @@
       "social_posts": [],
       "tags": [
         "Medicare",
-        "Medicaid",
         "Medicare Advantage",
         "TRICARE",
         "DME",
@@ -9140,14 +9139,15 @@
         "Lab Testing",
         "Genetic Testing",
         "Telehealth",
-        "Addiction Treatment",
         "Opioids"
       ],
       "entities": [],
       "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-4291362584",
