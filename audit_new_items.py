@@ -263,31 +263,56 @@ def fetch_doj_topics(url: str, page=None) -> list[str] | None:
     browser session across many fetches. If not provided, a temporary
     browser is launched just for this call (expensive — prefer to batch).
     """
+    topics, _body = fetch_doj_page_data(url, page=page)
+    return topics
+
+
+def fetch_doj_page_data(url: str, page=None) -> tuple:
+    """Fetch a justice.gov press release via Playwright, returning both
+    DOJ topic tags and the rendered body text.
+
+    The body text is critical as a fallback classifier when DOJ's topic
+    tagger fails (some USAO pages are untagged, some OPA pages are
+    tagged only with a category like "False Claims Act"). justice.gov
+    is Akamai-bot-blocked to plain requests, so we must reuse the
+    Playwright navigation we already do for topic extraction.
+
+    Returns ``(topics, body_text)`` where:
+      - topics: list[str] | None — same semantics as fetch_doj_topics
+      - body_text: str — rendered body text, or "" if fetch failed
+    """
     if not url or "justice.gov" not in url:
-        return None
+        return (None, "")
 
     try:
         from playwright.sync_api import sync_playwright
         from bs4 import BeautifulSoup
     except ImportError:
-        print("fetch_doj_topics: playwright or bs4 not installed", file=sys.stderr)
-        return None
+        print("fetch_doj_page_data: playwright or bs4 not installed", file=sys.stderr)
+        return (None, "")
 
-    def _extract_from_html(html: str) -> list[str] | None:
+    def _extract(html: str):
         soup = BeautifulSoup(html, "lxml")
         node = soup.find(class_="node-topics")
-        if not node:
-            return None
-        return extract_topics_from_text(node.get_text(" ", strip=True))
+        topics = None
+        if node:
+            topics = extract_topics_from_text(node.get_text(" ", strip=True))
+        main = soup.find("main") or soup.find("article") or soup.body
+        body_text = ""
+        if main:
+            for t in main.find_all(["nav", "footer", "aside", "script", "style"]):
+                t.decompose()
+            body_text = main.get_text(" ", strip=True)
+        return topics, body_text
 
     if page is not None:
         try:
             page.goto(url, wait_until="domcontentloaded", timeout=25000)
             page.wait_for_timeout(1200)
-            return _extract_from_html(page.content())
+            return _extract(page.content())
         except Exception as e:
-            print(f"  fetch_doj_topics failed for {url}: {e}", file=sys.stderr)
-            return None
+            print(f"  fetch_doj_page_data failed for {url}: {e}", file=sys.stderr)
+            return (None, "")
 
     # Standalone fallback — launches a browser just for this call.
     with sync_playwright() as p:
@@ -302,10 +327,10 @@ def fetch_doj_topics(url: str, page=None) -> list[str] | None:
         try:
             pg.goto(url, wait_until="domcontentloaded", timeout=25000)
             pg.wait_for_timeout(1200)
-            return _extract_from_html(pg.content())
+            return _extract(pg.content())
         except Exception as e:
-            print(f"  fetch_doj_topics failed for {url}: {e}", file=sys.stderr)
-            return None
+            print(f"  fetch_doj_page_data failed for {url}: {e}", file=sys.stderr)
+            return (None, "")
         finally:
             browser.close()
 

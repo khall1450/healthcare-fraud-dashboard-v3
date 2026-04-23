@@ -104,7 +104,8 @@ def _guess_agency(host: str) -> str:
 
 def build_item_from_url(url: str, agency_override: str = "",
                          type_override: str = "",
-                         is_media: bool = False) -> dict:
+                         is_media: bool = False,
+                         date_override: str = "") -> dict:
     """Fetch URL and build a fully-populated item dict.
 
     All fields come from the source page via the same helpers the
@@ -181,8 +182,10 @@ def build_item_from_url(url: str, agency_override: str = "",
             "Re-check source and pass --title explicitly if needed."
         )
 
-    # Date: use canonical if available, else YYYY-MM fallback
-    if canonical_date:
+    # Date: --date override wins, else canonical, else YYYY-MM fallback
+    if date_override:
+        date_str = date_override
+    elif canonical_date:
         date_str = canonical_date
         # If canonical_date doesn't have a day, it's already YYYY-MM
     else:
@@ -327,13 +330,11 @@ def main():
             agency_override=args.agency,
             type_override=args.type_override,
             is_media=args.media,
+            date_override=args.date or "",
         )
     except ValueError as e:
         print(f"ERROR: {e}", file=sys.stderr)
         sys.exit(1)
-
-    if args.date:
-        item["date"] = args.date
 
     print(json.dumps(item, indent=2, ensure_ascii=False))
 

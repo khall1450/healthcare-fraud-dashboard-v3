@@ -2749,7 +2749,7 @@ def scrape_doj_opa(session):
     # Import topic helpers from audit_new_items so we share a single
     # source of truth for DOJ topic vocab + "Health Care Fraud" check.
     try:
-        from audit_new_items import fetch_doj_topics, has_hc_topic
+        from audit_new_items import fetch_doj_page_data, has_hc_topic
     except ImportError as e:
         log(f"  DOJ-OPA: cannot import topic helpers: {e}")
         return []
@@ -2790,16 +2790,39 @@ def scrape_doj_opa(session):
             page = ctx.new_page()
         try:
             kept = 0
+            kept_via_fallback = 0
             for (title, href, date_str) in candidates:
-                # Gate 1: DOJ topic tag check — authoritative
-                topics = fetch_doj_topics(href, page=page)
-                if not has_hc_topic(topics):
-                    # Not tagged by DOJ as Health Care Fraud — skip entirely
-                    continue
+                # Gate 1: DOJ topic tag check — authoritative when DOJ
+                # actually tagged the page. BUT DOJ's topic tagger is
+                # inconsistent: some releases are tagged only with a
+                # category like "False Claims Act" (not "Health Care
+                # Fraud"), and USAO pages are sometimes untagged entirely.
+                # If the topic gate fails, fall through to a strict
+                # body-text check (Gate 1b) before dropping. We pull
+                # topics AND the rendered body from the same Playwright
+                # navigation since justice.gov is Akamai-bot-blocked to
+                # plain requests.
+                topics, rendered_body = fetch_doj_page_data(href, page=page)
+                topic_gate_passed = has_hc_topic(topics)
+                if not topic_gate_passed:
+                    # Gate 1b body-text fallback: require BOTH a
+                    # fraud/oversight keyword match AND healthcare
+                    # context in the rendered body. Stricter than the
+                    # normal trusted-source bypass so we don't pollute
+                    # the enforcement tab.
+                    search_text = f"{title} {rendered_body}"
+                    if not (test_any_keyword(search_text)
+                            and test_healthcare_context(search_text)):
+                        continue
+                    kept_via_fallback += 1
                 # Gate 2: extract canonical title + body via a requests
                 # fetch (justice.gov/opa/pr/* works fine with requests,
                 # unlike the Akamai-protected listing page)
                 detail_text, _, canonical_title, canonical_date = fetch_detail_page(session, href)
+                # If requests failed (Akamai), fall back to the
+                # Playwright-rendered body captured above.
+                if not detail_text and rendered_body:
+                    detail_text = rendered_body
                 if canonical_title:
                     title = canonical_title
                 if not date_str and detail_text:
@@ -2831,7 +2854,8 @@ def scrape_doj_opa(session):
                     '_related_agencies': extract_investigator_agencies(detail_text),
                 })
                 kept += 1
-            log(f"    DOJ-OPA: {kept} of {len(candidates)} candidates tagged 'Health Care Fraud'")
+            log(f"    DOJ-OPA: {kept} of {len(candidates)} candidates "
+                f"tagged 'Health Care Fraud' ({kept_via_fallback} via body-text fallback)")
         finally:
             if page is not None:
                 try:
@@ -2869,7 +2893,7 @@ def scrape_doj_usao(session):
     base_url = "https://www.justice.gov/usao/pressreleases"
     items = []
     try:
-        from audit_new_items import fetch_doj_topics, has_hc_topic
+        from audit_new_items import fetch_doj_page_data, has_hc_topic
     except ImportError as e:
         log(f"  DOJ-USAO: cannot import topic helpers: {e}")
         return []
@@ -2928,11 +2952,29 @@ def scrape_doj_usao(session):
             page = ctx.new_page()
         try:
             kept = 0
+            kept_via_fallback = 0
             for (title, href, date_str) in candidates:
-                # Topic tag gate
-                topics = fetch_doj_topics(href, page=page)
-                if not has_hc_topic(topics):
-                    continue
+                # Topic tag gate — authoritative when present, but DOJ's
+                # USAO topic tagger is unreliable (many releases come
+                # through untagged or tagged only as "False Claims Act").
+                # If the topic gate fails, fall through to a strict
+                # body-text check before dropping. We pull topics AND
+                # the rendered body from the same Playwright navigation
+                # since justice.gov USAO pages are Akamai-bot-blocked to
+                # plain requests (fetch_detail_page returns empty).
+                topics, rendered_body = fetch_doj_page_data(href, page=page)
+                topic_gate_passed = has_hc_topic(topics)
+                if not topic_gate_passed:
+                    # Body-text fallback: require BOTH a fraud/oversight
+                    # keyword match AND healthcare context in the
+                    # rendered body. Stricter than the normal
+                    # trusted-source bypass so we don't pollute the
+                    # enforcement tab with off-topic USAO press releases.
+                    search_text = f"{title} {rendered_body}"
+                    if not (test_any_keyword(search_text)
+                            and test_healthcare_context(search_text)):
+                        continue
+                    kept_via_fallback += 1
                 # Fetch detail page via requests for canonical title + body
                 detail_text = ""
                 _detail_title = ""
@@ -2940,6 +2982,12 @@ def scrape_doj_usao(session):
                     detail_text, _, _detail_title, _detail_date = fetch_detail_page(session, href)
                 except Exception:
                     pass
+                # If requests failed (Akamai blocked USAO page), fall
+                # back to the Playwright-rendered body from the topic
+                # extraction — otherwise downstream tag/amount/state
+                # extractors get empty input.
+                if not detail_text and rendered_body:
+                    detail_text = rendered_body
                 if _detail_title:
                     title = _detail_title
                 if not date_str and detail_text:
@@ -2969,7 +3017,8 @@ def scrape_doj_usao(session):
                     '_related_agencies': extract_investigator_agencies(detail_text),
                 })
                 kept += 1
-            log(f"    DOJ-USAO: {kept} of {len(candidates)} candidates tagged 'Health Care Fraud'")
+            log(f"    DOJ-USAO: {kept} of {len(candidates)} candidates "
+                f"tagged 'Health Care Fraud' ({kept_via_fallback} via body-text fallback)")
         finally:
             if page is not None:
                 try:

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T20:53:19.611950",
+    "last_updated": "2026-04-23T10:05:39.439546",
     "version": "1.0",
     "last_scraped": "2026-04-23T09:08:13.727323"
   },
@@ -2929,7 +2929,7 @@
         "Opioids",
         "Drug Pricing"
       ],
-      "state": "",
+      "state": "AZ, CA, CT, DC, DE, FL, GA, ID, IL, KY, LA, MA, ME, MI, MS, MT, NC, ND, NH, NJ, NV, NY, OH, OK, OR, PA, SC, TN, TX, VA, VT, WA, WV",
       "source_type": "official",
       "auto_fetched": false,
       "entities": [],
@@ -15825,6 +15825,53 @@
       "source_type": "news",
       "auto_fetched": false,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-04-22-eye-practice-and-physician-owner-agree-pay-415000-resolve-al",
+      "date": "2026-04-22",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Eye Practice and Physician Owner Agree to Pay $415,000 to Resolve Allegations of False Claims Act to Medicare",
+      "amount": "$415,000",
+      "amount_numeric": 415000,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ma/pr/eye-practice-and-physician-owner-agree-pay-415000-resolve-allegations-false-claims-act",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "MA",
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-04-22-columbia-missouri-doctor-arrested-accused-health-care-fraud-",
+      "date": "2026-04-22",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Columbia, Missouri Doctor Arrested, Accused of Health Care Fraud, Illegally Prescribing Drugs",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-edmo/pr/columbia-missouri-doctor-arrested-accused-health-care-fraud-illegally-prescribing",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MO",
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
