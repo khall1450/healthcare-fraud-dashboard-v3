@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-22T09:57:17.913076",
+    "last_scraped": "2026-04-23T10:02:01.227773",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -179,6 +179,11 @@
     "https://energycommerce.house.gov/posts/house-passes-energy-and-commerce-bills-to-expand-access-to-care-and-promote-patient-health-outcomes",
     "https://energycommerce.house.gov/posts/health-subcommittee-holds-hearing-on-department-of-health-and-human-services-fy-2027-budget",
     "https://waysandmeans.house.gov/2026/04/21/seven-key-moments-hearing-with-hhs-secretary-robert-f-kennedy-jr/",
-    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-discusses-mvp-agenda-to-make-health-care-affordable-on-senate-floor"
+    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-discusses-mvp-agenda-to-make-health-care-affordable-on-senate-floor",
+    "https://energycommerce.house.gov/posts/chairman-guthrie-delivers-floor-remarks-on-republicans-work-uplifting-rural-america",
+    "https://energycommerce.house.gov/posts/house-passes-energy-and-commerce-resolution-to-recognize-the-importance-of-protecting-rural-communities-across-america",
+    "http://www.finance.senate.gov/chairmans-news/crapo-statement-at-hearing-on-fy2027-hhs-budget",
+    "http://www.finance.senate.gov/ranking-members-news/wyden-finance-committee-hearing-statement-slamming-trump-and-rfk-jrs-disastrous-health-care-agenda",
+    "https://www.help.senate.gov/rep/newsroom/press/chairman-cassidy-delivers-remarks-during-hearing-with-secretary-kennedy-on-hhs-budget"
   ]
 }
