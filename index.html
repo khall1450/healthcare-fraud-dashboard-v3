@@ -1395,18 +1395,17 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="modal-body" style="padding:24px 28px;font-size:0.9rem;line-height:1.65;color:#303030;">
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Federal Enforcement Actions tab</div>
         <p style="margin-bottom:8px;">
-          Every item on this tab links to an official <code>.gov</code> press release. Content is auto-scraped daily from DOJ:
+          Every item on this tab links to an official <code>.gov</code> press release. Content is auto-scraped daily from:
         </p>
         <ul style="padding-left:20px;margin-bottom:10px;">
-          <li>The <strong>Office of Public Affairs</strong> press feed.</li>
-          <li>A <strong>consolidated USAO scraper</strong> that surfaces U.S. Attorney's Office releases from all 93 federal districts.</li>
+          <li><strong>DOJ Office of Public Affairs</strong> press feed.</li>
+          <li>A <strong>consolidated DOJ scraper</strong> that surfaces U.S. Attorney's Office releases from all 93 federal districts.</li>
+          <li><strong>HHS-OIG press releases</strong>. HHS-OIG often announces enforcement outcomes that it co-investigated by linking out to the DOJ press release; when the scraper sees a DOJ link (or enforcement keywords like "sentenced," "indicted," "agrees to pay") on an OIG release, it re-labels the item as DOJ and files it on this tab.</li>
         </ul>
         <p style="margin-bottom:18px;">
           Both DOJ scrapers primarily gate items on DOJ's own "Health Care Fraud" topic tag, with a strict
           body-text fallback (title must carry a health care signal, body must contain a fraud keyword AND
-          health care context) for legitimate releases DOJ's tagger missed. Settlement and prosecution items
-          from HHS-OIG, CMS, and State AGs also appear on this tab when their action type is classified as
-          Criminal Enforcement or Civil Action.
+          health care context) for legitimate releases DOJ's tagger missed.
         </p>
 
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:8px 0 8px;">Federal Oversight &amp; Accountability tab</div>
@@ -1414,7 +1413,7 @@ document.addEventListener('DOMContentLoaded', () => {
           Most items come from these auto-scraped official sources:
         </p>
         <ul style="padding-left:20px;margin-bottom:10px;">
-          <li><strong>HHS-OIG</strong> &mdash; press releases and the audit/evaluation reports feed.</li>
+          <li><strong>HHS-OIG</strong> &mdash; the audit/evaluation reports feed, plus any HHS-OIG press releases that aren't re-routed to Enforcement (e.g. announcements of new audits, industry advisories, or oversight initiatives).</li>
           <li><strong>CMS</strong> &mdash; the CMS newsroom and the dedicated <code>/fraud</code> page.</li>
           <li><strong>HHS</strong> &mdash; the HHS press room (structurally constrained by Akamai bot protection; fraud-relevant HHS items typically cross-post to CMS, which is captured automatically).</li>
           <li><strong>GAO</strong> &mdash; RSS feed for health-care-fraud-related reports and testimony.</li>
