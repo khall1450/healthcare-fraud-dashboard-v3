@@ -15845,7 +15845,7 @@
         "Medicare"
       ],
       "entities": [],
-      "state": "MA",
+      "state": "MA,FL",
       "source_type": "official",
       "auto_fetched": false,
       "related_agencies": [
