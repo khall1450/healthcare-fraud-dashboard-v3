@@ -9398,7 +9398,7 @@
         "Mental Health"
       ],
       "entities": [],
-      "state": "NC",
+      "state": "NC,SC",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
@@ -9411,8 +9411,8 @@
       "agency": "DOJ",
       "type": "Criminal Enforcement",
       "title": "Western District of Oklahoma: Oklahoma City Man Charged with Medicare Fraud as Part of National Takedown",
-      "amount": "$14.6 Billion",
-      "amount_numeric": 14600000000.0,
+      "amount": "$3.2 Million",
+      "amount_numeric": 3200000.0,
       "officials": [],
       "link": "https://www.justice.gov/usao-wdok/pr/oklahoma-city-man-charged-medicare-fraud-part-national-takedown",
       "link_label": "DOJ Press Release",
@@ -9425,7 +9425,9 @@
       "state": "OK",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": []
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     },
     {
       "id": "doj-2025-06-30-3109365968",
