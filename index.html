@@ -231,15 +231,16 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 <header class="dashboard-header">
   <div class="container-fluid px-4">
     <div class="d-flex align-items-center py-3">
-      <div class="d-flex align-items-center gap-3">
+      <div class="d-flex align-items-center gap-3" style="flex: 1 1 50%; min-width: 0;">
         <div class="header-seal"><i class="fa-solid fa-shield-halved fa-2x"></i></div>
         <div>
           <h1 class="header-title mb-0">Health Care Fraud Dashboard</h1>
           <p class="header-subtitle mb-0" id="headerAgencyList">DOJ &bull; HHS &bull; HHS-OIG &bull; CMS &bull; GAO &bull; Congress &bull; Treasury &bull; White House &bull; MedPAC &bull; MACPAC &bull; Media</p>
         </div>
       </div>
-      <!-- Rotating Paragon Spotlight (right-anchored, vertically centered with the title) -->
-      <div class="spotlight-card ms-auto" id="spotlightCard">
+      <!-- Rotating Paragon Spotlight (centered within the right half of the header) -->
+      <div style="flex: 1 1 50%; display: flex; justify-content: center; min-width: 0;">
+      <div class="spotlight-card" id="spotlightCard">
         <div class="spotlight-slide active" data-index="0">
           <div class="spotlight-eyebrow">Paragon Research: ACA</div>
           <div class="spotlight-body">
@@ -297,6 +298,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
           <button class="spotlight-dot" data-target="3"></button>
           <button class="spotlight-dot" data-target="4"></button>
         </div>
+      </div>
       </div>
 
     </div>
