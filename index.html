@@ -72,7 +72,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 .btn-refresh:hover { background: var(--sunrise); color: #fff; transform: translateY(-1px); box-shadow: 0 3px 8px rgba(255,148,26,0.4); }
 
 /* SPOTLIGHT CARD (in header) */
-.spotlight-card { flex: 1 1 auto; max-width: 560px; width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); padding: 14px 22px 18px; position: relative; overflow: hidden; min-height: 100px; display: flex; align-items: center; }
+.spotlight-card { flex: 1 1 auto; max-width: 560px; width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); padding: 16px 22px 20px; position: relative; overflow: hidden; min-height: 130px; display: flex; align-items: center; }
 .spotlight-slide { display: none; width: 100%; animation: fadeSlide 0.45s ease; flex-direction: column; justify-content: center; }
 .spotlight-slide.active { display: flex; }
 @keyframes fadeSlide { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
@@ -90,7 +90,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 .spotlight-dot:hover { background: rgba(255,255,255,0.4); }
 
 /* NARRATIVE BANNER */
-.narrative-banner { background: var(--paragon-blue); padding: 16px 0 18px; border-bottom: 3px solid var(--blaze); }
+.narrative-banner { background: var(--paragon-blue); padding: 4px 0 18px; border-bottom: 3px solid var(--blaze); }
 .narrative-banner p { font-family: 'Bona Nova', Georgia, serif; font-size: 1.05rem; line-height: 1.65; color: rgba(255,255,255,0.85); margin: 0; max-width: 900px; }
 .narrative-banner .highlight { color: var(--sunrise); font-weight: 700; }
 .narrative-banner .narrative-sub { font-family: 'Public Sans', sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.38); margin-top: 6px; letter-spacing: 0.03em; }
@@ -230,15 +230,15 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 <!-- HEADER -->
 <header class="dashboard-header">
   <div class="container-fluid px-4">
-    <div class="d-flex align-items-center py-3">
-      <div class="d-flex align-items-center gap-3" style="flex: 1 1 50%; min-width: 0;">
+    <div class="d-flex align-items-stretch py-3" style="min-height: 180px;">
+      <div class="d-flex align-items-start gap-3" style="flex: 1 1 50%; min-width: 0;">
         <div class="header-seal"><i class="fa-solid fa-shield-halved fa-2x"></i></div>
         <div>
           <h1 class="header-title mb-0">Health Care Fraud Dashboard</h1>
           <p class="header-subtitle mb-0" id="headerAgencyList">DOJ &bull; HHS &bull; HHS-OIG &bull; CMS &bull; GAO &bull; Congress &bull; Treasury &bull; White House &bull; MedPAC &bull; MACPAC &bull; Media</p>
         </div>
       </div>
-      <!-- Rotating Paragon Spotlight (centered within the right half of the header) -->
+      <!-- Rotating Paragon Spotlight (vertically centered in the right half of the header) -->
       <div style="flex: 1 1 50%; display: flex; justify-content: center; align-items: center; min-width: 0;">
       <div class="spotlight-card" id="spotlightCard">
         <div class="spotlight-slide active" data-index="0">
