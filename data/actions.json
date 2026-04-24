@@ -4726,8 +4726,8 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Missouri Man Pleads Guilty to Multimillion-Dollar Medicare Fraud Conspiracy",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$174 Million",
+            "amount_numeric": 174000000,
             "officials": [],
             "link": "https://www.justice.gov/opa/pr/missouri-man-pleads-guilty-multimillion-dollar-medicare-fraud-conspiracy",
             "link_label": "DOJ Press Release",
@@ -4739,7 +4739,7 @@
                 "Lab Testing"
             ],
             "entities": [],
-            "state": "MO",
+            "state": "MO, LA, TX",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
