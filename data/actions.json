@@ -253,7 +253,7 @@
                 "Medicare"
             ],
             "entities": [],
-            "state": "MI,IL,IN,WI,GA",
+            "state": "MI, IL, IN, WI, GA",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": []
@@ -696,7 +696,7 @@
                 "Pharmacy"
             ],
             "entities": [],
-            "state": "FL,MD",
+            "state": "FL, MD",
             "source_type": "official",
             "auto_fetched": false,
             "related_agencies": [
@@ -1098,7 +1098,7 @@
                 "Medicare",
                 "Lab Testing"
             ],
-            "state": "GA,AR",
+            "state": "GA, AR",
             "source_type": "official",
             "auto_fetched": false,
             "entities": [],
@@ -1492,7 +1492,7 @@
                 "DME",
                 "Telehealth"
             ],
-            "state": "FL,MS",
+            "state": "FL, MS",
             "source_type": "official",
             "auto_fetched": false,
             "entities": [],
@@ -1782,7 +1782,7 @@
                 "Medicare",
                 "Medicare Advantage"
             ],
-            "state": "CA,CO",
+            "state": "CA, CO",
             "source_type": "official",
             "auto_fetched": false,
             "entities": [],
@@ -2374,7 +2374,7 @@
                 "Medicare",
                 "Nursing Home"
             ],
-            "state": "MI,NJ,WI",
+            "state": "MI, NJ, WI",
             "source_type": "official",
             "auto_fetched": false,
             "entities": [],
@@ -2545,7 +2545,7 @@
                 "Medical Devices",
                 "Medicare"
             ],
-            "state": "AL,FL,MD",
+            "state": "AL, FL, MD",
             "source_type": "official",
             "auto_fetched": false,
             "entities": [],
@@ -2929,7 +2929,7 @@
                 "Opioids",
                 "Drug Pricing"
             ],
-            "state": "AZ,CA,CT,DC,DE,FL,GA,ID,IL,KY,LA,MA,ME,MI,MS,MT,NC,ND,NH,NJ,NV,NY,OH,OK,OR,PA,SC,TN,TX,VA,VT,WA,WV",
+            "state": "AZ, CA, CT, DC, DE, FL, GA, ID, IL, KY, LA, MA, ME, MI, MS, MT, NC, ND, NH, NJ, NV, NY, OH, OK, OR, PA, SC, TN, TX, VA, VT, WA, WV",
             "source_type": "official",
             "auto_fetched": false,
             "entities": [],
@@ -3041,7 +3041,7 @@
                 "Medicare",
                 "Telehealth"
             ],
-            "state": "AZ,FL",
+            "state": "AZ, FL",
             "source_type": "official",
             "auto_fetched": false,
             "entities": [],
@@ -3652,7 +3652,7 @@
                 "Pharmacy"
             ],
             "entities": [],
-            "state": "MI,OH",
+            "state": "MI, OH",
             "source_type": "official",
             "auto_fetched": false,
             "related_agencies": [
@@ -3973,7 +3973,7 @@
                 "Medicaid"
             ],
             "entities": [],
-            "state": "FL,TX",
+            "state": "FL, TX",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -4048,7 +4048,7 @@
                 "Pharmacy"
             ],
             "entities": [],
-            "state": "CA,FL",
+            "state": "CA, FL",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -4278,7 +4278,7 @@
                 "Medicare"
             ],
             "entities": [],
-            "state": "FL,TX",
+            "state": "FL, TX",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -5203,7 +5203,7 @@
                 "Medicaid"
             ],
             "entities": [],
-            "state": "TX,VA,SC",
+            "state": "TX, VA, SC",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -6847,7 +6847,7 @@
                 "Long-Term Care"
             ],
             "entities": [],
-            "state": "MD,AZ",
+            "state": "MD, AZ",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -7093,7 +7093,7 @@
                 "Long-Term Care"
             ],
             "entities": [],
-            "state": "MD,IN",
+            "state": "MD, IN",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -7337,7 +7337,7 @@
                 "Medical Devices"
             ],
             "entities": [],
-            "state": "MD,FL,AL",
+            "state": "MD, FL, AL",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -7797,7 +7797,7 @@
                 "Medicaid"
             ],
             "entities": [],
-            "state": "NY,NJ",
+            "state": "NY, NJ",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -8255,7 +8255,7 @@
                 "Lab Testing"
             ],
             "entities": [],
-            "state": "SC,GA,CO",
+            "state": "SC, GA, CO",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -8348,7 +8348,7 @@
                 "Lab Testing"
             ],
             "entities": [],
-            "state": "ID,NM",
+            "state": "ID, NM",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -8475,7 +8475,7 @@
                 "Telehealth"
             ],
             "entities": [],
-            "state": "OH,FL",
+            "state": "OH, FL",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -8551,7 +8551,7 @@
                 "Pharmacy"
             ],
             "entities": [],
-            "state": "NJ,NY",
+            "state": "NJ, NY",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -8701,7 +8701,7 @@
                 "Nursing Home"
             ],
             "entities": [],
-            "state": "NY,RI,KS,MO",
+            "state": "NY, RI, KS, MO",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -9401,7 +9401,7 @@
                 "Mental Health"
             ],
             "entities": [],
-            "state": "NC,SC",
+            "state": "NC, SC",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -9477,7 +9477,7 @@
                 "Genetic Testing"
             ],
             "entities": [],
-            "state": "TN,TX,MD,UT,IL",
+            "state": "TN, TX, MD, UT, IL",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -11045,7 +11045,7 @@
                 "Medicare"
             ],
             "entities": [],
-            "state": "MA,NY",
+            "state": "MA, NY",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -12679,7 +12679,7 @@
                 "Lab Testing"
             ],
             "entities": [],
-            "state": "MO,TX",
+            "state": "MO, TX",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -14399,7 +14399,7 @@
                 "Opioids"
             ],
             "entities": [],
-            "state": "FL,CA,NV",
+            "state": "FL, CA, NV",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
@@ -15850,7 +15850,7 @@
                 "Medicare"
             ],
             "entities": [],
-            "state": "MA,FL",
+            "state": "MA, FL",
             "source_type": "official",
             "auto_fetched": false,
             "related_agencies": [
