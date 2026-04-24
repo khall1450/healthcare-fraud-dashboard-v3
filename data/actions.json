@@ -10969,8 +10969,8 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Kansas Doctor Admits Accepting Kickbacks To Commit Health Care Fraud",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$7 Million",
+            "amount_numeric": 7000000,
             "officials": [],
             "link": "https://www.justice.gov/usao-edmo/pr/kansas-doctor-admits-accepting-kickbacks-commit-health-care-fraud",
             "link_label": "DOJ Press Release",
@@ -10978,7 +10978,8 @@
             "tags": [
                 "DME",
                 "Telehealth",
-                "Medicare"
+                "Medicare",
+                "Genetic Testing"
             ],
             "entities": [],
             "state": "MO",
