@@ -214,6 +214,14 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
   .search-wrapper { flex: 0 0 100%; }
   .filter-select, .filter-date { min-width: 120px; }
   .last-updated-badge { display: none; }
+  /* Stats card: full width, no fixed min-height, smaller padding on mobile */
+  .spotlight-card { max-width: 100%; min-height: auto; padding: 14px 18px 18px; }
+  .spotlight-stat { font-size: 1.6rem; }
+  .spotlight-desc { font-size: 0.8rem; }
+  .spotlight-eyebrow { font-size: 0.6rem; white-space: normal; }
+  /* Header stack: title + card stack vertically with smaller gap; less vertical padding */
+  .dashboard-header .d-flex.flex-column { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+  .header-narrative { font-size: 0.9rem; line-height: 1.5; }
 }
 .spinning { animation: spin 1s linear infinite; }
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
@@ -230,7 +238,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
 <!-- HEADER -->
 <header class="dashboard-header">
   <div class="container-fluid px-4">
-    <div class="d-flex align-items-center py-5">
+    <div class="d-flex flex-column flex-md-row align-items-md-center py-5 gap-4 gap-md-0">
       <!-- Left: title block + narrative paragraph stacked -->
       <div style="flex: 1 1 55%; min-width: 0;">
         <div class="d-flex align-items-center gap-3" style="margin-bottom: 22px;">
@@ -244,8 +252,8 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Bona Nova', Georgia, serif; }
           An estimated <a href="https://www.nhcaa.org/tools-insights/about-health-care-fraud/the-challenge-of-health-care-fraud/" target="_blank" rel="noopener" class="highlight">3% to 10%</a> of total U.S. health spending is lost to health care fraud every year. This dashboard tracks the federal response starting in 2025, including criminal and civil enforcement actions and federal oversight and accountability measures. It also highlights investigative media coverage exposing fraud across the system.
         </p>
       </div>
-      <!-- Rotating Paragon Spotlight (vertically centered across the combined header area) -->
-      <div style="flex: 1 1 45%; display: flex; justify-content: center; align-items: center; min-width: 0;">
+      <!-- Rotating Paragon Spotlight (vertically centered on desktop; full width stacked below title on mobile) -->
+      <div style="flex: 1 1 45%; display: flex; justify-content: center; align-items: center; min-width: 0; width: 100%;">
       <div class="spotlight-card" id="spotlightCard">
         <div class="spotlight-slide active" data-index="0">
           <div class="spotlight-eyebrow">Paragon Research: ACA</div>
