@@ -9463,8 +9463,8 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Lab Owner, Marketing Company Owner, and Doctor All Sentenced in Multi-Million Dollar Medicare and Medicaid Kickback Conspiracy",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$129 Million",
+            "amount_numeric": 129000000,
             "officials": [],
             "link": "https://www.justice.gov/usao-mdtn/pr/lab-owner-marketing-company-owner-and-doctor-all-sentenced-multi-million-dollar",
             "link_label": "DOJ Press Release",
@@ -9473,10 +9473,11 @@
                 "Medicare",
                 "Medicaid",
                 "Telehealth",
-                "Lab Testing"
+                "Lab Testing",
+                "Genetic Testing"
             ],
             "entities": [],
-            "state": "TN",
+            "state": "TN,TX,MD,UT,IL",
             "source_type": "official",
             "auto_fetched": true,
             "related_agencies": [
