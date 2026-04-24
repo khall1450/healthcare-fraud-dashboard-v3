@@ -9730,14 +9730,13 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Doctor at L5 Pain Clinic Sentenced to 40 Months in Prison, Ordered to Pay $35,000 Fine and $200,000 in Forfeiture",
-            "amount": "$35,000",
-            "amount_numeric": 35000.0,
+            "amount": "$200,000",
+            "amount_numeric": 200000,
             "officials": [],
             "link": "https://www.justice.gov/usao-wdva/pr/doctor-l5-pain-clinic-sentenced-40-months-prison-ordered-pay-35000-fine-and-200000",
             "link_label": "DOJ Press Release",
             "social_posts": [],
             "tags": [
-                "Medicaid",
                 "Pharmacy",
                 "Addiction Treatment",
                 "Opioids"
