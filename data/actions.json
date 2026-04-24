@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-23T10:05:39.439546",
+    "last_updated": "2026-04-24T09:15:02.342425",
     "version": "1.0",
-    "last_scraped": "2026-04-23T09:08:13.727323"
+    "last_scraped": "2026-04-24T09:15:02.342414"
   },
   "actions": [
     {
@@ -15877,6 +15877,28 @@
       "auto_fetched": false,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-07-14-2467588594",
+      "date": "2026-07-14",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Healthcare Worker at Detention Facilities Pleads Guilty to Fraud",
+      "amount": "$1.59 million",
+      "amount_numeric": 1590000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-sdca/pr/healthcare-worker-detention-facilities-pleads-guilty-fraud",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Financial Fraud"
       ]
     }
   ]
