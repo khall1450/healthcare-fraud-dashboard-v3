@@ -3276,7 +3276,9 @@
             "source_type": "official",
             "auto_fetched": false,
             "entities": [],
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-04-29-gilead-sciences-hiv-kickbacks",
