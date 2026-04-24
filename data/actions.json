@@ -3322,7 +3322,7 @@
                 "Pharmacy",
                 "Medicare"
             ],
-            "state": "IL",
+            "state": "IL, FL, MD, NY, VA, TX",
             "source_type": "official",
             "auto_fetched": false,
             "entities": [],
