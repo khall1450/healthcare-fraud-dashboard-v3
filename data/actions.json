@@ -10939,8 +10939,8 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Greensboro Woman Pleads Guilty To Health Care Fraud And Money Laundering In Connection With Multi-Million Dollar Urine Drug Testing Scheme",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$6 Million",
+            "amount_numeric": 6000000,
             "officials": [],
             "link": "https://www.justice.gov/usao-mdnc/pr/greensboro-woman-pleads-guilty-health-care-fraud-and-money-laundering-connection-multi",
             "link_label": "DOJ Press Release",
@@ -10953,7 +10953,9 @@
             "state": "NC",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-04-07-3368904670",
