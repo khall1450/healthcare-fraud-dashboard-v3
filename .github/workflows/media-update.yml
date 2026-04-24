@@ -1,8 +1,12 @@
 name: Daily Media Investigations Update
 
+# Daily cron disabled 2026-04-23 — the AI screen was still letting through
+# off-topic media pieces (e.g. KFF medical-debt podcast). Media tab is now
+# fully manual via add_item.py. Workflow remains available for manual runs
+# via workflow_dispatch if we ever want to re-enable backfill.
 on:
-  schedule:
-    - cron: '42 8 * * *'   # 8:42 AM UTC daily (separate from enforcement at 7:17)
+  # schedule:
+  #   - cron: '42 8 * * *'
   workflow_dispatch:
     inputs:
       backfill_from:
