@@ -9856,8 +9856,8 @@
             "agency": "DOJ",
             "type": "Civil Action",
             "title": "Houston Doctor Pays Six Figures To Settle False Claims Act Liability Involving Neurostimulator Devices",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$390,082",
+            "amount_numeric": 390082,
             "officials": [],
             "link": "https://www.justice.gov/usao-sdtx/pr/houston-doctor-pays-six-figures-settle-false-claims-act-liability-involving",
             "link_label": "DOJ Press Release",
@@ -9869,7 +9869,9 @@
             "state": "TX",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-06-02-227142135",
