@@ -10124,14 +10124,15 @@
             "link_label": "DOJ Press Release",
             "social_posts": [],
             "tags": [
-                "Medicaid",
                 "Opioids"
             ],
             "entities": [],
             "state": "NY",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-05-21-2258549710",
