@@ -12921,8 +12921,8 @@
             "agency": "DOJ",
             "type": "Civil Action",
             "title": "Norwalk Dentists Pay More Than $600K To Settle False Claims Allegations",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$645,721",
+            "amount_numeric": 645721,
             "officials": [],
             "link": "https://www.justice.gov/usao-ct/pr/norwalk-dentists-pay-more-600k-settle-false-claims-allegations",
             "link_label": "DOJ Press Release",
@@ -12934,7 +12934,9 @@
             "state": "CT",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-04-21-3127599967",
