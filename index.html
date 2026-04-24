@@ -1491,6 +1491,15 @@ document.addEventListener('DOMContentLoaded', () => {
           Items on this tab are hand-selected.
         </p>
 
+        <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:16px 0 8px;">How items are classified</div>
+        <p style="margin-bottom:10px;">
+          Tags, state, amount, and action type are extracted from the source text using regex rules plus AI
+          extraction with anchored citations (the model must quote the source verbatim for any field it
+          populates, and the code validates that the quoted phrase actually appears in the article). The
+          author also makes manual edits to improve accuracy. Titles generally match the official
+          press-release headline (or, for media, the article headline) verbatim, with occasional manual
+          edits for readability.
+        </p>
 
         <div style="font-family:'Bona Nova',Georgia,serif;font-size:1.0rem;font-weight:700;color:#002E6D;margin:16px 0 8px;">Accuracy and corrections</div>
         <p style="margin-bottom:0;font-size:0.85rem;color:#303030;">
