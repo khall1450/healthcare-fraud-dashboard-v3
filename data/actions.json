@@ -12610,14 +12610,14 @@
             "link": "https://www.justice.gov/usao-edva/pr/virginia-beach-doctor-agrees-625000-false-claims-act-settlement",
             "link_label": "DOJ Press Release",
             "social_posts": [],
-            "tags": [
-                "Medicaid"
-            ],
+            "tags": [],
             "entities": [],
             "state": "VA",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "hhs-oig-2026-03-09-2348143186",
