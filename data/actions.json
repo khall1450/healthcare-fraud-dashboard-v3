@@ -11368,15 +11368,16 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Putnam County Nurse Practitioner Pleads Guilty to Health Care Fraud",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$600,000",
+            "amount_numeric": 600000,
             "officials": [],
             "link": "https://www.justice.gov/usao-sdwv/pr/putnam-county-nurse-practitioner-pleads-guilty-health-care-fraud",
             "link_label": "DOJ Press Release",
             "social_posts": [],
             "tags": [
                 "Medicaid",
-                "Opioids"
+                "Opioids",
+                "Medicaid Managed Care"
             ],
             "entities": [],
             "state": "WV",
