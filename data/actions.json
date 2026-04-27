@@ -12262,14 +12262,15 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Two Charged with Defrauding Connecticut’s Medicaid Program",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$1.8 Million",
+            "amount_numeric": 1800000,
             "officials": [],
             "link": "https://www.justice.gov/usao-ct/pr/two-charged-defrauding-connecticuts-medicaid-program",
             "link_label": "DOJ Press Release",
             "social_posts": [],
             "tags": [
-                "Medicaid"
+                "Medicaid",
+                "Autism/ABA"
             ],
             "entities": [],
             "state": "CT",
