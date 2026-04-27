@@ -4183,6 +4183,13 @@ def main():
                                    item_type=action_type)
                 tags = generate_tags(title, full_text)
 
+                # Legislation drop: dashboard does not track legislative
+                # action items per the Sources & Methodology modal Congress
+                # entry ("legislation not tracked"). Drop unconditionally,
+                # before any mode-specific filters.
+                if action_type == 'Legislation':
+                    continue
+
                 # Enforcement-only filter: only add items classified as
                 # Criminal Enforcement or Civil Action. Oversight items
                 # (Audit, Investigation, Administrative Action,
