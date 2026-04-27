@@ -11724,20 +11724,23 @@
             "agency": "DOJ",
             "type": "Criminal Enforcement",
             "title": "Buffalo Business Owner Sentenced For Medicaid Fraud",
-            "amount": null,
-            "amount_numeric": 0,
+            "amount": "$250,000",
+            "amount_numeric": 250000,
             "officials": [],
             "link": "https://www.justice.gov/usao-wdny/pr/buffalo-business-owner-sentenced-medicaid-fraud",
             "link_label": "DOJ Press Release",
             "social_posts": [],
             "tags": [
-                "Medicaid"
+                "Medicaid",
+                "Medical Transportation"
             ],
             "entities": [],
             "state": "NY",
             "source_type": "official",
             "auto_fetched": true,
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-03-03-69491902",
