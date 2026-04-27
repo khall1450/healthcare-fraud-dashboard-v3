@@ -12257,30 +12257,6 @@
             ]
         },
         {
-            "id": "doj-2025-01-23-2344958612",
-            "date": "2025-01-23",
-            "agency": "DOJ",
-            "type": "Criminal Enforcement",
-            "title": "Operator of Home Health Care Company Sentenced to 12 Years in Prison for Multimillion Dollar Health Care Fraud Scheme",
-            "amount": null,
-            "amount_numeric": 0,
-            "officials": [],
-            "link": "https://www.justice.gov/usao-ma/pr/operator-home-health-care-company-sentenced-12-years-prison-multimillion-dollar-health",
-            "link_label": "DOJ Press Release",
-            "social_posts": [],
-            "tags": [
-                "Home Health",
-                "Medicaid"
-            ],
-            "entities": [],
-            "state": "MA",
-            "source_type": "official",
-            "auto_fetched": true,
-            "related_agencies": [
-                "HHS-OIG"
-            ]
-        },
-        {
             "id": "doj-2025-01-17-3838852947",
             "date": "2025-01-17",
             "agency": "DOJ",
