@@ -3759,7 +3759,9 @@
             "source_type": "official",
             "auto_fetched": false,
             "entities": [],
-            "related_agencies": []
+            "related_agencies": [
+                "HHS-OIG"
+            ]
         },
         {
             "id": "doj-2025-01-cr-bard-catheter-kickbacks",
