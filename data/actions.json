@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-28T10:28:49.016795",
+    "last_updated": "2026-04-29T09:30:26.880785",
     "version": "1.0",
-    "last_scraped": "2026-04-28T09:38:04.290380"
+    "last_scraped": "2026-04-29T09:30:26.880776"
   },
   "actions": [
     {
@@ -15939,6 +15939,29 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-04-28-3952103426",
+      "date": "2026-04-28",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Opioid Manufacturer Purdue Pharma Sentenced for Fraud and Kickback Conspiracies",
+      "amount": "$5 billion",
+      "amount_numeric": 5000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/opioid-manufacturer-purdue-pharma-sentenced-fraud-and-kickback-conspiracies",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "NJ",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }
