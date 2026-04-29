@@ -2139,7 +2139,12 @@ _HEARING_ABOUT_PATTERN = re.compile(
     # Closing statements
     r"\bclosing\s+(statement|remarks)[\s\S]{0,20}?\bhearing\b|"
     # Recap/readout about a hearing
-    r"\b(recap|readout|summary)\s[\w\s,.&'-]{0,20}?\bhearing\b"
+    r"\b(recap|readout|summary)\s[\w\s,.&'-]{0,20}?\bhearing\b|"
+    # "Key Moments / Top Moments / Highlights / Takeaways" recap formats
+    # e.g. "Seven Key Moments: Hearing on Medicare Fraud", "Top 5 Moments from Hearing"
+    r"\b(key|top|best|biggest)\s+(\d+\s+)?(moments|takeaways|highlights|quotes)[\s\S]{0,30}?\bhearing\b|"
+    r"\b(highlights|takeaways)\s+(from|of)[\s\S]{0,30}?\bhearing\b|"
+    r"\bhearing[\s\S]{0,30}?\b(highlights|takeaways|key\s+moments|top\s+moments)\b"
     r")",
     re.IGNORECASE,
 )
