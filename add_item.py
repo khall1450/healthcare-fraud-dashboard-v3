@@ -165,6 +165,15 @@ def build_item_from_url(url: str, agency_override: str = "",
                         canonical_title = og["content"].strip()
                     elif soup.find("h1"):
                         canonical_title = soup.find("h1").get_text(strip=True)
+                # canonical_date fallback — Playwright has the rendered
+                # DOM including <meta property="article:published_time">,
+                # which is the authoritative DOJ press release date.
+                # Without this, we fall through to body-text regex which
+                # picks up stale "since 2022" / "in September 2025"
+                # references and produces wildly wrong dates.
+                if not canonical_date:
+                    from update import _extract_canonical_date
+                    canonical_date = _extract_canonical_date(soup, url)
         except Exception as e:
             print(f"  Playwright fetch failed: {e}", file=sys.stderr)
 
