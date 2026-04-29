@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-29T14:40:54.187838",
+    "last_updated": "2026-04-29T15:17:58.870696",
     "version": "1.0",
     "last_scraped": "2026-04-29T09:30:26.880776"
   },
@@ -15961,6 +15961,54 @@
       "source_type": "news",
       "auto_fetched": false,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-04-28-tri-area-community-health-513k-medicare",
+      "date": "2026-04-28",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Tri-Area Community Health Agrees to Pay $513,000 to Resolve Medicare Billing Allegations",
+      "amount": "$513,000",
+      "amount_numeric": 513000,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-wdva/pr/tri-area-community-health-agrees-pay-513000-resolve-medicare-billing-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare"
+      ],
+      "entities": [],
+      "state": "VA",
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-04-29-pasadena-wound-care-seizure-2m",
+      "date": "2026-04-29",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "United States Seizes More Than $2 Million from Pasadena-Based Advanced Wound Care Clinic Accused of Medicare Fraud",
+      "amount": "$2 Million",
+      "amount_numeric": 2000000,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-cdca/pr/united-states-seizes-more-2-million-pasadena-based-advanced-wound-care-clinic-0",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Wound Care",
+        "Skin Substitutes"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": false,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
     }
   ]
 }

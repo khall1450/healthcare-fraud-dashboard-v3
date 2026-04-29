@@ -39,7 +39,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install requests beautifulsoup4 feedparser lxml playwright anthropic
+        pip install --upgrade pip certifi && pip install requests beautifulsoup4 feedparser lxml playwright anthropic
         playwright install --with-deps chromium
 
     - name: Run media scraper

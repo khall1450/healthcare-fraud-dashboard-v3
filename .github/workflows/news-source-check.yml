@@ -39,7 +39,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 lxml playwright
+          pip install --upgrade pip certifi && pip install requests beautifulsoup4 lxml playwright
           playwright install --with-deps chromium
 
       - name: Check + upgrade news-sourced items
