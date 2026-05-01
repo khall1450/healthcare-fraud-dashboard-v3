@@ -16086,10 +16086,10 @@
       "id": "doj-2026-04-30-3383734386",
       "date": "2026-04-30",
       "agency": "DOJ",
-      "type": "Criminal Enforcement",
+      "type": "Structural/Organizational",
       "title": "The Fraud Division Launches West Coast Strike Force to Target Health Care Fraud Schemes Across Arizona, Nevada, and Northern California",
-      "amount": "$45 billion",
-      "amount_numeric": 45000000000.0,
+      "amount": "",
+      "amount_numeric": 0,
       "officials": [],
       "link": "https://www.justice.gov/opa/pr/fraud-division-launches-west-coast-strike-force-target-health-care-fraud-schemes-across",
       "link_label": "DOJ Press Release",
@@ -16102,7 +16102,7 @@
         "Addiction Treatment"
       ],
       "entities": [],
-      "state": null,
+      "state": "AZ, NV, CA",
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": [
