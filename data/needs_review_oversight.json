@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-04-30T10:23:51.355435",
+    "last_scraped": "2026-05-01T10:03:08.640832",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -59,6 +59,35 @@
       "ai_decision": "not_oversight",
       "ai_confidence": 75,
       "ai_reason": "This HHS-OIG audit examines the Special Focus Facility Program for nursing homes, which is a quality-of-care and compliance monitoring program, not a healthcare fraud or program-integrity investigatio",
+      "ai_model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "hhs-oig-2026-04-28-706763026",
+      "date": "2026-04-28",
+      "agency": "HHS-OIG",
+      "type": "Audit",
+      "title": "Most Nursing Homes Throughout the United States Do Not Have Adequate or Reliable Emergency Power Systems",
+      "amount": null,
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://oig.hhs.gov/reports/all/2026/most-nursing-homes-throughout-the-united-states-do-not-have-adequate-or-reliable-emergency-power-systems/",
+      "link_label": "HHS-OIG Report",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Nursing Home",
+        "Assisted Living"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "flag_reason": "title lacks HC fraud / program integrity signal",
+      "ai_decision": "not_oversight",
+      "ai_confidence": 85,
+      "ai_reason": "This HHS-OIG audit addresses emergency power system adequacy in nursing homes, a patient safety and operational compliance issue, not healthcare fraud or program integrity.",
       "ai_model": "claude-haiku-4-5-20251001"
     }
   ],
