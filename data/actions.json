@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-30T10:23:51.521949",
+    "last_updated": "2026-05-01T09:15:41.769860",
     "version": "1.0",
-    "last_scraped": "2026-04-30T09:32:59.822840"
+    "last_scraped": "2026-05-01T09:15:41.769850"
   },
   "actions": [
     {
@@ -16055,6 +16055,90 @@
       "source_type": "official",
       "auto_fetched": true,
       "related_agencies": []
+    },
+    {
+      "id": "doj-2026-04-30-3833729853",
+      "date": "2026-04-30",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Pharmacy Technician Pleads Guilty to $5.6M Health Care Fraud Scheme and Illegal Distribution of Oxycodone",
+      "amount": "$5.6 Million",
+      "amount_numeric": 5600000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/pharmacy-technician-pleads-guilty-56m-health-care-fraud-scheme-and-illegal-distribution",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-04-30-3383734386",
+      "date": "2026-04-30",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "The Fraud Division Launches West Coast Strike Force to Target Health Care Fraud Schemes Across Arizona, Nevada, and Northern California",
+      "amount": "$45 billion",
+      "amount_numeric": 45000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/fraud-division-launches-west-coast-strike-force-target-health-care-fraud-schemes-across",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "TRICARE",
+        "Wound Care",
+        "Addiction Treatment"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-04-30-1473184464",
+      "date": "2026-04-30",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Cheshire Nurse Who Illegally Distributed Controlled Substances is Sentenced",
+      "amount": "$25,000",
+      "amount_numeric": 25000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ct/pr/cheshire-nurse-who-illegally-distributed-controlled-substances-sentenced",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "CT",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Prescription Drugs",
+        "Healthcare Fraud",
+        "Drug Trafficking"
+      ]
     }
   ]
 }
