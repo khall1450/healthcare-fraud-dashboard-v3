@@ -1047,6 +1047,21 @@ def extract_amount(text, title=""):
         cleaned = re.sub(
             r'fine\s+of\s+(?:up\s+to\s+)?\$[\d,.]+\s+or\s+twice[^.]*',
             '', cleaned, flags=re.IGNORECASE)
+        # Strip court-imposed criminal fines at sentencing. These are
+        # punishment, not fraud size. Patterns like "ordered (Muzyka) to
+        # pay a $25,000 fine," "(also) ordered to pay a $X fine,"
+        # "imposed a $X fine," "fined $X," or "(and) a $X fine."
+        cleaned = re.sub(
+            r'(?:also\s+)?ordered\s+(?:\w+\s+)?to\s+pay\s+(?:a\s+)?\$[\d,.]+'
+            r'(?:\s*million|\s*billion)?\s+fine',
+            '', cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(
+            r'(?:imposed|sentenced\s+to)\s+(?:a\s+)?\$[\d,.]+'
+            r'(?:\s*million|\s*billion)?\s+fine',
+            '', cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(
+            r'\bfined\s+\$[\d,.]+(?:\s*million|\s*billion)?',
+            '', cleaned, flags=re.IGNORECASE)
         result = _parse(cleaned)
         if result:
             return result

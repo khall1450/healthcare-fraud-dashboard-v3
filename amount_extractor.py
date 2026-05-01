@@ -49,6 +49,7 @@ In order of preference (highest first):
 
 - **Criminal penalty adjusted for ability to pay** (non-prosecution / deferred prosecution agreements where the penalty is negotiated based on the defendant's capacity, not the fraud size).
 - **Statutory fines or maximum fines** — "faces a fine of up to $250,000," "maximum penalty of $500,000."
+- **Court-imposed criminal fines at sentencing** — these are punishment, not fraud size. Phrases like "ordered to pay a $25,000 fine," "imposed a $X fine," "(was) fined $X," "(also) ordered to pay a $X fine and perform community service." Skip them even when they appear in the actual sentence (not just statutory maximums).
 - **Unrelated dollar figures** — unrelated assets, loan values, the defendant's salary, total DOJ recoveries over a decade, national takedown aggregates, etc.
 - **Boilerplate aggregate figures** — "Since January 2009, DOJ has recovered over $75 billion…" is boilerplate, never the case amount.
 
