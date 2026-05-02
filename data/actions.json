@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-01T09:15:41.769860",
+    "last_updated": "2026-05-02T08:48:29.071714",
     "version": "1.0",
-    "last_scraped": "2026-05-01T09:15:41.769850"
+    "last_scraped": "2026-05-02T08:48:29.071707"
   },
   "actions": [
     {
@@ -16137,6 +16137,108 @@
         "Prescription Drugs",
         "Healthcare Fraud",
         "Drug Trafficking"
+      ]
+    },
+    {
+      "id": "doj-2026-05-01-4107333240",
+      "date": "2026-05-01",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Mobile PET Scan Provider to Pay $8.33 Million to Resolve Allegations of False Claims Act Violations Based on Unlawful Kickbacks to Medical Practices",
+      "amount": "$8.33 Million",
+      "amount_numeric": 8330000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/mobile-pet-scan-provider-pay-833-million-resolve-allegations-false-claims-act-violations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "TRICARE"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-05-01-1392539992",
+      "date": "2026-05-01",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "PA Lifesharing, LCC Agrees to Pay $1.2M To Settle False Claims Act Allegations",
+      "amount": "$1.2 Million",
+      "amount_numeric": 1200000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdpa/pr/pa-lifesharing-lcc-agrees-pay-12m-settle-false-claims-act-allegations",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "PA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-05-01-637739015",
+      "date": "2026-05-01",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "O.C. Medical Scan Provider Agrees to Pay $8.3 Million to Resolve False Claims Allegations It Unlawfully Paid Doctors Kickbacks",
+      "amount": "$8.3 Million",
+      "amount_numeric": 8300000.000000001,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-cdca/pr/oc-medical-scan-provider-agrees-pay-83-million-resolve-false-claims-allegations-it",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare Advantage",
+        "Medicare",
+        "Medicaid",
+        "TRICARE"
+      ],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "False Claims Act"
+      ]
+    },
+    {
+      "id": "doj-2026-05-01-3896781317",
+      "date": "2026-05-01",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "United States Files Suit Against Naples Immunologist for False and Fraudulent Claims in Connection with Subcutaneous Immune Globulins",
+      "amount": "$1.9 million",
+      "amount_numeric": 1900000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-mdfl/pr/united-states-files-suit-against-naples-immunologist-false-and-fraudulent-claims",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Pharmacy"
+      ],
+      "entities": [],
+      "state": "FL",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [],
+      "doj_topics": [
+        "Healthcare Fraud"
       ]
     }
   ]
