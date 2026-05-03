@@ -16217,8 +16217,8 @@
       ]
     },
     {
-      "id": "doj-2026-05-01-3896781317",
-      "date": "2026-05-01",
+      "id": "doj-2026-04-30-3896781317",
+      "date": "2026-04-30",
       "agency": "DOJ",
       "type": "Civil Action",
       "title": "United States Files Suit Against Naples Immunologist for False and Fraudulent Claims in Connection with Subcutaneous Immune Globulins",
@@ -16236,7 +16236,9 @@
       "state": "FL",
       "source_type": "official",
       "auto_fetched": true,
-      "related_agencies": [],
+      "related_agencies": [
+        "HHS-OIG"
+      ],
       "doj_topics": [
         "Healthcare Fraud"
       ]
