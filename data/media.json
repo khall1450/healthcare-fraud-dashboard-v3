@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-05-04T08:41:28.355302",
+    "last_updated": "2026-05-04T10:22:12.622058",
     "version": "1.0"
   },
   "stories": [
@@ -493,6 +493,28 @@
       ],
       "entities": [],
       "state": "NC",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agencies": []
+    },
+    {
+      "id": "media-2026-05-04-medicaid-millionaires-how-the-feds-pay-immigrants-billions-t",
+      "date": "2026-05-04",
+      "agency": "Media",
+      "type": "Investigative Report",
+      "title": "Medicaid Millionaires: How The Feds Pay Immigrants Billions To Hang Out With Their Families",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.dailywire.com/news/medicaid-millionaires-how-the-feds-pay-immigrants-billions-to-hang-out-with-their-families",
+      "link_label": "Daily Wire",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Home Health"
+      ],
+      "entities": [],
+      "state": "OH, MN",
       "source_type": "news",
       "auto_fetched": false,
       "related_agencies": []
