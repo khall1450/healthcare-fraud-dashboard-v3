@@ -509,6 +509,48 @@ def test_healthcare_context(text):
             return True
     return False
 
+# Pandemic-loan-fraud indicators (PPP / EIDL / CARES Act). When these
+# appear without a healthcare nexus, the case is generic SBA financial
+# fraud and should not land on a healthcare fraud dashboard.
+_PPP_INDICATOR_RE = re.compile(
+    r'\b(PPP|paycheck\s+protection\s+program|paycheck\s+protection|'
+    r'EIDL|economic\s+injury\s+disaster\s+loan|CARES\s+Act|'
+    r'second-?draw\s+(PPP\s+)?loan|pandemic\s+loan|covid\s+loan)\b',
+    re.IGNORECASE,
+)
+# Strong healthcare nexus signals — defrauded-program names + healthcare
+# facility/role nouns. Items with at least one of these in the body are
+# real healthcare cases (even if the fraud vehicle was a PPP loan).
+_HC_NEXUS_RE = re.compile(
+    r'\b(Medicare|Medicaid|TRICARE|CHAMPVA|ACA|VA\s+health|'
+    r'hospital|clinic|nursing\s*(home|facility)|skilled\s*nursing|'
+    r'hospice|home\s*health|medical\s*practice|pharmacy|pharmacist|'
+    r'physician|doctor|nurse(?!ry)|dentist|dental\s*practice|'
+    r'patient|laborator(y|ies)|skin\s*substitute|durable\s*medical|'
+    r'addiction\s*treatment|behavioral\s*health|mental\s*health|'
+    r'health\s*care\s*provider|healthcare\s*provider|telehealth|'
+    r'opioid|controlled\s*substance|prescription)\b',
+    re.IGNORECASE,
+)
+
+def _is_ppp_fraud_without_healthcare_nexus(title, body):
+    """Return True if item is dominantly about pandemic-loan fraud
+    (PPP/EIDL/CARES) with no healthcare nexus. Triggered: ZERO mentions
+    of defrauded-program names and ZERO healthcare facility/role
+    keywords across title+body. Conservative by design — any plausible
+    healthcare signal lets the item through.
+
+    See project_ppp_filter_deferred.md for the trigger case (Innodisk
+    USA / Fremont, $950K PPP fraud against a flash memory subsidiary
+    that slipped onto the dashboard 2026-05-04)."""
+    haystack = f"{title or ''} {body or ''}"
+    if not _PPP_INDICATOR_RE.search(haystack):
+        return False  # Not a PPP-fraud item, doesn't apply
+    # PPP-flagged. Now check healthcare nexus.
+    if _HC_NEXUS_RE.search(haystack):
+        return False  # Has nexus, keep
+    return True  # PPP fraud + no healthcare nexus, drop
+
 def get_action_type(title, desc, agency=None, link=None):
     """Classify a scraped item into one of ~11 action types.
 
@@ -4179,6 +4221,20 @@ def main():
                 # but OIG surfaces SNAP, childcare, immigration, housing,
                 # passport, and other non-HC cases. So require healthcare
                 # context on every item.
+                # PPP / pandemic-loan fraud guard: applies BEFORE the
+                # trust_source bypass. Pandemic-loan-fraud items
+                # (Paycheck Protection Program, EIDL, CARES Act) sometimes
+                # come in as DOJ "Health Care Fraud"-tagged or appear on
+                # the HHS-OIG enforcement listing despite the case being
+                # a non-healthcare business that committed PPP fraud
+                # (e.g. Fremont/Innodisk USA, a flash/DRAM memory
+                # subsidiary). Drop only when the body shows ZERO
+                # healthcare nexus — i.e., no defrauded-program mention
+                # and no healthcare facility/role keyword. Cases where a
+                # doctor / clinic / nursing home defrauded PPP still
+                # have those keywords in body and pass through.
+                if _is_ppp_fraud_without_healthcare_nexus(title, search_text):
+                    continue
                 # Items marked with _trust_source=True have already been
                 # gated by a higher-authority signal (e.g. scrape_doj_opa
                 # only returns items DOJ itself tagged 'Health Care Fraud').
