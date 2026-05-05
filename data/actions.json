@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-04T09:38:17.210793",
+    "last_updated": "2026-05-05T09:30:58.254384",
     "version": "1.0",
-    "last_scraped": "2026-05-04T09:38:17.210783"
+    "last_scraped": "2026-05-05T09:30:58.254376"
   },
   "actions": [
     {
@@ -16242,6 +16242,74 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "doj-2026-05-04-1367988658",
+      "date": "2026-05-04",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Texas Doctor Convicted for Illegally Distributing More than a Million Pills",
+      "amount": "$45 billion",
+      "amount_numeric": 45000000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/texas-doctor-convicted-illegally-distributing-more-million-pills",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicaid",
+        "Pharmacy",
+        "Opioids"
+      ],
+      "entities": [],
+      "state": "TX",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
+    },
+    {
+      "id": "doj-2026-05-04-1941538625",
+      "date": "2026-05-04",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "Two Sentenced to Prison for $522M Genetic Testing Fraud and Illegal Kickback Scheme Targeting Medicare and Medicaid",
+      "amount": "$522 Million",
+      "amount_numeric": 522000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/opa/pr/two-sentenced-prison-522m-genetic-testing-fraud-and-illegal-kickback-scheme-targeting",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [
+        "Medicare",
+        "Medicaid",
+        "Genetic Testing",
+        "Lab Testing"
+      ],
+      "entities": [],
+      "state": null,
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-05-04-612412117",
+      "date": "2026-05-04",
+      "agency": "DOJ",
+      "type": "Civil Action",
+      "title": "Fremont Company Agrees to Pay Nearly One Million Dollars to Resolve False Claims Act Allegations Involving Paycheck Protection Program Loan",
+      "amount": "$950,000",
+      "amount_numeric": 950000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-ndca/pr/fremont-company-agrees-pay-nearly-one-million-dollars-resolve-false-claims-act",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "CA",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": []
     }
   ]
 }
