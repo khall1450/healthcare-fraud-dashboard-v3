@@ -16256,8 +16256,6 @@
       "link_label": "DOJ Press Release",
       "social_posts": [],
       "tags": [
-        "Medicaid",
-        "Pharmacy",
         "Opioids"
       ],
       "entities": [],
@@ -16291,25 +16289,6 @@
       "related_agencies": [
         "HHS-OIG"
       ]
-    },
-    {
-      "id": "doj-2026-05-04-612412117",
-      "date": "2026-05-04",
-      "agency": "DOJ",
-      "type": "Civil Action",
-      "title": "Fremont Company Agrees to Pay Nearly One Million Dollars to Resolve False Claims Act Allegations Involving Paycheck Protection Program Loan",
-      "amount": "$950,000",
-      "amount_numeric": 950000.0,
-      "officials": [],
-      "link": "https://www.justice.gov/usao-ndca/pr/fremont-company-agrees-pay-nearly-one-million-dollars-resolve-false-claims-act",
-      "link_label": "DOJ Press Release",
-      "social_posts": [],
-      "tags": [],
-      "entities": [],
-      "state": "CA",
-      "source_type": "official",
-      "auto_fetched": true,
-      "related_agencies": []
     }
   ]
 }
