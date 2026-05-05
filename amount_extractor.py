@@ -228,9 +228,17 @@ def extract_amount_with_evidence(client, title: str, body: str,
                   file=sys.stderr)
         return None
 
+    # Normalize display capitalization. The AI prompt asks for "Million" /
+    # "Billion" / "Thousand" capitalized, but the model occasionally
+    # returns lowercase. Force consistency on the way out.
+    display_out = display or f"${int(numeric):,}"
+    display_out = re.sub(r'\bmillion\b', 'Million', display_out)
+    display_out = re.sub(r'\bbillion\b', 'Billion', display_out)
+    display_out = re.sub(r'\bthousand\b', 'Thousand', display_out)
+
     return {
         "numeric": numeric,
-        "display": display or f"${int(numeric):,}",
+        "display": display_out,
         "kind": kind,
         "evidence": evidence,
     }

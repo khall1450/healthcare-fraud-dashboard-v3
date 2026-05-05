@@ -975,17 +975,24 @@ def extract_amount(text, title=""):
     Strategy: check the title first. If no amount in the title, fall back
     to body text but SKIP known boilerplate patterns.
     """
+    def _normalize_display(s):
+        """Force 'Million'/'Billion'/'Thousand' to capitalized for consistency."""
+        s = re.sub(r'\bmillion\b', 'Million', s)
+        s = re.sub(r'\bbillion\b', 'Billion', s)
+        s = re.sub(r'\bthousand\b', 'Thousand', s)
+        return s
+
     def _parse(t):
         # Try "$X Billion" first
         m = re.search(r'\$[\d,]+(?:\.\d+)?\s*billion', t, re.IGNORECASE)
         if m:
             num = float(re.sub(r'[\$,\s]', '', m.group().lower().replace('billion', '')))
-            return {"display": m.group(), "numeric": num * 1e9}
+            return {"display": _normalize_display(m.group()), "numeric": num * 1e9}
         # Then "$X Million"
         m = re.search(r'\$[\d,]+(?:\.\d+)?\s*million', t, re.IGNORECASE)
         if m:
             num = float(re.sub(r'[\$,\s]', '', m.group().lower().replace('million', '')))
-            return {"display": m.group(), "numeric": num * 1e6}
+            return {"display": _normalize_display(m.group()), "numeric": num * 1e6}
         # Then "$X,XXX" shorthand (e.g. "$850,000", "$4.75M")
         m = re.search(r'\$([\d,]+(?:\.\d+)?)\s*[MmBb]\b', t)
         if m:
