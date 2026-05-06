@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-05-05T09:30:58.254384",
+    "last_updated": "2026-05-06T09:42:52.416909",
     "version": "1.0",
-    "last_scraped": "2026-05-05T09:30:58.254376"
+    "last_scraped": "2026-05-06T09:42:52.416899"
   },
   "actions": [
     {
@@ -16288,6 +16288,30 @@
       "auto_fetched": true,
       "related_agencies": [
         "HHS-OIG"
+      ]
+    },
+    {
+      "id": "doj-2026-05-05-188148212",
+      "date": "2026-05-05",
+      "agency": "DOJ",
+      "type": "Criminal Enforcement",
+      "title": "U.S. Attorney’s Office Hosts Health Care Fraud Consortium Workshop with Federal Partners",
+      "amount": "$12 Million",
+      "amount_numeric": 12000000.0,
+      "officials": [],
+      "link": "https://www.justice.gov/usao-nv/pr/us-attorneys-office-hosts-health-care-fraud-consortium-workshop-federal-partners",
+      "link_label": "DOJ Press Release",
+      "social_posts": [],
+      "tags": [],
+      "entities": [],
+      "state": "NV",
+      "source_type": "official",
+      "auto_fetched": true,
+      "related_agencies": [
+        "HHS-OIG"
+      ],
+      "doj_topics": [
+        "Healthcare Fraud"
       ]
     }
   ]
