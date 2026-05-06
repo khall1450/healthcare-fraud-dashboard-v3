@@ -672,6 +672,21 @@ def get_action_type(title, desc, agency=None, link=None):
     if re.search(r'\b(launches? (an? )?investigation|opens? (an? )?investigation|'
                  r'fact.?find(ing)?|sends?.*(letter|inquiry))\b', title_l):
         return 'Investigation'
+    # Coordination events: workshops, summits, consortium meetings,
+    # roundtables, partnership announcements. These are agency-level
+    # admin actions, NOT prosecutions — even though the body of the
+    # press release usually describes the prosecution work the event
+    # is organized around (which would otherwise trigger the body-text
+    # 'prosecut' fallback below and mislabel as Criminal Enforcement).
+    if re.search(r'\b(hosts?|convenes?|hosted|convened|holds?|held)\s+'
+                 r'(a |an |the )?[\w\s\-]{0,40}?'
+                 r'(workshop|summit|consortium|roundtable|symposium|forum|'
+                 r'training|meeting\s+(with|of)\s+(federal\s+)?partners)\b',
+                 title_l):
+        return 'Administrative Action'
+    if re.search(r'\b(workshop|summit|consortium|roundtable|symposium|forum)\s+'
+                 r'(with|on|for|brings\s+together)\b', title_l):
+        return 'Administrative Action'
 
     # ---- Fall back to full-text checks for ambiguous titles ----
     if re.search(r'plead|convict|indict|charg|guilty|arrest|prosecut', full_text):
