@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-05-06T09:42:52.416909",
+    "last_updated": "2026-05-06T16:20:01.934076",
     "version": "1.0",
     "last_scraped": "2026-05-06T09:42:52.416899"
   },
@@ -16313,6 +16313,27 @@
       "doj_topics": [
         "Healthcare Fraud"
       ]
+    },
+    {
+      "id": "cms-2026-04-30-mn-medicaid-91m-deferral",
+      "date": "2026-04-30",
+      "agency": "CMS",
+      "type": "Administrative Action",
+      "title": "Trump administration defers $91M more in Minnesota Medicaid funding citing fraud vulnerabilities",
+      "amount": "",
+      "amount_numeric": 0,
+      "officials": [],
+      "link": "https://www.kare11.com/article/syndication/associatedpress/trump-administration-defers-91m-more-in-minnesota-medicaid-funding-citing-fraud-vulnerabilities/616-4cfe5bfc-2c23-4d56-a024-c94748a1874b",
+      "link_label": "KARE 11",
+      "social_posts": [],
+      "tags": [
+        "Medicaid"
+      ],
+      "entities": [],
+      "state": "MN",
+      "source_type": "news",
+      "auto_fetched": false,
+      "related_agencies": []
     }
   ]
 }
