@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Oversight review queue. Items scraped via `update.py --oversight-only` land here, get classified by audit-oversight + ai-review-oversight, and either auto-promote into actions.json or wait for human review.",
-    "last_scraped": "2026-05-05T10:18:55.099671",
+    "last_scraped": "2026-05-06T10:33:51.772738",
     "last_updated": "2026-04-19T17:48:53.435434"
   },
   "items": [
@@ -220,6 +220,9 @@
     "https://waysandmeans.house.gov/2026/04/28/what-they-are-saying-historic-bipartisan-reforms-support-long-term-success-for-transition-age-foster-youth/",
     "https://www.cms.gov/newsroom/news-alert/cms-extends-deadlines-generous-model-applications-drug-manufacturers-states",
     "https://www.gao.gov/products/gao-26-108139",
-    "https://energycommerce.house.gov/posts/health-subcommittee-holds-legislative-hearing-on-policies-to-strengthen-fda-food-regulation"
+    "https://energycommerce.house.gov/posts/health-subcommittee-holds-legislative-hearing-on-policies-to-strengthen-fda-food-regulation",
+    "https://www.cms.gov/newsroom/blog/moving-prior-authorization-21st-century",
+    "https://www.gao.gov/products/gao-26-107778",
+    "https://www.help.senate.gov/rep/newsroom/press/icymi-chairman-cassidy-leads-help-committee-hearing-in-louisiana-on-making-health-care-affordable-for-families"
   ]
 }
