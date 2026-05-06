@@ -1093,6 +1093,26 @@ def extract_amount(text, title=""):
             r'since (january|fiscal year).*?(justice department|department of justice).*?'
             r'recover\w*.*?\$[\d,.]+\s*(billion|million)[^.]*\.',
             '', text, flags=re.IGNORECASE | re.DOTALL)
+        # Strip Health Care Fraud Strike Force aggregate boilerplate. The
+        # closing paragraph of many DOJ HCF press releases reads:
+        # "...has charged more than 6,200 defendants who collectively
+        # billed federal health care programs and private insurers more
+        # than $45 billion since 2007." That $45B is the cumulative
+        # Strike Force tally, never the case amount, but the regex
+        # extractor was picking it up before this strip was added.
+        cleaned = re.sub(
+            r'(charged|investigated|prosecuted)\s+more\s+than\s+[\d,]+\s+'
+            r'defendants\s+who\s+(collectively\s+)?'
+            r'(billed|defrauded|stole|caused).*?\$[\d,.]+\s*(billion|million)'
+            r'[^.]*\bsince\s+\d{4}[^.]*\.',
+            '', cleaned, flags=re.IGNORECASE | re.DOTALL)
+        # Also handle the simpler "...billed federal health care
+        # programs ... more than $X billion since YYYY" variant.
+        cleaned = re.sub(
+            r'(billed|defrauded)\s+(federal\s+)?(health\s*care|healthcare)\s+'
+            r'programs?[^.]*?\$[\d,.]+\s*(billion|million)[^.]*?'
+            r'\bsince\s+\d{4}[^.]*\.',
+            '', cleaned, flags=re.IGNORECASE | re.DOTALL)
         # Also remove "the largest health care fraud takedown" aggregate paragraphs
         cleaned = re.sub(
             r'(this|the)\s+(national|largest|record).*?takedown.*?\$[\d,.]+\s*(billion|million)[^.]*\.',
